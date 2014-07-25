@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>網站基本資料維護</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/master.css" />
+	<link rel="stylesheet" type="text/css" href="css/admin.css" />
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+	<script src="scripts/jquery-1.9.0.min.js"></script>
+	<script src="scripts/jquery.fancybox.js"></script>
+	<script src="scripts/script.js"></script>
+	<script src="scripts/admin_menu.js"></script>
+</head>
+<body>
+	<div id="head_area">
+		<div id="head">
+			<h1 id="logo"><a href="admin_main.html">南門國中圖書館管理後台</a></h1>
+			<div id="head_nav">
+				<ul>
+					<li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
+					<li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
+					<li><a href="about.html">關於我們</a>&nbsp;|</li>
+					<li><a href="help.html">服務說明</a>&nbsp;|</li>
+					<li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
+					<li><a href="#" class="lang">E</a></li>
+					<li><a href="#" class="lang">繁</a></li>
+					<li><a href="#" class="lang">簡</a></li>
+					<li><a href="#" class="lang"><img src="img/admin2.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="menu_area">
+		<div id="menu_bar">
+			<ul id="menu">
+				<li><a href="#">網站管理</a>
+					<ul class="sub_menu">
+						<li><a href="config_edit.html">基本資料維護</a></li>
+						<li><a href="bulletin_main.html">系統公告維護</a></li>
+						<li><a href="bulletin_add.html">系統公告新增</a></li>
+					</ul>
+				</li>
+				<li><a href="#">身份管理</a>
+					<ul class="sub_menu">
+						<li><a href="accounts_main.html">帳號管理</a></li>
+						<li><a href="read_group_main.html">群組管理</a></li>
+					</ul>
+				</li>
+				<li><a href="#">圖書管理</a>
+					<ul class="sub_menu">
+						<li><a href="admin_ebook_main.html">版權書管理</a></li>
+						<li><a href="ebook_free_main.html">自有版權書管理</a></li>
+					</ul>
+				</li>
+				<li><a href="#">閱讀歷程</a></li>
+				<li><a href="#">數位電子內容管理平台</a>
+					<ul class="sub_menu">
+						<li><a href="ebook_main.html">電子書維護</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="cont_area">
+		<div id="cont">
+			<div class="breadcrumbs">目前位置：網站管理&nbsp;&gt;&nbsp;基本資料維護</div>
+			<form method="post" enctype="multipart/form-data">
+				<div class="cont_tab2">
+					<h2><div class="icon04"></div>網站基本資料維護</h2>
+					<div class="pd2040">
+						<table cellpadding="0" cellspacing="0" width="100%">
+							<tr><th width="17%">名稱</th><td width="83%"><input class="w01" type="text" value="五常國小"><em>瀏覽器分頁顯示名稱</em></td></tr>
+							<tr><th>地址</th><td><input class="w01" type="text" value="104 臺北市中山區五常街16號"></td></tr>
+							<tr><th>電話</th><td><input class="w01" type="text" value="02-87926168"></td></tr>
+							<tr><th>服務專線</th><td><input class="w01" type="text" value="02-87926168"></td></tr>
+							<tr><th>服務信箱</th><td><input class="w01" type="text" value="service@tp.edu.tw"></td></tr>
+							<tr><th>圖書館Logo</th><td><input class="w01" type="file"/><em>寬430px&nbsp;/&nbsp;高100px&nbsp;(.png檔)</em></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="cont_tab2">
+					<h2><div class="icon04"></div>網站其它資料維護</h2>
+					<div class="pd2040">
+						<table cellpadding="0" cellspacing="0" width="100%">
+							<tr><th width="17%">備註</th><td width="83%"><input class="w01" type="text" value="五常國小"><em>五常國小數位圖書館</em></td></tr>
+							<tr><th>更新人員</th><td><input class="w01" type="text" value="測試人員" disabled></td></tr>
+							<tr><th>最後更新日期</th><td><input class="w01" type="text" value="2013/10/26" disabled></td></tr>
+						</table>
+					</div>
+				</div>
+				<ul class="a_btn_c2">
+					<li><input class="a_b01" type="button" value="儲存"></li>
+					<li><input class="a_b02" type="button" value="取消" onclick="location.href='config_edit.html'"></li>
+				</ul>
+			</form>
+			<div class="clearb"></div>
+		</div>
+	</div>
+	<div id="foot_area">
+		<div id="foot">
+			浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
+		</div>
+	</div>
+</body>
+</html>

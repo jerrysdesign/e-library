@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>帳號登入</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style01.css" />
+</head>
+<body>
+	<form id="loginForm1" name="loginForm1" action="/login.action" method="post">
+		<h2><div class="icon10"></div>帳號登入</h2>
+		<ul>
+			<li>登入帳號<input type="text" size="71" value=""/></li>
+			<li>登入密碼<input type="password" size="71" /></li>
+			<li>輸入驗證<input type="text" size="42" value="" maxlength="5" /><img id="veriImg" src="images/veriImg.jpg"/></li>
+			<li class="note">驗證碼全為數字，如無法辨識，請點驗證碼圖，系統會產生新的驗證碼。</li>
+		</ul>
+		<div class="fixbtn">
+			<input type="button" class="btn01" value="帳號登入" onclick="javascript:history.back()">
+			<input type="button" class="btn02" value="忘記密碼" onclick="javascript:location.href='forgot.html'">
+		</div>
+	</form>
+</body>
+</html>
