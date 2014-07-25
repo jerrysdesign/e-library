@@ -1,0 +1,6 @@
+project/source/.sass-cache
+*.scssc
+*.sassc
+project/source/fire_app_log.txt
+project/source/stylesheets
+project/source/config.rb
