@@ -1,7 +1,8 @@
 .gitignore
 *.scssc
 *.sassc
-project/source_code/.sass-cache
-project/source_code/fire_app_log.txt
-project/source_code/stylesheets
-project/source_code/config.rb
+doc/
+source_code/.sass-cache
+source_code/fire_app_log.txt
+source_code/stylesheets
+source_code/config.rb
