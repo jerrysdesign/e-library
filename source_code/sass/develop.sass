@@ -1,0 +1,65 @@
+$labelLine: #09277b
+@import "compass"
+$legacy-support-for-ie: true
+
+.control-group
+  margin-bottom: 2px
+  
+.control-label
+  float: left
+  width: 16%
+  text-align: right
+  padding-right: 10px
+
+.controls
+  padding-left: 10px
+  margin-left: 17%
+  border-left: 1px solid $labelLine
+
+.masthead
+  background-color: #bbb
+  .cont
+    padding: 20px 0
+    position: relative
+    &:before, &:after
+      content: " "
+      display: block
+    &:after
+      clear: both
+
+.masthead_head
+  width: 10%
+  float: left
+  vertical-align: top
+  &:before
+    content: " "
+    position: absolute
+    //z-index: -1
+    display: block
+    top: 0
+    bottom: 0
+    left: 0
+    width: 10%
+    border-right: 1px solid #ddd
+.masthead_title
+  background: url(/admin/images/icon-edit.png) no-repeat
+  height: 36px
+  line-height: 36px
+  padding-left: 40px
+  color: #666
+.masthead_content
+  width: 90%
+  float: left
+.cont
+  width: 1000px
+  margin: 0 auto
+// 合併進 > #head, #menu_bar, #cont, #foot
+
+.masthead
+  .control-label
+    width: 9%
+    line-height: 34px
+  .controls
+    margin-left: 10%
+// reset .control-label 與 .controls
+
