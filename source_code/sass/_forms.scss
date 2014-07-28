@@ -161,5 +161,23 @@ $radius: 0;
       right: 0;
     }
   }
+  input[type="button"]:disabled, input[type="submit"]:disabled, input[type="reset"]:disabled, input[type="file"]:disabled::-webkit-file-upload-button, button:disabled, select:disabled, keygen:disabled, optgroup:disabled, option:disabled, select[disabled] > option {
+    color: graytext;
+  }
+  .bt:hover, .bt:focus, .bt:active, .bt.active, .bt.disabled, .bt[disabled] {
+    color: #333333;
+    background-color: #e6e6e6;
+  }
+  .bt.disabled, .bt[disabled] {
+    cursor: default;
+    background-image: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
 
 }
+
