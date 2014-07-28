@@ -10,6 +10,7 @@ $legacy-support-for-ie: true
 
 .control-group
   margin-bottom: 2px
+  +clearfix
   
 .control-label
   float: left
@@ -82,9 +83,26 @@ $legacy-support-for-ie: true
 
 .a_btn_c2
   @extend %clearfix
+.cont_tab4
+  background-color: #FFF
+// 合併進reset
+textarea
+  line-height: 30px
+  border: 1px solid #ddd
 
 // temp
 // override
+%inline-block, .inline-block
+  display: inline-block !important
+  float: none !important
+  +has-layout-zoom
+  +has-layout-block
+%i-b-block, .i-b-block
+  > *
+    +inline-block
+    vertical-align: bottom //因應頁面-新增題目是非題
+textarea
+  border: 1px solid #ddd !important
 .a_b01, .a_b02
   line-height: 32px !important
 .a_b02
