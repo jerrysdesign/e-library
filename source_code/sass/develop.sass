@@ -1,12 +1,10 @@
-$labelLine: #09277b
 @import "compass"
 $legacy-support-for-ie: true
+//變數，設定
+@import "syntax" 
+//Mixin功能
+@import "mixin" 
 @import "forms"
-
-@mixin clearfix
-  +pie-clearfix
-%clearfix, .clearfix
-  +clearfix
 
 .control-group
   margin-bottom: 5px
@@ -98,6 +96,7 @@ textarea
 
 // temp
 // override
+
 %inline-block, .inline-block
   display: inline-block !important
   float: none !important
