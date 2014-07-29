@@ -103,6 +103,9 @@ textarea
 
 .pd2020
   padding: 20px
+
+.pd2040, .pd2020
+  @extend %clearfix
 // temp
 tr:nth-child(odd)
   background-color: #eee !important
@@ -134,3 +137,50 @@ ul.a_btn_c2 li
   float: none !important
   +has-layout-zoom
   +has-layout-block
+
+//選擇題ul li styles
+// ul , ol , li
+//   margin: 0
+//   padding: 0
+//   list-style: none
+// $Color: #9bd7d7
+// $Circular: 20px
+// ol
+//   //counter-reset: list 0
+//   > li
+//     position: relative
+//     line-height: $Circular*1.5
+//     &:before
+//       content: counter(list, upper-alpha)
+//       counter-increment: list
+//       text-align: center
+//       display: block
+//       width: $Circular
+//       height: $Circular
+//       line-height: $Circular
+//       background-color: rgba(255, 255, 255, 0.55)
+//       border: 2px solid $Color
+//       color: #789
+//       background-color: #fff
+//       +border-radius(100%)
+//       float: left
+//       font-weight: 100
+//       margin-right: 10px
+//   > li + li
+//     padding-top: 10px
+
+.upper-alpha
+  li
+    padding-left: 32px
+    min-height: 24px
+    background: url(../admin/images/upper-alpha.png) no-repeat
+  li + li
+    margin-top: 5px
+  li:nth-child(1)
+    background-position: left 0
+  li:nth-child(2)
+    background-position: left -24px
+  li:nth-child(3)
+    background-position: left -48px
+  li:nth-child(4)
+    background-position: left -72px

@@ -1,0 +1,25 @@
+#cont
+	form.cf enctype="multipart/form-data" method="post" 
+		.cont_tab2
+			h2
+				.icon04
+				| 匯入題目
+			.pd2040
+				| 供選取5題
+				.btn-group.fr
+					a.bt href="javascript:;" 匯入
+					a.bt href="javascript:;" 取消
+		-5.times do
+			.cont_tab2
+				.pd2040
+					p.pd2020
+						=zh_lorem_paragraphs 2 
+					ol.upper-alpha.pd2020
+						li
+							=zh_lorem_sentences 1
+						li
+							=zh_lorem_sentences 1
+						li
+							=zh_lorem_sentences 1
+						li
+							=zh_lorem_sentences 1
