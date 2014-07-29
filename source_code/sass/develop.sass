@@ -6,6 +6,13 @@ $legacy-support-for-ie: true
 @import "mixin" 
 @import "forms"
 
+@import "_admin_fancybox"
+@import "_component_btn"
+
+//Inline form
+
+
+//Horizontal form
 .control-group
   margin-bottom: 5px
   margin-top: 5px
@@ -94,6 +101,8 @@ textarea
   text-align: right
   clear: both
 
+.pd2020
+  padding: 20px
 // temp
 // override
 
@@ -103,9 +112,11 @@ textarea
   +has-layout-zoom
   +has-layout-block
 %i-b-block, .i-b-block
+  +clearfix
   > *
     +inline-block
     vertical-align: bottom //因應頁面-新增題目是非題
+
 textarea
   border: 1px solid #ddd !important
 .a_b01, .a_b02

@@ -1,0 +1,28 @@
+//是否有數據
+
+- if f == "ture"
+  / == content_tag(:tr, \
+  / content_tag(:td, "")+\
+  / content_tag(:td, "OOPS!")+\
+  / content_tag(:td, "OOPS!")+\
+  / content_tag(:td, "OOPS!")+\
+  / content_tag(:td, "OOPS!")+\
+  / content_tag(:td, "OOPS!"))
+  tr
+    td
+      input type="checkbox"
+    td
+      / | 1
+    td
+      / | 是非
+    td
+      / =zh_lorem_paragraphs 1
+    td
+      / =lorem_date("%Y/%m/%d", 2014..2014)
+    td
+      / =lorem_date("%Y/%m/%d", 2014..2014)
+
+- else
+  tr
+    td colspan="6"
+      | 尚未加入任何項目

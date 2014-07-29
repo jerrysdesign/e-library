@@ -18,23 +18,23 @@
           | 題
         .fr.i-b-block
           .btn-group
-            a.bt href="javascript:;" 加入
+            a#qAdd class="bt fancybox fancybox.iframe afb" href="pop_quiz_add.html" 加入
             a.bt.disabled href="javascript:;" 移除
           .btn-group
             a.bt.disabled href="javascript:;" 上移
             a.bt.disabled href="javascript:;" 下移
       table cellpadding="0" cellspacing="1" width="100%"
         tr
-          th: input type="checkbox"
-          th 題型
+          th width="5%": input type="checkbox"
+          th width="8%" 題型
           th 題目
-          th 建立日期
-          th 最新作答日期
-          th 功能
+          th width="10%" 建立日期
+          th width="10%" 最新作答日期
+          th width="10%" 功能
+        //== render "quiz_list" , :locals => {:f => "ture"}
         tr
           td colspan="6"
-            | 尚未加入任何項目
-
+            | 尚未加入任何項目  
     ul.a_btn_c2
       li: input type="button" value="儲存"
-      li: input type="button" value="取消" onclick="javascript:;"
+      li: input type="button" value="取消" onclick="javascript:;" 
