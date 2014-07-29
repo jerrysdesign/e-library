@@ -25,10 +25,9 @@ html lang="zh-tw"
             th width="10%" 題型
             th 題目
             th width="15%" 建立日期
-          tr
-            td colspan="4"
-              | 尚未加入任何項目  
-      
+          
+          == render "partials/quiz_list_pop" , :locals => {:f => "ture"}
+
       ._afb_footbar
         .i-b-block
           .alert.fl
