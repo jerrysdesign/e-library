@@ -57,6 +57,10 @@ $(function(){
 	$(".fancybox").fancybox();
 	$(".afb").fancybox({
     wrapCSS : '_admin_fancybox',
-    padding : 0
+    padding : 0,
+    scrolling : 'no',
+    closeBtn: false
 	});
+	
+
 });
