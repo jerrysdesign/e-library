@@ -53,4 +53,10 @@ $(function(){
 		});
 	});
 
+	// fancybox
+	$(".fancybox").fancybox();
+	$(".afb").fancybox({
+    wrapCSS : '_admin_fancybox',
+    padding : 0
+	});
 });
