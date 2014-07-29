@@ -25,16 +25,14 @@
             a.bt.disabled href="javascript:;" 下移
       table cellpadding="0" cellspacing="1" width="100%"
         tr
-          th width="5%": input type="checkbox"
+          th width="4%": input type="checkbox"
+          th width="4%" 序號
           th width="8%" 題型
           th 題目
           th width="10%" 建立日期
           th width="10%" 最新作答日期
           th width="10%" 功能
-        //== render "quiz_list" , :locals => {:f => "ture"}
-        tr
-          td colspan="6"
-            | 尚未加入任何項目  
+        == render "quiz_list" , :locals => {:f => "else"}
     ul.a_btn_c2
       li: input type="button" value="儲存"
       li: input type="button" value="取消" onclick="javascript:;" 
