@@ -14,7 +14,7 @@
       .i-b-block
         .alert
           | 已加入
-          span  5 
+          span  0 
           | 題
         .fr.i-b-block
           .btn-group
@@ -32,7 +32,7 @@
           th width="10%" 建立日期
           th width="10%" 最新作答日期
           / th width="10%" 功能
-        == render "quiz_list" , :locals => {:f => "ture"}
+        == render "quiz_list" , :locals => {:f => "else"}
     ul.a_btn_c2
       li: input type="button" value="儲存"
       li: input type="button" value="取消" onclick="javascript:;"
