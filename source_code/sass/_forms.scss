@@ -27,6 +27,11 @@ $radius: 0;
 
   input, select, textarea {
     width: 99%;
+    //width: 206px;
+    @include box-sizing(border-box);
+    &[type="button"] {
+      width: auto;
+    }
   }
 
   input {
@@ -56,7 +61,7 @@ $radius: 0;
     font-weight: 400;
   }
 
-  .bt, .pagination a, button {
+  .bt, button {
     font: inherit;
     display: inline-block;
     padding: 10px 12px;
@@ -86,7 +91,7 @@ $radius: 0;
     }
   }
 
-  .bt:hover, .pagination a:hover, button:hover {
+  .bt:hover, button:hover {
     background-color: #f6f6f6;
     @include _hover;
     
@@ -117,7 +122,7 @@ $radius: 0;
     padding: 10px;
     background: #fff;
     border-radius: $radius;
-    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.12);
+    //box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.12);
   }
 
   input {
@@ -138,14 +143,16 @@ $radius: 0;
     appearance: button;
     -moz-appearance: button;
     -webkit-appearance: button;
-    background-color: #f6f6f6;
+    //background-color: #f6f6f6;
     // background: linear-gradient(to bottom, #fafafa, #e5e5e5);
     // background: -webkit-linear-gradient(top, #fafafa, #e5e5e5);
     // background: -moz-linear-gradient(center 1px, #fafafa, #e5e5e5);
     // background: -ms-linear-gradient(top, #fafafa, #e5e5e5);
     // background: -o-linear-gradient(top, #fafafa, #e5e5e5);
-    background-images: url('../images/arrow_b2.gif');
-    background-position: 90% 50%;
+    // background: url('../images/arrow_b2.gif') 95% 50% no-repeat;
+    
+    background-image: url('../images/arrow_b3.gif');
+    background-position: right 50%;
     background-repeat: no-repeat;
   }
 
@@ -177,7 +184,10 @@ $radius: 0;
     -moz-box-shadow: none;
     box-shadow: none;
   }
-
-
 }
 
+// 表單輔助元件
+.caption {
+  text-align: left;
+  line-height: 40px;
+}

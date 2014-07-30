@@ -6,12 +6,13 @@ $legacy-support-for-ie: true
 @import "mixin" 
 @import "forms"
 @import "tables"
+@import "pagination"
 
 @import "_admin_fancybox"
 @import "_component_btn"
 
 //Inline form
-
+  
 
 //Horizontal form
 .control-group
@@ -137,7 +138,9 @@ ul.a_btn_c2 li
   float: none !important
   +has-layout-zoom
   +has-layout-block
-
+.cont_tab2
+  input
+    height: auto !important
 //選擇題ul li styles
 // ul , ol , li
 //   margin: 0
@@ -184,3 +187,9 @@ ul.a_btn_c2 li
     background-position: left -48px
   li:nth-child(4)
     background-position: left -72px
+
+// fix menu
+.menu_wrap
+  height: 40px
+#menu_area
+  z-index: 9999
