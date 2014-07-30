@@ -7,7 +7,10 @@
 	<%= render :partial => "partials/layout_header.html.erb" %>
 	<%= render :partial => "partials/layout_menu.html.erb" %>
 	<div id="cont_area">
-		<%= render :partial => "partials/quiz_creat_null.html.slim" %>
+		<div id="cont">
+			<div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
+			<%= render :partial => "partials/subject_edit.html.slim" %>
+		</div>
 	</div>
 	<%= render :partial => "partials/layout_footer.html.erb" %>
 </body>

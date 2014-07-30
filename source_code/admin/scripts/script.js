@@ -55,6 +55,7 @@ $(function(){
 
 	// fancybox
 	$(".fancybox").fancybox();
+	$("input.fancybox").fancybox();
 	$(".afb").fancybox({
     wrapCSS : '_admin_fancybox',
     padding : 0,

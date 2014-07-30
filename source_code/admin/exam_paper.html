@@ -2,7 +2,7 @@
 <html lang="zh-tw">
 <head>
 	<meta charset="UTF-8">
-	<title>管理題目</title>
+	<title>自有版權書管理測驗</title>
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
 	<link rel="stylesheet" type="text/css" href="css/master.css" />
 	<link rel="stylesheet" type="text/css" href="css/admin.css" />
@@ -51,144 +51,120 @@
 	</div>
 	<div id="cont_area">
 		<div id="cont">
-			<div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
+			<div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
 			<form method="post" enctype="multipart/form-data">
 				<div class="cont_tab2">
-					<h2><div class="icon04"></div>題目設定</h2>
+					<h2><div class="icon04"></div>測驗</h2>
 					<div class="pd2040">
 						<table cellpadding="0" cellspacing="0" width="100%">
-							<tr>
-								<th width="17%">是非題答題型態</th>
-								<td width="83%">
-									<div class="a_sltbox">
-										<select class="a_slt">
-											<option></option>
-											<option value="0">O or X</option>
-											<option value="1">√ or X</option>
-											<option value="2">T or F</option>
-										</select>
-									</div>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-				<div class="cont_tab2">
-					<h2><div class="icon04"></div>題目管理</h2>
-					<div class="pd2040">
-						<table cellpadding="0" cellspacing="0" width="100%">
-							<tr>
-								<th width="17%">題型</th>
-								<td width="83%">
-									<div class="a_sltbox">
-										<select class="a_slt">
-											<option></option>
-											<option value="0">是非</option>
-											<option value="1">選擇</option>
-										</select>
-									</div>
-								</td>
-							</tr>
-							<tr><th>題目</th><td><input type="text" class="w01"><input class="a_b01" type="button" value="搜尋"></td></tr>
+							<tr><th width="17%">共有500道題目</th><td width="83%"><input class="a_b01 mg-0" type="button" value="管理題目" onclick="javascript:location.href='subject_edit.html'"></td></tr>
+							<tr><th>測驗卷名稱</th><td><input type="text" class="w01"><input class="a_b01" type="button" value="搜尋"></td></tr>
 						</table>
 					</div>
 				</div>
 				<div class="cont_tab3 clearb">
 					<table cellpadding="0" cellspacing="1" width="100%">
-						<caption>題庫內共有<em>500</em>道題目，其中<em>450</em>道已作答過。
-							<div class="btn_area">
-								<input type="button" class="a_b01" value="新增題目">
-								<input type="button" class="a_b01" value="匯入">
-								<input type="button" class="a_b02" value="匯出">
-							</div>
+						<caption>共有<em>210</em>張測驗卷，其中<em>100</em>張已測驗過。
+							<div class="btn_area"><input type="button" class="a_b01" value="新增測驗卷" onclick="javascript:location.href='exam_paper_list_null.html'"></div>
 						</caption>
 						<tr>
 							<th width="5%">序號</th>
-							<th width="10%">題型</th>
-							<th width="43%">測驗卷名稱</th>
+							<th width="33%">測驗卷名稱</th>
+							<th width="10%">題數</th>
+							<th width="10%">平均正確率</th>
 							<th width="16%">建立日期</th>
-							<th width="16%">最新作答日期</th>
+							<th width="16%">測驗日期</th>
 							<th width="10%">功能</th>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td>是非</td>
 							<td>數學_第二章</td>
+							<td>是非題：5題<br>選擇題：6題</td>
+							<td>78%</td>
 							<td>2014/07/03 15:13 </td>
 							<td>2014/07/05 20:13</td>
-							<td><a href="#">檢視</a></td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
 						</tr>
 						<tr>
 							<td>2</td>
-							<td>選擇</td>
 							<td>沉默_閱讀測驗</td>
+							<td>是非題：5題<br>選擇題：6題</td>
+							<td>--</td>
 							<td>2014/07/01 18:13</td>
 							<td>尚未測驗</td>
-							<td><a href="#">檢視</a><br><a href="#">統計</a></td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
 						</tr>
 						<tr>
 							<td>3</td>
-							<td>是非</td>
 							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
 							<td>2014/05/30 12:00</td>
 							<td>2014/05/30 12:00</td>
-							<td><a href="#">檢視</a><br><a href="#">刪除</a></td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
 						</tr>
 						<tr>
 							<td>4</td>
-							<td>選擇</td>
 							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
 							<td>2014/05/30 12:00</td>
-							<td>尚未作答</td>
-							<td><a href="#">檢視</a></td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
 						</tr>
 						<tr>
 							<td>5</td>
-							<td>是非</td>
 							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
 							<td>2014/05/30 12:00</td>
-							<td>尚未作答</td>
-							<td><a href="#">檢視</a><br><a href="#">刪除</a></td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
 						</tr>
 						<tr>
 							<td>6</td>
-							<td>是非</td>
 							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
 							<td>2014/05/30 12:00</td>
-							<td>尚未作答</td>
-							<td><a href="#">檢視</a><br><a href="#">刪除</a></td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
 						</tr>
 						<tr>
 							<td>7</td>
-							<td>選擇</td>
 							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
 							<td>2014/05/30 12:00</td>
-							<td>2014/05/30 12:30</td>
-							<td><a href="#">檢視</a><br><a href="#">刪除</a></td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
 						</tr>
 						<tr>
 							<td>8</td>
-							<td>是非</td>
 							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
 							<td>2014/05/30 12:00</td>
-							<td>尚未作答</td>
-							<td><a href="#">檢視</a><br><a href="#">刪除</a></td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
 						</tr>
 						<tr>
 							<td>9</td>
-							<td>是非</td>
 							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
 							<td>2014/05/30 12:00</td>
-							<td>尚未作答</td>
-							<td><a href="#">檢視</a><br><a href="#">刪除</a></td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
 						</tr>
 						<tr>
 							<td>10</td>
-							<td>是非</td>
 							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
 							<td>2014/05/30 12:00</td>
-							<td>2014/05/30 14:00</td>
-							<td><a href="#">檢視</a><br><a href="#">刪除</a></td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">預覽</a><br><a href="#">統計</a></td>
 						</tr>
 					</table>
 					<div class="pager">
