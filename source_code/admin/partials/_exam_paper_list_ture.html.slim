@@ -6,8 +6,9 @@
       .control-group
         label.control-label 名稱
         .controls
-          input type="text"
-          a.bt.fr href="javascript:;" 開始測驗
+          .inline-grop
+            input type="text"
+            input type="button" value="開始測驗" onclick="javascript:;"
 .container.cf
   .cont
     .cont_tab3
@@ -33,6 +34,6 @@
           th width="10%" 最新作答日期
           / th width="10%" 功能
         == render "quiz_list" , :locals => {:f => "ture"}
-    ul.a_btn_c2
-      li: input type="button" value="儲存"
-      li: input type="button" value="取消" onclick="javascript:;"
+    .center-block.i-b-block
+      input type="button" value="儲存"
+      input type="button" value="取消" onclick="javascript:;"

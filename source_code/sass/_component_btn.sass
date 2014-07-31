@@ -5,4 +5,33 @@
   input + input,
   a + a
     margin-left: -2px
+.center-block
+  input + input
+    margin: 0 10px
+//Inline form
+.inline-grop
+  +clearfix
+  input
+    width: auto !important
+  a + a, input + a
+    margin-left: -2px
+  
+//Horizontal form
+.control-group
+  margin-bottom: 5px
+  margin-top: 5px
+  +pie-clearfix
+  
+.control-label
+  float: left
+  width: 16%
+  text-align: right
+  padding-right: 10px
+
+.controls
+  padding-left: 10px
+  margin-left: 17%
+  border-left: 1px solid $labelLine
+  
+
   
