@@ -10,26 +10,11 @@
       .control-group
         label.control-label 題目
         .controls
-          textarea rows="2"
+          textarea rows="1"
+            = lorem_paragraphs 2
           .clearfix
           .i-b-block
-            img src="http://placehold.it/250x250&text=([img)1]" alt=""
-            ul.i-b-block
-              li: input type="button" value="瀏覽"
-              li: input type="button" value="移除"
-      / .title
-      /   | 設定正確答案
-      / .control-group
-      /   label.control-label
-      /     input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
-      /   .controls
-      /     | T
-      / .control-group
-      /   label.control-label
-      /     input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"
-      /   .controls
-      /     | F
-
+            == render "quiz_add_photo" , :locals => {:f => "ture"}
       .control-group
         label.control-label
           | 設定正確答案

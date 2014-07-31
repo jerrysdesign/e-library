@@ -12,12 +12,7 @@
         .controls
           textarea rows="1"
           .i-b-block
-            //input type="button" value="插入圖片"
-            a.bt href="javascript:;" 插入圖片
-            / img src="http://placehold.it/250x250&text=([img)1]" alt=""
-            / ul.i-b-block
-            /   li: input type="button" value="瀏覽"
-            /   li: input type="button" value="移除"
+            == render "quiz_add_photo" , :locals => {:f => "else"}
       .control-label.title 設定正確答案
       ul
         li
@@ -28,8 +23,7 @@
             .controls
               textarea rows="1"
               .i-b-block
-                //input type="button" value="插入圖片"
-                a.bt href="javascript:;" 插入圖片
+                == render "quiz_add_photo" , :locals => {:f => "else"}
         li
           .control-group
             label.control-label
@@ -38,8 +32,7 @@
             .controls
               textarea rows="1"
               .i-b-block
-                //input type="button" value="插入圖片"
-                a.bt href="javascript:;" 插入圖片
+                == render "quiz_add_photo" , :locals => {:f => "else"}
         li
           .control-group
             label.control-label
@@ -48,17 +41,14 @@
             .controls
               textarea rows="1"
               .i-b-block
-                //input type="button" value="插入圖片"
-                a.bt href="javascript:;" 插入圖片
+                == render "quiz_add_photo" , :locals => {:f => "else"}
         li
           .control-group
             label.control-label
             .controls
               a.bt href="javascript:;" 增加選項
-         
-
 
   .cont
-    ul.a_btn_c2
-      li: input type="button" value="儲存"
-      li: input type="button" value="取消" onclick="javascript:;"
+    .center-block.i-b-block
+      input type="button" value="儲存"
+      input type="button" value="取消" onclick="javascript:;"
