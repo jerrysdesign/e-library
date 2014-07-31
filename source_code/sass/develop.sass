@@ -2,8 +2,7 @@
 $legacy-support-for-ie: true
 //變數，設定
 @import "syntax" 
-//Mixin功能
-@import "mixin" 
+
 @import "forms"
 @import "tables"
 @import "pagination"
@@ -18,7 +17,7 @@ $legacy-support-for-ie: true
 .control-group
   margin-bottom: 5px
   margin-top: 5px
-  +clearfix
+  +pie-clearfix
   
 .control-label
   float: left
@@ -31,14 +30,14 @@ $legacy-support-for-ie: true
   margin-left: 17%
   border-left: 1px solid $labelLine
 
+// 管理介面題型選擇區塊
 .masthead
   background-color: #bbb
   position: relative
-  // border-bottom: 1px solid #999
-  // +box-shadow(0 2px 5px rgba(0,0,0,.2))
   .cont
     padding: 20px 0
     position: relative
+
     &:before, &:after
       content: " "
       display: block
@@ -48,7 +47,6 @@ $legacy-support-for-ie: true
 .container
   background-color: #f7f7f7
   padding: 30px
-
 
 .masthead_head
   width: 10%
@@ -66,9 +64,9 @@ $legacy-support-for-ie: true
     border-right: 1px solid #ddd
 
 .masthead_title
-  background: url(/admin/images/icon-edit.png) no-repeat
-  height: 36px
-  line-height: 36px
+  background: url(/admin/images/icon-edit.png) no-repeat left center
+  height: 51px
+  line-height: 51px
   padding-left: 40px
   color: #666
 
@@ -84,13 +82,14 @@ $legacy-support-for-ie: true
 .masthead
   .control-label
     width: 9%
-    line-height: 34px
+    line-height: 41px
+    margin-bottom: 0
   .controls
     margin-left: 10%
 /* reset .control-label 與 .controls */
 
 .a_btn_c2
-  @extend %clearfix
+  @extend %pie-clearfix
 .cont_tab4
   background-color: #FFF
 // 合併進reset
@@ -107,23 +106,14 @@ textarea
   padding: 20px
 
 .pd2040, .pd2020
-  @extend %clearfix
+  @extend %pie-clearfix
 // temp
 
 
 // 待合併組件
 .text-l
   text-align: left
-%inline-block, .inline-block
-  display: inline-block !important
-  float: none !important
-  +has-layout-zoom
-  +has-layout-block
-%i-b-block, .i-b-block
-  +clearfix
-  > *
-    +inline-block
-    vertical-align: bottom //因應頁面-新增題目是非題
+
 
 textarea
   border: 1px solid #ddd !important

@@ -33,9 +33,7 @@
 @mixin center-block {
   margin-left: auto;
   margin-right: auto;
-}
-%center-block {
-  @include center-block;
+  text-align: center
 }
 
 // clearfix
@@ -56,3 +54,4 @@
 %pie-clearfix {
   @include pie-clearfix;
 }
+

@@ -5,6 +5,9 @@ $link_color_hover: #709bb4
 $color_Mandy: #e76060
 $color_e76060: $color_Mandy //再整理
 
+// Mixin功能
+@import "mixin"
+
 %h2bg
   background: url('../images/h2bg.gif') repeat-x 0 0
 %font_color_e76060
@@ -30,19 +33,34 @@ $color_e76060: $color_Mandy //再整理
   %w
     background-color: white
 
-@mixin dp($extend)
-  @if $extend == b
-    @extend %b
-  @if $extend == i
-    @extend %i
-  @if $extend == n
-    @extend %n
-  @else
-    display: block
-%b
-  display: inline-block
-%i
-  display: inline
-%n
-  display: none
+// @mixin dp($extend)
+//   @if $extend == b
+//     @extend %b
+//   @if $extend == i
+//     @extend %i
+//   @if $extend == n
+//     @extend %n
+//   @else
+//     display: block
+// %dib
+//   display: inline-block
+// %dbl
+//   display: block
+// %dil
+//   display: inline
+// %dno
+//   display: none
 
+%center-block, .center-block
+  +center-block
+
+%inline-block, .inline-block
+  display: inline-block !important
+  float: none !important
+  +has-layout-zoom
+  +has-layout-block
+%i-b-block, .i-b-block
+  +clearfix
+  > *
+    +inline-block
+    vertical-align: bottom //因應頁面-新增題目是非題
