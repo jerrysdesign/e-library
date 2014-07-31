@@ -2,6 +2,16 @@
   label.control-label 類型
   .controls
     select style="width:200px"
-      option 選擇類型
-      option 是非題
-      option 選擇題
+      - if f == "torf"
+        option
+        option selected="" 是非題 
+        option 選擇題
+      - if f == "mulch"
+        option
+        option 是非題 
+        option selected="" 選擇題
+      - else
+        option 
+          option
+          option 是非題 
+          option 選擇題
