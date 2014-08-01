@@ -1,0 +1,11 @@
+.masthead.cf
+  .cont
+    .masthead_head
+      .masthead_title 題目
+    .masthead_content
+      == render "type" , :locals => {:f => "else"}
+.container.cf
+  .cont
+    .center-block.i-b-block
+      input type="button" value="儲存"
+      input type="button" value="取消" onclick="history.back()"

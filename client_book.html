@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>館藏查詢</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/style01.css" />
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+	<script src="scripts/jquery-1.9.0.min.js"></script>
+	<script src="scripts/jquery.fancybox.js"></script>
+	<script src="scripts/script.js"></script>
+</head>
+<body>
+	<div id="head_area">
+		<div id="head">
+			<h1 id="logo"><a href="index.html">南門國中圖書館</a></h1>
+			<div id="head_nav">
+				<ul>
+					<li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a class="fancybox fancybox.iframe" href="login.html">帳號登入&nbsp;|</a></li>
+					<li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
+					<li><a href="about.html">關於我們</a>&nbsp;|</li>
+					<li><a href="help.html">服務說明</a></li>
+					<li><a href="#" class="lang">E</a></li>
+					<li><a href="#" class="lang">繁</a></li>
+					<li><a href="#" class="lang">簡</a></li>
+					<li><a href="#" class="lang">後</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="menu_area">
+		<div id="menu_bar">
+			<ul id="menu">
+				<li class="menu1"><a href="client_book.html">所有館藏</a></li>
+				<li class="menu2"><a href="client_book_case.html">個人書櫃</a></li>
+				<li class="menu3"><a href="use.html">借閱規則</a></li>
+				<li class="menu4"><a href="download.html">閱讀軟體下載</a></li>
+			</ul>
+			<div id="searchbox">
+				<input class="search" value="search" onclick="this.value=''">
+				<button class="search_btn" type="submit" name="search"></button>
+				<div class="sltbox">
+					<select class="search_slt"><option>&nbsp;</option><option>人文歷史傳記</option></select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="cont_area">
+		<div id="cont">
+
+			<div id="side">
+				<div id="type">
+					<h2><div class="icon01"></div>圖書分類</h2>
+					<ul>
+						<li><a href="#">文學小說(5)</a></li>
+						<li><a href="#">藝術設計(5)</a></li>
+						<li><a href="#">人文科普(5)</a></li>
+						<li><a href="#">生活風格(5)</a></li>
+						<li><a href="#">心靈養生(5)</a></li>
+						<li><a href="#">語文學習(5)</a></li>
+						<li><a href="#">商業理財(5)</a></li>
+						<li><a href="#">親子共享(5)</a></li>
+						<li><a href="#">電子資訊(5)</a></li>
+					</ul>
+				</div>
+				<div id="banner"><img src="images/banner.jpg"></div>				
+				<div id="news">
+					<h2><div class="icon02"></div>最新消息</h2>
+					<ol>
+						<li class="no01"><a href="#">浩鑫數位圖書館，好書讀不完!快來體驗!</a></li>
+						<li class="no02"><a href="#">依據您的需求選定欲選購買的書籍後，請點選「購買本書」。</a></li>
+						<li class="no03"><a href="#">確認您要購買的書籍項目、數量均正確後，點選「結帳」。</a></li>
+						<li class="no04"><a href="#">選擇付款方式，目前購買電子書，僅提供線上信用卡刷卡付費方式。</a></li>
+						<li class="no05"><a href="#">確認訂單資料。</a></li>
+						<li class="no06"><a href="#">輸入信用卡資料。</a></li>
+						<li class="no07"><a href="#">完成交易後,即可至『我的書房』選擇【同步載具】功能，管理同步到載具的書籍。</a></li>
+						<li class="no08"><a href="#">取消的內容，當載具同步後會於書櫃中消失。</a></li>
+						<li class="no09"><a href="#">勾選的內容，當載具同步後會在書櫃中呈現。</a></li>
+						<li class="no10"><a href="#">亦可離線閱讀。</a></li>
+					</ol>
+				</div>				
+			</div>
+			<div id="books">
+				<div id="client_book">
+					<h2><div class="icon06"></div>查詢書籍列表</h2>
+					<div class="col_5">
+						<a href="#"><img src="images/books03.jpg"></a>
+						<p><a href="#" class="titles">SCIENCE WORLD：DINO WORLD</a></p>
+						<p class="author">合力出版</p>
+						<a class="borrow" href="#"><span class="reserve">&#9684;</span>預約</a>
+					</div>
+					<div class="col_5">
+						<a href="#"><img src="images/books04.jpg"></a>
+						<p><a href="#" class="titles">小故事大道理：關於樂觀、自信與勇氣</a></p>
+						<p class="author">強哥</p>
+						<a class="borrow" href="#"><span class="reserve">&#9684;</span>預約</a>
+					</div>					
+					<div class="col_5">
+						<a href="#"><img src="images/books05.jpg"></a>
+						<p><a href="#" class="titles">Our Peaceful Little Farm 我們的寧靜小農莊</a></p>
+						<p class="author">Gell Mackey</p>
+						<a class="borrow" href="#">借閱</a>
+					</div>
+					<div class="col_5">
+						<a href="#"><img src="images/books06.jpg"></a>
+						<p><a href="#" class="titles">從閱讀到寫作：現代名家散文十五講</a></p>
+						<p class="author">遠流出版事業股份有限公司</p>
+						<a class="borrow" href="#"><span class="reserve">&#9684;</span>預約</a>
+					</div>
+					<div class="col_5">
+						<a href="#"><img src="images/books07.jpg"></a>
+						<p><a href="#" class="titles">山上的女孩</a></p>
+						<p class="author">康軒文教事業股份有限公司</p>
+						<a class="borrow" href="#">借閱</a>
+					</div>
+					<div class="col_5">
+						<a href="client_book_detail.html"><img src="images/books11.jpg"></a>
+						<p><a class="titles">跑得過一切：天生就會跑主角史考特的跑步與飲食之心</a></p>
+						<p class="author">史考特．傑瑞克</p>
+						<a class="borrow" href="#"><span class="reserve">&#9684;</span>預約</a>
+					</div>
+					<div class="col_5">
+						<a href="#"><img src="images/books12.jpg"></a>
+						<p><a class="titles">打開雲門：解密雲門的技藝、美學與堅持</a></p>
+						<p class="author">果力文化/主編；鄒欣寧等/著</p>
+						<a class="borrow" href="#">借閱</a>
+					</div>
+					<div class="col_5">
+						<a href="#"><img src="images/books13.jpg"></a>
+						<p><a href="#" class="titles">十年苦鬥：亞洲大學‧安藤忠雄的美術館</a></p>
+						<p class="author">劉育東/著,楊麗玲/採訪整理</p>
+						<a class="borrow" href="#"><span class="reserve">&#9684;</span>預約</a>
+					</div>
+					<div class="col_5">
+						<a href="#"><img src="images/books14.jpg"></a>
+						<p><a href="#" class="titles">我們不要忘記今天</a></p>
+						<p class="author">申京淑</p>
+						<a class="borrow" href="#">借閱</a>
+					</div>
+					<div class="col_5">
+						<a href="#"><img src="images/books15.jpg"></a>
+						<p><a href="#" class="titles">飛上天空的輪胎：「半澤直樹」原創作者在台唯一作品！</a></p>
+						<p class="author">池井戶潤</p>
+						<a class="borrow" href="#">借閱</a>
+					</div>
+					<div class="pager">
+						<ul>
+				            <li><a href="#">&lt;</a></li>
+				            <li class="current"><a href="#">1</a></li>
+				            <li><a href="#">2</a></li>
+				            <li><a href="#">3</a></li>
+				            <li><a href="#">4</a></li>
+				            <li><a href="#">5</a></li>
+				            <li><a href="#">6</a></li>
+				            <li><a href="#">7</a></li>
+				            <li><a href="#">8</a></li>
+				            <li><a href="#">9</a></li>
+				            <li><a href="#">10</a></li>
+				            <li><a href="#">&gt;</a></li>
+				        </ul>
+						<div class="sltbox">
+							<select class="search_slt">
+								<option>10筆</option>
+								<option>20筆</option>
+								<option>50筆</option>
+								<option>80筆</option>
+								<option>100筆</option>
+							</select>
+						</div>
+			    	</div>
+				</div>
+			</div>
+			<div class="clearb"></div>
+		</div>
+	</div>
+	<div id="foot_area">
+		<div id="foot">
+			浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
+		</div>
+	</div>
+</body>
+</html>
