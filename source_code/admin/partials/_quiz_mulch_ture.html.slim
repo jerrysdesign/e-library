@@ -1,0 +1,88 @@
+.masthead.cf
+  .cont
+    .masthead_head
+      .masthead_title 題目
+    .masthead_content
+      == render "type" , :locals => {:f => "mulch"}
+.container.cf
+  .cont.cont_tab4
+    .pd2040
+      .control-group
+        label.control-label 題目
+        .controls
+          .row
+            textarea rows="1"
+              = zh_lorem_paragraphs 3
+          .i-b-block.row
+            == render "quiz_add_photo" , :locals => {:f => "ture"}
+
+      .control-label.title 設定正確答案
+      ol
+        li.control-group
+          label.control-label
+            label.radio
+              input type="radio" name="optionsRadios" id="optionsRadios1" value="a"  A
+          .controls
+            .row.i-b-block
+              input type="text" value="=zh_lorem_sentences 1"
+            .i-b-block.row
+              == render "quiz_add_photo" , :locals => {:f => "ture"}
+        li.control-group
+          label.control-label
+            label.radio
+              input type="radio" name="optionsRadios" id="optionsRadios2" value="b"  B
+          .controls
+            .row
+              input type="text" value="=zh_lorem_sentences 1"
+            .i-b-block.row
+              == render "quiz_add_photo" , :locals => {:f => "ture"}
+        
+        / li.control-group
+        /   label.control-label
+        /     label.radio
+        /       input type="radio" name="optionsRadios" id="optionsRadios3" value="c"  C
+        /   .controls
+        /     a.btn.remove href="javascript:;" 刪除選項
+        /     .row
+        /       input type="text" value="=zh_lorem_sentences 1"
+        /     .i-b-block.row
+        /       == render "quiz_add_photo" , :locals => {:f => "ture"}
+        / li.control-group
+        /   label.control-label
+        /     label.radio
+        /       input type="radio" name="optionsRadios" id="optionsRadios3" value="d"  D
+        /   .controls
+        /     a.btn.remove href="javascript:;" 刪除選項
+        /     .row
+        /       input type="text" value="=zh_lorem_sentences 1"
+        /     .i-b-block.row
+        /       == render "quiz_add_photo" , :locals => {:f => "ture"}
+        / li.control-group
+        /   label.control-label
+        /     label.radio
+        /       input type="radio" name="optionsRadios" id="optionsRadios3" value="e"  E
+        /   .controls
+        /     a.btn.remove href="javascript:;" 刪除選項
+        /     .row
+        /       input type="text" value="=zh_lorem_sentences 1"
+        /     .i-b-block.row
+        /       == render "quiz_add_photo" , :locals => {:f => "ture"}
+        / li.control-group
+        /   label.control-label
+        /     label.radio
+        /       input type="radio" name="optionsRadios" id="optionsRadios3" value="f"  F
+        /   .controls
+        /     a.btn.remove href="javascript:;" 刪除選項
+        /     .row
+        /       input type="text" value="=zh_lorem_sentences 1"
+        /     .i-b-block.row
+        /       == render "quiz_add_photo" , :locals => {:f => "ture"}
+      .control-group
+        label.control-label
+        .controls
+          a.bt.add href="javascript:;" 增加選項
+
+  .cont
+    .center-block.i-b-block
+      input type="button" value="儲存"
+      input type="button" value="取消" onclick="javascript:;"

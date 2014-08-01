@@ -1,7 +1,7 @@
 $(function(){
 
 	// search
- 	var _speed = 300;
+	var _speed = 300;
 	$(".search").focus(function(){
 		$(this).stop().animate({width:"200px"},_speed);
 		var navwidth = 700;
@@ -57,11 +57,34 @@ $(function(){
 	$(".fancybox").fancybox();
 	$("input.fancybox").fancybox();
 	$(".afb").fancybox({
-    wrapCSS : '_admin_fancybox',
-    padding : 0,
-    scrolling : 'no',
-    closeBtn: false
+		wrapCSS : '_admin_fancybox',
+		padding : 0,
+		scrolling : 'no',
+		closeBtn: false
 	});
 	
+	// 增加題目
+	$(document).ready(function(){
+		var count = 2;
+		$(".add").click(function() {
+			count++;
+			// var n = $("ol").find("li").length;
+			
+			$("ol").append("<li class='control-group''>"+
+												"<label class='control-label'>"+
+													"<label class='radio'>"+
+														"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'>"+ n+1 +"</label>"+"</label>"+"</label>"+
+													"<div class='controls'>"+
+													"<a class='btn remove' href='javascript:;'>"+"刪除選項"+"</a>"+
+														"<textarea rows='1'></textarea>"+
+														"<div class='i-b-block'>"+
+															"<a class='bt' href='javascript:;'>"+"插入圖片"+"</a>"+
+													"</div>"+
+												"</div>"+
+											"</li>");
+			
+
+		});
+	});
 
 });

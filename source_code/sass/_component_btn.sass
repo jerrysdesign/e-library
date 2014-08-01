@@ -21,8 +21,8 @@
   
 //Horizontal form
 .control-group
-  margin-bottom: 5px
-  margin-top: 5px
+  margin-bottom: 10px
+  margin-top: 10px
   +pie-clearfix
   
 .control-label
@@ -35,6 +35,24 @@
   padding-left: 10px
   margin-left: 17%
   border-left: 1px solid $labelLine
-  
-
-  
+.cont_tab4
+  .control-group
+    padding: 10px
+    &:hover
+      background-color: #f7f7f7
+.controls
+  position: relative
+  .remove
+    display: none
+  &:hover
+    .remove
+      @extend %ir
+      position: absolute
+      top: -16px
+      right: -16px
+      +size(32px)
+      background-image: url('../admin/images/icon-remove.png')
+      background-position: center
+      display: block
+      +border-radius(100%)
+      background-color: #fff
