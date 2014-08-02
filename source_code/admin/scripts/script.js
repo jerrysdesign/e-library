@@ -73,7 +73,7 @@ $(function(){
 			$("ol").append("<li class='control-group''>"+
 												"<label class='control-label'>"+
 													"<label class='radio'>"+
-														"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'>"+ n+1 +"</label>"+"</label>"+"</label>"+
+														"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'>"+ count +"</label>"+"</label>"+"</label>"+
 													"<div class='controls'>"+
 													"<a class='btn remove' href='javascript:;'>"+"刪除選項"+"</a>"+
 														"<textarea rows='1'></textarea>"+
