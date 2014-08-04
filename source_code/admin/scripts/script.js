@@ -46,7 +46,7 @@ $(function(){
 	$('#news').append('<div id="newsbox"></div>');
 	$('#news').find('a').addClass('fancybox').attr({"href":"#newsbox","title":"最新消息"});
 	$('#news a').each(function(){	
-		var _this = $(this).text();
+		var _this = $(this).text();a
 		$(this).click(function(){
 			$('#newsbox').empty();
 			$('#newsbox').append(_this);
@@ -64,13 +64,16 @@ $(function(){
 	});
 	
 	// 增加題目
-	$(document).ready(function(){
-		var count = 2;
+	$(function(){
 		$(".add").click(function() {
-			count++;
-			// var n = $("ol").find("li").length;
 			
-			$("ol").append("<li class='control-group''>"+
+			var count = $("ol li").size();
+			count++;
+			if (count>7) {
+				$(".add").attr("disabled", true);
+			} else{
+				$(".add").attr("disabled", false);
+				$("ol").append("<li class= \'control-group" +" "+ "item" + count +"\'>" +
 												"<label class='control-label'>"+
 													"<label class='radio'>"+
 														"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'>"+ count +"</label>"+"</label>"+"</label>"+
@@ -82,9 +85,15 @@ $(function(){
 													"</div>"+
 												"</div>"+
 											"</li>");
-			
-
+				Remove();
+			};
 		});
-	});
 
+		function Remove() {
+			$(".remove").click(function() {
+				$(this).parents("li[class*='item']").remove();
+			});
+		}
+	});
+	
 });
