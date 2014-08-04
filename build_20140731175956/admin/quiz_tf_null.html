@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+<title>管理題目</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+<link rel="stylesheet" type="text/css" href="css/master.css" />
+<link rel="stylesheet" type="text/css" href="css/admin.css" />
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+<script src="scripts/jquery-1.9.0.min.js"></script>
+<script src="scripts/jquery.fancybox.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/admin_menu.js"></script>
+</head>
+<body>
+	<div id="head_area">
+  <div id="head">
+    <h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
+    <div id="head_nav">
+      <ul>
+        <li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
+        <li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
+        <li><a href="about.html">關於我們</a>&nbsp;|</li>
+        <li><a href="help.html">服務說明</a>&nbsp;|</li>
+        <li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
+        <li><a href="#" class="lang">E</a></li>
+        <li><a href="#" class="lang">繁</a></li>
+        <li><a href="#" class="lang">簡</a></li>
+        <li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+	<div class="menu_wrap">
+  <div id="menu_area">
+    <div id="menu_bar">
+      <ul id="menu">
+        <li><a href="#">圖書管理</a>
+          <ul class="sub_menu">
+            <li><a href="admin_ebook_main.html">版權書管理</a></li>
+            <li><a href="ebook_free_main.html">自有版權書管理</a></li>
+          </ul>
+        </li>
+        <li><a href="#">閱讀歷程</a></li>
+        <li><a href="#">數位電子內容管理平台</a>
+          <ul class="sub_menu">
+            <li><a href="ebook_main.html">電子書維護</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+	<div id="cont_area">
+		<div class="masthead cf">
+  <div class="cont">
+    <div class="masthead_head">
+      <div class="masthead_title">
+        題目
+      </div>
+    </div>
+    <div class="masthead_content">
+      <div class="control-group">
+        <label class="control-label">類型</label>
+        <div class="controls">
+          <select style="width:200px"><option></option><option selected="">是非題 </option><option>選擇題</option><option></option><option>是非題 </option><option>選擇題</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container cf">
+  <div class="cont cont_tab4">
+    <div class="pd2040">
+      <div class="control-group">
+        <label class="control-label">題目</label>
+        <div class="controls">
+          <textarea rows="2"></textarea>
+          <div class="clearfix"></div>
+          <div class="i-b-block">
+            <a class="bt" href="javascript:;">插入圖片</a>
+          </div>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">設定正確答案</label>
+        <div class="controls">
+          <label class="radio"><input id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> T</input></label><label class="radio"><input id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> F</input></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container cf">
+  <div class="cont">
+    <div class="center-block i-b-block">
+      <input type="button" value="儲存"><input onclick="javascript:;" type="button" value="取消">
+    </div>
+  </div>
+</div>
+	</div>
+	<div id="foot_area">
+  <div id="foot">
+    浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
+  </div>
+</div>
+</body>
+</html>

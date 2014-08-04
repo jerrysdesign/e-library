@@ -1,0 +1,109 @@
+/* 00 global */
+body,h1,h2,h3,h4,ul,ol,li,dl,dt,dd,div,p,em,form,select,option,input,button,img,label{margin:0;padding:0}
+body{font:12px/1.6em Helvetica, Verdana, Arial;letter-spacing:.1em}
+ul,ol,li{list-style:none}
+a{text-decoration:none;color:#333}
+a:hover{text-decoration:underline}
+img{background:#fff url('../img/loading.gif') no-repeat 50% 50%}
+img,select,input,button{border:0;outline:none}
+
+	/* share_style */
+	#head,#menu_bar,
+	#cont,#foot{width:1000px;margin:0 auto}
+	#menu,#foot{width:800px}
+	#logo a,#head_nav li,
+	#menu_area,#menu,#menu li{float:left}
+
+	h2,#menu_area{height:40px;line-height:43px;font-size:16px}
+	h2,.lang,#menu a,.backtop,#menu_area{background:url('../img/h2bg3.gif') repeat-x 0 0;color:#fff}
+	h2,.lang,#menu a,.backtop{height:38px;border:1px solid #3c74c5}
+	h2,h3,#menu{font-family:Helvetica,Verdana,Arial,"微軟正黑體","Microsoft Jhenghei";line-height:40px}
+
+	.clearb{clear:both}
+	.fixed{position:fixed;top:0}
+	.backtop{width:60px;line-height:40px;text-align:center;position:fixed;bottom:110px;right:0;cursor:pointer}
+
+	/* icon */
+	.icon01,.icon02,.icon03,.icon04,.icon05,.icon06,
+	.icon07,.icon08,.icon09,.icon10,.icon11,.icon12,
+	.icon13{width:40px;height:38px;line-height:43px;float:left;background:url('../img/icon.png') no-repeat 50% 10px}
+	.icon02{background-position: 50% -46px}
+	.icon03{background-position: 50% -103px}
+	.icon04{background-position: 50% -160px}
+	.icon05{background-position: 50% -215px}
+	.icon06{background-position: 50% -270px}
+	.icon07{background-position: 50% -327px}
+	.icon08{background-position: 50% -382px}
+	.icon09{background-position: 50% -438px}
+	.icon10{background-position: 50% -496px}
+	.icon11{background-position: 50% -552px}
+	.icon12{background-position: 50% -606px}
+	.icon13{background-position: 50% -661px}
+
+	/* login */
+	#loginForm1{width:600px;height:380px}
+	#loginForm1 ul{height:180px;padding:20px 40px;margin-top:10px;color:#e76060}
+	#loginForm1 li{margin-bottom:10px}
+	#loginForm1 img{height:32px;vertical-align:top;margin-left:10px}
+	#loginForm1 input{height:30px;line-height:30px;margin-left:7px;border:1px solid #ddd;text-indent:10px}
+	#loginForm1 .btn01,#loginForm1 .btn02{width:100px;height:40px;text-indent:0;line-height:20px;border:0;float:right;margin:0 0 0 10px;cursor:pointer}
+	#loginForm1 .note{line-height:30px;background-color:#fcdddd;text-align:center}
+	#loginForm1 .fixbtn{position:fixed;bottom:0;right:0}
+
+	/* newsbox */
+	#newsbox{width:400px;display:none}
+
+/* 01 head */
+#head_area{height:80px}
+	#logo{text-indent:-9999px}
+	#logo a{width:260px;height:60px;margin:10px;background:url('../../img/logo.gif') no-repeat 0 0;background-size:260px 60px}
+	
+	/* nav */
+	#head_nav{width:700px;float:right}
+	#head_nav ul{float:right}
+	#head_nav li{padding:0 0 0 5px;line-height:25px}
+		a.lang{width:25px;height:25px}
+		a.lang img{vertical-align:text-bottom;background:none;padding-top:5px}
+		a.lang:hover,.pager a:hover{background-position:0 -40px}
+		a.lang,#menu a{display:block}
+		a.lang,#menu{text-align:center}
+
+/* 02menu */
+#menu_area{width:100%}
+	#menu{width:100%;border-left:1px solid #60a4ea;border-right:1px solid #3c74c5}
+	#menu li{width:20%}
+	#menu a{border-right:1px solid #60a4ea;font-size:16px}
+	#menu a:hover{background-position: 0 bottom}
+	#menu ul li{width:100%;border-bottom:1px solid #e4f5f5}
+	#menu ul a{display:block;background:#fff;border:0}
+	#menu ul.sub_menu{width:201px;position:absolute;margin-left:-1px;display:none}
+
+/* 03 cont */
+#cont_area{background:url('../img/bg01.jpg') 0 0 fixed;clear:both}
+	#cont{word-break:break-all;padding:20px 0}
+	
+	/* search */
+	#searchbox{width:200px}
+		.sltbox,.search_slt,.search,.search_btn{height:30px;line-height:30px}
+		.sltbox{width:64px;margin:5px 0 5px 1px;background:#fff url('../img/arrow_b2.gif') no-repeat 50% 50%;overflow:hidden}
+		.search_slt{width:100px;background:transparent}
+		.search{width:100px;outline:none;margin:5px 0 5px 5px;text-indent:5px;color:#999}
+		.search_btn{width:30px;background:#fff url('../img/search.gif') no-repeat 50% 50%;margin:5px 0}
+	
+	/* pager */
+	.pager li.current a{background:url('../img/h2bg3.gif') repeat-x 0 0}
+	.pager a:hover{background-position:0 -160px}
+	.pager li,.pager .sltbox{float:left}
+	.pager a{color:#6060e7}
+	.pager a{background-color:#d8e4f5}
+	.pager a:hover{background-color:#b1c9ea}
+	
+		/* pager */
+		.pager{float:right;width:546px;margin-left:10px}
+		.pager li{margin:10px 10px 0 0}
+		.pager a{width:30px;height:30px;line-height:30px;display:block;text-align:center}
+		.pager li.current a{color:#fff}
+		.pager .sltbox{margin-top:10px;background-position:80% 50%}
+
+/* 04 foot */
+#foot{padding:30px 0 30px 200px;background:url('../img/edu_logo.jpg') no-repeat 0 60%;text-align:right}

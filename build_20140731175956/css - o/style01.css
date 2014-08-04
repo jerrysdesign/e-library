@@ -1,0 +1,268 @@
+/* 00 global */
+body,h1,h2,h3,h4,ul,ol,li,dl,dt,dd,div,p,em,form,select,option,input,button,img{margin:0;padding:0}
+body{font:12px/1.6em Helvetica, Verdana, Arial;letter-spacing:.1em}
+ul,ol,li{list-style:none}
+a{text-decoration:none;color:#333}
+a:hover{color:#709bb4;text-decoration:underline}
+img{background:#fff url('../img/loading.gif') no-repeat 50% 50%}
+img,select,input,button{border:0;outline:none}
+em{font-style:normal}
+
+#head,#menu_bar,#cont,#foot{width:1000px;margin:0 auto}
+#menu,#books,#hot,#reco,#download,#browsers,#help_library,#help_cloud,#foot{width:800px}
+#menu_area,#cont h2,.icon01,.icon02,.icon03,.icon04,.icon05,.icon06,.icon07,.icon08,.icon09,.icon10,.icon11,.icon12,.icon13,.icon14,#news a,#loginForm1 h2{height:40px;line-height:43px}
+.lang,#menu a,#cont h2,.backtop,.pager li.current a,#book_case th,#book_case .date01,#book_case .date02,#loginForm1 h2,.quizs_rl_tb th{background:url('../img/h2bg.gif') repeat-x 0 0}
+.sltbox,#news a,.titles,.author,
+.date,#book_detail h3,#book_detail dt,#book_detail dd,#book_case .date01,#book_case .date02{overflow:hidden}
+.clearb{clear:both}
+.fixed{position:fixed;top:0}
+.backtop{width:60px;line-height:40px;text-align:center;color:#fff;position:fixed;bottom:110px;right:0;cursor:pointer}
+
+/* 01 head */
+#head_area{height:80px}
+	#logo{text-indent:-9999px}
+	#logo a{width:260px;height:60px;margin:10px;background:url('../img/logo.gif') no-repeat 0 0}
+	
+	/* nav */
+	#head_nav{width:700px;float:right}
+	#head_nav ul{float:right}
+	#head_nav li{padding:0 0 0 5px;line-height:25px}
+		a.lang{width:25px;height:25px}
+		a.lang:hover,.pager a:hover{background-position:0 -160px}
+		a.lang img{vertical-align:text-bottom;background:none}
+
+/* 02menu */
+#menu_area{width:100%;background-color:#a3cae1}
+	#menu li{width:25%}
+	#menu a{border-right:1px solid #ddd;font-size:16px}
+	#menu a:hover{background-position: 0 -160px}
+
+	/* search */
+	#searchbox{width:200px}
+		.sltbox,.search_slt,.search,.search_btn{height:30px;line-height:30px}
+		.sltbox{width:64px;margin:5px 0 5px 1px;background:#fff url('../img/arrow_b2.gif') no-repeat 50% 50%}
+		.search_slt{width:100px;background:transparent}
+		.search{width:100px;outline:none;margin:5px 0 5px 5px;text-indent:5px;color:#999}
+		.search_btn{width:30px;background:#fff url('../img/search.gif') no-repeat 50% 50%;margin:5px 0}
+
+/* 03 cont */
+#cont_area{background:url('../img/bg01.jpg') 0 0 fixed;clear:both}/*#cde3ff*/
+
+	#menu,h2,h3,.quiz_h_c1,.q_dh_title{font-family:Helvetica,Verdana,Arial,"微軟正黑體","Microsoft Jhenghei"}
+	#cont{word-break:break-all;padding:20px 0}
+	h2{font-size:16px;background-position:0 -160px}
+		
+		/* icon */
+		.icon01,.icon02,.icon03,.icon04,.icon05,.icon06,.icon07,.icon08,.icon09,.icon10,.icon11,.icon12,.icon13,.icon14{background:url('../img/icon.png') no-repeat 50% 10px;width:40px}
+		.icon02{background-position: 50% -46px}
+		.icon03{background-position: 50% -103px}
+		.icon04{background-position: 50% -160px}
+		.icon05{background-position: 50% -215px}
+		.icon06{background-position: 50% -270px}
+		.icon07{background-position: 50% -327px}
+		.icon08{background-position: 50% -382px}
+		.icon09{background-position: 50% -438px}
+		.icon10{background-position: 50% -496px}
+		.icon11{background-position: 50% -552px}
+		.icon12{background-position: 50% -606px}
+		.icon13{background-position: 50% -661px}
+		.icon14{background-position: 50% -722px}
+	
+	/* side */
+	#side {width:200px}
+		#side li{margin-bottom:1px}
+
+		/* type */
+		#type li{text-indent:40px}
+		#type a{background:url('../img/arrow.gif') no-repeat 20px 0px}
+		#type a:hover{background-position:20px -41px}
+		
+		/* banner */
+		#banner{margin-bottom:7px}
+
+		/* news */
+		#news h2{background-position: 0 -40px}
+		#news li{width:100%;padding:3px 0}
+		#news a{margin:0 10px 0 40px;line-height:1.6em}
+
+		/* no_icon */
+		.no01,.no02,.no03,.no04,.no05,.no06,.no07,.no08,.no09,.no10{background:url('../img/news_no.gif') no-repeat 0 -10px}
+		.no02{background-position:0 -70px}
+		.no03{background-position:0 -130px}
+		.no04{background-position:0 -190px}
+		.no05{background-position:0 -250px}
+		.no06{background-position:0 -310px}
+		.no07{background-position:0 -370px}
+		.no08{background-position:0 -430px}
+		.no09{background-position:0 -490px}
+		.no10{background-position:0 -550px}
+
+	/* books */
+	#books h2{margin-left:10px}
+
+		/* share_style */
+		#logo a,#head_nav li,#menu_area,#menu,#menu li,#searchbox,.sltbox,.search,.search_btn,#side,
+		.icon01,.icon02,.icon03,.icon04,.icon05,.icon06,.icon07,.icon08,.icon09,.icon10,.icon11,.icon12,.icon13,.icon14,
+		#news li,#news a,#books,#hot,#reco,#download,#browsers,.col_1,.col_2,.col_5,#help_cloud,
+		.pager li,.pager .sltbox,.tabs,.d_tabs li,.d_cont,
+		#book_detail dl,#book_detail .col_1 img,#book_detail .col_1 h3,#book_detail dt,#book_detail dd,#book_detail .bd_bt{float:left}
+		a.lang,#menu a,#type a,.borrow,.btn01,.btn02,.btn03,.btn04{display:block}
+		#menu_area,h2,#cont h3,#type li{line-height:40px}
+		a.lang,#menu,.col_2,.col_5,.borrow,.btn01,.btn02,.btn03,.btn04,.quiz_h_description a{text-align:center}
+
+		#type,#hot,#reco{margin-bottom:10px}
+		.col_1,.col_2,.col_5{margin:10px 0 0 10px}
+		#browsers img{margin:30px 0}
+		#browsers h2,#help_cloud h2{margin-top:10px}
+		#use li,#about li,#help_library li,#help_cloud li{margin:0 0 10px 20px;list-style-type:decimal}
+
+		h2,a.lang,#menu a{color:#fff}
+		#hot .titles,#hot a.borrow,h3,#client_book .titles,#client_book a.borrow,.btn01,a.btn01,.pager a,
+		.q_cont em,.quiz_h_description em,#quizs ol > li{color:#e76060}
+		#reco .titles,#reco a.borrow,.btn02,a.btn02,#help_cloud h3,.quiz_h_description a{color:#0a989e}
+		.btn03:hover,.btn04:hover{color:#333}
+
+		.borrow,.btn01,.btn02,.btn03,.btn04{background:url('../img/arrow_b.png') no-repeat 50% 0}
+		#hot h2,#download h2,#use h2,#about h2,#help_library h2,#client_book h2,#book_case h2,#loginForm1 h2{background-position: 0 -80px}
+		#reco h2,#browsers h2,#help_cloud h2,#book_case th,.quizs_rl_tb th,#quizs_rl .quizs_rl_sh h2{background-position: 0 -120px}
+		.btn01,.btn02,.btn03,.btn04{padding:10px 0}
+
+		.search,#side li,.col_1,.col_2,.col_5{background-color:#fff}
+		#hot .borrow,#client_book .borrow,.btn01,.pager a{background-color:#fcdddd}
+		#hot .borrow:hover,#client_book .borrow:hover,.pager a:hover,a.btn01:hover,input.btn01:hover{background-color:#f9bbbb}
+		#reco .borrow,.btn02,#book_case tr:hover,.quiz_h_description a{background-color:#e4f5f5}
+		#reco .borrow:hover,a.btn02:hover,input.btn02:hover,.quiz_h_description a:hover{background-color:#94d5d8}
+		.btn03:hover{background-color:#ccc}
+		.btn03,.btn04:hover{background-color:#ddd}
+		.btn04{background-color:#eee}
+		.reserve{font-size:18px;line-height:14px;padding-right:3px}
+
+		/* col */
+		.col_1,.col_2,.col_5{border-bottom:1px solid #fff}
+		.col_1{width:710px;padding:20px 40px}
+		.col_1 p{margin-bottom:20px}
+		.col_2{width:390px}
+		.col_5{width:150px}
+		.col_5 p{padding:0 10px}
+		.titles,.author{height:36px;display:block;margin-top:4px}
+		.borrow{height:43px;line-height:45px;margin-top:9px}
+
+		/* pager */
+		.pager{float:right;width:546px;margin-left:10px}
+		.pager li{margin:10px 10px 0 0}
+		.pager a{width:30px;height:30px;line-height:30px;display:block;text-align:center}
+		.pager li.current a{background-position:0 -80px;color:#fff}
+		.pager .sltbox{margin-top:10px;background-position:80% 50%}
+
+		/* tabs */
+		.tabs{width:100%;margin-top:80px}
+		.d_cont{width:690px;padding:40px 10px;border-top:1px solid #f9bbbb;border-bottom:1px solid #f9bbbb}
+		.d_tabs li{width:100px;height:40px;line-height:40px;margin-right:1px;text-align:center;background-color:#fcdddd}
+		.d_tabs a{display:block;color:#e76060}
+		.d_tabs li:hover{background-color:#f9bbbb}
+		.d_cont li#d_tab2 ol li{margin-left:24px;list-style:decimal}
+		.active a{color:#fff;background:#e76060 url('../img/arrow_b.png') no-repeat 50% 0}
+		
+		/* book_detail */
+		#book_detail .col_1{padding:40px}
+		#book_detail dt,#book_detail dd{margin-bottom:1px;height:20px}
+		#book_detail h2{background-position:0 -80px}
+		#book_detail h3{font-size:20px;line-height:1.3em;width:550px;height:55px;margin-left:10px}
+		#book_detail dl{width:400px;margin-left:10px}
+		#book_detail dt{width:89px;padding-right:10px;border-right:1px solid #fcdddd;text-align:right;color:#e76060}
+		#book_detail dd{width:280px;padding:0 10px}
+		#book_detail .btn01,#book_detail .btn02,
+		#book_detail .btn03,#book_detail .btn04{width:150px;margin-bottom:10px;padding:0;height:40px;line-height:45px}
+		/*#book_detail .bd_bt{margin-top:65px}*/
+
+		/* book_case */
+		#book_case .d_cont{padding:0;width:800px;border:0}
+		#book_case .d_tabs{margin-left:10px}
+		#book_case .tabs{margin-top:10px}
+		#book_case .col_1{width:730px;padding:20px 30px 30px 30px;margin-top:10px}
+		#book_case .col_1 em{padding-right:10px;margin-right:10px;border-right:1px solid #fcdddd;color:#e76060;font-style:normal}
+		#book_case .titles{color:#e76060}
+		#book_case .btn01{margin-top:9px}
+		#book_case .date01{height:20px;line-height:20px;margin-top:9px;color:#fff;background-position:0 -80px}
+		#book_case .date02{height:40px;line-height:20px;margin-top:9px;color:#fff;background-position:0 -40px;text-align:left}
+		#book_case #d_tab3{width:790px;margin-left:10px}
+		#book_case #d_tab3 img{height:40px;vertical-align:middle}
+		#book_case table{text-align:center;margin-top:10px}
+		#book_case tr{height:40px;background-color:#fff}
+		#book_case th{color:#fff}
+
+		/* login */
+		#loginForm1{width:600px;height:380px}
+		#loginForm1 ul{height:180px;padding:20px 40px;margin-top:10px;color:#e76060}
+		#loginForm1 li{margin-bottom:10px}
+		#loginForm1 img{height:32px;vertical-align:top;margin-left:10px}
+		#loginForm1 input{height:30px;line-height:30px;margin-left:7px;border:1px solid #ddd;text-indent:10px}
+		#loginForm1 .btn01,#loginForm1 .btn02{width:100px;height:40px;text-indent:0;line-height:20px;border:0;float:right;margin:0 0 0 10px;cursor:pointer}
+		#loginForm1 .note{line-height:30px;background-color:#fcdddd;text-align:center}
+		#loginForm1 .fixbtn{position:fixed;bottom:0;right:0}
+
+		/* newsbox */
+		#newsbox{width:400px;display:none}
+
+		/* quiz */
+		#menu_area.quiz_h{height:auto;line-height:normal;background:url('../img/h2bg_quiz.jpg') 0 0}
+		.quiz_h_c1,.quiz_h_c2{float:left}
+		.quiz_h_c1 span,.quiz_h_description em,.q_cont em,.quizs_rl_tb caption em,.q_dh_title,.q_dh_cont em{font-size:16px}
+		.quiz_h_c1{width:14.8%;border-right:1px solid #fff;color:#fff;background:url('../img/quiz.png') no-repeat 18px 50%}
+		.quiz_h_c1 span{display:block;margin:30px 0;text-align:center}
+		.quiz_h_c2{width:83%;padding:0.6% 0 0 2%}
+		.quiz_h_title span{margin-left:20px;font-size:12px}
+		.quiz_h_description{color:#ddd}
+		.quiz_h_description em,.q_cont em,.q_dh_cont em{margin:0 5px;padding:2px 14px;border-radius:3px;background-color:#fff;box-shadow:inset 0 1px 1px #aaa}
+		.quiz_h_description a{float:right;position:relative;top:-8px;padding:8px 40px}
+
+		#quizs{background-color:#fff;padding:40px}
+		#quizs ol > li,#quizs ul > li,.q_topic{float:left}
+		#quizs ol > li,#quizs ul > li{width:97%}
+		#quizs ol > li{padding:0 0 40px 40px;list-style:decimal;list-style-position:inside}
+		#quizs ol h3{line-height:1.6em;display:inline}
+		#quizs ul{margin-top:15px}
+		#quizs ul > li{margin:0 0 20px 18px;color:#666}
+		#quizs ul li span{float:left;width:30px;margin-right:10px;border:1px solid #ccc;border-radius:50%;cursor:pointer;text-align:center;line-height:30px}
+		#quizs .q_pic img{margin-right:5px}
+		#quizs .q_topic{width:94%}
+		#quizs ul .choose span{background-color:#ccc}
+		#quizs ul p{padding:6px 0}
+
+		#quizs.quizs_ans .ans{color:#e76060}
+		#quizs.quizs_ans .ans span{color:#fff;border-color:#e76060;background-color:#e76060}
+		#quizs.quizs_ans ol > li{background:url('../img/q_ans01.png') no-repeat 0 0}
+		#quizs.quizs_ans .wrong{background-image:url('../img/q_ans02.png')}
+
+		/* box_quizs */
+		.box_quizs{width:600px}
+		.box_quizs h2{background:url('../img/h2bg_quiz.jpg') 0 0}
+		.box_quizs .q_cont{margin:40px}
+		.box_quizs .q_btn input{float:left;width:50%;cursor:pointer}
+
+		/* quiz_results_list */
+		.q_sh_col1,.q_sh_col2,.q_sh_col3{float:left}
+		.quizs_rl_tb tr,.q_sh,.q_dh{background-color:#fff}
+
+		.quizs_rl_tb {text-align:center;margin-top:10px}
+		.quizs_rl_tb caption{text-align:left;margin:15px 0 5px 0}
+		.quizs_rl_tb caption em{color:#e76060;margin:0 5px}
+		.quizs_rl_tb tr{height:40px}
+		.quizs_rl_tb th{color:#fff}
+
+		.q_sh,.q_dh{padding:20px 40px}
+		.q_sh_col1{width:17%;line-height:38px;text-align:right}
+		.q_sh_col2{width:42%;padding-left:10px}
+		.q_sh_col2 input{width:94%;height:34px;border:1px solid #ddd;padding-left:10px}
+		.q_sh_col3 input{width:100px;cursor:pointer}
+
+		/* quiz_results_detail */
+		.quizs_rl_dh{margin-bottom:20px}
+		.q_dh_title{margin-bottom:10px}
+		.q_dh_title span,.q_dh_c2{margin-left:20px}
+		.q_dh_title span{font-size:12px}
+		.q_dh_cont em{color:#e76060}
+		.q_dh_c3{float:right}
+
+/* 04 foot */
+#foot{padding:30px 0 30px 200px;background:url('../img/edu_logo.jpg') no-repeat 0 60%;text-align:right}
