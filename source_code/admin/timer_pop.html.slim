@@ -14,16 +14,16 @@ html lang="zh-tw"
       ._afb_main
         .cont_tab3
           .pd2020
-            .i-b-block
+            .i-b-block.row
               label.radio
-                input#optionsRadios1 checked="" name="optionsRadios" type="radio" value="option1" 
+                input#optionsRadios1 checked="" name="optionsRadios" type="radio" value="option1" style="width: 50px"
                   | 計時
-              select
+              select style="width: 250px"
                 - (1..5).each do |n|
                   option #{n}
-            .i-b-block
+            .i-b-block.row
               label.radio
-                input#optionsRadios2 name="optionsRadios" type="radio" value="option2" 
+                input#optionsRadios2 name="optionsRadios" type="radio" value="option2" style="width: 50px"
                   | 不計時
       ._afb_footbar_out
         ._afb_footbar
