@@ -1,0 +1,31 @@
+#cont_area
+  .masthead.cf
+    .cont
+      .masthead_head
+        .masthead_title 題目
+      .masthead_content
+        == render "partials/type" , :locals => {:f => "torf"}
+  .container.cf
+    .cont.cont_tab4
+      .pd2040
+        .control-group
+          label.control-label 題目
+          .controls
+            textarea rows="1"
+              = lorem_paragraphs 2
+            .clearfix
+            .i-b-block
+              == render "partials/quiz_add_photo" , :locals => {:f => "ture"}
+        .control-group
+          label.control-label
+            | 設定正確答案
+          .controls
+            label.radio
+              input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  T
+            label.radio
+              input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"  F
+  .container.cf
+    .cont
+      .center-block.i-b-block
+        input type="button" value="儲存"
+        input type="button" value="取消" onclick="history.back()"
