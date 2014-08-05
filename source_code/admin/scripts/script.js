@@ -1,55 +1,58 @@
-// 預覽插入圖片
+// 插入圖片
 function insert_img()
 {
-	$('body').on('click','.insert_img',function()
-	{
-		var _this = $(this).prev();
-		_this.click();
-
-		if(_this.parent().find('img').size() == 0)
-		{
-			_this.parent().prepend('<img class="pic"/>')
-			var path,
-				clip = _this.prev(':eq(1)'),
-				FileReader = window.FileReader;
-
-			$(".file").change(function()
-			{
-				// 篩選圖檔格式
-				var ext = $(this).val().split('.').pop().toLowerCase();
-				if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
-				{
-					alert('只允許上傳PNG或JPG影像檔');
-					$(this).empty();
-					return false;
-				}
-				var $this = $(this);
-				if(FileReader)
-				{
-					var reader = new FileReader(),
-						file = this.files[0];
-					reader.onload = function(e) {
-						var _v = e.target.result;
-						clip.attr("src", e.target.result);
-						$this.prev('.pic').attr("src", e.target.result);
-					};
-					reader.readAsDataURL(file);
-				}
-				else
-				{
-					path = $(this).val();
-					if (/"\w\W"/.test(path))
-					{
-						path = path.slice(1, -1);
-					}
-					clip.attr("src", path);
-					$this.prev('.pic').attr("src", path);
-				}
-				$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
-			});
-		}
-	});
+  $('body').on('click','.insert_img',function()
+  {
+    var _this = $(this).prev();
+        _this.click();
+    if(_this.parent().find('img').size() == 0)
+    {
+      _this.parent().prepend('<img class="pic"/>')
+    }
+  });
 };
+
+// 預覽插入圖片
+function change_img(){
+$('body').on('change','.file',function()
+  {
+    var path,
+        clip = $(this).prev(':eq(1)'),
+        FileReader = window.FileReader;
+
+    // 篩選圖檔格式
+    var ext = $(this).val().split('.').pop().toLowerCase();
+    if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
+    {
+      alert('只允許上傳PNG或JPG影像檔');
+      $(this).empty();
+      return false;
+    }
+    var $this = $(this);
+    if(FileReader)
+    {
+      var reader = new FileReader(),
+        file = this.files[0];
+      reader.onload = function(e) {
+        var _v = e.target.result;
+        clip.attr("src", e.target.result);
+        $this.prev('.pic').attr("src", e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+    else
+    {
+      path = $(this).val();
+      if (/"\w\W"/.test(path))
+      {
+        path = path.slice(1, -1);
+      }
+      clip.attr("src", path);
+      $this.prev('.pic').attr("src", path);
+    }
+    $this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
+  });
+}
 
 // 刪除圖片
 function remove_img()
@@ -201,6 +204,7 @@ $(function(){
 	});
 	
 	insert_img();
+  	change_img();
 	remove_img();
 	additem();
 	renumber();
