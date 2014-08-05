@@ -45,8 +45,7 @@ function insert_img()
 					clip.attr("src", path);
 					$this.prev('.pic').attr("src", path);
 				}
-				$this.prev().addClass('view');
-				$this.next().text('更換圖片').next().addClass('cur');
+				$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
 			});
 		}
 	});

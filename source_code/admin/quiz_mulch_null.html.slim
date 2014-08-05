@@ -16,12 +16,12 @@
             .i-b-block
               == render "partials/quiz_add_photo" , :locals => {:f => "else"}
         .control-label.title 設定正確答案
-        ol
+        ol.quiz_add_subject
           li
             .control-group
               label.control-label
                 label.radio
-                  input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  A
+                  input type="radio" name="optionsRadios" value="option1"
               .controls
                 textarea rows="1"
                 .i-b-block
@@ -30,7 +30,7 @@
             .control-group
               label.control-label
                 label.radio
-                  input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  B
+                  input type="radio" name="optionsRadios" value="option1"
               .controls
                 textarea rows="1"
                 .i-b-block
