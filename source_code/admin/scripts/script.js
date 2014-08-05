@@ -59,7 +59,7 @@ function remove_img()
 {
 	$('body').on('click','.remove_img',function()
 	{
-		$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').remove();
+		$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').remove().end().find('input').val('');
 	});
 }
 
