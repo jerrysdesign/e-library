@@ -1,0 +1,77 @@
+#cont_area
+  #cont
+    |  <div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
+    form.cf enctype="multipart/form-data" method="post" 
+      .cont_tab2
+        h2
+          .icon04
+          | 題目設定
+        .pd2040
+          .control-group
+            label.control-label 是非題答題型態
+            .controls
+              select
+                option
+                option value="0"  O or X
+                option value="1"  √ or X
+                option value="2"  T or F
+      .cont_tab2
+        h2
+          .icon04
+          | 題目管理
+        .pd2040
+          .control-group
+            label.control-label 題型
+            .controls
+              select
+                option
+                option value="0"  是非
+                option value="1"  選擇
+          .control-group
+            label.control-label 題目
+            .controls
+              .btn-group.i-b-block
+                input type="text" 
+                input type="button" value="搜尋"
+      
+      .cont_tab3.clearb
+        .i-b-block
+          .caption
+            | 題庫內共有
+            em 500
+            | 道題目，其中
+            em 450
+            | 道已作答過。
+          .fr.i-b-block
+            .btn-group
+              a class="bt" href="quiz_creat.html" 新增
+              a class="bt" href="quiz_import.html" 匯入
+              a class="bt fancybox fancybox.iframe afb" href="quiz_export_pop.html" 匯出
+        table.table cellpadding="0" cellspacing="1" width="100%" 
+          tr
+            th width="5%"  序號
+            th width="10%"  題型
+            th width="43%"  測驗卷名稱
+            th width="16%"  建立日期
+            th width="16%"  最新作答日期
+            th width="10%"  功能
+          - (1..10).each do |n|
+            tr
+              td
+                | 1
+              td
+                #{n}
+              td.text-l
+                =zh_lorem_words 25
+              td
+                =lorem_date("%Y-%m-%d %H:%M", 2014..2014)
+              td
+                =lorem_date("%Y-%m-%d %H:%M", 2014..2014)
+              td
+                a href="#"  檢視
+                br
+                a href="#"  刪除
+        // paginatio
+        == render "partials/components/paginatio"
+    .clearb
+

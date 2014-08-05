@@ -1,0 +1,46 @@
+#cont_area
+  .masthead.cf
+    .cont
+      .masthead_head
+        .masthead_title 題目
+      .masthead_content
+        == render "partials/type" , :locals => {:f => "mulch"}
+  .container.cf
+    .cont.cont_tab4
+      .pd2040
+        .control-group
+          label.control-label 題目
+          .controls
+            .row
+              textarea rows="1"
+            .i-b-block
+              == render "partials/quiz_add_photo" , :locals => {:f => "else"}
+        .control-label.title 設定正確答案
+        ol
+          li
+            .control-group
+              label.control-label
+                label.radio
+                  input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  A
+              .controls
+                textarea rows="1"
+                .i-b-block
+                  == render "partials/quiz_add_photo" , :locals => {:f => "else"}
+          li
+            .control-group
+              label.control-label
+                label.radio
+                  input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  B
+              .controls
+                textarea rows="1"
+                .i-b-block
+                  == render "partials/quiz_add_photo" , :locals => {:f => "else"}
+        .control-group
+          label.control-label
+          .controls
+            a.bt.add href="javascript:;" 增加選項
+
+    .cont
+      .center-block.i-b-block
+        input type="button" value="儲存"
+        input type="button" value="取消" onclick="history.back()"

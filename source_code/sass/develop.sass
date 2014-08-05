@@ -56,10 +56,45 @@ $legacy-support-for-ie: true
   width: 90%
   float: left
 
+.test
+  position: relative
+.eptitle
+  font-size: 18px
+.quiz_total
+.test
+  padding: 0 40px
+  +box-sizing(border-box)
+  // 超靠北結構
+  dl
+    @extend %i-b-block
+    > *
+      &:nth-child(1):after , &:nth-child(2):after
+        content: "/"
+        display: inline-block
+        margin: 0 5px
+      &:nth-child(1):after
+        content: "/"
+        display: inline-block
+        margin: 0 5px
+      &:nth-child(3)
+        border-right: 1px solid #ddd
+        margin-right: 20px
+        &:after
+          content: ""
+          display: inline-block
+          margin: 0 5px
+  dt
+    @extend %fl
+
+  span
+  input
+
 .cont
   width: 1000px
   margin: 0 auto
 
+.row
+  +pie-clearfix
 .row + .row
   margin-top: 5px
 // 合併進 > #head, #menu_bar, #cont, #foot
@@ -161,6 +196,19 @@ ul.a_btn_c2 li
   li:nth-child(4)
     background-position: left -72px
 
+.quiz_list_stylesass
+  counter-reset: list 0
+  > li
+    position: relative
+    &:after
+      position: absolute
+      content: ""
+      content: counter(list, decimal)
+      counter-increment: list
+      text-align: center
+      top: 40px
+      left: 40px
+      font-size: 16px
 // fix menu
 .menu_wrap
   height: 40px

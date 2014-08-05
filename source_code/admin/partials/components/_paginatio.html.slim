@@ -1,0 +1,22 @@
+// paginatio
+.pagination.fr
+  ul.fl
+    // prev
+    li.disabled
+      a.disabled href="javascript:goPage_pager(1);"  &lt;
+    // active
+    li.active
+      a 1
+    - (2..10).each do |n|
+      li
+        a href="javascript:goPage_pager('#{n}');"  #{n}
+    // next
+    li
+      a href="javascript:goPage_pager(2);"  &gt;
+  .fr
+    select.select-page onchange="javascript:sizePage_pager($(this).val());" 
+      option selected="" value="10"  10
+      option value="20"  20
+      option value="50"  50
+      option value="80"  80
+      option value="100"  100
