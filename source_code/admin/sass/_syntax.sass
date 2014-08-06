@@ -1,0 +1,76 @@
+$labelLine: #09277b
+
+$link_color: #333
+$link_color_hover: #709bb4
+$color_Mandy: #e76060
+$color_e76060: $color_Mandy //再整理
+
+// Assets path
+// level2
+$l2: "../images"
+// 使用方式: background: url(#{$l2}/file) x y no-repeat
+
+// Mixin功能
+@import "mixin"
+
+%h2bg
+  background: url('#{$l2}/h2bg.gif') repeat-x 0 0
+%font_color_e76060
+  font-color: #e76060
+@mixin fr
+  float: right
+@mixin fl
+  float: left
+@mixin oh
+  overflow: hidden
+.fr,%fr
+  +fr
+.fl,%fl
+  +fl
+.oh,%oh
+  +oh
+
+@mixin bgc($extend)
+  @if $extend
+    @extend %w
+  @else
+    @extend %w
+  %w
+    background-color: white
+
+// @mixin dp($extend)
+//   @if $extend == b
+//     @extend %b
+//   @if $extend == i
+//     @extend %i
+//   @if $extend == n
+//     @extend %n
+//   @else
+//     display: block
+// %dib
+//   display: inline-block
+// %dbl
+//   display: block
+// %dil
+//   display: inline
+// %dno
+//   display: none
+
+%center-block, .center-block
+  +center-block
+
+%inline-block, .inline-block
+  display: inline-block !important
+  float: none !important
+  +has-layout-zoom
+  +has-layout-block
+%i-b-block, .i-b-block
+  +pie-clearfix
+  > *
+    display: inline-block !important
+    vertical-align: bottom //因應頁面-新增題目是非題
+
+.text-l
+  text-align: left
+.text-r
+  text-align: right
