@@ -2,56 +2,48 @@
 function insert_img()
 {
   $('body').on('click','.insert_img',function()
-  {
-    var _this = $(this).prev();
-        _this.click();
-    if(_this.parent().find('img').size() == 0)
-    {
-      _this.parent().prepend('<img class="pic"/>')
-    }
-  });
+	{
+		$(this).prev().click().on(change_img());
+	});
 };
 
 // 預覽插入圖片
-function change_img(){
-$('body').on('change','.file',function()
-  {
-    var path,
-        clip = $(this).prev(':eq(1)'),
-        FileReader = window.FileReader;
+function change_img()
+{
+	$('.file').change(function()
+	{
+		var path,
+			clip = $(this).prev(),
+			FileReader = window.FileReader;
 
-    // 篩選圖檔格式
-    var ext = $(this).val().split('.').pop().toLowerCase();
-    if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
-    {
-      alert('只允許上傳PNG或JPG影像檔');
-      $(this).empty();
-      return false;
-    }
-    var $this = $(this);
-    if(FileReader)
-    {
-      var reader = new FileReader(),
-        file = this.files[0];
-      reader.onload = function(e) {
-        var _v = e.target.result;
-        clip.attr("src", e.target.result);
-        $this.prev('.pic').attr("src", e.target.result);
-      };
-      reader.readAsDataURL(file);
-    }
-    else
-    {
-      path = $(this).val();
-      if (/"\w\W"/.test(path))
-      {
-        path = path.slice(1, -1);
-      }
-      clip.attr("src", path);
-      $this.prev('.pic').attr("src", path);
-    }
-    $this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
-  });
+		// 篩選圖檔格式
+		var ext = $(this).val().split('.').pop().toLowerCase();
+		if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
+		{
+			alert('只允許上傳PNG或JPG影像檔');
+			$(this).empty();
+			return false;
+		}
+		var $this = $(this);
+		if(FileReader)
+		{
+			var reader = new FileReader(),
+			file = this.files[0];
+			reader.onload = function(e)
+			{
+				var _v = e.target.result;
+				clip.attr("src", e.target.result);
+				$this.prev('.pic').attr("src", e.target.result);
+			};
+			reader.readAsDataURL(file);
+		}
+		else
+		{
+			path = $(this).val();
+			clip.attr("src", path);
+		}
+			$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
+		});
 }
 
 // 刪除圖片
@@ -59,7 +51,7 @@ function remove_img()
 {
 	$('body').on('click','.remove_img',function()
 	{
-		$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').remove().end().find('input').val('');
+		$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').removeClass('view').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
 	});
 }
 
@@ -84,15 +76,18 @@ function additem()
 					"<a class='btn remove' href='javascript:;'>刪除選項</a>"+
 					"<textarea rows='1'></textarea>"+
 					"<div class='i-b-block'>"+
-                		"<input type='file' class='ipt_upload_img file'>&nbsp;"+
+						"<img class='pic'>&nbsp;"+
+						"<input type='file' class='ipt_upload_img file'>&nbsp;"+
 						"<a class='bt insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
 						"<a class='bt remove_img' href='javascript:;'>刪除圖片</a>"+
 					"</div>"+
 				"</div>"+
 			"</li>");
-		if(count == 6){
+		if(count == 6)
+		{
 			$(".add").attr("disabled", true);
 		}
+		change_img();
 		Remove();
 		renumber();
 	});
@@ -112,11 +107,11 @@ function Remove()
 // 答案編號
 function renumber()
 {
-    $(".quiz_add_subject > li").each(function()
-    {
-    	var _num  = $(this).index() + 1,
-    		_this = $(this).find('.radio > b'),
-    		_rdo  = _this.text(_num);
+	$(".quiz_add_subject > li").each(function()
+	{
+		var _num  = $(this).index() + 1,
+			_this = $(this).find('.radio > b'),
+			_rdo  = _this.text(_num);
 		switch ($(_this,this).text())
 		{
 			case '1' : _this.text('A');break;
@@ -126,7 +121,7 @@ function renumber()
 			case '5' : _this.text('E');break;
 			case '6' : _this.text('F');break;
 		}
-    });
+	});
 };
 
 $(function(){
@@ -204,7 +199,7 @@ $(function(){
 	});
 	
 	insert_img();
-  	change_img();
+	change_img();
 	remove_img();
 	additem();
 	renumber();
