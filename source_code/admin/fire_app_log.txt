@@ -1,9 +1,0 @@
-2014-08-06 16:24:02    create css/develop.css 
-2014-08-06 16:29:01     error sass/develop.sass (Line 12 of sass/_admin_fancybox.sass: Undefined variable: "$l2".)
-2014-08-06 16:29:01 overwrite css/develop.css 
-2014-08-06 16:29:07     error sass/develop.sass (Line 12 of sass/_admin_fancybox.sass: Undefined variable: "$l2".)
-2014-08-06 16:29:07 identical css/develop.css 
-2014-08-06 16:29:29 overwrite css/develop.css 
-2014-08-06 16:29:37 overwrite css/develop.css 
-2014-08-06 16:30:21 identical css/develop.css 
-2014-08-06 16:37:52 overwrite css/develop.css 

@@ -3,8 +3,10 @@
 *.sassc
 doc/
 source_code/.sass-cache
-source_code/fire_app_log.txt
+fire_app_log.txt
 source_code/stylesheets
 source_code/config.rb
 source/ICON
 file_tree.txt
+
+source_code/admin/fire_app_log.txt
