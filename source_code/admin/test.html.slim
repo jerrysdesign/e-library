@@ -1,7 +1,7 @@
 #cont_area
   .masthead.cf
     .cont
-      == render "partials/testing_header" , :locals => {:f => "testing"}
+      == render "partials/testing_header" , :locals => {:f => "true"}
   .container.cf
     #cont
       ol.quiz_list_stylesass
@@ -20,10 +20,3 @@
                     =zh_lorem_sentences 1
                   li
                     =zh_lorem_sentences 1
-
-/ .fancybox
-#alert.warning.cf style="display:none"
-  strong.strong 確定要停止測驗？
-  .block
-    a.bt.fl href="javascript:;" YES
-    a.bt.fr href="javascript:;" NO

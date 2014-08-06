@@ -84,7 +84,7 @@ function additem()
 					"<a class='btn remove' href='javascript:;'>刪除選項</a>"+
 					"<textarea rows='1'></textarea>"+
 					"<div class='i-b-block'>"+
-                		"<input type='file' class='ipt_upload_img file'>&nbsp;"+
+										"<input type='file' class='ipt_upload_img file'>&nbsp;"+
 						"<a class='bt insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
 						"<a class='bt remove_img' href='javascript:;'>刪除圖片</a>"+
 					"</div>"+
@@ -112,11 +112,11 @@ function Remove()
 // 答案編號
 function renumber()
 {
-    $(".quiz_add_subject > li").each(function()
-    {
-    	var _num  = $(this).index() + 1,
-    		_this = $(this).find('.radio > b'),
-    		_rdo  = _this.text(_num);
+		$(".quiz_add_subject > li").each(function()
+		{
+			var _num  = $(this).index() + 1,
+				_this = $(this).find('.radio > b'),
+				_rdo  = _this.text(_num);
 		switch ($(_this,this).text())
 		{
 			case '1' : _this.text('A');break;
@@ -126,7 +126,7 @@ function renumber()
 			case '5' : _this.text('E');break;
 			case '6' : _this.text('F');break;
 		}
-    });
+		});
 };
 
 $(function(){
@@ -197,10 +197,17 @@ $(function(){
 	$(".fancybox").fancybox();
 	$("input.fancybox").fancybox();
 	$(".afb").fancybox({
-		wrapCSS : '_admin_fancybox',
-		padding : 0,
-		scrolling : 'no',
-		closeBtn: false
+		wrapCSS		: '_admin_fancybox',
+		padding 	: 0,
+		scrolling 	: 'no',
+		closeBtn 	: false
+	});
+	$(".alert").fancybox({
+		maxWidth	: 300,
+		maxHeight	: 120,
+		fitToView	: false,
+		autoSize	: false,
+		closeBtn 	: false
 	});
 	
 	insert_img();
