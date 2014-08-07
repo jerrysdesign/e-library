@@ -1,18 +1,11 @@
 .gitignore
 *.scssc
 *.sassc
-doc/
-source_code/.sass-cache
-fire_app_log.txt
-source_code/stylesheets
-source_code/config.rb
-source/ICON
 file_tree.txt
-
-source_code/admin/fire_app_log.txt
-source_code/admin/stylesheets
-source_code/admin/config.rb
 fire_app_log.txt
-
+doc/
+source/ICON
 
 source_code/admin/fire_app_log.txt
+source_code/admin/.sass-cache
+source_code/admin/config.rb
