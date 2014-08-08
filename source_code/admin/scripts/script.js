@@ -1,49 +1,44 @@
 // 插入圖片
 function insert_img()
 {
-  $('body').on('click','.insert_img',function()
-	{
-		$(this).prev().click().on(change_img());
-	});
+	$(this).prev().click();
 };
 
 // 預覽插入圖片
 function change_img()
 {
-	$('.file').change(function()
-	{
-		var path,
-			clip = $(this).prev(),
-			FileReader = window.FileReader;
+	var path,
+		clip = $(this).prev(),
+		FileReader = window.FileReader;
 
-		// 篩選圖檔格式
-		var ext = $(this).val().split('.').pop().toLowerCase();
-		if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
+	// 篩選圖檔格式
+	var  ext = $(this).val().split('.').pop().toLowerCase();
+	
+	if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
+	{
+		$(this).replaceWith($('.file:eq(0)').val('').clone(true));
+		alert('只允許上傳PNG或JPG影像檔');
+		return false;
+	}
+	var $this = $(this);
+	if(FileReader)
+	{
+		var reader = new FileReader(),
+		file = this.files[0];
+		reader.onload = function(e)
 		{
-			alert('只允許上傳PNG或JPG影像檔');
-			$(this).empty();
-			return false;
-		}
-		var $this = $(this);
-		if(FileReader)
-		{
-			var reader = new FileReader(),
-			file = this.files[0];
-			reader.onload = function(e)
-			{
-				var _v = e.target.result;
-				clip.attr("src", e.target.result);
-				$this.prev('.pic').attr("src", e.target.result);
-			};
-			reader.readAsDataURL(file);
-		}
-		else
-		{
-			path = $(this).val();
-			clip.attr("src", path);
-		}
-			$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
-		});
+			var _v = e.target.result;
+			clip.attr("src", e.target.result);
+			$this.prev('.pic').attr("src", e.target.result);
+		};
+		reader.readAsDataURL(file);
+	}
+	else
+	{
+		path = $(this).val();
+		clip.attr("src", path);
+	}
+	$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
 }
 
 // 刪除圖片
@@ -58,7 +53,7 @@ function remove_img()
 // 增加選項
 function additem()
 {
-	$(".add").click(function()
+	$('.add').click(function()
 	{
 		var _qas  = $(".quiz_add_subject"),
 			count = _qas.find('li').size();
@@ -83,20 +78,23 @@ function additem()
 					"</div>"+
 				"</div>"+
 			"</li>");
+
 		if(count == 6)
 		{
 			$(".add").attr("disabled", true);
 		}
-		change_img();
-		Remove();
 		renumber();
+		
+		var new_element = _qas.children('li').last();
+		$('.insert_img',new_element).on('click',insert_img);
+		$('.file',new_element).on('change',change_img);
 	});
 }
 
 // 刪除選項
 function Remove()
 {
-	$(".remove").click(function()
+	$('body').on('click','.remove',function()
 	{
 		$(".add").attr("disabled", false);
 		$(this).parents("li[class*='item']").remove();
@@ -197,10 +195,11 @@ $(function(){
 		scrolling : 'no',
 		closeBtn: false
 	});
-	
-	insert_img();
-	change_img();
+
+	$('.insert_img').on('click',insert_img);
+	$('.file').on('change',change_img);
 	remove_img();
+	Remove();
 	additem();
 	renumber();
 });
