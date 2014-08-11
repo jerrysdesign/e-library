@@ -223,4 +223,17 @@ $(function()
 		fixedColumns: 1
 	});
 
+	// active 事件
+	function active() {
+		$('.active').removeClass('active');
+		$(this).addClass("active");
+	}
+	$('.quiz_add_subject > li').on('click',active);
+
+	
+
+	var v= (typeof($("input:checked").val()) == "undefined" )? "0":"1";
+	
+
 });
+
