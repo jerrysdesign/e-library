@@ -32,7 +32,70 @@
                 .btn-group.fr
                   a.bt href="javascript:;" 公布成績
                   a.bt href="javascript:;" 匯出報表
-  
+    .cont_tab2
+      .pd2020
+        // for demo
+        javascript:
+          function setColor(area,data,config,i,j,animPct,value) {
+            if(value > 35)return("rgba(220,0,0,"+animPct);
+            else return("rgba(0,220,0,"+animPct);
+          }
+
+          var charJSPersonnalDefaultOptions = { decimalSeparator : "," , thousandSeparator : ".", roundNumber : "none", graphTitleFontSize: 2 };
+
+          var mydata1 = {
+            labels : ["第一題","第二題","第三題","第四題","第五題","第六題","第七題"],
+            datasets : [
+              {
+                fillColor : "rgba(220,220,220,0.5)",
+                strokeColor : "rgba(220,220,220,1)",
+                // pointColor : "rgba(220,220,220,1)",
+                // pointstrokeColor : "yellow",
+                data : [95,53,99,55,73,27,82],
+                title : "A"
+              },
+              {
+                fillColor : "rgba(151,187,205,0.5)",
+                strokeColor : "rgba(151,187,205,1)",
+                // pointColor : "green", 
+                // pointstrokeColor : "yellow",
+                data : [35,43,59,22,31,50,66],
+                title : "B"
+              },
+              {
+                fillColor : "rgba(164,204,150,0.5)",
+                strokeColor : "rgba(164,204,150,1)",
+                // pointColor : "green",
+                // pointstrokeColor : "yellow",
+                data : [58,86,17,9,61,17,66],
+                title : "C"
+              }
+            ]
+          }               
+          var startWithDataset =1;
+          var startWithData =1;
+
+          var opt1 = {
+            animationStartWithDataset : startWithDataset,
+            animationStartWithData : startWithData,
+            animationSteps : 200,
+            canvasBorders : true,
+            canvasBordersWidth : 0,
+            canvasBordersColor : "black",
+            graphTitle : "圖表",
+            legend : true,
+            inGraphDataShow : true,
+            annotateDisplay : true,
+            graphTitleFontSize: 18
+            //legendTemplate : "<%if (label){%><%=label%>: <%}%><%= (value * -1 ) %>",
+            //scaleLabel: "<%=(value * -1)%>"
+          }
+
+        canvas#canvas_HorizontalBar1 width="900" height="900"
+        javascript:
+          window.onload = function() {
+            var myHorizontalBar = new Chart(document.getElementById("canvas_HorizontalBar1").getContext("2d")).HorizontalBar(mydata1,opt1);
+          }
     .cont_tab4
       .trtable_wrapper
         table.table.trtable.js-fixed-header-01 border="0" 
