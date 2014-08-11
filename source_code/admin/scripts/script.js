@@ -210,3 +210,17 @@ $(function(){
 	additem();
 	renumber();
 });
+
+// fixed-header
+// source: https://github.com/markmalek/Fixed-Header-Table
+$(function()
+{
+	// 測驗結果表格
+	$('.js-fixed-header-01').fixedHeaderTable(
+	{
+		altClass: 'odd',
+		footer: false,
+		fixedColumns: 1
+	});
+
+});

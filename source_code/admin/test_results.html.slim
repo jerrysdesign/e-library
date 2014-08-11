@@ -1,0 +1,70 @@
+= content_for :title do
+  title
+    = data["site-title"]
+    |  | 測驗結果
+
+#cont_area.cf
+  #cont
+    form enctype="multipart/form-data" method="post" 
+      .cont_tab2
+        h2
+          span.icon04
+          | 測驗結果
+        .pd2020
+          .test
+            .row
+              .fl
+                h3.eptitle =zh_lorem_words 35
+              .fr
+                | 共
+                span.quiz_total 5
+                | 題
+            .row
+              .fl
+                | 測驗已結束，共計
+                span style="margin-right: 10px" =lorem_date("%H:%M:%S")
+              dl.fl
+                dt 繳交人數
+                dd 90
+                dt 借閱人數
+                dd 150
+              .fr
+                .btn-group.fr
+                  a.bt href="javascript:;" 公布成績
+                  a.bt href="javascript:;" 匯出報表
+  
+    .cont_tab4
+      .trtable_wrapper
+        table.table.trtable.js-fixed-header-01 border="0" 
+          thead
+            tr
+              th width="10%"
+                div
+                  span 題目 / 帳號
+              - (1..10).each do |n|
+                th scope="col"
+                  div
+                    span
+                      | #{n}.(
+                      =lorem_q_m
+                      | )
+                    span
+                      | 作答
+              - (11..30).each do |n|
+                th scope="col"
+                  span
+                    | #{n}.(
+                    =lorem_q_tf
+                    | )
+                  span
+                    | 作答
+          tbody
+            -50.times do
+              tr
+                th =zh_lorem_name
+                -10.times do
+                  td =lorem_q_m
+                -10.times do
+                  td =lorem_q_tf
+                -10.times do
+                  td =lorem_q_tf_error

@@ -6,9 +6,17 @@ module ViewHelpers
 		return d
 	end
 
-	# head > title
-	# def pagetitle(page_title)
-	#   content_for(:title) { page_title }
-	# end
+	# 亂數A-D+O+X
+	def lorem_q_m
+		["A","B","C","D"].sample
+	end
+
+	def lorem_q_tf
+			['O','X'].sample
+	end
+
+	def lorem_q_tf_error
+		content_tag(:span, ['O','X'].sample, :class => "error")
+	end
 	
 end
