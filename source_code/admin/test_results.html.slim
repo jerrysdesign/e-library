@@ -32,7 +32,13 @@
                 .btn-group.fr
                   a.bt href="javascript:;" 公布成績
                   a.bt href="javascript:;" 匯出報表
-  
+    .cont_tab2
+      .pd2020
+        .widget-content
+          .widget-body
+            #statChartFlotBar style="width:100%; height:360px"
+            /!-- // Chart 1
+
     .cont_tab4
       .trtable_wrapper
         table.table.trtable.js-fixed-header-01 border="0" 
@@ -68,3 +74,7 @@
                   td =lorem_q_tf
                 -10.times do
                   td =lorem_q_tf_error
+
+script src="vender/flot/jquery.flot.js"
+script src="vender/flot/jquery.flot.orderBars.js"
+script src="scripts/demo-statistic-flot.js"
