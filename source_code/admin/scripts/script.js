@@ -64,7 +64,7 @@ function additem()
 			return false;
 		}
 		_qas.append(
-			"<li class= \'control-group item" + count + "\'>" +
+			"<li class='control-group'>"+
 				"<label class='control-label'><label class='radio'>"+
 				"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'><b>"+ count +"</b></label></label>"+
 				"<div class='controls'>"+
@@ -88,6 +88,7 @@ function additem()
 		var new_element = _qas.children('li').last();
 		$('.insert_img',new_element).on('click',insert_img);
 		$('.file',new_element).on('change',change_img);
+		$('.quiz_add_subject > li').on('click',active);
 	});
 }
 
@@ -209,6 +210,7 @@ $(function(){
 	Remove();
 	additem();
 	renumber();
+	$('.quiz_add_subject > li').on('click',active);
 });
 
 // fixed-header
@@ -222,17 +224,22 @@ $(function()
 		footer: false,
 		fixedColumns: 1
 	});
+});
 
-	// active 事件
-	function active() {
-		$('.active').removeClass('active');
-		$(this).addClass("active");
-	}
-	$('.quiz_add_subject > li').on('click',active);
+// active 事件
+function active() {
+	$('.active').removeClass('active');
+	$(this).addClass("active");
+	var isActive = $(this).hasClass('active');
+	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
+}
 
+// chenge style & radio checked
+$(function()
+{
 	
 
-	var v= (typeof($("input:checked").val()) == "undefined" )? "0":"1";
 	
 
 });
+

@@ -35,15 +35,10 @@
 	padding-left: 10px
 	margin-left: 17%
 	border-left: 1px solid $labelLine
+
 .cont_tab4
 	.control-group
 		padding: 10px
-		&:hover
-			background-color: #f7f7f7
-		&.active
-			background-color: nth($successColor, 3)
-			// &:hover
-			// 	background-color: nth($successColor, 3)
 
 .controls
 	position: relative
@@ -53,11 +48,11 @@
 		.remove
 			@extend %ir
 			position: absolute
-			top: -16px
-			right: -16px
-			+size(32px)
+			top: -$removeicon*.75
+			right: -$removeicon*.75
+			+size($removeicon)
 			background-image: url('#{$l2}/icon-remove.png')
 			background-position: center
 			display: block
 			+border-radius(100%)
-			background-color: #fff
+			background-color: $white
