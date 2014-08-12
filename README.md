@@ -12,7 +12,7 @@
 
 ## Getting Sass(y) with Compass
 
-使用的強大的[Sass](http://Sass-lang.com)透過[Compass](http://compass-style.org)來創建靈活的樣式，未來可併入到其它專案，重複使用。
+使用的強大的 [Sass](http://Sass-lang.com) 透過 [Compass](http://compass-style.org) 來創建靈活的樣式，未來可併入到其它專案，重複使用。
 
 ---
 
