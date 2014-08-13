@@ -98,7 +98,7 @@ function Remove()
 	$('body').on('click','.remove',function()
 	{
 		$(".add").attr("disabled", false);
-		$(this).parents("li[class*='item']").remove();
+		$(this).parents("li").remove();
 		renumber();
 	});
 }
@@ -122,6 +122,16 @@ function renumber()
 		}
 	});
 };
+
+// chenge style & radio checked
+// active 事件
+function active()
+{
+	$('.active').removeClass('active');
+	$(this).addClass("active");
+	var isActive = $(this).hasClass('active');
+	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
+}
 
 $(function(){
 	// search
@@ -204,19 +214,8 @@ $(function(){
 		closeBtn 	: false
 	});
 
-	$('.insert_img').on('click',insert_img);
-	$('.file').on('change',change_img);
-	remove_img();
-	Remove();
-	additem();
-	renumber();
-	$('.quiz_add_subject > li').on('click',active);
-});
-
-// fixed-header
-// source: https://github.com/markmalek/Fixed-Header-Table
-$(function()
-{
+	// fixed-header
+	// source: https://github.com/markmalek/Fixed-Header-Table
 	// 測驗結果表格
 	$('.js-fixed-header-01').fixedHeaderTable(
 	{
@@ -224,28 +223,24 @@ $(function()
 		footer: false,
 		fixedColumns: 1
 	});
-});
 
-// chenge style & radio checked
-// active 事件
-function active() {
-	$('.active').removeClass('active');
-	$(this).addClass("active");
-	var isActive = $(this).hasClass('active');
-	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
-}
+	$('.insert_img').on('click',insert_img);
+	$('.file').on('change',change_img);
+	$('.quiz_add_subject > li').on('click',active);
+	remove_img();
+	Remove();
+	additem();
+	renumber();
 
-$(function() {
 	//＊＊/ nofp = number of people
 	// 單位最大人數
 	// 100/單位最大人數為基數
 	// 下方2為基數
 	// .chart__bars .data('nofp')/100,轉整數帶入
-
-	$(".chart__bar").each( function( key, bar )
+	$('.chart__bar').each(function( key, bar )
 	{
 		var nofp = $(this).data('nofp');
 		$(this).css('width', nofp * 2 + '%');
 	});
-});
 
+});
