@@ -226,6 +226,7 @@ $(function()
 	});
 });
 
+// chenge style & radio checked
 // active 事件
 function active() {
 	$('.active').removeClass('active');
@@ -234,12 +235,17 @@ function active() {
 	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
 }
 
-// chenge style & radio checked
-$(function()
-{
-	
+$(function() {
+	//＊＊/ nofp = number of people
+	// 單位最大人數
+	// 100/單位最大人數為基數
+	// 下方2為基數
+	// .chart__bars .data('nofp')/100,轉整數帶入
 
-	
-
+	$(".chart__bar").each( function( key, bar )
+	{
+		var nofp = $(this).data('nofp');
+		$(this).css('width', nofp * 2 + '%');
+	});
 });
 
