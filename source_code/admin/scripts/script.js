@@ -64,17 +64,24 @@ function additem()
 			return false;
 		}
 		_qas.append(
-			"<li class='control-group'>"+
-				"<label class='control-label'><label class='radio'>"+
-				"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'><b>"+ count +"</b></label></label>"+
-				"<div class='controls'>"+
-					"<a class='btn remove' href='javascript:;'>刪除選項</a>"+
-					"<textarea rows='1'></textarea>"+
-					"<div class='i-b-block'>"+
-						"<img class='pic'>&nbsp;"+
-						"<input type='file' class='ipt_upload_img file'>&nbsp;"+
-						"<a class='bt insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
-						"<a class='bt remove_img' href='javascript:;'>刪除圖片</a>"+
+			"<li class='dt'>"+
+				"<div class='control-group'>"+
+					"<div class='control-label'>"+
+						"<div class='radioholder'>"+
+							"<span class='tick'>"+"</span>"+
+							"<input type='radio' name='projecttype' value=' '>"+"<b>"+ 
+							count +"</b>"+
+						"</div>"+
+					"</div>"+
+					"<div class='controls'>"+
+							"<a class='btn remove' href='javascript:;'>刪除選項</a>"+
+							"<textarea rows='1'></textarea>"+
+							"<div class='i-b-block'>"+
+							"<img class='pic'>&nbsp;"+
+							"<input type='file' class='ipt_upload_img file'>&nbsp;"+
+							"<a class='bt insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
+							"<a class='bt remove_img' href='javascript:;'>刪除圖片</a>"+
+						"</div>"+
 					"</div>"+
 				"</div>"+
 			"</li>");
@@ -84,11 +91,12 @@ function additem()
 			$(".add").attr("disabled", true);
 		}
 		renumber();
-		
 		var new_element = _qas.children('li').last();
 		$('.insert_img',new_element).on('click',insert_img);
 		$('.file',new_element).on('change',change_img);
 		$('.quiz_add_subject > li').on('click',active);
+		$("input.projecttype[type=radio]").on('click',activeradioholder);
+
 	});
 }
 
@@ -109,7 +117,7 @@ function renumber()
 	$(".quiz_add_subject > li").each(function()
 	{
 		var _num  = $(this).index() + 1,
-			_this = $(this).find('.radio > b'),
+			_this = $(this).find('.radioholder > b'),
 			_rdo  = _this.text(_num);
 		switch ($(_this,this).text())
 		{
@@ -121,16 +129,6 @@ function renumber()
 			case '6' : _this.text('F');break;
 		}
 	});
-};
-
-// chenge style & radio checked
-// active 事件
-function active()
-{
-	$('.active').removeClass('active');
-	$(this).addClass("active");
-	var isActive = $(this).hasClass('active');
-	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
 }
 
 $(function(){
@@ -197,21 +195,107 @@ $(function(){
 		});
 	});
 
+	function activeradioholder(){
+		
+		$("input.projecttype[type=radio]").each(function() {
+			if ($(this).prop("checked") == true) {
+				$(this).parent().addClass("activeradioholder");
+			} else {
+				$(this).parent().removeClass("activeradioholder");
+			}
+		});
+	}
+
+	function radioholder()
+	{
+		$(".radioholder").each(function() {
+			var description;
+			$(this).children('.tick').show();
+			$(this).click(function() {
+				$(this).children("input").prop("checked", true);
+				$(this).children("input").trigger("change");
+			});
+		});
+	}
+	function selectholder() {
+		$(".selectholder").each(function() {
+			var description;
+
+			$(this).children().hide();
+			description = $(this).children("b").text();
+			$(this).append("<span class=\"desc\">" + description + "</span>");
+			$(this).append("<span class=\"pulldown\"></span>");
+			$(this).append("<div class=\"selectdropdown\"></div>");
+			$(this).children("select").children("option").each(function() {
+				var $drop, name;
+
+				if ($(this).attr("value") !== "0") {
+					$drop = $(this).parent().siblings(".selectdropdown");
+					name = $(this).attr("value");
+					$drop.append("<span>" + name + "</span>");
+				}
+			});
+			$(this).click(function() {
+				if ($(this).hasClass("activeselectholder")) {
+					$(this).children(".selectdropdown").slideUp(100);
+					$(this).removeClass("activeselectholder");
+					if ($(this).children("select").val() !== "0") {
+						$(this).children(".desc").fadeOut(50, function() {
+							$(this).text($(this).siblings("select").val());
+							$(this).fadeIn(50);
+						});
+					}
+				} else {
+					$(".activeselectholder").each(function() {
+						$(this).children(".selectdropdown").slideUp(100);
+						if ($(this).children("select").val() !== "0") {
+							$(this).children(".desc").fadeOut(100, function() {
+								$(this).text($(this).siblings("select").val());
+								$(this).fadeIn(100);
+							});
+						}
+						$(this).removeClass("activeselectholder");
+					});
+					$(this).children(".selectdropdown").slideDown(100);
+					$(this).addClass("activeselectholder");
+					if ($(this).children("select").val() !== "0") {
+						$(this).children(".desc").fadeOut(100, function() {
+							$(this).text($(this).siblings("select").children("option[value=0]").text());
+							$(this).fadeIn(50);
+						});
+					}
+				}
+			});
+		});
+		$(".selectholder .selectdropdown span").click(function() {
+			var value;
+
+			$(this).siblings().removeClass("active");
+			$(this).addClass("active");
+			value = $(this).text();
+			$(this).parent().siblings("select").val(value);
+			$(this).parent().siblings(".desc").fadeOut(100, function() {
+				$(this).text(value);
+				$(this).fadeIn(100);
+			});
+		});
+	}
+
 	// fancybox
 	$(".fancybox").fancybox();
 	$("input.fancybox").fancybox();
 	$(".afb").fancybox({
-		wrapCSS		: '_admin_fancybox',
-		padding 	: 0,
-		scrolling 	: 'no',
-		closeBtn 	: false
+		wrapCSS			: '_admin_fancybox',
+		padding			: 0,
+		scrolling		: 'no',
+		closeBtn		: false
 	});
 	$(".alert").fancybox({
 		maxWidth	: 300,
 		maxHeight	: 120,
 		fitToView	: false,
 		autoSize	: false,
-		closeBtn 	: false
+		closeBtn	: false
 	});
 
 	// fixed-header
@@ -226,12 +310,14 @@ $(function(){
 
 	$('.insert_img').on('click',insert_img);
 	$('.file').on('change',change_img);
-	$('.quiz_add_subject > li').on('click',active);
+	$("input[type=radio]").on('change',activeradioholder);
+
 	remove_img();
 	Remove();
 	additem();
+	radioholder();
+	selectholder();
 	renumber();
-
 	//＊＊/ nofp = number of people
 	// 單位最大人數
 	// 100/單位最大人數為基數
@@ -244,4 +330,3 @@ $(function(){
 	});
 
 });
-

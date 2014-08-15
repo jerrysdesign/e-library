@@ -4,7 +4,7 @@
       var description;
 
       $(this).children().hide();
-      description = $(this).children("label").html();
+      description = $(this).children("b").html();
       $(this).append("<span class=\"desc\">" + description + "</span>");
       $(this).prepend("<span class=\"tick\"></span>");
       $(this).click(function() {
@@ -26,7 +26,7 @@
       var description;
 
       $(this).children().hide();
-      description = $(this).children("label").text();
+      description = $(this).children("b").text();
       $(this).append("<span class=\"desc\">" + description + "</span>");
       $(this).append("<span class=\"pulldown\"></span>");
       $(this).append("<div class=\"selectdropdown\"></div>");

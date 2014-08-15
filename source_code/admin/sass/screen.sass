@@ -56,6 +56,10 @@ img
 @import "modules/component_btn"
 @import "modules/tr_table"
 
+// 解決.control-group .control-label .controls 組件定位
+.dt
+	display: table
+	width: 100%
 
 .container
 	background-color: #f7f7f7
@@ -190,6 +194,7 @@ ul.a_btn_c2 li
 			display: none !important
 		&.remove_img.cur
 			display: inline-block !important
+
 .quiz_subject
 	display: table
 	width: 1000px
@@ -204,23 +209,13 @@ ul.a_btn_c2 li
 		display: inline-block
 		font-size: 1.5em
 		margin-bottom: 20px
-.quiz_add_subject2
+
+.quiz_add_subject
 	li
 		display: table
 		width: 100%
 		margin: 20px 0
-.control-group2
-	display: table-row
-	.control-label2,
-	.controls2
-		display: table-cell
-		vertical-align: top
-		padding: 0 20px
-	.control-label2
-		width: 20%
-		padding: 0
-	.controls2
-		border-left: 1px solid $labelLine
+
 
 $holder-height: 3.6em
 
@@ -231,18 +226,13 @@ $holder-height: 3.6em
 	color: $black-60
 	+transition(.1s ease-out)
 	cursor: pointer
+
 .activeradioholder
-	//background: nth($successColor, 2)
 	background: lighten($primary, 10%)
 	color: #fff
 
 .radioholder
-	.desc
-		display: inline-block
-		vertical-align: middle
-		padding-left: .6em
-		height: $holder-height
-		line-height: $holder-height
+	//.desc
 	.tick
 		display: inline-block
 		vertical-align: middle
@@ -251,6 +241,14 @@ $holder-height: 3.6em
 		background-color: $black-10
 		background-image: none
 		+transition(.1s ease-out)
+	b
+		display: inline-block
+		vertical-align: middle
+		padding-left: .6em
+		height: $holder-height
+		line-height: $holder-height
+	input
+		display: none
 
 .activeradioholder .tick
 	background-color: $primary

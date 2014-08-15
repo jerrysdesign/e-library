@@ -21,27 +21,24 @@
 	
 //Horizontal form
 .control-group
-	margin-bottom: 10px
-	margin-top: 10px
-	+pie-clearfix
-	
-.control-label
-	float: left
-	width: 16%
-	text-align: right
-	padding-right: 10px
-
-.controls
-	padding-left: 10px
-	margin-left: 17%
-	border-left: 1px solid $labelLine
+	display: table-row
+	.control-label,
+	.controls
+		display: table-cell
+		vertical-align: top
+		padding: 0 20px
+	.control-label
+		width: 20%
+		padding: 0
+	.controls
+		border-left: 1px solid $labelLine
 
 .cont_tab4
 	.control-group
 		padding: 10px
 
-.quiz_add_subject, .quiz_add_subject2
-	.controls, .controls2
+.quiz_add_subject
+	.controls
 		position: relative
 		.remove
 			display: none
@@ -58,5 +55,5 @@
 				display: block
 				+border-radius(100%)
 				background-color: $white
-.control-group2
+.control-group
 	border: 1px solid $transparent

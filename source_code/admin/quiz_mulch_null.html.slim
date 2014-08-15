@@ -15,75 +15,48 @@
   .container.cf
     .cont.cont_tab4
       .pd2040
-        .control-group
-          label.control-label 題目
-          .controls
-            .row
-              textarea rows="1"
-            .i-b-block
-              == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-        .control-label.title 設定正確答案
+        /! 結構更動
+        .quiz_subject
+          .control-group
+            label.control-label
+              h3 題目
+            .controls
+              .row
+                textarea rows="1"
+              .i-b-block
+                == render "partials/quiz_add_photo" , :locals => {:f => "else"}
+        h3.title 設定正確答案
         ol.quiz_add_subject
-          li.control-group
+          li.dt
+            .control-group
+              .control-label
+                .radioholder
+                  span.tick
+                  input type="radio" name="projecttype" value="" checked=""
+                  b A
+              .controls
+                a.btn.remove href="javascript:;" 刪除選項
+                textarea rows="1"
+                .i-b-block
+                  == render "partials/quiz_add_photo" , :locals => {:f => "else"}
+          li.dt
+            .control-group
+              .control-label
+                .radioholder
+                  span.tick
+                  input type="radio" name="projecttype" value=""
+                  b B
+              .controls
+                a.btn.remove href="javascript:;" 刪除選項
+                textarea rows="1"
+                .i-b-block
+                  == render "partials/quiz_add_photo" , :locals => {:f => "else"}
+        .dt
+          .control-group
             label.control-label
-              label.radio
-                input.js-check type="radio" name="optionsRadios" value="option1"
-                b
             .controls
-              textarea rows="1"
-              .i-b-block
-                == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-          li.control-group
-            label.control-label
-              label.radio
-                input.js-check type="radio" name="optionsRadios" value="option1"
-                b
-            .controls
-              textarea rows="1"
-              .i-b-block
-                == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-        .control-group
-          label.control-label
-          .controls
-            a.bt.add href="javascript:;" 增加選項
-
-        //test style
-        div style="display:block; height: 100px"
-        ol.quiz_add_subject2
-          li
-            .control-group2
-              .control-label2
-                .radioholder
-                  input type="radio" name="projecttype" value="Website" checked=''
-                  label for="pt_website" A
-              .controls2
-                a.btn.remove href="javascript:;" 刪除選項
-                textarea rows="1"
-                .i-b-block
-                  == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-          li
-            .control-group2
-              .control-label2
-                .radioholder
-                  input type="radio" name="projecttype" value="Website"
-                  label for="pt_website" B
-              .controls2
-                a.btn.remove href="javascript:;" 刪除選項
-                textarea rows="1"
-                .i-b-block
-                  == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-          li
-            .control-group2
-              .control-label2
-                .radioholder
-                  input type="radio" name="projecttype" value="Website"
-                  label for="pt_website" C
-              .controls2
-                a.btn.remove href="javascript:;" 刪除選項
-                textarea rows="1"
-                .i-b-block
-                  == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-
+              a.bt.add href="javascript:;" 增加選項
+        /! 結構更動 end
     .cont
       .center-block.i-b-block
         input type="button" value="儲存"
