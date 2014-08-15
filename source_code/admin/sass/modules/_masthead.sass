@@ -1,0 +1,46 @@
+// ------------------------------------------------------------
+// 管理介面題型選擇區塊
+// ------------------------------------------------------------
+
+.masthead
+	background-color: #bbb
+	position: relative
+	.cont
+		padding: 20px 0
+		position: relative
+		+pie-clearfix
+
+.masthead_head
+	width: 10%
+	float: left
+	vertical-align: top
+	&:before
+		content: " "
+		position: absolute
+		//z-index: -1
+		display: block
+		top: 0
+		bottom: 0
+		left: 0
+		width: 10%
+		border-right: 1px solid #ddd
+
+.masthead_title
+	background: url(#{$l2}/icon-edit.png) no-repeat left center
+	height: 51px
+	line-height: 51px
+	padding-left: 40px
+	color: #666
+
+.masthead_content
+	width: 90%
+	float: left
+
+/* reset .control-label 與 .controls */
+.masthead
+	.control-label
+		width: 9%
+		line-height: 41px
+		margin-bottom: 0
+	.controls
+		margin-left: 10%

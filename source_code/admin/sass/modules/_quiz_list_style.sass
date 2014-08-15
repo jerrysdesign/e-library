@@ -1,0 +1,13 @@
+.quiz_list_stylesass
+	counter-reset: list 0
+	> li
+		position: relative
+		&:after
+			position: absolute
+			content: ""
+			content: counter(list, decimal)
+			counter-increment: list
+			text-align: center
+			top: 40px
+			left: 40px
+			font-size: 16px

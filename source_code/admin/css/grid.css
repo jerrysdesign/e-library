@@ -1,0 +1,51 @@
+.row:after, .row__colspaced:after { content: ""; display: table; clear: both; }
+
+*[class*="col-"] { width: 100%; display: block; }
+
+*[class*="as-grid"] { float: left; display: inline; display: inline-block; }
+
+.row { position: relative; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; }
+.row .col-12-1 { width: 8.33333%; }
+.row .col-12-2 { width: 16.66667%; }
+.row .col-12-3 { width: 25%; }
+.row .col-12-4 { width: 33.33333%; }
+.row .col-12-5 { width: 41.66667%; }
+.row .col-12-6 { width: 50%; }
+.row .col-12-7 { width: 58.33333%; }
+.row .col-12-8 { width: 66.66667%; }
+.row .col-12-9 { width: 75%; }
+.row .col-12-10 { width: 83.33333%; }
+.row .col-12-11 { width: 91.66667%; }
+.row .col-12-12 { width: 100%; }
+.row .push-12-1 { margin-left: 8.33333%; }
+.row .push-12-2 { margin-left: 16.66667%; }
+.row .push-12-3 { margin-left: 25%; }
+.row .push-12-4 { margin-left: 33.33333%; }
+.row .push-12-5 { margin-left: 41.66667%; }
+.row .push-12-6 { margin-left: 50%; }
+.row .push-12-7 { margin-left: 58.33333%; }
+.row .push-12-8 { margin-left: 66.66667%; }
+.row .push-12-9 { margin-left: 75%; }
+.row .push-12-10 { margin-left: 83.33333%; }
+.row .push-12-11 { margin-left: 91.66667%; }
+.row .push-12-12 { margin-left: 100%; }
+.row .pull-12-1 { margin-right: 8.33333%; }
+.row .pull-12-2 { margin-right: 16.66667%; }
+.row .pull-12-3 { margin-right: 25%; }
+.row .pull-12-4 { margin-right: 33.33333%; }
+.row .pull-12-5 { margin-right: 41.66667%; }
+.row .pull-12-6 { margin-right: 50%; }
+.row .pull-12-7 { margin-right: 58.33333%; }
+.row .pull-12-8 { margin-right: 66.66667%; }
+.row .pull-12-9 { margin-right: 75%; }
+.row .pull-12-10 { margin-right: 83.33333%; }
+.row .pull-12-11 { margin-right: 91.66667%; }
+.row .pull-12-12 { margin-right: 100%; }
+.row .push-disable12 { margin-left: 0; }
+.row .pull-disable12 { margin-right: 0; }
+.row .hide-at12 { display: none; }
+.row .block-show-at12 { display: block; }
+.row .inline-show-at12 { display: inline; display: inline-block; }
+
+.row__colspaced { position: relative; }
+.lt-ie9 .row__colspaced { max-width: 100%; min-width: auto; left: auto; }

@@ -1,0 +1,42 @@
+@import "libs/settings";
+@import "libs/mixins";
+@import "libs/placeholders";
+
+@include grid;	// Include the grid mixin
+
+// ------------------------------------------------------------
+
+
+// Standard row
+// Rows should contain columns as children
+// You can use multiple grid denominations within each breakpoint, but each breakpoint must have unique column set-up
+// For example, you can have a 6 and 8 column grid at breakpoint b, but you can't use 6 or eight columns in other breakpoints
+.row {
+	@extend %pie-clearfix;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $internal-spacing/2; 	// Narrower for smaller screens
+	padding-right: $internal-spacing/2;	// Narrower for smaller screens
+
+	@include grid_columns(12);	// Twelve column grid
+
+	// IE less than 9 
+	// .lt-ie9 & {
+	// 	@include grid_columns(12);	// Twelve column grid
+	// 	width: $ie-fixed-vp;
+	// }
+}
+
+// Drag row left to allow for equal spaced grid. AKA gutters
+// Gutters set in mixins.scss file
+.row__colspaced {
+	position: relative;
+	@extend %pie-clearfix;
+
+	.lt-ie9 & { 
+		max-width: 100%; 
+		min-width: auto; 
+		left: auto; 
+	}
+}

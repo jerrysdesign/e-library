@@ -40,19 +40,23 @@
 	.control-group
 		padding: 10px
 
-.controls
-	position: relative
-	.remove
-		display: none
-	&:hover
+.quiz_add_subject, .quiz_add_subject2
+	.controls, .controls2
+		position: relative
 		.remove
-			@extend %ir
-			position: absolute
-			top: -$removeicon*.75
-			right: -$removeicon*.75
-			+size($removeicon)
-			background-image: url('#{$l2}/icon-remove.png')
-			background-position: center
-			display: block
-			+border-radius(100%)
-			background-color: $white
+			display: none
+	li
+		&:hover
+			.remove
+				@extend %ir
+				position: absolute
+				top: -$removeicon*.75
+				right: -$removeicon*.75
+				+size($removeicon)
+				background-image: url('#{$l2}/icon-remove.png')
+				background-position: center
+				display: block
+				+border-radius(100%)
+				background-color: $white
+.control-group2
+	border: 1px solid $transparent

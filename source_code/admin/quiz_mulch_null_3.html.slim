@@ -15,40 +15,17 @@
   .container.cf
     .cont.cont_tab4
       .pd2040
-        .control-group
-          label.control-label 題目
-          .controls
-            .row
-              textarea rows="1"
-            .i-b-block
-              == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-        .control-label.title 設定正確答案
-        ol.quiz_add_subject
-          li.control-group
-            label.control-label
-              label.radio
-                input.js-check type="radio" name="optionsRadios" value="option1"
-                b
-            .controls
-              textarea rows="1"
+        .quiz_subject
+          .control-group2
+            label.control-label2
+              h3 題目
+            .controls2
+              .row
+                textarea rows="1"
               .i-b-block
                 == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-          li.control-group
-            label.control-label
-              label.radio
-                input.js-check type="radio" name="optionsRadios" value="option1"
-                b
-            .controls
-              textarea rows="1"
-              .i-b-block
-                == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-        .control-group
-          label.control-label
-          .controls
-            a.bt.add href="javascript:;" 增加選項
+        h3.title 設定正確答案
 
-        //test style
-        div style="display:block; height: 100px"
         ol.quiz_add_subject2
           li
             .control-group2

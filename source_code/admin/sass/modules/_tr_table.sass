@@ -1,0 +1,39 @@
+.trtable_wrapper
+	width: 1000px
+	height: 400px
+	overflow-x: auto
+	overflow-y: auto
+
+.trtable
+	// 與主樣式衝突
+	margin: 0
+	border: 1px solid $black-30
+	th
+		background-color: $black-10
+
+	th, td
+		text-align: center
+		padding: 0
+		span + span
+			color: $white
+			background: $black-15
+			line-height: 1
+			
+	th , td
+		span
+			display: block
+			padding: 0.5em
+	td
+		// 答題正確
+		background-color: lighten(nth($successColor, 2), 5%)
+		color: lighten(nth($successColor, 1), 30%)
+		border-color: $white
+		vertical-align: middle
+		// 答題錯誤
+	.error
+		background-color: darken(nth($errorColor, 2), 3%) 
+		color: lighten(nth($errorColor, 1), 30%) 
+	th
+		background: $white
+		span
+			white-space: nowrap
