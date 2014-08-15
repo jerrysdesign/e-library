@@ -133,6 +133,107 @@ function active()
 	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
 }
 
+// [ exam ] checkbox - checked all
+function chk_all()
+{
+	var _this = $(this);
+	if(_this.prop('checked'))
+	{
+		$('.chk').prop('checked',true);
+	}
+	else
+	{
+		$('.chk').prop('checked',false);
+	}
+}
+
+// [ exam ] tr - up & down
+function tr_ud()
+{
+	if($('.chk:checked').length == 1)
+	{
+		var row = $('td .chk:checked').parents('tr:first').css('color','blue'),
+			row_count = $("table > tbody > tr").length;
+		if ($(this).is('.exam-up') && row.index() > 1)
+		{
+			row.insertBefore(row.prev());
+		}
+		else if($(this).is('.exam-down') && row.index() < row_count)
+		{
+			row.insertAfter(row.next());
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
+// [ exam ] btn - mode
+function btn_mode()
+{
+	var _length = $('input.chk:checked').size();
+	switch (_length)
+	{
+		case 0:
+			$('.exam-up,.exam-down,.exam-remove').addClass('disabled');
+			break;
+		case 1:
+			$('.disabled').removeClass('disabled');
+			break;
+		default:
+			$('.exam-remove').removeClass('disabled');
+			$('.exam-up,.exam-down').addClass('disabled');
+			break;
+	}
+}
+
+// [ exam ] tr - remove
+function tr_remove()
+{
+	if($('.chk:checked').length >= 1)
+	{
+		var _result = confirm('Want to delete?');
+		if(_result == true)
+		{
+			$('td .chk:checked').parents('tr').remove();
+		}
+	}
+}
+
+// [ exam ] tr - removeclass
+function tr_reclass()
+{
+	$('tr').css('color','black');
+}
+
+
+// fix
+function thead_fixed()
+{
+	var $win   = $(window),
+		$cont  = $('.container'),
+		$tbfix = $cont.find('.tb_fixed'),
+		$btn_area = $cont.find('.btn_area'),
+		$th = $('tr.tbfix');
+		_contOffset = $cont.offset().top,
+		_fixed = $tbfix.hasClass('fixed');
+		console.log($th.length);
+
+	if($win.scrollTop() >= _contOffset)
+	{
+		if(!_fixed){
+			$tbfix.addClass('fixed');
+		}
+	}
+	else
+	{
+		if(_fixed)
+		{
+			$tbfix.removeClass('fixed');
+		}
+	}
+}
+
 $(function(){
 	// search
 	var _speed = 300;
@@ -242,5 +343,14 @@ $(function(){
 		var nofp = $(this).data('nofp');
 		$(this).css('width', nofp * 2 + '%');
 	});
+
+	// [ exam ] table - remove & up & down
+	$('.chk').on('click',tr_reclass);
+	$('.exam-remove').on('click',tr_remove);
+	$('.exam-up,.exam-down').on('click',tr_ud);
+	$('th .chk:first').on('change',chk_all);
+	$('input.chk').on('change',btn_mode);
+
+	$(window).scroll(thead_fixed);
 
 });
