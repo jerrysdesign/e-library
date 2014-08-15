@@ -207,17 +207,17 @@ function tr_reclass()
 }
 
 
-// fix
+// [ exam ] caption - thead_fixed
 function thead_fixed()
 {
 	var $win   = $(window),
 		$cont  = $('.container'),
 		$tbfix = $cont.find('.tb_fixed'),
-		$btn_area = $cont.find('.btn_area'),
-		$th = $('tr.tbfix');
+		$btn_wrap = $cont.find('.btn_wrap'),
+		$thead = $('thead.tb_fixed');
 		_contOffset = $cont.offset().top,
 		_fixed = $tbfix.hasClass('fixed');
-		console.log($th.length);
+		// console.log(_btnwOffset);
 
 	if($win.scrollTop() >= _contOffset)
 	{
