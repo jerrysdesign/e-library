@@ -103,7 +103,7 @@ img,select,input,button{border:0;outline:none}
 
 h2, .lang, #menu a, .backtop, #menu_area { background: url(../images/h2bg3.gif) repeat-x 0 0; color: #fff; }
 
-h2, #menu_area { height: 40px; font-size: 16px; color: white; }
+h2, #menu_area { height: 38px; line-height: 38px; font-size: 16px; color: white; }
 h2 a, #menu_area a { color: white; }
 
 h2, .lang, #menu a, .backtop { height: 38px; border: 1px solid #3c74c5; }
@@ -133,7 +133,11 @@ h2, .lang, #menu a, .backtop { height: 38px; border: 1px solid #3c74c5; }
 #menu a:hover { background-position: 0 bottom; }
 #menu .sub_menu { width: 201px; position: absolute; margin-left: -1px; display: none; }
 #menu li li { width: 100%; border-bottom: 1px solid #e4f5f5; }
-#menu a { background: #fff; border: 0; }
+#menu li li a { background: #fff; border: 0; }
+
+.menu_wrap { height: 38px; }
+
+#menu_area { z-index: 9999; }
 
 /* search */
 .sltbox { width: 64px; margin: 5px 0 5px 1px; background: white url(../images/arrow_b2.gif) no-repeat 50% 50%; }
@@ -610,10 +614,6 @@ ul.a_btn_c2 li { display: block; }
 .upper-alpha li:nth-child(2) { background-position: left -24px; }
 .upper-alpha li:nth-child(3) { background-position: left -48px; }
 .upper-alpha li:nth-child(4) { background-position: left -72px; }
-
-.menu_wrap { height: 40px; }
-
-#menu_area { z-index: 9999; }
 
 .cont_tab h2, .cont_tab li, .cont_tab2 h2 { clear: both; }
 

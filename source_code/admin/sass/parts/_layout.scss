@@ -35,8 +35,8 @@ $total_width: 1000px;
 	@extend %fl;
 }
 #menu, #foot{
-		@extend %col4-5;
-	}
+	@extend %col4-5;
+}
 #head, #menu_bar, #cont, #foot {
 	width: $total_width;
 	@include center-block;
@@ -66,13 +66,13 @@ $backTopBorder: #3c74c5;
 
 // h2 要改如 .title_2
 h2, #menu_area {
-  height: 40px;
-  // line-height: 43px;
-  font-size: 16px;
-  color: $styleMenuColor;
-  a {
-  	color: $styleMenuColor;
-  }
+	height: $styleMenuHeight;
+	line-height: $styleMenuHeight;
+	font-size: 16px;
+	color: $styleMenuColor;
+	a {
+		color: $styleMenuColor;
+	}
 }
 
 h2, .lang, #menu a, .backtop, #menu_area {
@@ -80,13 +80,13 @@ h2, .lang, #menu a, .backtop, #menu_area {
 }
 
 h2, .lang, #menu a, .backtop {
-  height: $styleMenuHeight;
-  border: 1px solid $backTopBorder;
+	height: $styleMenuHeight;
+	border: 1px solid $backTopBorder;
 }
 
 h2, h3, #menu {
-  //font-family: Helvetica,Verdana,Arial,"微軟正黑體","Microsoft Jhenghei";
-  //line-height: 40px;
+	//font-family: Helvetica,Verdana,Arial,"微軟正黑體","Microsoft Jhenghei";
+	//line-height: 40px;
 }
 #logo a,#head_nav li,
 #menu_area,#menu,#menu li{float:left}
