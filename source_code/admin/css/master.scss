@@ -1,5 +1,5 @@
 /* 00 global */
-body,h1,h2,h3,h4,ul,ol,li,dl,dt,dd,div,p,em,form,select,option,input,button,img,label{margin:0;padding:0}
+/*body,h1,h2,h3,h4,ul,ol,li,dl,dt,dd,div,p,em,form,select,option,input,button,img,label{margin:0;padding:0}
 body{font:12px/1.6em Helvetica, Verdana, Arial;letter-spacing:.1em}
 ul,ol,li{list-style:none}
 a{text-decoration:none;color:#333}
@@ -7,11 +7,17 @@ a:hover{text-decoration:underline}
 em{font-style:normal}
 img{background:#fff url('../images/loading.gif') no-repeat 50% 50%}
 img,select,input,button{border:0;outline:none}
-
+*/
 	/* share_style */
-	#head,#menu_bar,
-	#cont,#foot{width:1000px;margin:0 auto}
-	#menu,#foot{width:800px}
+	#head,
+	#menu_bar,
+	#cont,
+	#foot{
+		@extend %static-container;
+	}
+	#menu,#foot{
+		@include span-columns(8, 10);
+	}
 	#logo a,#head_nav li,
 	#menu_area,#menu,#menu li{float:left}
 

@@ -7,17 +7,17 @@
 // Fonts
 // ------------------------------------------------------------
 
-%font-body	{  font-family: Helvetica, Verdana, Arial; }
-%font-var 	{  font-family: Georgia, serif; }
-
+%serif			{	font-family: $serif } 			// Serif Fonts
+%sans-serif	{	font-family: $sans-serif } 	// Sans-Serif Fonts
+%monospace	{	font-family: $monospace } 	// Monospace Fonts
 
 // ------------------------------------------------------------
 // Core typography
 // ------------------------------------------------------------
 
-// p, span, cite, ol, ul, pre, label, input, textarea 	{ @include adjust-font-size-to($para); }
-// ul																									{ @include nobullet; } 						
-// ol																									{ @include nobullet; }	
-// li																									{ line-height: inherit; }					
-// strong, b																						{ font-weight: 700; }
-// em, i, q																						{ font-style: italic; }
+p, span, cite, ol, ul, pre, label, input, textarea 	{ @include adjust-font-size-to($para); }
+ul																									{ @include nobullet; } 						
+ol																									{ @include nobullet; }	
+li																									{ line-height: inherit; }					
+strong, b																						{ font-weight: 700; }
+em, i, q																						{ font-style: italic; }

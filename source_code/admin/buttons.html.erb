@@ -1,0 +1,969 @@
+<script>
+	$('#head_area').hide;
+	$('#menu_wrap').hide;
+</script>
+<style type="text/css">
+@-webkit-keyframes title {
+  /* line 12, ../scss/main.scss */
+  from {
+    color: #EEE;
+    margin-top: -220px;
+  }
+
+  /* line 16, ../scss/main.scss */
+  to {
+    color: #333;
+    margin-top: 0px;
+  }
+}
+
+/* line 35, ../scss/main.scss */
+.clear {
+  clear: both;
+}
+
+/* line 37, ../scss/main.scss */
+body {
+  padding: 60px 0px 0px 0px;
+  margin: 0px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+/* line 45, ../scss/main.scss */
+nav {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+  background: #FFF;
+  padding: 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+}
+/* line 55, ../scss/main.scss */
+nav ul {
+  width: 900px;
+  margin: 0px auto;
+  padding: 0px;
+  list-style-type: none;
+}
+/* line 63, ../scss/main.scss */
+nav ul li {
+  -webkit-transition: border 0.2s;
+  -moz-transition: border 0.2s;
+  -o-transition: border 0.2s;
+  transition: border 0.2s;
+  float: left;
+  margin-bottom: -3px;
+}
+/* line 68, ../scss/main.scss */
+nav ul li.selected {
+  border-bottom: 10px solid #d30d15;
+}
+/* line 72, ../scss/main.scss */
+nav ul li.home {
+  padding: 10px;
+}
+/* line 75, ../scss/main.scss */
+nav ul li.home a {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  display: block;
+  line-height: 40px;
+  width: 40px;
+  background: #d30d15;
+  color: #FFF;
+  font-family: "Cherry Swash", sans-serif;
+  text-align: center;
+  font-size: 24px;
+  padding: 0px;
+}
+/* line 90, ../scss/main.scss */
+nav ul a {
+  float: left;
+  text-decoration: none;
+  padding: 20px 15px;
+  color: #999;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* line 102, ../scss/main.scss */
+header {
+  background: #fcfcfc;
+  padding: 40px 0px 100px 0px;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+  margin-bottom: 100px;
+  position: relative;
+}
+/* line 110, ../scss/main.scss */
+header hgroup {
+  text-align: center;
+  font-family: "Cherry Swash", sans-serif;
+}
+/* line 114, ../scss/main.scss */
+header hgroup h1 {
+  -webkit-animation-name: title;
+  -khtml-animation-name: title;
+  -moz-animation-name: title;
+  -ms-animation-name: title;
+  -o-animation-name: title;
+  animation-name: title;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-iteration-count: 1;
+  font-size: 150px;
+  font-weight: 700;
+  margin: 0px 10px 0px 10px;
+  line-height: 150px;
+  color: #333;
+  text-shadow: 0px 1px 0px #FFF;
+}
+/* line 123, ../scss/main.scss */
+header hgroup h2 {
+  color: #999;
+  font-weight: normal;
+  margin: 0px 10px 20px 10px;
+  text-shadow: 0px 1px 0px #FFF;
+}
+/* line 131, ../scss/main.scss */
+header .social-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+/* line 136, ../scss/main.scss */
+header .social-buttons .github-button {
+  min-width: 90px;
+}
+/* line 141, ../scss/main.scss */
+header .button-download {
+  position: absolute;
+  bottom: -74px;
+  left: 50%;
+  margin-left: -74px;
+  z-index: 10;
+}
+@media only screen and (max-width: 480px) {
+  /* line 102, ../scss/main.scss */
+  header {
+    padding: 70px 0px 80px 0px;
+  }
+  /* line 156, ../scss/main.scss */
+  header hgroup h1 {
+    font-size: 70px;
+    line-height: 80px;
+    margin: 0px 10px 10px 10px;
+  }
+  /* line 161, ../scss/main.scss */
+  header hgroup h2 {
+    font-size: 24px;
+    margin: 0px 20px 20px 20px;
+  }
+  /* line 167, ../scss/main.scss */
+  header .social-buttons {
+    position: absolute;
+    top: 20px;
+    left: auto;
+    bottom: auto;
+    right: 20px;
+  }
+}
+
+/* line 179, ../scss/main.scss */
+#page {
+  max-width: 920px;
+  margin: 0px auto;
+}
+/* line 184, ../scss/main.scss */
+#page .showcase {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+  background: #fcfcfc;
+  margin: 0px 10px 60px 10px;
+  position: relative;
+}
+/* line 191, ../scss/main.scss */
+#page .showcase hgroup {
+  position: absolute;
+  top: -30px;
+  z-index: 1;
+}
+/* line 196, ../scss/main.scss */
+#page .showcase hgroup h3 {
+  font-family: "Cherry Swash", sans-serif;
+  font-weight: lighter;
+  color: #CCC;
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 205, ../scss/main.scss */
+#page .showcase hgroup h3 em {
+  font-size: 11px;
+  color: #999;
+  font-style: normal;
+}
+/* line 210, ../scss/main.scss */
+#page .showcase hgroup h3 em a {
+  color: #999;
+}
+/* line 217, ../scss/main.scss */
+#page .showcase .gallery {
+  padding: 20px 20px 20px 20px;
+}
+/* line 220, ../scss/main.scss */
+#page .showcase .gallery > ul {
+  list-style-type: none;
+  margin: 0px 0px 20px 0px;
+  padding: 0;
+}
+/* line 225, ../scss/main.scss */
+#page .showcase .gallery > ul:last-child {
+  margin-bottom: 0px;
+}
+/* line 229, ../scss/main.scss */
+#page .showcase .gallery > ul > li {
+  margin: 5px;
+  display: inline-block;
+}
+/* line 235, ../scss/main.scss */
+#page .showcase .gallery em {
+  font-size: 11px;
+  color: #999;
+  font-style: normal;
+}
+/* line 240, ../scss/main.scss */
+#page .showcase .gallery em a {
+  color: #999;
+}
+/* line 246, ../scss/main.scss */
+#page .showcase .prettyprint {
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #333;
+  padding: 10px 5px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 16px;
+  overflow: hidden;
+}
+/* line 256, ../scss/main.scss */
+#page .showcase .prettyprint li.L1, #page .showcase .prettyprint li.L3, #page .showcase .prettyprint li.L5, #page .showcase .prettyprint li.L7, #page .showcase .prettyprint li.L9 {
+  background: #333;
+}
+
+/* line 264, ../scss/main.scss */
+#setup {
+  background: #EEE;
+}
+/* line 267, ../scss/main.scss */
+#setup h2 {
+  text-align: center;
+  font-weight: 100;
+  font-size: 60px;
+  color: #CCC;
+  text-shadow: 0px 1px 0px #FFF;
+  margin: 0px 0px 20px 0px;
+  line-height: 60px;
+}
+@media only screen and (max-width: 480px) {
+  /* line 267, ../scss/main.scss */
+  #setup h2 {
+    font-size: 44px;
+  }
+}
+/* line 280, ../scss/main.scss */
+#setup h3 {
+  color: #666;
+  font-size: 22px;
+}
+/* line 285, ../scss/main.scss */
+#setup .instructions {
+  max-width: 880px;
+  padding: 40px 20px;
+  margin: 0px auto;
+}
+/* line 290, ../scss/main.scss */
+#setup .instructions ol.steps {
+  padding-left: 30px;
+}
+/* line 292, ../scss/main.scss */
+#setup .instructions ol.steps > li {
+  line-height: 22px;
+  margin-bottom: 10px;
+  color: #666;
+}
+/* line 299, ../scss/main.scss */
+#setup .instructions em {
+  font-size: 12px;
+}
+/* line 305, ../scss/main.scss */
+#setup .prettyprint {
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: #333;
+  padding: 5px;
+  margin: 0;
+  font-size: 10px;
+  line-height: 16px;
+  overflow: hidden;
+}
+/* line 315, ../scss/main.scss */
+#setup .prettyprint .linenums {
+  padding-left: 20px;
+}
+/* line 319, ../scss/main.scss */
+#setup .prettyprint li.L1, #setup .prettyprint li.L3, #setup .prettyprint li.L5, #setup .prettyprint li.L7, #setup .prettyprint li.L9 {
+  background: #333;
+}
+/* line 324, ../scss/main.scss */
+#setup .customize {
+  float: right;
+}
+/* line 328, ../scss/main.scss */
+#setup .setup {
+  float: left;
+}
+/* line 331, ../scss/main.scss */
+#setup .customize, #setup .setup {
+  width: 47%;
+  text-align: left;
+}
+@media only screen and (max-width: 480px) {
+  /* line 331, ../scss/main.scss */
+  #setup .customize, #setup .setup {
+    float: none;
+    width: auto;
+    margin: 20px auto 40px auto;
+  }
+}
+
+/* line 344, ../scss/main.scss */
+footer {
+  background: #333;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+/* line 351, ../scss/main.scss */
+footer a {
+  color: #FFF;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 366, ../scss/main.scss */
+  body {
+    padding: 0px;
+  }
+
+  /* line 371, ../scss/main.scss */
+  nav {
+    position: static;
+  }
+  /* line 374, ../scss/main.scss */
+  nav ul {
+    width: auto;
+  }
+  /* line 377, ../scss/main.scss */
+  nav ul li {
+    float: none;
+    display: block;
+    border-bottom: 1px solid #EEE;
+  }
+  /* line 382, ../scss/main.scss */
+  nav ul li.home {
+    padding: 10px;
+    margin: 5px auto;
+  }
+  /* line 385, ../scss/main.scss */
+  nav ul li.home a {
+    margin: 5px auto;
+  }
+  /* line 391, ../scss/main.scss */
+  nav ul li.selected {
+    border-bottom: 1px solid #EEE;
+  }
+  /* line 395, ../scss/main.scss */
+  nav ul li a {
+    float: none;
+    display: block;
+    line-height: 24px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+</style>
+<nav id="main-nav">
+	<ul class="clearfix">
+		<li><a href="#flat">Flat</a></li>
+		<li><a href="#icons">Icons</a></li>
+		<li><a href="#glow">Glow</a></li>
+		<li><a href="#rounded">Rounded</a></li>
+		<li><a href="#pill">Pill</a></li>
+		<li><a href="#square">Square</a></li>
+		<li><a href="#circle">Circle</a></li>
+		<li><a href="#block">Block</a></li>
+		<li><a href="#more">More</a></li>
+		<li><a href="#setup">Get Started</a></li>
+	</ul>
+	<div class="clear"></div>
+</nav>
+<header class="clear">
+	<hgroup>
+	<h1>Buttons</h1>
+	</hgroup>
+</header>
+<section id="page">
+	<!-- ******************************************************************* -->
+	<!-- FLAT BUTTONS ***************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="flat" class="showcase">
+		<hgroup>
+		<h3>Flat Buttons</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button button-rounded button-flat">press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-primary">press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-action">press me</a> </li>
+				<li><a href="#" class="button button-rounded button-flat-highlight">press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-caution">press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-royal">press me</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="button button-pill button-flat">press me</a></li>
+				<li><a href="#" class="button button-pill button-flat-primary">press me</a></li>
+				<li><a href="#" class="button button-pill button-flat-action">press me</a> </li>
+				<li><a href="#" class="button button-pill button-flat-highlight">press me</a></li>
+				<li><a href="#" class="button button-pill button-flat-caution">press me</a></li>
+				<li><a href="#" class="button button-pill button-flat-royal">press me</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="button button-flat">press me</a></li>
+				<li><a href="#" class="button button-flat-primary">press me</a></li>
+				<li><a href="#" class="button button-flat-action">press me</a> </li>
+				<li><a href="#" class="button button-flat-highlight">press me</a></li>
+				<li><a href="#" class="button button-flat-caution">press me</a></li>
+				<li><a href="#" class="button button-flat-royal">press me</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="button button-circle button-flat">press me</a></li>
+				<li><a href="#" class="button button-circle button-flat-primary">press me</a></li>
+				<li><a href="#" class="button button-circle button-flat-action">press me</a> </li>
+				<li><a href="#" class="button button-circle button-flat-highlight">press me</a></li>
+				<li><a href="#" class="button button-circle button-flat-caution">press me</a></li>
+				<li><a href="#" class="button button-circle button-flat-royal">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-primary&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-pill button-flat-primary&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-flat-primary&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-circle button-flat-primary&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- ICONS BUTTONS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="icons" class="showcase">
+		<hgroup>
+		<h3>Icon Buttons <em>(icons provided by <a target="_blank" href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>)</em></h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button button-rounded button-flat"><i class="fa fa-github"></i> press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-primary"><i class="fa fa-refresh"></i> press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-action"><i class="fa fa-cloud"></i> press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-highlight"><i class="fa fa-camera"></i> press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-caution"><i class="fa fa-code"></i> press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-royal"><i class="fa fa-download"></i> press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat&quot;&gt;&lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt; press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-primary&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&lt;/i&gt; press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-action&quot;&gt;&lt;i class=&quot;fa fa-cloud&quot;&gt;&lt;/i&gt; press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-highlight&quot;&gt;&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt; press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-caution&quot;&gt;&lt;i class=&quot;fa fa-code&quot;&gt;&lt;/i&gt; press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-royal&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt; press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- GLOW BUTTONS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="glow" class="showcase">
+		<hgroup>
+		<h3>Glow Buttons</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button glow button-rounded button-flat">press me</a></li>
+				<li><a href="#" class="button glow button-rounded button-flat-primary">press me</a></li>
+				<li><a href="#" class="button glow button-rounded button-flat-action">press me</a> </li>
+				<li><a href="#" class="button glow button-rounded button-flat-highlight">press me</a></li>
+				<li><a href="#" class="button glow button-rounded button-flat-caution">press me</a></li>
+				<li><a href="#" class="button glow button-rounded button-flat-royal">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button glow button-rounded button-flat&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button glow button-rounded button-flat-primary&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button glow button-rounded button-flat-action&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button glow button-rounded button-flat-highlight&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button glow button-rounded button-flat-caution&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button glow button-rounded button-flat-royal&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- ROUNDED BUTTONS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="rounded" class="showcase">
+		<hgroup>
+		<h3>Rounded Buttons</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button button-rounded">press me</a></li>
+				<li><a href="#" class="button button-rounded button-primary">press me</a></li>
+				<li><a href="#" class="button button-rounded button-action">press me</a> </li>
+				<li><a href="#" class="button button-rounded button-highlight">press me</a></li>
+				<li><a href="#" class="button button-rounded button-caution">press me</a></li>
+				<li><a href="#" class="button button-rounded button-royal">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-primary&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-action&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-highlight&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-caution&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-royal&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- PILL BUTTONS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="pill" class="showcase">
+		<hgroup>
+		<h3>Pill Buttons</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button button-pill">press me</a></li>
+				<li><a href="#" class="button button-pill button-primary">press me</a></li>
+				<li><a href="#" class="button button-pill button-action">press me</a> </li>
+				<li><a href="#" class="button button-pill button-highlight">press me</a></li>
+				<li><a href="#" class="button button-pill button-caution">press me</a></li>
+				<li><a href="#" class="button button-pill button-royal">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button button-pill&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-pill button-primary&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-pill button-action&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-pill button-highlight&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-pill button-caution&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-pill button-royal&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- BORDER BUTTONS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="border" class="showcase">
+		<hgroup>
+		<h3>Border Buttons</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button button-border">press me</a></li>
+				<li><a href="#" class="button button-border-primary button-rounded">press me</a></li>
+				<li><a href="#" class="button button-border-action button-pill">press me</a> </li>
+				<li><a href="#" class="button button-border-highlight button-circle">press me</a></li>
+				<li><a href="#" class="button button-border-caution"><i class="fa fa-camera"></i> press me</a></li>
+				<li><a href="#" class="button button-border-royal">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button button-border&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-border-primary button-rounded&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-border-action button-pill&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-border-highlight button-circle&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-border-caution&quot;&gt;&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt; press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-border-royal&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- 3D BUTTONS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="3d" class="showcase">
+		<hgroup>
+		<h3>3D Buttons</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button button-3d">press me</a></li>
+				<li><a href="#" class="button button-3d-primary button-rounded">press me</a></li>
+				<li><a href="#" class="button button-3d-action button-pill">press me</a> </li>
+				<li><a href="#" class="button button-3d-highlight button-circle">press me</a></li>
+				<li><a href="#" class="button button-3d-caution"><i class="fa fa-camera"></i> press me</a></li>
+				<li><a href="#" class="button button-3d-royal">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button button-3d&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-3d-primary button-rounded&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-3d-action button-pill&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-3d-highlight button-circle&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-3d-caution&quot;&gt;&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt; press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-3d-royal&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- SQUARE BUTTONS **************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="square" class="showcase">
+		<hgroup>
+		<h3>Square Buttons</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button">press me</a></li>
+				<li><a href="#" class="button button-primary">press me</a></li>
+				<li><a href="#" class="button button-action">press me</a> </li>
+				<li><a href="#" class="button button-highlight">press me</a></li>
+				<li><a href="#" class="button button-caution">press me</a></li>
+				<li><a href="#" class="button button-royal">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-primary&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-action&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-highlight&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-caution&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-royal&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- CIRCLE BUTTONS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="circle" class="showcase">
+		<hgroup>
+		<h3>Circle Buttons</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button button-circle">press me</a></li>
+				<li><a href="#" class="button button-circle button-primary">press me</a></li>
+				<li><a href="#" class="button button-circle button-action">press me</a> </li>
+				<li><a href="#" class="button button-circle button-highlight">press me</a></li>
+				<li><a href="#" class="button button-circle button-caution">press me</a></li>
+				<li><a href="#" class="button button-circle button-royal">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button button-circle&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-circle button-primary&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-circle button-action&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-circle button-highlight&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-circle button-caution&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-circle button-royal&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- DROPDOWN BUTTONS ************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="more" class="showcase">
+		<hgroup>
+		<h3>Dropdown Buttons <em>(Include jQuery &amp; buttons.js)</em></h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li>
+					<span class="button-dropdown" data-buttons="dropdown">
+					<a href="#" class="button button-rounded"> press me <i class="fa fa-caret-down"></i></a>
+					<ul>
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li class="button-dropdown-divider"><a href="#">Option 3</a></li>
+					</ul>
+					</span>
+				</li>
+				<li>
+					<span class="button-dropdown" data-buttons="dropdown">
+					<a href="#" class="button button-rounded button-flat-primary"> press me <i class="fa fa-caret-down"></i></a>
+					<ul class="button-dropdown-menu-below">
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li class="button-dropdown-divider"><a href="#">Option 3</a></li>
+					</ul>
+					</span>
+				</li>
+				<li>
+					<span class="button-dropdown" data-buttons="dropdown">
+					<a href="#" class="button button-rounded button-flat-action"> press me <i class="fa fa-caret-down"></i></a>
+					<ul class="button-dropdown-menu-above">
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li class="button-dropdown-divider"><a href="#">Option 3</a></li>
+					</ul>
+					</span>
+				</li>
+				<li>
+					<span class="button-dropdown" data-buttons="dropdown">
+					<a href="#" class="button button-highlight button-rounded">
+						</i> press me <i class="fa fa-caret-down"></i>
+					</a>
+					<ul>
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li class="button-dropdown-divider"><a href="#">Option 3</a></li>
+					</ul>
+					</span>
+				</li>
+				<li>
+					<span class="button-dropdown" data-buttons="dropdown">
+					<a href="#" class="button button-caution button-pill"> press me <i class="fa fa-caret-down"></i></a>
+					<ul>
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li class="button-dropdown-divider"><a href="#">Option 3</a></li>
+					</ul>
+					</span>
+				</li>
+				<li>
+					<span class="button-dropdown" data-buttons="dropdown">
+					<a href="#" class="button button-royal button-rounded">
+						<i class="fa fa-envelope"></i> press me <i class="fa fa-caret-down"></i>
+					</a>
+					<ul>
+						<li><a href="#">Option 1</a></li>
+						<li><a href="#">Option 2</a></li>
+						<li class="button-dropdown-divider"><a href="#">Option 3</a></li>
+					</ul>
+					</span>
+				</li>
+			</ul>
+		</section>
+		<!-- CODE EXAMPLE -->
+<pre class="prettyprint linenums">&lt;span class=&quot;button-dropdown&quot; data-buttons=&quot;dropdown&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-primary&quot;&gt; press me &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href=&quot;http://airwolfe.com&quot;&gt;AirWolfe.com&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href=&quot;http://twitter.com&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+ &lt;li class=&quot;button-dropdown-divider&quot;&gt;&lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/span&gt;
+&lt;span class=&quot;button-dropdown&quot; data-buttons=&quot;dropdown&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-primary&quot;&gt; press me &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;!-- Dropdown Below Button --&gt;
+&lt;ul class=&quot;button-dropdown-menu-below&quot;&gt;
+ &lt;li&gt;&lt;a href=&quot;http://airwolfe.com&quot;&gt;AirWolfe.com&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href=&quot;http://twitter.com&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+ &lt;li class=&quot;button-dropdown-divider&quot;&gt;&lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/span&gt;
+&lt;span class=&quot;button-dropdown&quot; data-buttons=&quot;dropdown&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-primary&quot;&gt; press me &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;!-- Dropdown Above Button --&gt;
+&lt;ul class=&quot;button-dropdown-menu-above&quot;&gt;
+ &lt;li&gt;&lt;a href=&quot;http://airwolfe.com&quot;&gt;AirWolfe.com&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href=&quot;http://twitter.com&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+ &lt;li class=&quot;button-dropdown-divider&quot;&gt;&lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/span&gt;
+</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- BLOCK BUTTONS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="block" class="showcase">
+		<hgroup>
+		<h3>Block Buttons</h3>
+		</hgroup>
+		<section class="gallery">
+			<a href="#" class="button button-block button-rounded button-large">press me</a>
+			<br/>
+			<a href="#" class="button button-block button-rounded button-primary button-large">press me</a>
+			<br/>
+			<a href="#" class="button button-block button-rounded button-action button-large">press me</a>
+			<br/>
+			<a href="#" class="button button-block button-rounded button-highlight button-large">press me</a>
+			<br/>
+			<a href="#" class="button button-block button-rounded button-caution button-large">press me</a>
+			<br/>
+			<a href="#" class="button button-block button-rounded button-royal button-large">press me</a>
+		</section>
+<pre class="prettyprint linenums">&lt;a href=&quot;#&quot; class=&quot;button button-block button-rounded button-primary button-large&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- BUTTON SIZES ***************************************************** -->
+	<!-- ******************************************************************* -->
+	<section class="showcase">
+<hgroup>
+<h3>Button Sizes</h3>
+</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><a href="#" class="button button-rounded button-flat-primary button-jumbo">press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-primary button-large">press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-primary">press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-primary button-small">press me</a></li>
+				<li><a href="#" class="button button-rounded button-flat-primary button-tiny">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-primary button-large&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-primary&quot;&gt;press me&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-primary button-small&quot;&gt;press me&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;button button-rounded button-flat-primary button-tiny&quot;&gt;press me&lt;/a&gt;</pre></section>
+	<!-- ******************************************************************* -->
+	<!-- WRAPPER BUTTONS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="wrappers" class="showcase">
+<hgroup>
+<h3>Button Wrappers</h3>
+</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><span class="button-wrap"><a href="#" class="button button-circle">press me</a></span></li>
+				<li><span class="button-wrap"><a href="#" class="button button-circle button-primary">press me</a></span></li>
+				<li><span class="button-wrap"><a href="#" class="button button-pill ">press me</a></span></li>
+				<li><span class="button-wrap"><a href="#" class="button button-pill button-primary">press me</a></span></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">&lt;span class=&quot;button-wrap&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;button button-circle&quot;&gt;press me&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrap&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;button button-circle button-primary&quot;&gt;press me&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrap&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;button button-pill &quot;&gt;press me&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;button-wrap&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;button button-pill button-primary&quot;&gt;press me&lt;/a&gt;&lt;/span&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- BUTTON GROUPS ***************************************************** -->
+	<!-- ******************************************************************* -->
+	<section class="showcase">
+		<hgroup>
+		<h3>Button Groups</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li>
+					<div class="button-group">
+						<button type="button" class="button">Option 1</button>
+						<button type="button" class="button">Option 2</button>
+						<button type="button" class="button">Option 3</button>
+					</div>
+				</li>
+				<li>
+					<div class="button-group">
+						<button type="button" class="button button-primary">Option 1</button>
+						<button type="button" class="button button-primary">Option 2</button>
+						<button type="button" class="button button-primary">Option 3</button>
+					</div>
+				</li>
+				<li>
+					<div class="button-group">
+						<button type="button" class="active button button-pill">Option 1</button>
+						<button type="button" class="button button-pill">Option 2</button>
+						<button type="button" class="button button-pill">Option 3</button>
+					</div>
+				</li>
+				<li>
+					<div class="button-group">
+						<button type="button" class="button button-pill button-action">Option 1</button>
+						<button type="button" class="button button-pill button-action">Option 2</button>
+						<button type="button" class="button button-pill button-action">Option 3</button>
+					</div>
+				</li>
+				<li>
+					<div class="button-group">
+						<button type="button" class="button button-rounded">Option 1</button>
+						<button type="button" class="button button-rounded">Option 2</button>
+						<button type="button" class="button button-rounded">Option 3</button>
+					</div>
+				</li>
+				<li>
+					<div class="button-group">
+						<button type="button" class="button button-flat-primary">Option 1</button>
+						<button type="button" class="button button-flat-primary">Option 2</button>
+						<button type="button" class="button button-flat-primary">Option 3</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">&lt;div class=&quot;button-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;button&quot;&gt;Option 1&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button&quot;&gt;Option 2&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button&quot;&gt;Option 3&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;button-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-primary&quot;&gt;Option 1&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-primary&quot;&gt;Option 2&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-primary&quot;&gt;Option 3&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;button-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;active button button-pill&quot;&gt;Option 1&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-pill&quot;&gt;Option 2&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-pill&quot;&gt;Option 3&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;button-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-pill button-action&quot;&gt;Option 1&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-pill button-action&quot;&gt;Option 2&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-pill button-action&quot;&gt;Option 3&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;button-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-rounded&quot;&gt;Option 1&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-rounded&quot;&gt;Option 2&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-rounded&quot;&gt;Option 3&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;button-group&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-flat-primary&quot;&gt;Option 1&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-flat-primary&quot;&gt;Option 2&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button-flat-primary&quot;&gt;Option 3&lt;/button&gt;
+&lt;/div&gt;</pre>
+	</section>
+	<!-- ******************************************************************* -->
+	<!-- FORMS & ANCHORS *************************************************** -->
+	<!-- ******************************************************************* -->
+	<section id="form" class="showcase">
+		<hgroup>
+		<h3>Form Elements Work Too</h3>
+		</hgroup>
+		<section class="gallery">
+			<ul>
+				<li><input type="submit" value="press me" class="button button-pill button-primary"/></li>
+				<li><button class="button button-pill button-primary">press me</button></li>
+				<!-- DISABLED BUTTONS -->
+				<li><input  disabled type="submit"  value="press me" class="button button-pill button-primary"/></li>
+				a        <li><button disabled class="button  button-pill button-primary">press me</button></li>
+				<li><button disabled class="button button-pill button-flat-primary">press me</button></li>
+				<li><a href="#" class="button disabled button-pill button-primary ">press me</a></li>
+			</ul>
+		</section>
+<pre class="prettyprint linenums">
+&lt;input type=&quot;submit&quot; value=&quot;press me&quot; class=&quot;button button-pill button-primary&quot;/&gt;
+&lt;button class=&quot;button button-pill button-primary&quot;&gt;press me&lt;/button&gt;
+&lt;!-- DISABLED BUTTONS --&gt;
+&lt;input  disabled type=&quot;submit&quot;  value=&quot;press me&quot; class=&quot;button button-pill button-primary&quot;/&gt;
+&lt;button disabled class=&quot;button  button-pill button-primary&quot;&gt;press me&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;button disabled button-pill button-primary&quot;&gt;press me&lt;/a&gt;</pre>
+	</section>
+</section>

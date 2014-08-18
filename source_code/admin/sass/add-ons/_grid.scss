@@ -1,42 +1,72 @@
-@import "libs/settings";
-@import "libs/mixins";
-@import "libs/placeholders";
+// @import "libs/settings";
+// @import "libs/mixins";
+// @import "libs/placeholders";
 
-@include grid;	// Include the grid mixin
+// @include grid;	// Include the grid mixin
+// // ------------------------------------------------------------
 
+
+// // Standard row
+// // Rows should contain columns as children
+// // You can use multiple grid denominations within each breakpoint, but each breakpoint must have unique column set-up
+// // For example, you can have a 6 and 8 column grid at breakpoint b, but you can't use 6 or eight columns in other breakpoints
+// .row {
+// 	@extend %pie-clearfix;
+// 	position: relative;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	padding-left: $internal-spacing/2; 	// Narrower for smaller screens
+// 	padding-right: $internal-spacing/2;	// Narrower for smaller screens
+
+// 	@include grid_columns(12);	// Twelve column grid
+
+// 	// IE less than 9 
+// 	// .lt-ie9 & {
+// 	// 	@include grid_columns(12);	// Twelve column grid
+// 	// 	width: $ie-fixed-vp;
+// 	// }
+// }
+
+// // Drag row left to allow for equal spaced grid. AKA gutters
+// // Gutters set in mixins.scss file
+// .row__colspaced {
+// 	position: relative;
+// 	@extend %pie-clearfix;
+
+// 	.lt-ie9 & { 
+// 		max-width: 100%; 
+// 		min-width: auto; 
+// 		left: auto; 
+// 	}
+// }
+
+
+
+// Susy Grid
 // ------------------------------------------------------------
 
+@import "susy";
 
-// Standard row
-// Rows should contain columns as children
-// You can use multiple grid denominations within each breakpoint, but each breakpoint must have unique column set-up
-// For example, you can have a 6 and 8 column grid at breakpoint b, but you can't use 6 or eight columns in other breakpoints
-.row {
-	@extend %pie-clearfix;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: $internal-spacing/2; 	// Narrower for smaller screens
-	padding-right: $internal-spacing/2;	// Narrower for smaller screens
+$show-grid-backgrounds  : true;
 
-	@include grid_columns(12);	// Twelve column grid
+// Setting up the Static Grid
+$total-columns: 12;
+$column-width: 65px;
+$gutter-width: 20px;
+$grid-padding: 0;
 
-	// IE less than 9 
-	// .lt-ie9 & {
-	// 	@include grid_columns(12);	// Twelve column grid
-	// 	width: $ie-fixed-vp;
-	// }
-}
+$container-style: static;
+$container-width: 1000px;
 
-// Drag row left to allow for equal spaced grid. AKA gutters
-// Gutters set in mixins.scss file
-.row__colspaced {
-	position: relative;
-	@extend %pie-clearfix;
+%static-container { @include container; }
 
-	.lt-ie9 & { 
-		max-width: 100%; 
-		min-width: auto; 
-		left: auto; 
-	}
-}
+// Elastic grid as percentages
+$total-columns: 12;
+$column-width: 6%;
+$gutter-width: 2%;
+$grid-padding: 0;
+
+$container-style: magic;
+$container-width: 62.5em;
+
+%fluid-container { @include container; }

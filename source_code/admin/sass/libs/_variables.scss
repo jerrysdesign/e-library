@@ -1,0 +1,81 @@
+// ------------------------------------------------------------
+// Varables
+
+// :: Font Family
+// :: Color
+// :: Typography
+// :: Borders
+// ------------------------------------------------------------
+
+
+
+
+// ------------------------------------------------------------
+// :: Font Family
+// ------------------------------------------------------------
+
+$fontMing				: 新細明體, 'MingLiU'; 									// 新細明體
+$fontJhengHei		: 微軟正黑體, 'Microsoft JhengHei'; 		// 微軟正黒體
+$fontHeiTi			: 'Heiti TC'; 												// 黑體
+
+$serif					:	'Times New Roman', Times, serif; 		// Serif Fonts
+$sansSerif			:	Arial, Helvetica, sans-serif;				// Sans-Serif Fonts
+$monospace			:	'Courier New', Courier, monospace; 	// Monospace Fonts
+
+
+
+// ------------------------------------------------------------
+// :: Color
+// ------------------------------------------------------------
+
+@import "color";
+
+$macy-grey							: #777;	
+$ron-burgundy 					: #e0006e;
+$agent-orange						: #c64f24;
+$labelLine							: #09277b;
+$link_color							: #333333;
+$link_color_hover				: #709bb4;
+$color_Mandy						: #e76060;
+$primary								: #3c74c5;
+
+// 以下待整理
+$EAEDEF									: #EAEDEF;
+$color_0088cc						: #0088cc;
+$link_color							: #333333;
+$link_color_hover				: #709bb4;
+$color_Mandy						: #e76060;
+$color_e76060						: $color_Mandy;
+
+
+
+// ------------------------------------------------------------
+// :: Typesizes/scale
+// ------------------------------------------------------------
+
+// Greek alphabet naming system. Obscure, yet hierarchical.
+// Allows us to avoid naming based on html object. 
+// Eg. A h1 can be smaller visually, than a h4.
+$alpha   	: 42px;
+$beta			: 32px;
+$gamma		: 28px;
+$delta		: 26px;
+$epsilon	: 24px;
+$zeta			: 20px;
+$eta			: 18px;
+$theta		: 15px;
+$iota 		: 14px;
+$kappa 		: 12px;
+
+$para			: $kappa;	// Paragraph size
+$quote		: $beta;	// Quote size
+
+
+
+// ------------------------------------------------------------
+// :: Border widths
+// ------------------------------------------------------------
+
+$default-border-width 				: 1px; 
+
+

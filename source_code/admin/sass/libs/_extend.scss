@@ -7,6 +7,7 @@
 
 // ------------------------------------------------------------
 
+
 // h2 background
 %h2bg {
 	background: url("#{$l2}/h2bg.gif") repeat-x 0 0;
@@ -86,3 +87,7 @@
 .text-r, %text-r {
 	text-align: right;
 }
+
+// Susy Grid
+// form grid.scss
+%container { @include container;}

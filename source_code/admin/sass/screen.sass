@@ -1,11 +1,14 @@
 // ::Imports pre-render. Must be after reset
 // ------------------------------------------------------------
 @import "libs/required"
+@import "libs/variables"
 @import "libs/reset"
-@import "libs/settings"
 @import "libs/mixins"
 @import "libs/placeholders"
+@import "libs/grid"
+@import "libs/settings"
 @import "libs/extend"
+
 
 // ::Base styles
 // ------------------------------------------------------------
@@ -14,8 +17,8 @@ html
 	font-size: 100%
 
 body
-	@extend %font-body
-	background-color: $body-color
+	+adjust-font-size-to($baseFontSize)
+	background-color: $background-color-body
 	color: $base-color
 
 a
@@ -55,6 +58,15 @@ img
 @import "modules/admin_fancybox"
 @import "modules/component_btn"
 @import "modules/tr_table"
+
+
+// ::Componet
+// ------------------------------------------------------------
+
+// Buttons
+@import "component/buttons"
+
+
 
 // 解決.control-group .control-label .controls 組件定位
 .dt
