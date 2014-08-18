@@ -1,6 +1,8 @@
 .gitignore
 *.scssc
 *.sassc
+*.coffeescript-cache
+
 file_tree.txt
 fire_app_log.txt
 doc/
