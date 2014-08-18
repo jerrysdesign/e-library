@@ -1,4 +1,3 @@
-.gitignore
 *.scssc
 *.sassc
 *.coffeescript-cache
