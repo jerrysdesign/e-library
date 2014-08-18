@@ -217,7 +217,6 @@ function thead_fixed()
 		$thead = $('thead.tb_fixed');
 		_contOffset = $cont.offset().top,
 		_fixed = $tbfix.hasClass('fixed');
-		// console.log(_btnwOffset);
 
 	if($win.scrollTop() >= _contOffset)
 	{
@@ -232,6 +231,32 @@ function thead_fixed()
 			$tbfix.removeClass('fixed');
 		}
 	}
+}
+
+// barCharts
+function barCharts()
+{
+	//＊＊/ nofp = number of people
+	// 單位最大人數
+	// 100/單位最大人數為基數
+
+	// barChart gap text
+	var _sum = 0;
+	$('.chart__bars:first .chart__bar').each(function(){
+		_sum += Number($(this).data('nofp'));
+	});
+	$('.chart__numbers > li > span').each(function(key){
+		var _k = key + 1,
+			_s = _sum / 5;
+		$(this).text(_s * _k);
+	});
+
+	// barChart width
+	$('.chart__bar').each(function( key, bar )
+	{
+		var nofp = $(this).data('nofp');
+		$(this).css('width', ( nofp / _sum ) * 100 + '%');
+	});
 }
 
 $(function(){
@@ -332,17 +357,7 @@ $(function(){
 	Remove();
 	additem();
 	renumber();
-
-	//＊＊/ nofp = number of people
-	// 單位最大人數
-	// 100/單位最大人數為基數
-	// 下方2為基數
-	// .chart__bars .data('nofp')/100,轉整數帶入
-	$('.chart__bar').each(function( key, bar )
-	{
-		var nofp = $(this).data('nofp');
-		$(this).css('width', nofp * 2 + '%');
-	});
+	barCharts();
 
 	// [ exam ] table - remove & up & down
 	$('.chk').on('click',tr_reclass);
@@ -351,6 +366,9 @@ $(function(){
 	$('th .chk:first').on('change',chk_all);
 	$('input.chk').on('change',btn_mode);
 
-	$(window).scroll(thead_fixed);
+	if($('.container').has('.tb_fixed').size() == 1)
+	{
+		$(window).scroll(thead_fixed);
+	}
 
 });
