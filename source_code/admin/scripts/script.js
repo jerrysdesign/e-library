@@ -94,9 +94,7 @@ function additem()
 		var new_element = _qas.children('li').last();
 		$('.insert_img',new_element).on('click',insert_img);
 		$('.file',new_element).on('change',change_img);
-		$('.quiz_add_subject > li').on('click',active);
-		$("input.projecttype[type=radio]").on('click',activeradioholder);
-
+		$('.radioholder').on('click',radioholder);
 	});
 }
 
@@ -129,6 +127,79 @@ function renumber()
 			case '6' : _this.text('F');break;
 		}
 	});
+}
+
+// select subject
+function selectholder()
+{
+	$(".selectholder").each(function() {
+		var description;
+
+		$(this).children().hide();
+		description = $(this).children("b").text();
+		$(this).append("<span class=\"desc\">" + description + "</span>");
+		$(this).append("<span class=\"pulldown\"></span>");
+		$(this).append("<div class=\"selectdropdown\"></div>");
+		$(this).children("select").children("option").each(function() {
+			var $drop, name;
+
+			if ($(this).attr("value") !== "0") {
+				$drop = $(this).parent().siblings(".selectdropdown");
+				name = $(this).attr("value");
+				$drop.append("<span>" + name + "</span>");
+			}
+		});
+		$(this).click(function() {
+			if ($(this).hasClass("activeselectholder")) {
+				$(this).children(".selectdropdown").slideUp(100);
+				$(this).removeClass("activeselectholder");
+				if ($(this).children("select").val() !== "0") {
+					$(this).children(".desc").fadeOut(50, function() {
+						$(this).text($(this).siblings("select").val());
+						$(this).fadeIn(50);
+					});
+				}
+			} else {
+				$(".activeselectholder").each(function() {
+					$(this).children(".selectdropdown").slideUp(100);
+					if ($(this).children("select").val() !== "0") {
+						$(this).children(".desc").fadeOut(100, function() {
+							$(this).text($(this).siblings("select").val());
+							$(this).fadeIn(100);
+						});
+					}
+					$(this).removeClass("activeselectholder");
+				});
+				$(this).children(".selectdropdown").slideDown(100);
+				$(this).addClass("activeselectholder");
+				if ($(this).children("select").val() !== "0") {
+					$(this).children(".desc").fadeOut(100, function() {
+						$(this).text($(this).siblings("select").children("option[value=0]").text());
+						$(this).fadeIn(50);
+					});
+				}
+			}
+		});
+	});
+	$(".selectholder .selectdropdown span").click(function() {
+		var value;
+
+		$(this).siblings().removeClass("active");
+		$(this).addClass("active");
+		value = $(this).text();
+		$(this).parent().siblings("select").val(value);
+		$(this).parent().siblings(".desc").fadeOut(100, function() {
+			$(this).text(value);
+			$(this).fadeIn(100);
+		});
+	});
+}
+
+// select ans
+function radioholder()
+{
+	$('.radioholder').removeClass("activeradioholder");
+	$(this).addClass('activeradioholder').children("input[type=radio]").prop("checked", true);
 }
 
 $(function(){
@@ -195,92 +266,6 @@ $(function(){
 		});
 	});
 
-	function activeradioholder(){
-		
-		$("input.projecttype[type=radio]").each(function() {
-			if ($(this).prop("checked") == true) {
-				$(this).parent().addClass("activeradioholder");
-			} else {
-				$(this).parent().removeClass("activeradioholder");
-			}
-		});
-	}
-
-	function radioholder()
-	{
-		$(".radioholder").each(function() {
-			var description;
-			$(this).children('.tick').show();
-			$(this).click(function() {
-				$(this).children("input").prop("checked", true);
-				$(this).children("input").trigger("change");
-			});
-		});
-	}
-	function selectholder() {
-		$(".selectholder").each(function() {
-			var description;
-
-			$(this).children().hide();
-			description = $(this).children("b").text();
-			$(this).append("<span class=\"desc\">" + description + "</span>");
-			$(this).append("<span class=\"pulldown\"></span>");
-			$(this).append("<div class=\"selectdropdown\"></div>");
-			$(this).children("select").children("option").each(function() {
-				var $drop, name;
-
-				if ($(this).attr("value") !== "0") {
-					$drop = $(this).parent().siblings(".selectdropdown");
-					name = $(this).attr("value");
-					$drop.append("<span>" + name + "</span>");
-				}
-			});
-			$(this).click(function() {
-				if ($(this).hasClass("activeselectholder")) {
-					$(this).children(".selectdropdown").slideUp(100);
-					$(this).removeClass("activeselectholder");
-					if ($(this).children("select").val() !== "0") {
-						$(this).children(".desc").fadeOut(50, function() {
-							$(this).text($(this).siblings("select").val());
-							$(this).fadeIn(50);
-						});
-					}
-				} else {
-					$(".activeselectholder").each(function() {
-						$(this).children(".selectdropdown").slideUp(100);
-						if ($(this).children("select").val() !== "0") {
-							$(this).children(".desc").fadeOut(100, function() {
-								$(this).text($(this).siblings("select").val());
-								$(this).fadeIn(100);
-							});
-						}
-						$(this).removeClass("activeselectholder");
-					});
-					$(this).children(".selectdropdown").slideDown(100);
-					$(this).addClass("activeselectholder");
-					if ($(this).children("select").val() !== "0") {
-						$(this).children(".desc").fadeOut(100, function() {
-							$(this).text($(this).siblings("select").children("option[value=0]").text());
-							$(this).fadeIn(50);
-						});
-					}
-				}
-			});
-		});
-		$(".selectholder .selectdropdown span").click(function() {
-			var value;
-
-			$(this).siblings().removeClass("active");
-			$(this).addClass("active");
-			value = $(this).text();
-			$(this).parent().siblings("select").val(value);
-			$(this).parent().siblings(".desc").fadeOut(100, function() {
-				$(this).text(value);
-				$(this).fadeIn(100);
-			});
-		});
-	}
-
 	// fancybox
 	$(".fancybox").fancybox();
 	$("input.fancybox").fancybox();
@@ -310,14 +295,14 @@ $(function(){
 
 	$('.insert_img').on('click',insert_img);
 	$('.file').on('change',change_img);
-	$("input[type=radio]").on('change',activeradioholder);
+	$('.radioholder').on('click',radioholder);
 
 	remove_img();
 	Remove();
 	additem();
-	radioholder();
 	selectholder();
 	renumber();
+
 	//＊＊/ nofp = number of people
 	// 單位最大人數
 	// 100/單位最大人數為基數
