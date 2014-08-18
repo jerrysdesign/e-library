@@ -1,0 +1,67 @@
+/* icon */
+
+%icon {
+  background: url(#{$l2}/icon.png) no-repeat 50% 10px;
+  width: 40px;
+}
+@for $i from 1 through 9 {
+  .icon0#{$i} {
+    @extend %icon;
+    @extend %fl;
+  }
+}
+@for $i from 0 through 4 {
+  .icon1#{$i} {
+    @extend %icon;
+    @extend %fl;
+  }
+}
+
+.icon02 {
+  background-position: 50% -46px;
+}
+//57
+.icon03 {
+  background-position: 50% -103px;
+}
+//57
+.icon04 {
+  background-position: 50% -160px;
+}
+//55
+.icon05 {
+  background-position: 50% -215px;
+}
+//55
+.icon06 {
+  background-position: 50% -270px;
+}
+//57
+.icon07 {
+  background-position: 50% -327px;
+}
+//55
+.icon08 {
+  background-position: 50% -382px;
+}
+//56
+.icon09 {
+  background-position: 50% -438px;
+}
+//58
+.icon10 {
+  background-position: 50% -496px;
+}
+//56
+.icon11 {
+  background-position: 50% -552px;
+}
+//54
+.icon12 {
+  background-position: 50% -606px;
+}
+//55
+.icon13 {
+  background-position: 50% -661px;
+}
+

@@ -9,7 +9,7 @@ img{background:#fff url('../images/loading.gif') no-repeat 50% 50%}
 img,select,input,button{border:0;outline:none}
 */
 	/* share_style */
-	#head,#menu_bar,
+/*	#head,#menu_bar,
 	#cont,#foot{width:1000px;margin:0 auto}
 	#menu,#foot{width:800px}
 	#logo a,#head_nav li,
@@ -19,7 +19,8 @@ img,select,input,button{border:0;outline:none}
 	h2,.lang,#menu a,.backtop,#menu_area{background:url('../images/h2bg3.gif') repeat-x 0 0;color:#fff}
 	h2,.lang,#menu a,.backtop{height:38px;border:1px solid #3c74c5}
 	h2,h3,#menu{font-family:Helvetica,Verdana,Arial,"微軟正黑體","Microsoft Jhenghei";line-height:40px}
-
+*/
+	
 	.clearb{clear:both}
 	.fixed{position:fixed;top:0}
 	.backtop{width:60px;line-height:40px;text-align:center;position:fixed;bottom:110px;right:0;cursor:pointer}

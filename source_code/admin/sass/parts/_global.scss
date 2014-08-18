@@ -1,0 +1,93 @@
+/* 00 global */
+
+@import "../base/layout";
+
+body, h1, h2, h3, h4, ul, ol, li, dl, dt, dd, div, p, em, form, select, option, input, button, img {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px / 1.6em;
+  font-family: $font-default;
+  letter-spacing: 1px;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $link_color;
+  &:hover {
+    color: $link_color_hover;
+    text-decoration: underline;
+  }
+}
+
+img {
+  background: white url("../images/loading.gif") no-repeat 50% 50%;
+  border: 0;
+  outline: none;
+}
+
+select, input, button {
+  border: 0;
+  outline: none;
+}
+
+#menu_area, #cont h2, .icon01, .icon02, .icon03, .icon04, .icon05, .icon06, .icon07, .icon08, .icon09, .icon10, .icon11, .icon12, .icon13, #news a, #loginForm1 h2 {
+  height: 40px;
+  line-height: 43px;
+}
+
+.lang, #menu a, #cont h2, .backtop, .pager li.current a {
+  @extend %h2bg;
+}
+
+#book_case {
+  th, .date01, .date02 {
+    @extend %h2bg;
+  }
+}
+
+#loginForm1 h2 {
+  @extend %h2bg;
+}
+
+.sltbox, #news a, .titles, .author, .date {
+  overflow: hidden;
+}
+
+#book_detail {
+  h3, dt, dd {
+    @extend oh;
+  }
+}
+
+#book_case {
+  .date01, .date02 {
+    @extend oh;
+  }
+}
+
+.clearb {
+  clear: both;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.backtop {
+  width: 60px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  position: fixed;
+  bottom: 110px;
+  right: 0;
+  cursor: pointer;
+}

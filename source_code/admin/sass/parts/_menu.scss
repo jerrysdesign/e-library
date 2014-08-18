@@ -1,0 +1,82 @@
+/* 02 menu */
+
+$menuBg: #a3cae1;
+$menuLbord: #60a4ea;
+$menuRbord: #3c74c5;
+
+#menu {
+  border-left: 1px solid $menuLbord;
+  border-right: 1px solid $menuRbord;
+  > li {
+    width: 20%;
+  }
+  a {
+    font-size: 16px;
+    border-right: 1px solid #60a4ea;
+    display: block;
+    &:hover {
+      background-position: 0 bottom;
+    }
+  }
+  .sub_menu {
+    width: 201px;
+    position: absolute;
+    margin-left: -1px;
+    display: none;
+  }
+  li  li {
+    width: 100%;
+    border-bottom: 1px solid #e4f5f5;
+  }
+  a {
+    
+    background: #fff;
+    border: 0;
+  }
+}
+
+
+/* search */
+
+$serachBoxHeight: 30px;
+
+%serach_box_h {
+  height: $serachBoxHeight;
+  line-height: $serachBoxHeight;
+}
+
+#searchbox {
+  @extend %col1-5;
+  @extend %fl;
+  @extend %search_box_h;
+}
+
+.sltbox {
+  width: 64px;
+  margin: 5px 0 5px 1px;
+  background: white url(#{$l2}/arrow_b2.gif) no-repeat 50% 50%;
+  @extend %search_box_h;
+}
+
+.search_slt {
+  width: 100px;
+  background: transparent;
+  @extend %search_box_h;
+}
+
+.search {
+  width: 100px;
+  outline: none;
+  margin: 5px 0 5px 5px;
+  text-indent: 5px;
+  color: #999999;
+  @include bgc(w);
+  @extend %search_box_h;
+}
+
+.search_btn {
+  width: 30px;
+  background: white url(#{$l2}/search.gif) no-repeat 50% 50%;
+  margin: 5px 0;
+  @extend %search_box_h;
+}

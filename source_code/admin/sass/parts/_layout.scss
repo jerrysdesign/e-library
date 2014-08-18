@@ -1,0 +1,92 @@
+// Latout settings
+// ------------------------------------------------------------
+
+
+$total_width: 1000px;
+
+%col1-5 {
+	width: 1 / 5 * $total_width;
+}
+%col4-5 {
+	width: 4 / 5 * $total_width;
+}
+
+
+
+/* $Layout */
+/* ------------------------------------------------------------ */
+
+%area {
+	width: 100%;
+	@include pie-clearfix;
+}
+#head_area, #menu_wrap, #menu_area, #cont_area, #foot_area, #menu {
+	@extend %area;
+}
+
+#head_area {
+	height: 80px;
+}
+#cont {
+	padding: 20px 0;
+}
+#side {
+	@extend %col1-5;
+	@extend %fl;
+}
+#menu, #foot{
+		@extend %col4-5;
+	}
+#head, #menu_bar, #cont, #foot {
+	width: $total_width;
+	@include center-block;
+	@include pie-clearfix;
+}
+#menu, #books, #hot, #reco, #download, #browsers, #help_library, #help_cloud, #foot {
+	@extend %col4-5;
+}
+#head_nav {
+	width: 7 / 10 * $total_width
+}
+
+
+$styleMenuHeight: 38px;
+$styleMenuColor: $black-0;
+$backTopBorder: #3c74c5;
+
+%style_menu {
+	height: $styleMenuHeight;
+	line-height: $styleMenuHeight;
+	@include adjust-font-size-to(16px);
+}
+%style_menu_bg {
+	background: url(#{$l2}/h2bg3.gif) repeat-x 0 0; //h2bg3要改名
+	color: #fff;
+}
+
+// h2 要改如 .title_2
+h2, #menu_area {
+  height: 40px;
+  // line-height: 43px;
+  font-size: 16px;
+  color: $styleMenuColor;
+  a {
+  	color: $styleMenuColor;
+  }
+}
+
+h2, .lang, #menu a, .backtop, #menu_area {
+	@extend %style_menu_bg;
+}
+
+h2, .lang, #menu a, .backtop {
+  height: $styleMenuHeight;
+  border: 1px solid $backTopBorder;
+}
+
+h2, h3, #menu {
+  //font-family: Helvetica,Verdana,Arial,"微軟正黑體","Microsoft Jhenghei";
+  //line-height: 40px;
+}
+#logo a,#head_nav li,
+#menu_area,#menu,#menu li{float:left}

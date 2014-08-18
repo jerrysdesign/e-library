@@ -1,0 +1,49 @@
+/* 01 head */
+
+#logo {
+  a {
+    @include ir;
+    @include size(260px 60px);
+    margin: 10px;
+    background: url(#{$l2}/logo.png) no-repeat 0 0;
+    background-size: 260px 60px;
+  }
+}
+
+/* nav */
+
+#head_nav {
+  @include fr;
+  ul {
+    @include fr;
+  }
+  li {
+    padding:0 0 0 5px;
+    line-height:25px;
+  }
+  a {
+    &.lang {
+      @include size(25px);
+      img {
+        vertical-align: middle;
+        background:none;
+      }
+      &:hover, a:hover {
+        background-position: 0 -40px;
+      }
+    }
+    &.lang {
+      display: block;
+    }
+    &.lang {
+      text-align: center
+    }
+  }
+}
+
+#menu {
+  text-align: center;
+  a {
+    display: block;
+  }
+}

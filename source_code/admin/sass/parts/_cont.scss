@@ -1,0 +1,83 @@
+#cont_area {
+	background: url(#{$l2}/bg01.jpg) 0 0 fixed;
+}
+
+#cont {
+	word-break: break-all;
+}
+
+h2 {
+	font-size: 16px;
+	background-position: 0 -160px;
+}
+
+
+#searchbox {
+  width: 200px;
+}
+
+.sltbox, .search_slt, .search, .search_btn {
+  height: 30px;
+  line-height: 30px;
+}
+
+.sltbox {
+  width: 64px;
+  margin: 5px 0 5px 1px;
+  background: white url('../images/arrow_b2.gif') no-repeat 50% 50%;
+  overflow: hidden;
+}
+
+.search_slt {
+  width: 100px;
+  background: transparent;
+}
+
+.search {
+  width: 100px;
+  outline: none;
+  margin: 5px 0 5px 5px;
+  text-indent: 5px;
+  color: #999;
+}
+
+.search_btn {
+  width: 30px;
+  background: white url('../images/search.gif') no-repeat 50% 50%;
+  margin: 5px 0;
+}
+
+/* pager */
+
+.pager {
+  float: right;
+  width: 546px;
+  margin-left: 10px;
+  li {
+    margin: 10px 10px 0 0;
+    &.current a {
+      color: #fff;
+      background: url('../images/h2bg3.gif') repeat-x 0 0;
+    }
+    float: left;
+    margin-top: 10px;
+    background-position: 80% 50%;
+  }
+  .sltbox {
+    float: left;
+    margin-top: 10px;
+    background-position: 80% 50%;
+  }
+  li a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+    color: #6060e7;
+    background-color: #ddddfc;
+    &:hover {
+      background-color: #bbbbf9;
+    }
+  }
+}

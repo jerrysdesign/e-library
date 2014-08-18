@@ -1,0 +1,30 @@
+#head_nav {
+	width: $total_width / 7;
+	float: right;
+	ul {
+		float: right;
+	}
+	li {
+		padding:0 0 0 5px;
+		line-height:25px;
+	}
+	a {
+		&.lang {
+			@include size(25px);
+			img {
+				vertical-align:bottom;
+				background:none;
+				padding-top:5px;
+			}
+			&:hover, a:hover {
+				background-position: 0 -40px;
+			}
+		}
+		&.lang ,#menu a {
+			display:block;
+		}
+		&.lang ,#menu{
+			text-align: center
+		}
+	}
+}
