@@ -4,46 +4,73 @@
       == render "partials/testing_header" , :locals => {:f => "view"}
   .container.cf
     #cont
+      /! 結構更動 start
       ol.quiz_list_stylesass
-        -5.times do
-          li
-            /! 結構更動
-            /! 選擇題 start
-            .cont_tab2
-              .pd2040
-                p.pd2020
+        /! 選擇題 start
+        li
+          .cont_tab2
+            .pd2040
+              p.pd2020
+                =zh_lorem_words 45
+              ol.upper-alpha.pd2020
+                li
+                  /! 純文字狀態
+                  .icon-list
+                  =zh_lorem_sentences 1
+                li
+                  /! 純圖片狀態
+                  .icon-list
+                  img src="http://placehold.it/400x400&text=[img]" alt=""
+                li
+                  /! 有文有圖狀態
+                  .icon-list
                   =zh_lorem_words 45
-                ol.upper-alpha.pd2020
-                  li
-                    /! 純文字狀態
-                    .icon-list
-                    =zh_lorem_sentences 1
-                  li
-                    /! 純圖片狀態
-                    .icon-list
-                    img src="http://placehold.it/400x400&text=[img]" alt=""
-                  li
-                    /! 有文有圖狀態
-                    .icon-list
-                    =zh_lorem_words 45
-                    .clearfix
-                    img src="http://placehold.it/400x400&text=[img]" alt=""
-            /! 選擇題 end
-          li
-            /! 是非題 start
-            .cont_tab2
-              .pd2040
-                p.pd2020
-                  =zh_lorem_words 45 
-                ol.upper-alpha.pd2020
-                  li
-                    /! 是非: 是
-                    .icon-list.tft
-                    =zh_lorem_sentences 1
-                  li
-                    /! 是非: 否
-                    .icon-list.tff
-                    =zh_lorem_sentences 1
-                    .clearfix
-                    img src="http://placehold.it/400x400&text=[img]" alt=""
-            /! 是非題 end
+                  .clearfix
+                  img src="http://placehold.it/400x400&text=[img]" alt=""
+        /! 選擇題 end
+        /! 是非題 start
+        li
+          .cont_tab2
+            .pd2040
+              /! 題目只有文
+              p.pd2020
+                =zh_lorem_words 45 
+              ol.upper-alpha.pd2020
+                li
+                  /! 是非: 是
+                  .icon-list.tft
+                li
+                  /! 是非: 否
+                  .icon-list.tff
+        li
+          .cont_tab2
+            .pd2040
+              /! 題目只有圖
+              p.pd2020
+                img src="http://placehold.it/400x400&text=[img]" alt=""
+              ol.upper-alpha.pd2020
+                li
+                  /! 是非: 是
+                  .icon-list.tft
+                li
+                  /! 是非: 否
+                  .icon-list.tff
+        li
+          .cont_tab2
+            .pd2040
+              /! 題目有圖文
+              p.pd2020
+                =zh_lorem_words 45 
+                .clearfix
+                img src="http://placehold.it/400x400&text=[img]" alt=""
+              ol.upper-alpha.pd2020
+                li
+                  /! 是非: 是
+                  .icon-list.tft
+                li
+                  /! 是非: 否
+                  .icon-list.tff
+        /! 是非題 end
+      .center-block.i-b-block 
+        input type="button" value="返回" onclick="history.back()"
+      /! 結構更動 end
