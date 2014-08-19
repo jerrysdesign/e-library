@@ -79,15 +79,18 @@
 }
 
 /* text align left */
-.text-l, %text-l {
+%text-l, .text-l {
 	text-align: left;
 }
 
 /* text align right */
-.text-r, %text-r {
+%text-r, .text-r {
 	text-align: right;
 }
 
 // Susy Grid
 // form grid.scss
+%static-container, .static-container { @include container; }
+%fluid-container, .fluid-container { @include container; }
+
 %container { @include container;}

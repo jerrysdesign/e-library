@@ -14,6 +14,7 @@ $grid-padding: 0;
 $container-style: static;
 $container-width: 1000px;
 
+// 搬去extend
 %static-container { @include container; }
 
 // Elastic grid as percentages
@@ -25,4 +26,5 @@ $grid-padding: 0;
 $container-style: magic;
 $container-width: 62.5em;
 
+// 搬去extend
 %fluid-container { @include container; }

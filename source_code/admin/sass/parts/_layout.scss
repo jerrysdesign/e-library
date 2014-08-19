@@ -20,6 +20,7 @@ $total_width: 1000px;
 	width: 100%;
 	@include pie-clearfix;
 }
+
 #head_area, #menu_wrap, #menu_area, #cont_area, #foot_area, #menu {
 	@extend %area;
 }
@@ -27,24 +28,30 @@ $total_width: 1000px;
 #head_area {
 	height: 80px;
 }
+
 #cont {
 	padding: 20px 0;
 }
+
 #side {
 	@extend %col1-5;
 	@extend %fl;
 }
+
 #menu, #foot{
 	@extend %col4-5;
 }
+
 #head, #menu_bar, #cont, #foot {
 	width: $total_width;
-	@include center-block;
+	margin: 0 auto;
 	@include pie-clearfix;
 }
+
 #menu, #books, #hot, #reco, #download, #browsers, #help_library, #help_cloud, #foot {
 	@extend %col4-5;
 }
+
 #head_nav {
 	width: 7 / 10 * $total_width
 }
