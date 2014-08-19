@@ -6,20 +6,47 @@
     #cont
       ol.quiz_list_stylesass
         -5.times do
+          /! 結構更動
           li
+            /! 選擇題 start
             .cont_tab2
               .pd2040
                 p.pd2020
-                  =zh_lorem_paragraphs 2 
+                  =zh_lorem_words 45
                 ol.upper-alpha.pd2020
                   li
+                    /! 純文字狀態
+                    .icon-list
                     =zh_lorem_sentences 1
                   li
+                    /! 純圖片狀態
+                    .icon-list
+                    img src="http://placehold.it/400x400&text=[img]" alt=""
+                  li
+                    /! 有文有圖狀態
+                    .icon-list
+                    =zh_lorem_words 45
+                    .clearfix
+                    img src="http://placehold.it/400x400&text=[img]" alt=""
+            /! 選擇題 end
+          li
+            /! 是非題 start
+            .cont_tab2
+              .pd2040
+                p.pd2020
+                  =zh_lorem_words 45 
+                ol.upper-alpha.pd2020
+                  li
+                    /! 是非: 是
+                    .icon-list.tft
                     =zh_lorem_sentences 1
                   li
+                    /! 是非: 否
+                    .icon-list.tff
                     =zh_lorem_sentences 1
-                  li
-                    =zh_lorem_sentences 1
+                    .clearfix
+                    img src="http://placehold.it/400x400&text=[img]" alt=""
+            /! 是非題 end
 
 / .fancybox
 #alert.warning.cf style="display:none"
