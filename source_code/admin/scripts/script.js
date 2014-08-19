@@ -64,24 +64,17 @@ function additem()
 			return false;
 		}
 		_qas.append(
-			"<li class='dt'>"+
-				"<div class='control-group'>"+
-					"<div class='control-label'>"+
-						"<div class='radioholder'>"+
-							"<span class='tick'>"+"</span>"+
-							"<input type='radio' name='projecttype' value=' '>"+"<b>"+ 
-							count +"</b>"+
-						"</div>"+
-					"</div>"+
-					"<div class='controls'>"+
-							"<a class='btn remove' href='javascript:;'>刪除選項</a>"+
-							"<textarea rows='1'></textarea>"+
-							"<div class='i-b-block'>"+
-							"<img class='pic'>&nbsp;"+
-							"<input type='file' class='ipt_upload_img file'>&nbsp;"+
-							"<a class='bt insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
-							"<a class='bt remove_img' href='javascript:;'>刪除圖片</a>"+
-						"</div>"+
+			"<li class='control-group'>"+
+				"<label class='control-label'><label class='radio'>"+
+				"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'><b>"+ count +"</b></label></label>"+
+				"<div class='controls'>"+
+					"<a class='btn remove' href='javascript:;'>刪除選項</a>"+
+					"<textarea rows='1'></textarea>"+
+					"<div class='i-b-block'>"+
+						"<img class='pic'>&nbsp;"+
+						"<input type='file' class='ipt_upload_img file'>&nbsp;"+
+						"<a class='bt insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
+						"<a class='bt remove_img' href='javascript:;'>刪除圖片</a>"+
 					"</div>"+
 				"</div>"+
 			"</li>");
@@ -91,10 +84,12 @@ function additem()
 			$(".add").attr("disabled", true);
 		}
 		renumber();
+		
 		var new_element = _qas.children('li').last();
 		$('.insert_img',new_element).on('click',insert_img);
 		$('.file',new_element).on('change',change_img);
 		$('.radioholder').on('click',radioholder);
+		$('body').on('click',this,btn_enable);
 	});
 }
 
@@ -106,6 +101,7 @@ function Remove()
 		$(".add").attr("disabled", false);
 		$(this).parents("li").remove();
 		renumber();
+		btn_enable();
 	});
 }
 
@@ -115,7 +111,7 @@ function renumber()
 	$(".quiz_add_subject > li").each(function()
 	{
 		var _num  = $(this).index() + 1,
-			_this = $(this).find('.radioholder > b'),
+			_this = $(this).find('.radio > b'),
 			_rdo  = _this.text(_num);
 		switch ($(_this,this).text())
 		{
@@ -127,79 +123,194 @@ function renumber()
 			case '6' : _this.text('F');break;
 		}
 	});
+};
+
+// chenge style & radio checked
+// active 事件
+function active()
+{
+	$('.active').removeClass('active');
+	$(this).addClass("active");
+	var isActive = $(this).hasClass('active');
+	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
 }
 
-// select subject
-function selectholder()
+// [ exam ] checkbox - checked all
+function chk_all()
 {
-	$(".selectholder").each(function() {
-		var description;
+	var _this = $(this);
+	if(_this.prop('checked'))
+	{
+		$('.chk').prop('checked',true);
+	}
+	else
+	{
+		$('.chk').prop('checked',false);
+	}
+}
 
-		$(this).children().hide();
-		description = $(this).children("b").text();
-		$(this).append("<span class=\"desc\">" + description + "</span>");
-		$(this).append("<span class=\"pulldown\"></span>");
-		$(this).append("<div class=\"selectdropdown\"></div>");
-		$(this).children("select").children("option").each(function() {
-			var $drop, name;
+// [ exam ] tr - up & down
+function tr_ud()
+{
+	if($('.chk:checked').length == 1)
+	{
+		var row = $('td .chk:checked').parents('tr:first').css('color','blue'),
+			row_count = $("table > tbody > tr").length;
+		if ($(this).is('.exam-up') && row.index() > 1)
+		{
+			row.insertBefore(row.prev());
+		}
+		else if($(this).is('.exam-down') && row.index() < row_count)
+		{
+			row.insertAfter(row.next());
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
+// [ exam ] btn - mode
+function btn_mode()
+{
+	var _length = $('input.chk:checked').size();
+	switch (_length)
+	{
+		case 0:
+			$('.exam-up,.exam-down,.exam-remove').addClass('disabled');
+			break;
+		case 1:
+			$('.disabled').removeClass('disabled');
+			break;
+		default:
+			$('.exam-remove').removeClass('disabled');
+			$('.exam-up,.exam-down').addClass('disabled');
+			break;
+	}
+}
 
-			if ($(this).attr("value") !== "0") {
-				$drop = $(this).parent().siblings(".selectdropdown");
-				name = $(this).attr("value");
-				$drop.append("<span>" + name + "</span>");
-			}
-		});
-		$(this).click(function() {
-			if ($(this).hasClass("activeselectholder")) {
-				$(this).children(".selectdropdown").slideUp(100);
-				$(this).removeClass("activeselectholder");
-				if ($(this).children("select").val() !== "0") {
-					$(this).children(".desc").fadeOut(50, function() {
-						$(this).text($(this).siblings("select").val());
-						$(this).fadeIn(50);
-					});
-				}
-			} else {
-				$(".activeselectholder").each(function() {
-					$(this).children(".selectdropdown").slideUp(100);
-					if ($(this).children("select").val() !== "0") {
-						$(this).children(".desc").fadeOut(100, function() {
-							$(this).text($(this).siblings("select").val());
-							$(this).fadeIn(100);
-						});
-					}
-					$(this).removeClass("activeselectholder");
-				});
-				$(this).children(".selectdropdown").slideDown(100);
-				$(this).addClass("activeselectholder");
-				if ($(this).children("select").val() !== "0") {
-					$(this).children(".desc").fadeOut(100, function() {
-						$(this).text($(this).siblings("select").children("option[value=0]").text());
-						$(this).fadeIn(50);
-					});
-				}
-			}
-		});
+// [ exam ] tr - remove
+function tr_remove()
+{
+	if($('.chk:checked').length >= 1)
+	{
+		var _result = confirm('Want to delete?');
+		if(_result == true)
+		{
+			$('td .chk:checked').parents('tr').remove();
+		}
+	}
+}
+
+// [ exam ] tr - removeclass
+function tr_reclass()
+{
+	$('tr').css('color','black');
+}
+
+
+// [ exam ] caption - thead_fixed
+function thead_fixed()
+{
+	var $win   = $(window),
+		$cont  = $('.container'),
+		$tbfix = $cont.find('.tb_fixed'),
+		$btn_wrap = $cont.find('.btn_wrap'),
+		$thead = $('thead.tb_fixed');
+		_contOffset = $cont.offset().top,
+		_fixed = $tbfix.hasClass('fixed');
+
+	if($win.scrollTop() >= _contOffset)
+	{
+		if(!_fixed){
+			$tbfix.addClass('fixed');
+		}
+	}
+	else
+	{
+		if(_fixed)
+		{
+			$tbfix.removeClass('fixed');
+		}
+	}
+}
+
+// barCharts
+function barCharts()
+{
+	//＊＊/ nofp = number of people
+	// 單位最大人數
+	// 100/單位最大人數為基數
+
+	// barChart gap text
+	var _sum = 0;
+	$('.chart__bars:first .chart__bar').each(function(){
+		_sum += Number($(this).data('nofp'));
 	});
-	$(".selectholder .selectdropdown span").click(function() {
-		var value;
+	$('.chart__numbers > li > span').each(function(key){
+		var _k = key + 1,
+			_s = _sum / 5;
+		$(this).text(_s * _k);
+	});
 
-		$(this).siblings().removeClass("active");
-		$(this).addClass("active");
-		value = $(this).text();
-		$(this).parent().siblings("select").val(value);
-		$(this).parent().siblings(".desc").fadeOut(100, function() {
-			$(this).text(value);
-			$(this).fadeIn(100);
-		});
+	// barChart width
+	$('.chart__bar').each(function( key, bar )
+	{
+		var nofp = $(this).data('nofp');
+		$(this).css('width', ( nofp / _sum ) * 100 + '%');
 	});
 }
 
-// select ans
-function radioholder()
+// 檢核設定正確答案及題目內容輸入欄位
+function check_val()
 {
-	$('.radioholder').removeClass("activeradioholder");
-	$(this).addClass('activeradioholder').children("input[type=radio]").prop("checked", true);
+	var $textarea = $('textarea'),
+		$quiz_a_s = $('.activeradioholder').size();
+
+	$textarea.each(function()
+	{
+		if($(this).val().trim() == '')
+		{
+			alert('輸入文字欄位不得為空');
+			return false;
+		}
+	});
+
+	if($quiz_a_s == 0)
+	{
+		alert('請設定正確答案');
+		return false;
+	}
+}
+
+// 判斷儲存按鈕是否啓用
+function btn_enable()
+{
+	var $textarea  = $('textarea'),
+		$quiz_a_s = $('.activeradioholder').size(),
+		$success = true;
+
+	$textarea.each(function()
+	{
+		if($(this).val().trim() == '')
+		{
+			$success = false;
+		}
+	});
+
+	if($quiz_a_s == 0)
+	{
+		$success = false;
+	}
+
+	if($success)
+	{
+		$('.center-block.i-b-block > input:eq(0)').removeClass('disabled');
+	}
+	else
+	{
+		$('.center-block.i-b-block > input:eq(0)').addClass('disabled');
+	}
 }
 
 $(function(){
@@ -270,17 +381,17 @@ $(function(){
 	$(".fancybox").fancybox();
 	$("input.fancybox").fancybox();
 	$(".afb").fancybox({
-		wrapCSS			: '_admin_fancybox',
-		padding			: 0,
-		scrolling		: 'no',
-		closeBtn		: false
+		wrapCSS		: '_admin_fancybox',
+		padding 	: 0,
+		scrolling 	: 'no',
+		closeBtn 	: false
 	});
 	$(".alert").fancybox({
 		maxWidth	: 300,
 		maxHeight	: 120,
 		fitToView	: false,
 		autoSize	: false,
-		closeBtn	: false
+		closeBtn 	: false
 	});
 
 	// fixed-header
@@ -295,23 +406,32 @@ $(function(){
 
 	$('.insert_img').on('click',insert_img);
 	$('.file').on('change',change_img);
-	$('.radioholder').on('click',radioholder);
-
+	$('.quiz_add_subject > li').on('click',active);
 	remove_img();
 	Remove();
 	additem();
-	selectholder();
 	renumber();
+	barCharts();
 
-	//＊＊/ nofp = number of people
-	// 單位最大人數
-	// 100/單位最大人數為基數
-	// 下方2為基數
-	// .chart__bars .data('nofp')/100,轉整數帶入
-	$('.chart__bar').each(function( key, bar )
+	// [ exam ] table - remove & up & down
+	$('.chk').on('click',tr_reclass);
+	$('.exam-remove').on('click',tr_remove);
+	$('.exam-up,.exam-down').on('click',tr_ud);
+	$('th .chk:first').on('change',chk_all);
+	$('input.chk').on('change',btn_mode);
+
+	if($('.container').has('.tb_fixed').size() == 1)
 	{
-		var nofp = $(this).data('nofp');
-		$(this).css('width', nofp * 2 + '%');
-	});
+		$(window).scroll(thead_fixed);
+	}
+
+	// if($('.center-block.i-b-block > input').hasClass('disabled')){
+
+	// }
+
+	$('.center-block.i-b-block > input:eq(0)').on('click',check_val);
+	$('.quiz_subject,.quiz_add_subject').find('textarea').on('blur',btn_enable);
+	$('.radioholder').on('click',btn_enable);
 
 });
+
