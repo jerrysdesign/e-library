@@ -644,3 +644,5 @@ ul.a_btn_c2 li { display: block; }
 .selectholder .selectdropdown span:last-child { border-bottom: none; }
 .selectholder .selectdropdown span.active { background-color: #6390d1; background-image: url(../images/radio_tick.png); background-repeat: no-repeat; background-size: 1.6em 1.6em; background-position: 98% 50%; }
 .selectholder .selectdropdown span:hover { background-color: #3c74c5; }
+
+input[type="button"].disabled { background: #e6e6e6; }
