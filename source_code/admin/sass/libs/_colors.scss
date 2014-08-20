@@ -1,0 +1,162 @@
+/// 基本顏色
+// color function : http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// lighten($color, $amount)
+// darken($color, $amount)
+// opacify($color, $amount)
+// mix($color1, $color2[, $amount])
+//-----------------------------------------------------
+$transparent: transparent;
+$white: white;
+$grayLighter: #f4f4f4;
+$grayLight: whitesmoke;
+$gray: #cccccc;
+$grayDark: #999999;
+$grayDarker: #333333;
+$black: black;
+
+// $ffffff
+$black-0: darken(white, 0%);
+
+// #f3f3f3
+$black-5: darken(white, 5%);
+
+// #e5e5e5
+$black-10: darken(white, 10%);
+
+// #d9d9d9
+$black-15: darken(white, 15%);
+
+// #ccc
+$black-20: darken(white, 20%);
+
+// #bfbfbf
+$black-25: darken(white, 25%);
+
+// #b3b3b3
+$black-30: darken(white, 30%);
+
+// #a6a6a6
+$black-35: darken(white, 35%);
+
+// #999
+$black-40: darken(white, 40%);
+
+// #8c8c8c
+$black-45: darken(white, 45%);
+
+// #808080
+$black-50: darken(white, 50%);
+
+// #737373
+$black-55: darken(white, 55%);
+
+// #666
+$black-60: darken(white, 60%);
+
+// #595959
+$black-65: darken(white, 65%);
+
+// #4d4d4d
+$black-70: darken(white, 70%);
+
+// #404040
+$black-75: darken(white, 75%);
+
+// #333
+$black-80: darken(white, 80%);
+
+// #262626
+$black-85: darken(white, 85%);
+
+// #1a1a1a
+$black-90: darken(white, 90%);
+
+// #0d0d0d
+$black-95: darken(white, 95%);
+
+$red: #cc3300;
+$blue: #00a3cf;
+$blueDark: #0064cd;
+$orange: #f47837;
+$green: #51b148;
+$yellow: #ffc40d;
+$pink: #c3325f;
+$purple: #7a43b6;
+
+// placeholder
+//-----------------------------------------------------
+// 變數分別為：表單的佔位符placeholder樣式，文本色
+$placeholder: $gray;
+
+// 互動配色
+// 警告，錯誤，成功，提示
+//-----------------------------------------------------
+// 每個變數都有三個顏色值，分別為：內文色，背景色，邊框色
+$warningColor: #514721 #fff6bf #ffd324;
+$errorColor: #8a1f11 #fbe3e4 #fbc2c4;
+$successColor: #264409 #e6efc2 #c6d880;
+$infoColor: #205791 #d5edf8 #92cae4;
+
+
+
+// ------------------------------------------------------------
+//    _____ __          __  __     ______                                             __  
+//   / ___// /_  __  __/ /_/ /_   / ____/________ _____ ___  ___ _      ______  _____/ /__
+//   \__ \/ __ \/ / / / __/ __/  / /_  / ___/ __ `/ __ `__ \/ _ \ | /| / / __ \/ ___/ //_/
+//  ___/ / / / / /_/ / /_/ /_   / __/ / /  / /_/ / / / / / /  __/ |/ |/ / /_/ / /  / ,<   
+// /____/_/ /_/\__,_/\__/\__/  /_/   /_/   \__,_/_/ /_/ /_/\___/|__/|__/\____/_/  /_/|_| 
+//
+// ------------------------------------------------------------
+
+/* =Colors
+-----------------------------------------------------------------------------*/
+.color-black {
+	color: $colorBlack;
+}
+.color-gray-dark {
+	color: $colorGrayDark;
+}
+.color-gray {
+	color: $colorGray;
+}
+.color-gray-light {
+	color: $colorGrayLight;
+}
+.color-white {
+	color: $colorWhite;
+}
+.color-red,
+.error {
+	color: $colorRed;
+}
+.color-green,
+.success {
+	color: $colorGreen;
+}
+.color-orange {
+	color: $colorOrange;
+}
+.color-green {
+	color: $colorGreen;
+}
+.color-blue {
+	color: $colorBlue;
+}
+.color-yellow {
+	color: $colorYellow;
+}
+
+/* Link Colors Hover */
+a.color-white:focus,
+a.color-white:hover {
+	color: darken($colorWhite, 25%);
+	color: rgba(255, 255, 255, .6);
+}
+a.color-green:focus,
+a.color-green:hover,
+a.color-red:focus,
+a.color-red:hover,
+a.color-error:focus,
+a.color-error:hover  {
+	color: $colorBlack;
+}
