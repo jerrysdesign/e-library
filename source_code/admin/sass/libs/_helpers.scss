@@ -162,6 +162,10 @@
 // Custom
 // -------------------------------------------------------
 
+%ir {
+    @include ir;
+}
+
 /* Float-left */
 .fl, %fl {
     @include float(left);
