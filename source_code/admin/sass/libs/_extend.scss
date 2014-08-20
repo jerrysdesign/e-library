@@ -18,48 +18,18 @@
 	font-color: #e76060;
 }
 
-/* Float-left */
-.fl, %fl {
-	@include fl;
-}
-
-/* Float-right */
-.fr, %fr {
-	@include fr;
-}
-
-/* Rest-float */
-.rf, %rf {
-	@include rf;
-}
-
-/* Overflow hidden */
-.oh, %oh {
-	@include oh;
-}
-
-/* 浮動 hack */
-.cearfix, %pie-clearfix {
-	@include pie-clearfix;
-}
-
 //
-@mixin bgc($extend) {
-	@if $extend {
-		@extend %w;
-	}
-	@else {
-		@extend %w;
-	}
-	%w {
-		background-color: white;
-	}
-}
-
-/* Center block */
-%center-block, .center-block {
-	@include center-block;
-}
+// @mixin bgc($extend) {
+// 	@if $extend {
+// 		@extend %w;
+// 	}
+// 	@else {
+// 		@extend %w;
+// 	}
+// 	%w {
+// 		background-color: white;
+// 	}
+// }
 
 /* Inlin block */
 %inline-block, .inline-block {
@@ -76,16 +46,6 @@
 		display: inline-block !important;
 		// vertical-align: bottom;
 	}
-}
-
-/* text align left */
-%text-l, .text-l {
-	text-align: left;
-}
-
-/* text align right */
-%text-r, .text-r {
-	text-align: right;
 }
 
 // Susy Grid

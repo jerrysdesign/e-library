@@ -34,29 +34,29 @@ $round-to-nearest-half-line		: false;
 
 
 
-// Setting up the Static Grid
+// // Setting up the Static Grid
 
-$total-columns: 12;
-$column-width: 65px;
-$gutter-width: 20px;
-$grid-padding: 0;
+// $total-columns: 12;
+// $column-width: 65px;
+// $gutter-width: 20px;
+// $grid-padding: 0;
 
-$container-style: static;
-$container-width: 1000px;
+// $container-style: static;
+// $container-width: 1000px;
 
-%static-container { @include container; }
+// %static-container { @include container; }
 
 
-// Elastic grid as percentages
+// // Elastic grid as percentages
 
-$total-columns: 12;
-$column-width: 6%;
-$gutter-width: 2%;
-$grid-padding: 0;
+// $total-columns: 12;
+// $column-width: 6%;
+// $gutter-width: 2%;
+// $grid-padding: 0;
 
-$container-style: magic;
-$container-width: 62.5em;
+// $container-style: magic;
+// $container-width: 62.5em;
 
-%fluid-container { @include container; }
+// %fluid-container { @include container; }
 
 

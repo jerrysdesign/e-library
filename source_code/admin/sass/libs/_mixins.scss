@@ -273,57 +273,7 @@
 	margin-right: auto;
 	text-align: center
 }
-
-
-// ------------------------------------------------------------
-// clearfix
-// ------------------------------------------------------------
-
-// 閉合子元素的浮動
-
-@mixin clearfix {
-	overflow: hidden
-}
-
-@mixin pie-clearfix {
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-}
-
-
-
-// ------------------------------------------------------------
-// Float
-// ------------------------------------------------------------
-
-// float-left
-
-@mixin fl {
-	@include float(left);
-}
-
-// float-right
-
-@mixin fr {
-	@include float(right);
-}
-
-// rest-float
-
-@mixin rf {
-	@include reset-float;
-}
-
-// Fix flot element's parent bug
-@mixin oh {
-	@include clearfix;
-}
-
-
-                                                                              
+                                                                
 // ------------------------------------------------------------
 //    _____ __          __  __     ______                                             __  
 //   / ___// /_  __  __/ /_/ /_   / ____/________ _____ ___  ___ _      ______  _____/ /__

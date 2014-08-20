@@ -9,6 +9,30 @@
 
 /* =Goodies
 -----------------------------------------------------------------------------*/
+/* Float-left */
+.fl, %fl {
+	@include float(left);
+}
+/* Float-right */
+.fr, %fr {
+	@include float(right);
+}
+/* Rest-float */
+.rf, %rf {
+	@include reset-float;
+}
+/* Overflow hidden */
+.oh, %oh {
+	@include clearfix;
+}
+/* Center block */
+%center-block, .center-block {
+	@include center-block;
+}
+/* 浮動 hack */
+.cearfix, %pie-clearfix {
+	@include pie-clearfix;
+}
 %first-letter,.first-letter::first-letter {
 	font-size: 4em;
 	line-height: 0.75em;
@@ -32,9 +56,11 @@
 	padding: 2px 0;
 	font-size: $bigFontSize;
 }
+/* text align center */
 %text-centered, .text-centered {
 	text-align: center;
 }
+/* text align right */
 %text-right, .text-right {
 	text-align: right;
 }

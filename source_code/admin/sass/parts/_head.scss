@@ -13,9 +13,9 @@
 /* nav */
 
 #head_nav {
-  @include fr;
+  @extend %fr;
   ul {
-    @include fr;
+    @extend %fr;
   }
   li {
     padding:0 0 0 5px;

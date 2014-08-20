@@ -74,7 +74,7 @@ $serachBoxHeight: 30px;
 	margin: 5px 0 5px 5px;
 	text-indent: 5px;
 	color: #999999;
-	@include bgc(w);
+	background-color: white;
 	@extend %search_box_h;
 }
 
