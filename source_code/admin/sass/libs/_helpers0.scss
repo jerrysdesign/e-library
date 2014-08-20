@@ -3,103 +3,126 @@
 // Type and rhythm
 
 %first-letter, .first-letter::first-letter {
-    @include first-letter;
+    font-size: 4em;
+    line-height: 0.75em;
+    float: left;
+    position: relative;
+    padding-right: 6px;
+    margin-top: -2px;
+    font-weight: normal;
+    color: $colorBody;
 }
 
 %supersmall, .supersmall {
-    @include supersmall;
+    font-size: $superSmallFontSize;
 }
 
 %small, .small {
-    @include small;
+    font-size: $smallFontSize;
 }
 
 %big, .big {
-    @include big;
+    font-size: $bigFontSize;
 }
 
 %inputbig, input.big {
-    @include inputbig;
+    padding: 2px 0;
+    font-size: $bigFontSize;
 }
 
 /* text align center */
 %text-centered, .text-centered {
-    @include text-centered;
+    text-align: center;
 }
 
 /* text align right */
 %text-right, .text-right {
-    @include text-right;
+    text-align: right;
 }
 
 %text-uppercase, .text-uppercase {
-    @include text-uppercase;
+    text-transform: uppercase;
 }
 
 %text-lowercase, .lowercase {
-    @include text-lowercase;
+    text-transform: uppercase;
 }
 
 %nowrap, .nowrap {
-    @include nowrap;
+    white-space: nowrap;
 }
 
 %zero, .zero {
-    @include zero;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 %clear, .clear {
-    @include clear;
+    clear: both;
 }
 
 %last, .last {
-    @include last;
+    margin-right: 0 !important;
 }
 
 %pause, .pause {
-    @include pause;
+    margin-bottom: 0.75em !important;
 }
 
 %end, .end {
-    @include end;
+    margin-bottom: 0 !important;
 }
 
 %no-leader, .no-leader {
-    @include no-leader;
+    margin-top: 0;
 }
 
 %no-trailer, .no-trailer {
-    @include no-trailer;
+    margin-bottom: 0;
 }
 
 %handle, .handle {
-    @include handle;
+    cursor: move;
 }
 
 %normal, .normal {
-    @include normal;
+    font-weight: normal;
 }
 
 %bold, .bold {
-    @include bold;
+    font-weight: bold;
 }
 
 %italic, .italic {
-    @include italic;
+    font-style: italic;
 }
 
 %req,
 .req,
 .required {
-    @include req;
+    font-weight: normal;
+    color: $colorRed;
 }
 
 %highlight, .highlight {
-    @include highlight;
+    background-color: #ffff9e !important;
 }
 
 %close, .close {
-    @include close;
+    padding: 4px 6px;
+    line-height: 1;
+    font-size: 18px;
+    cursor: pointer;
+    color: $colorBlack;
+    text-decoration: none;
+    opacity: 0.4;
+    &:before {
+        content: '\00D7';
+    }
+    &:hover {
+        color: $colorBlack;
+        opacity: 1;
+    }
 }
 
 // ------------------------------------------------------------
@@ -108,29 +131,31 @@
 
 // Show / hides
 .is-hidden, %is-hidden {
-    @include is-hidden;
+    display: none;
 }
 
 .is-shown-block, %is-shown-block {
-    @include is-shown-block;
+    display: block;
 }
 
 .is-shown-inline, %is-shown-inline {
-    @include is-shown-inline;
+    display: inline;
+    display: inline-block;
 }
 
 // Clearfixes
-// %clearfix {
-//     @include clearfix;
-// }
+%clearfix {
+    @include clearfix;
+}
 
-// %pie-clearfix {
-//     @include pie-clearfix;
-// }
+%pie-clearfix {
+    @include pie-clearfix;
+}
 
 // Images
 %max-width {
-    @include max-width;
+    max-width: 100%;
+    height: auto;
 }
 
 // -------------------------------------------------------
