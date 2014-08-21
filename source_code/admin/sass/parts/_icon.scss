@@ -3,6 +3,7 @@
 %icon {
   background: url(#{$l2}/icon.png) no-repeat 50% 10px;
   width: 40px;
+  height: 38px;
 }
 @for $i from 1 through 9 {
   .icon0#{$i} {

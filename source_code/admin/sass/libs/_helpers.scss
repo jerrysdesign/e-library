@@ -120,12 +120,12 @@
     @include is-hidden;
 }
 
-.is-shown-block, %is-shown-block {
-    @include is-shown-block;
+.is-show-block, %is-show-block {
+    @include is-show-block;
 }
 
-.is-shown-inline, %is-shown-inline {
-    @include is-shown-inline;
+.is-show-inline, %is-shown-inline {
+    @include is-show-inline;
 }
 
 // Clearfixes
@@ -179,3 +179,14 @@
 .cearfix, %pie-clearfix {
     @include pie-clearfix;
 }
+
+// 第一層子元素變行內區塊
+%is-inlineblock-block, .is-inlineblock-show {
+   @include pie-clearfix;
+    > * {
+        display: inline-block !important;
+        vertical-align: bottom; //因應頁面-新增題目是非題
+    }
+}
+
+    

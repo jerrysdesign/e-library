@@ -461,13 +461,16 @@
     display: none;
 }
 
-@mixin is-shown-block {
+@mixin is-show-block {
     display: block;
 }
 
-@mixin is-shown-inline {
+@mixin is-show-inline {
     display: inline;
     display: inline-block;
+    float: none !important;
+    @include has-layout-zoom;
+    @include has-layout-block;
 }
 
 // @mixin clearfix {
@@ -510,3 +513,5 @@
     margin-right: auto;
     text-align: center
 }
+
+// 第一層子元素變行內區塊

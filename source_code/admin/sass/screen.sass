@@ -89,6 +89,9 @@ img
 @import "master"
 
 
+// 標題 h2 背景
+%h2bg
+	background: url('#{$l2}/h2bg.gif') repeat-x 0 0
 // 解決.control-group .control-label .controls 組件定位
 .dt
 	display: table
@@ -105,10 +108,9 @@ img
 .quiz_total
 .test
 	padding: 0 40px
-	+box-sizing(border-box)
 	// 超靠北結構
 	dl
-		@extend %i-b-block
+		@extend %is-inlineblock-block
 		> *
 			&:nth-child(1):after , &:nth-child(2):after
 				content: "/"
@@ -211,7 +213,7 @@ ul.a_btn_c2 li
 	width: 1px
 	height: 1px
 	position: absolute
-.i-b-block
+.is-inlineblock-show
 	img
 		&.pic
 			display: none
@@ -358,3 +360,6 @@ $holder-height: 3.6em
 			background-position: 98% 50%
 		&:hover
 			background-color: $primary
+
+.a_slt, .search_slt
+	border: 0
