@@ -5,10 +5,33 @@
 @import "libs/variables"
 @import "libs/mixins"
 
+@import "libs/settings"
+
+
+// ::Base styles
+// ------------------------------------------------------------
+
+html
+	font-size:		100%
+
+body
+	font-size:		$baseFontSize / 16 * 1em
+	line-height:	$baseLine / $em
+	font-family:	$baseFontFamily
+
+a
+	color: $action
+	text-decoration: none
+	+link-active-styles
+		// Mixin for interactions (hover,focus,active)
+		color: $actionRespond, $actionRespond, $actionRespond
+
+img
+	background: $transparent url(#{$l2}/loading.gif) no-repeat 50% 50%
+
 
 // ::Import styles
 // ------------------------------------------------------------
-
 // Base level typography
 @import "libs/typography"
 // Tables
@@ -17,6 +40,14 @@
 @import "libs/lists"
 // Forms
 @import "libs/forms"
+// Images
+@import "libs/images"
+// Grid system
+@import "libs/grid"
+
+
+// ::Componet
+// ------------------------------------------------------------
 // Navs
 @import "libs/navs"
 // Messages
@@ -25,65 +56,29 @@
 @import "libs/labels"
 // Button
 @import "libs/buttons"
-// Images
-@import "libs/images"
 // Blocks
 @import "libs/blocks"
-// Grid system
-@import "libs/grid"
+
 
 // ::Modules
 // ------------------------------------------------------------
 
-// @import "libs/reset_forms"
-// @import "libs/reset_tables"
+@import "libs/reset_forms"
+@import "libs/reset_tables"
 
-
-@import "libs/colors"
 @import "libs/helpers"
-@import "libs/settings"
+@import "libs/colors"
 
 
-// ::Base styles
-// ------------------------------------------------------------
-
-html
-	font-size: 100%
-
-body
-	+adjust-font-size-to($baseFontSize)
-	background-color: $background-color-body
-	color: $base-color
-
-a
-	color: $action
-	text-decoration: none
-	+link-active-styles
-		// Mixin for interactions (hover,focus,active)
-		color: $action-respond
-
-img
-	background: $transparent url(#{$l2}/loading.gif) no-repeat 50% 50%
-
-
-// @import "modules/pagination"
-// @import "modules/masthead"
-// @import "modules/alert"
-// @import "modules/quiz_list_style"
-// @import "modules/chart_bar"
-// @import "modules/quiz_add_subject"
-// @import "modules/admin_fancybox"
-// @import "modules/component_btn"
-// @import "modules/tr_table"
-
-
-// ::Componet
-// ------------------------------------------------------------
-
-// Buttons
-// @import "component/buttons"
-
-
+@import "modules/pagination"
+@import "modules/masthead"
+@import "modules/alert"
+@import "modules/quiz_list_style"
+@import "modules/chart_bar"
+@import "modules/quiz_add_subject"
+@import "modules/admin_fancybox"
+@import "modules/component_btn"
+@import "modules/tr_table"
 
 //
 /* import master */

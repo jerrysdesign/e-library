@@ -17,16 +17,29 @@
 // :: Base
 // ------------------------------------------------------------
 
+// Type
+$baseFontSize	: 12;
+$baseLineHeight	: 1.65;
+
+// Util
+// outputting ems, e.g. 14/@em
+$em				: $baseFontSize;
+
+$baseLine		: $baseFontSize * $baseLineHeight;
 
 // ------------------------------------------------------------
 // :: Font Family
 // ------------------------------------------------------------
 
-$baseFontFamily	: Tahoma, Helvetica, Arial, "Heiti TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
-// $baseFontSize		: 12px;
-$baseFontSize		: 12;
-$baseFontSize: 12px;
+// Fonts
+$baseFontFamily			: $fontTC;
+$headingsFontFamily		: $baseFontFamily;
+$inputFontFamily		: $baseFontFamily;
+$buttonFontFamily		: $baseFontFamily;
+$codeFontFamily			: $monospace;
 
+// $baseLine				: $base-line-height;
+// $baseFontSize			: 12;
 
 
 
@@ -46,61 +59,70 @@ $l2	: "../images";
 // :: Grid variables & Breakpoints 
 // ------------------------------------------------------------
 
-$show-grid-backgrounds  : true;
-
+// $show-grid-backgrounds  : true;
+// Grid
+$gridWidth			: 1000;
+$gridGutterWidth	: 30;
 
 // ------------------------------------------------------------
 // :: Color
 // ------------------------------------------------------------
 
+// Base color
+$bodyBackgroundColor	: $EAEDEF;
+$bodyColor				: $black-80;
+$headingsColor			: $black-85;
+
+$linkColor				: $colorLochmara;
+$linkColorHover			: $colorMandy;
+$action					: $linkColor;
+$actionRespond			: $linkColorHover;
+
+// BackgroundColor
+$markBackgroundColor	: #fe5;
+$codeBackgroundColor	: darken(white, 3%);
+$tfootBackgroundColor	: darken(white, 5%);
+$colorStripedTable		: darken(white, 3%);
+$colorHoveredTable		: darken(white, 2.5%);
 
 
-// 指定變數到顏色的變數
-// 是描述性(名詞)而不是具體的顏色
-// 整個專案保持項目一致性，使之容易變更
+// 互動配色
+// 警告，錯誤，成功，提示
+//-----------------------------------------------------
 
-$background-color-body	: $EAEDEF;
-$body-color							: $white;
-$base-color							: $macy-grey;
-$heading-color					: $blue;
-$hightlight-color 			: $blue;
-$action									: $black-80;
-$action-respond					: $blue;
-$textColor							: $grayDarker;
-$linkColor							: $color_0088cc	;
-$labelLine							: lighten(desaturate($primary, 30%), 20%);
+// 每個變數都有三個顏色值，分別為：內文色，背景色，邊框色
+$successColor	: #3c763d #d6e9c6 #d6e9c6;
+$infoColor		: #31708f #d9edf7 #bce8f1;
+$warningColor	: #8a6d3b #fcf8e3 #faebcc;
+$errorColor		: #a94442 #f2dede #ebccd1;
+
+
+//
+$labelLine		: lighten(desaturate($primary, 30%), 20%);
+
+// placeholder
+// 變數分別為：表單的佔位符placeholder樣式，文字顏色
+$placeholder: $colorGray;
 
 // ------------------------------------------------------------
 // :: Typesizes/scale
 // ------------------------------------------------------------
 
-// Greek alphabet naming system. Obscure, yet hierarchical.
-// Allows us to avoid naming based on html object. 
-// Eg. A h1 can be smaller visually, than a h4.
 
-$alpha   	: 42px;
-$beta			: 32px;
-$gamma		: 28px;
-$delta		: 26px;
-$epsilon	: 24px;
-$zeta			: 20px;
-$eta			: 18px;
-$theta		: 15px;
-$iota 		: 14px;
-$kappa 		: 12px;
 
 $para			: $kappa;	// Paragraph size
-$quote		: $beta;	// Quote size
+$quote			: $beta;	// Quote size
 
 
 // ------------------------------------------------------------
 // :: Border widths
 // ------------------------------------------------------------
 
-$default-border-width 				: 1px; 
-
-
-
+// Borders
+$default-border-width	: 1px; 
+$cellBorder				: 1px solid #eee;
+$cellBorderDark			: 1px solid #ddd;
+$fieldsetBorder			: 1px solid #e3e3e3;
 
 // ------------------------------------------------------------
 // Custom
@@ -109,8 +131,30 @@ $default-border-width 				: 1px;
 // 移除icon
 $removeicon: 32px;
 
+// Misc sizes
+$listsLeft: 2em;
+$columnarWidth: 150px;
+$columnarMargin: 20px;
 
+// Font sizes
+$bigFontSize: 1.2em;
+$smallFontSize: 0.85em;
+$superSmallFontSize: 0.7em;
+
+// FloatingImages
+$floatingMargin: 1em;
+$floatingBackgroundColor: #fff;
+$floatingPadding: 0;
+$floatingBorder: none;
+
+
+
+// ------------------------------------------------------------
+// :: Border widths
+// ------------------------------------------------------------
+
+$default-border-width 				: 1px; 
 // ------------------------------------------------------------	
 // Add functional stuff
 // ------------------------------------------------------------	
-@import "functions/functions";
+// @import "functions/functions";

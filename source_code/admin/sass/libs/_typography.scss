@@ -3,13 +3,7 @@
 // ------------------------------------------------------------
 
 
-// ------------------------------------------------------------
-// Fonts
-// ------------------------------------------------------------
 
-%serif			{	font-family: $serif } 			// Serif Fonts
-%sans-serif	{	font-family: $sansSerif } 	// Sans-Serif Fonts
-%monospace	{	font-family: $monospace } 	// Monospace Fonts
 
 // ------------------------------------------------------------
 // Core typography
@@ -36,27 +30,27 @@
 
 /* =Typography
 -----------------------------------------------------------------------------*/
-body {
-	background: $colorWhite;
-	color: $colorBody;
-	font-size: $baseFontSize / 16 * 1em;
-	line-height: $baseLine / $em;
-	font-family: $baseFontFamily;
-}
-a {
-	color: $colorLink;
-}
-a:focus,
-a:hover {
-	color: $colorLinkHover;
-}
+// body {
+// 	background: $white;
+// 	color: $bodyColor;
+// 	font-size: $baseFontSize / 16 * 1em;
+// 	line-height: $baseLine / $em;
+// 	font-family: $baseFontFamily;
+// }
+// a {
+// 	color: $linkColor;
+// }
+// a:focus,
+// a:hover {
+// 	color: $linkColorHover;
+// }
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	color: $colorHeadings;
+	color: $headingsColor;
 	font-family: $headingsFontFamily;
 	font-weight: bold;
 }
@@ -238,7 +232,7 @@ figcaption {
 ins,
 mark {
 	background-color: $markBackgroundColor;
-	color: $colorBlack;
+	color: $black;
 	text-decoration: none;
 }
 pre,

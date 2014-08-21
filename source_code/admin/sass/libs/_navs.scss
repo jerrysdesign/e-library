@@ -40,7 +40,7 @@
 }
 .nav-h ul li a:hover,
 .nav-g ul li a:hover {
-	color: $colorLinkHover;
+	color: $linkColorHover;
 	text-decoration: underline;
 }
 .nav-h ul li span,
@@ -79,7 +79,7 @@
 	text-decoration: none;
 }
 .nav-v ul li a:hover {
-	color: $colorLinkHover;
+	color: $linkColorHover;
 	text-decoration: underline;
 }
 .nav-v ul li span {
@@ -175,7 +175,7 @@
 	top: 0;
 }
 .breadcrumbs ul li a {
-	color: $colorBlack;
+	color: $black;
 	text-decoration: none;
 }
 .breadcrumbs ul li a.active {
@@ -213,12 +213,12 @@
 }
 .nav-tabs ul li a:focus,
 .nav-tabs ul li a:hover {
-	color: $colorBlack;
+	color: $black;
 	text-decoration: underline;
 }
 .nav-tabs ul li .active,
 .nav-tabs ul li span {
-	color: $colorBlack;
+	color: $black;
 	background: #fff;
 	margin-top: -2px;
 	position: relative;
@@ -321,7 +321,7 @@
 .pagination li a:hover {
 	text-decoration: underline;
 	background-color: #333;
-	color: $colorWhite;
+	color: $white;
 }
 
 .pagination li.pagination-older {

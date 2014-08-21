@@ -1,19 +1,9 @@
+// -------------------------------------------------------
+// Colors
+// -------------------------------------------------------
 
-
-
-// ------------------------------------------------------------
-//    _____ __          __  __     ______                                             __  
-//   / ___// /_  __  __/ /_/ /_   / ____/________ _____ ___  ___ _      ______  _____/ /__
-//   \__ \/ __ \/ / / / __/ __/  / /_  / ___/ __ `/ __ `__ \/ _ \ | /| / / __ \/ ___/ //_/
-//  ___/ / / / / /_/ / /_/ /_   / __/ / /  / /_/ / / / / / /  __/ |/ |/ / /_/ / /  / ,<   
-// /____/_/ /_/\__,_/\__/\__/  /_/   /_/   \__,_/_/ /_/ /_/\___/|__/|__/\____/_/  /_/|_| 
-//
-// ------------------------------------------------------------
-
-/* =Colors
------------------------------------------------------------------------------*/
 .color-black {
-	color: $colorBlack;
+	color: $black;
 }
 .color-gray-dark {
 	color: $colorGrayDark;
@@ -25,7 +15,7 @@
 	color: $colorGrayLight;
 }
 .color-white {
-	color: $colorWhite;
+	color: $white;
 }
 .color-red,
 .error {
@@ -51,7 +41,7 @@
 /* Link Colors Hover */
 a.color-white:focus,
 a.color-white:hover {
-	color: darken($colorWhite, 25%);
+	color: darken($white, 25%);
 	color: rgba(255, 255, 255, .6);
 }
 a.color-green:focus,
@@ -60,5 +50,5 @@ a.color-red:focus,
 a.color-red:hover,
 a.color-error:focus,
 a.color-error:hover  {
-	color: $colorBlack;
+	color: $black;
 }

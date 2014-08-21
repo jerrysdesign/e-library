@@ -8,68 +8,19 @@
 // ------------------------------------------------------------
 
 
-// Base color
-$colorBody: #333;
-$colorHeadings: #222;
-
-// Font
-$baseFontFamily: 'PT Sans', Arial, "Helvetica Neue", Helvetica, Tahoma, sans-serif;
-$headingsFontFamily: $baseFontFamily;
-$inputFontFamily: $baseFontFamily;
-$buttonFontFamily: $baseFontFamily;
-$codeFontFamily: Consolas, Monaco, monospace, sans-serif;
-
-// Base color
-$colorBody: #333;
-$colorHeadings: #222;
-
-// Type
-$baseFontSize: 14;
-$baseLineHeight: 1.65;
-$baseLine: $baseFontSize * $baseLineHeight;
-
-// Grid
-$gridWidth: 1000;
-$gridGutterWidth: 30;
-
-
-
-// Misc sizes
-$listsLeft: 2em;
-$columnarWidth: 150px;
-$columnarMargin: 20px;
-
-// Font sizes
-$bigFontSize: 1.2em;
-$smallFontSize: 0.85em;
-$superSmallFontSize: 0.7em;
-
-// FloatingImages
-$floatingMargin: 1em;
-$floatingBackgroundColor: #fff;
-$floatingPadding: 0;
-$floatingBorder: none;
-
-// LinkColor
-$colorLink: #369;
-$colorLinkHover: #ef6465;
-
-
-
-// Util
-$em: $baseFontSize;	// outputting ems, e.g. 14/@em
-
 // ------------------------------------------------------------
 // :: Font Family
 // ------------------------------------------------------------
 
-$fontMing						: 新細明體, 'MingLiU'; 									// 新細明體
-$fontJhengHei				: 微軟正黑體, 'Microsoft JhengHei'; 		// 微軟正黒體
-$fontHeiTi					: 'Heiti TC'; 												// 黑體
-
-$serif							:	'Times New Roman', Times, serif; 		// Serif Fonts
-$sansSerif					:	Arial, Helvetica, sans-serif;				// Sans-Serif Fonts
-$monospace					:	'Courier New', Courier, monospace; 	// Monospace Fonts
+$fontTC			: Tahoma, Helvetica, Arial, "Heiti TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+// Traditional Chinese Fonts
+$fontMing		: 新細明體, 'MingLiU'; 					// 新細明體
+$fontJhengHei	: 微軟正黑體, 'Microsoft JhengHei'; 		// 微軟正黒體
+$fontHeiTi		: 'Heiti TC'; 							// 黑體
+// English Fonts
+$serif			: 'Times New Roman', Times, serif; 		// Serif Fonts
+$sansSerif		: Arial, Helvetica, sans-serif;			// Sans-Serif Fonts
+$monospace		: 'Courier New', Courier, monospace; 	// Monospace Fonts
 
 
 
@@ -77,106 +28,60 @@ $monospace					:	'Courier New', Courier, monospace; 	// Monospace Fonts
 // :: Color
 // ------------------------------------------------------------
 
-$macy-grey							: #777;	
-$ron-burgundy 					: #e0006e;
-$agent-orange						: #c64f24;
-$labelLine							: #09277b;
-$link_color							: #333333;
-$link_color_hover				: #709bb4;
-$color_Mandy						: #e76060;
-$primary								: #3c74c5;
-
-// 以下待整理
-$EAEDEF									: #EAEDEF;
-$color_0088cc						: #0088cc;
-$link_color							: #333333;
-$link_color_hover				: #709bb4;
-$color_Mandy						: #e76060;
-$color_e76060						: $color_Mandy;
-
-// Colors
-$colorBlack: #000;
-$colorGrayDark: #555;
-$colorGray: #777;
-$colorGrayLight: #999;
-$colorWhite: #fff;
-$colorRed: #ef6465;
-$colorOrange: #f48a30;
-$colorGreen: #90af45;
-$colorBlue: #1c7ab4;
-$colorYellow: #f3c835;
-
-// BackgroundColor
-$markBackgroundColor: #fe5;
-$codeBackgroundColor: #f5f5f5;
-$tfootBackgroundColor: #f2f2f2;
-$colorStripedTable: #f5f5f5;
-$colorHoveredTable: #f6f6f6;
-
-// Borders
-$cellBorder: 1px solid #eee;
-$cellBorderDark: 1px solid #ddd;
-$fieldsetBorder: 1px solid #e3e3e3;
-
-// ------------------------------------------------------------
-// :: Typesizes/scale
-// ------------------------------------------------------------
-
-// Greek alphabet naming system. Obscure, yet hierarchical.
-// Allows us to avoid naming based on html object. 
-// Eg. A h1 can be smaller visually, than a h4.
-$alpha   	: 42px;
-$beta			: 32px;
-$gamma		: 28px;
-$delta		: 26px;
-$epsilon	: 24px;
-$zeta			: 20px;
-$eta			: 18px;
-$theta		: 15px;
-$iota 		: 14px;
-$kappa 		: 12px;
-
-$para			: $kappa;	// Paragraph size
-$quote		: $beta;	// Quote size
-
-
-
-// ------------------------------------------------------------
-// :: Border widths
-// ------------------------------------------------------------
-
-$default-border-width 				: 1px; 
-
-
-
-// ------------------------------------------------------------
-//    _____ __          __  __     ______                                             __  
-//   / ___// /_  __  __/ /_/ /_   / ____/________ _____ ___  ___ _      ______  _____/ /__
-//   \__ \/ __ \/ / / / __/ __/  / /_  / ___/ __ `/ __ `__ \/ _ \ | /| / / __ \/ ___/ //_/
-//  ___/ / / / / /_/ / /_/ /_   / __/ / /  / /_/ / / / / / /  __/ |/ |/ / /_/ / /  / ,<   
-// /____/_/ /_/\__,_/\__/\__/  /_/   /_/   \__,_/_/ /_/ /_/\___/|__/|__/\____/_/  /_/|_| 
-//
-// ------------------------------------------------------------
-
-
-
-
-
-/// 基本顏色
 // color function : http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
 // lighten($color, $amount)
 // darken($color, $amount)
 // opacify($color, $amount)
 // mix($color1, $color2[, $amount])
-//-----------------------------------------------------
-$transparent: transparent;
-$white: white;
-$grayLighter: #f4f4f4;
-$grayLight: whitesmoke;
-$gray: #cccccc;
-$grayDark: #999999;
-$grayDarker: #333333;
-$black: black;
+// ------------------------------------------------------------
+// 指定變數到顏色的變數
+// 是描述性(名詞)而不是具體的顏色
+// 整個專案保持項目一致性，使之容易變更
+
+$transparent			: transparent;
+
+// Useless
+
+// $macyGrey				: #777777;	
+// $ronBurgundy 			: #e0006e;
+// $agent-orange			: #c64f24;
+
+$colorMandy				: #e76060;
+$primary				: #3c74c5;
+$EAEDEF					: #EAEDEF;
+$colorLochmara			: #0088cc;
+
+
+$colorGrayLighter		: #e5e5e5;
+$colorGrayLight			: #b1b1b1;
+$colorGray				: #7d7d7d;
+$colorGrayDark			: #585858;
+$colorGrayDarker		: #333333;
+
+$colorRed				: #ef6465;
+$colorOrange			: #f48a30;
+$colorGreen				: #90af45;
+$colorBlue				: #1c7ab4;
+$colorYellow			: #f3c835;
+$colorpink				: #c3325f;
+$colorpurple			: #7a43b6;
+
+
+// W3C Color Name
+$white					: #FFFFFF;
+$Red					: #FF0000;
+$Orange					: #FFA500;
+$Green					: #008000;
+$Blue					: #0000FF;
+$Yellow					: #FFFF00;
+$pink					: #FFC0CB;
+$purple					: #800080;
+$black					: #000000;
+
+
+
+// ::: Grayscale
+// ------------------------------------------------------------
 
 // $ffffff
 $black-0: darken(white, 0%);
@@ -238,25 +143,23 @@ $black-90: darken(white, 90%);
 // #0d0d0d
 $black-95: darken(white, 95%);
 
-$red: #cc3300;
-$blue: #00a3cf;
-$blueDark: #0064cd;
-$orange: #f47837;
-$green: #51b148;
-$yellow: #ffc40d;
-$pink: #c3325f;
-$purple: #7a43b6;
 
-// placeholder
-//-----------------------------------------------------
-// 變數分別為：表單的佔位符placeholder樣式，文本色
-$placeholder: $gray;
 
-// 互動配色
-// 警告，錯誤，成功，提示
-//-----------------------------------------------------
-// 每個變數都有三個顏色值，分別為：內文色，背景色，邊框色
-$warningColor: #514721 #fff6bf #ffd324;
-$errorColor: #8a1f11 #fbe3e4 #fbc2c4;
-$successColor: #264409 #e6efc2 #c6d880;
-$infoColor: #205791 #d5edf8 #92cae4;
+
+// ------------------------------------------------------------
+// :: Typesizes/scale
+// ------------------------------------------------------------
+
+// Greek alphabet naming system. Obscure, yet hierarchical.
+// Allows us to avoid naming based on html object. 
+// Eg. A h1 can be smaller visually, than a h4.
+$alpha   	: 42px;
+$beta		: 32px;
+$gamma		: 28px;
+$delta		: 26px;
+$epsilon	: 24px;
+$zeta		: 20px;
+$eta		: 18px;
+$theta		: 15px;
+$iota 		: 14px;
+$kappa 		: 12px;

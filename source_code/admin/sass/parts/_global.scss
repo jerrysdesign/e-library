@@ -19,9 +19,9 @@ ul, ol, li {
 
 a {
   text-decoration: none;
-  color: $link_color;
+  color: $linkColor;
   &:hover {
-    color: $link_color_hover;
+    color: $linkColorHover;
     text-decoration: underline;
   }
 }

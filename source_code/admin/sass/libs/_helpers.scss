@@ -1,6 +1,11 @@
-
-
+// ------------------------------------------------------------
 // Type and rhythm
+// ------------------------------------------------------------
+
+// Fonts
+%serif      {   font-family: $serif }       // Serif Fonts
+%sans-serif {   font-family: $sansSerif }   // Sans-Serif Fonts
+%monospace  {   font-family: $monospace }   // Monospace Fonts
 
 %first-letter, .first-letter::first-letter {
     @include first-letter;
@@ -22,12 +27,10 @@
     @include inputbig;
 }
 
-/* text align center */
 %text-centered, .text-centered {
     @include text-centered;
 }
 
-/* text align right */
 %text-right, .text-right {
     @include text-right;
 }
