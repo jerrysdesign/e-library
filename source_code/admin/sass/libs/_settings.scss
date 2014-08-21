@@ -1,13 +1,12 @@
 // ------------------------------------------------------------
-// Settings
+// $Settings
 // :: Base
 // :: Font Family
 // :: Path
-// :: Breakpoints
+// :: Grid & Breakpoints
 // :: Color
 // :: Typography
 // :: Borders
-// :: Spacing
 // :: Custom
 // ------------------------------------------------------------
 
@@ -27,6 +26,7 @@ $em				: $baseFontSize;
 
 $baseLine		: $baseFontSize * $baseLineHeight;
 
+
 // ------------------------------------------------------------
 // :: Font Family
 // ------------------------------------------------------------
@@ -42,9 +42,6 @@ $codeFontFamily			: $monospace;
 // $baseFontSize			: 12;
 
 
-
-
-
 // ------------------------------------------------------------
 // :: Path
 // ------------------------------------------------------------
@@ -56,13 +53,14 @@ $l2	: "../images";
 
 
 // ------------------------------------------------------------
-// :: Grid variables & Breakpoints 
+// :: Grid & Breakpoints
 // ------------------------------------------------------------
 
 // $show-grid-backgrounds  : true;
 // Grid
 $gridWidth			: 1000;
 $gridGutterWidth	: 30;
+
 
 // ------------------------------------------------------------
 // :: Color
@@ -104,11 +102,10 @@ $labelLine		: lighten(desaturate($primary, 30%), 20%);
 // 變數分別為：表單的佔位符placeholder樣式，文字顏色
 $placeholder: $colorGray;
 
+
 // ------------------------------------------------------------
 // :: Typesizes/scale
 // ------------------------------------------------------------
-
-
 
 $para			: $kappa;	// Paragraph size
 $quote			: $beta;	// Quote size
@@ -123,6 +120,7 @@ $default-border-width	: 1px;
 $cellBorder				: 1px solid #eee;
 $cellBorderDark			: 1px solid #ddd;
 $fieldsetBorder			: 1px solid #e3e3e3;
+
 
 // ------------------------------------------------------------
 // Custom
@@ -148,12 +146,6 @@ $floatingPadding: 0;
 $floatingBorder: none;
 
 
-
-// ------------------------------------------------------------
-// :: Border widths
-// ------------------------------------------------------------
-
-$default-border-width 				: 1px; 
 // ------------------------------------------------------------	
 // Add functional stuff
 // ------------------------------------------------------------	
