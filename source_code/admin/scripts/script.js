@@ -311,6 +311,7 @@ function btn_enable()
 	{
 		$('.center-block.i-b-block > input:eq(0)').addClass('disabled');
 	}
+	console.log('0000')
 }
 
 // select subject
@@ -501,7 +502,7 @@ $(function(){
 	}
 
 	$('.center-block.i-b-block > input:eq(0)').on('click',check_val);
-	$('.quiz_subject,.quiz_add_subject').find('textarea').on('blur',btn_enable);
+	$('.quiz_subject,.quiz_add_subject').find('textarea').on('keyup',btn_enable);
 	$('.radioholder').on('click',btn_enable);
 
 
