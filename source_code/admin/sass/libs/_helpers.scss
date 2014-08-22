@@ -128,6 +128,10 @@
     @include is-show-inline;
 }
 
+.is-table, %is-table {
+    @include is-table;
+}
+
 // Clearfixes
 // %clearfix {
 //     @include clearfix;
@@ -180,12 +184,13 @@
     @include pie-clearfix;
 }
 
-// 第一層子元素變行內區塊
-%is-inlineblock-block, .is-inlineblock-show {
-   @include pie-clearfix;
+第一層子元素變行內區塊
+%is-horizontal, .is-horizontal {
+    display: block;
+    @include pie-clearfix;
     > * {
-        display: inline-block !important;
-        vertical-align: bottom; //因應頁面-新增題目是非題
+        @include is-show-inline;
+        // vertical-align: bottom; //因應頁面-新增題目是非題
     }
 }
 

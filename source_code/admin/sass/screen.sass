@@ -38,11 +38,11 @@ img
 // // Lists
 // @import "libs/lists"
 // // Forms
-// @import "libs/forms"
+@import "libs/forms"
 // Images
-// @import "libs/images"
+@import "libs/images"
 // Grid system
-// @import "libs/grid"
+@import "libs/grid"
 
 
 // ::Componet
@@ -54,9 +54,9 @@ img
 // // Labels
 // @import "libs/labels"
 // Button
-// @import "libs/buttons"
+@import "libs/buttons"
 // // Blocks
-// @import "libs/blocks"
+@import "libs/blocks"
 
 
 // ::Modules
@@ -228,7 +228,7 @@ ul.a_btn_c2 li
 			display: inline-block !important
 
 .quiz_subject
-	display: table
+	@extend %is-table
 	width: 1000px
 	@include background-image(linear-gradient(white, $black-5 80%, $black-5))
 	border-bottom: 5px solid darken($colorPeterRiver, 10)
@@ -238,7 +238,7 @@ ul.a_btn_c2 li
 		background-color: #fff
 		padding: 10px 30px
 		display: inline-block
-		font-size: 1.5em
+		font-size: 1.2em
 		margin-bottom: 20px
 
 .quiz_add_subject
@@ -362,3 +362,14 @@ $holder-height: 3.6em
 
 .a_slt, .search_slt
 	border: 0
+
+.i-b-block
+	@include pie-clearfix
+	> * 
+		@include is-show-inline
+		// vertical-align: bottom; //因應頁面-新增題目是非題
+// 限定題目圖片顯示大小
+.pic
+.view
+	widh: 260px
+	
