@@ -2,6 +2,11 @@
 // $Grid
 // -------------------------------------------------------
 
+.wrap {
+	width: $gridWidth*1px;
+	@include is-center-block;
+}
+
 .units-container,
 .units-row-end,
 .units-row {
@@ -9,7 +14,7 @@
 }
 .units-container { /* it's the trick to not collapse padding-top in the child element */
 	padding-top: 1px;
-		margin-top: -1px;
+	margin-top: -1px;
 }
 .units-container,
 .units-row-end,
