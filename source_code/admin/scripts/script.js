@@ -250,7 +250,7 @@ function barCharts()
 	$('.chart__numbers > li > span').each(function(key){
 		var _k = key + 1,
 			_s = _sum / 5;
-		$(this).text(_s * _k);
+		$(this).text(Math.floor(_s * _k));
 	});
 
 	// barChart width
