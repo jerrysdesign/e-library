@@ -1,401 +1,398 @@
-<!doctype html>
-<html lang="zh-tw">
-<head>
-  <meta charset="UTF-8">
-<title>管理題目</title>
-<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
-<link rel="stylesheet" type="text/css" href="css/master.css" />
-<link rel="stylesheet" type="text/css" href="css/admin.css" />
-<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
-<script src="scripts/jquery-1.9.0.min.js"></script>
-<script src="scripts/jquery.fancybox.js"></script>
-<script src="scripts/script.js"></script>
-<script src="scripts/admin_menu.js"></script>
-</head>
-<body>
-  <div id="head_area">
-  <div id="head">
-    <h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
-    <div id="head_nav">
-      <ul>
-        <li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
-        <li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
-        <li><a href="about.html">關於我們</a>&nbsp;|</li>
-        <li><a href="help.html">服務說明</a>&nbsp;|</li>
-        <li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
-        <li><a href="#" class="lang">E</a></li>
-        <li><a href="#" class="lang">繁</a></li>
-        <li><a href="#" class="lang">簡</a></li>
-        <li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-  <div class="menu_wrap">
-  <div id="menu_area">
-    <div id="menu_bar">
-      <ul id="menu">
-        <li><a href="#">圖書管理</a>
-          <ul class="sub_menu">
-            <li><a href="admin_ebook_main.html">版權書管理</a></li>
-            <li><a href="ebook_free_main.html">自有版權書管理</a></li>
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+    <title>管理題目</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+    <script src="scripts/jquery-1.9.0.min.js"></script>
+    <script src="scripts/jquery.fancybox.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/admin_menu.js"></script>
+  </head>
+  <body>
+    <div id="head_area">
+      <div id="head">
+        <h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
+        <div id="head_nav">
+          <ul>
+            <li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
+            <li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
+            <li><a href="about.html">關於我們</a>&nbsp;|</li>
+            <li><a href="help.html">服務說明</a>&nbsp;|</li>
+            <li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
+            <li><a href="#" class="lang">E</a></li>
+            <li><a href="#" class="lang">繁</a></li>
+            <li><a href="#" class="lang">簡</a></li>
+            <li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
           </ul>
-        </li>
-        <li><a href="#">閱讀歷程</a></li>
-        <li><a href="#">數位電子內容管理平台</a>
-          <ul class="sub_menu">
-            <li><a href="ebook_main.html">電子書維護</a></li>
+        </div>
+      </div>
+    </div><div class="menu_wrap">
+      <div id="menu_area">
+        <div id="menu_bar">
+          <ul id="menu">
+            <li><a href="#">圖書管理</a>
+              <ul class="sub_menu">
+                <li><a href="admin_ebook_main.html">版權書管理</a></li>
+                <li><a href="ebook_free_main.html">自有版權書管理</a></li>
+              </ul>
+            </li>
+            <li><a href="#">閱讀歷程</a></li>
+            <li><a href="#">數位電子內容管理平台</a>
+              <ul class="sub_menu">
+                <li><a href="ebook_main.html">電子書維護</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-  <div id="cont_area">
-    <div id="cont">
-      <div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
-      <form class="cf" enctype="multipart/form-data" method="post">
-  <div class="cont_tab2">
-    <h2>
-      <div class="icon04"></div>
-      題目設定
-    </h2>
-    <div class="pd2040">
-      <div class="control-group">
-        <label class="control-label">是非題答題型態</label>
-        <div class="controls">
-          <select><option></option><option value="0"> O or X</option><option value="1"> √ or X</option><option value="2"> T or F</option></select>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="cont_tab2">
-    <h2>
-      <div class="icon04"></div>
-      題目管理
-    </h2>
-    <div class="pd2040">
-      <div class="control-group">
-        <label class="control-label">題型</label>
-        <div class="controls">
-          <select><option></option><option value="0"> 是非</option><option value="1"> 選擇</option></select>
-        </div>
+    </div><div id="cont_area">
+      <div id="cont">
+        <div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
+        <form class="cf" enctype="multipart/form-data" method="post">
+          <div class="cont_tab2">
+            <h2>
+              <div class="icon04"></div>
+              題目設定
+            </h2>
+            <div class="pd2040">
+              <div class="control-group">
+                <label class="control-label">是非題答題型態</label>
+                <div class="controls">
+                  <select><option></option><option value="0"> O or X</option><option value="1"> √ or X</option><option value="2"> T or F</option></select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cont_tab2">
+            <h2>
+              <div class="icon04"></div>
+              題目管理
+            </h2>
+            <div class="pd2040">
+              <div class="control-group">
+                <label class="control-label">題型</label>
+                <div class="controls">
+                  <select><option></option><option value="0"> 是非</option><option value="1"> 選擇</option></select>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label">題目</label>
+                <div class="controls">
+                  <div class="btn-group i-b-block">
+                    <input type="text"><input type="button" value="搜尋">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cont_tab3 clearb">
+            <div class="i-b-block">
+              <div class="caption">
+                題庫內共有<em>500</em>道題目，其中<em>450</em>道已作答過。
+              </div>
+              <div class="fr i-b-block">
+                <div class="btn-group">
+                  <a class="bt" href="quiz_creat.html">新增</a><a class="bt" href="quiz_import.html">匯入</a><a class="bt fancybox fancybox.iframe afb" href="quiz_export_pop.html">匯出</a>
+                </div>
+              </div>
+            </div>
+            <table cellpadding="0" cellspacing="1" class="table" width="100%">
+              <tr>
+                <th width="5%">
+                  序號
+                </th>
+                <th width="10%">
+                  題型
+                </th>
+                <th width="43%">
+                  測驗卷名稱
+                </th>
+                <th width="16%">
+                  建立日期
+                </th>
+                <th width="16%">
+                  最新作答日期
+                </th>
+                <th width="10%">
+                  功能
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    1
+                  </div>
+                </td>
+                <td class="text-l">
+                  會傻為還纔們了疑前兩天來纔再的被-舒疑好是真夜悽使
+                </td>
+                <td>
+                  2014-12-31 00:00
+                </td>
+                <td>
+                  2014-07-01 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    2
+                  </div>
+                </td>
+                <td class="text-l">
+                  苦陽不有的疲目奏明就害答堆裡著老兩來月茶吃人嬉要實
+                </td>
+                <td>
+                  2014-11-13 00:00
+                </td>
+                <td>
+                  2014-07-02 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    3
+                  </div>
+                </td>
+                <td class="text-l">
+                  憤還這真罵去光們憑停可就要老似的中也去斷皮番快禮像
+                </td>
+                <td>
+                  2014-10-09 00:00
+                </td>
+                <td>
+                  2014-12-29 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    4
+                  </div>
+                </td>
+                <td class="text-l">
+                  後人經有挨是一嬉樣地可我年意不你何就來較爸個黎了和
+                </td>
+                <td>
+                  2014-09-01 00:00
+                </td>
+                <td>
+                  2014-02-08 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    5
+                  </div>
+                </td>
+                <td class="text-l">
+                  切來點了有響知結地真被悠容受盲本憊的理兄的有又份憊
+                </td>
+                <td>
+                  2014-03-31 00:00
+                </td>
+                <td>
+                  2014-12-08 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    6
+                  </div>
+                </td>
+                <td class="text-l">
+                  人他過杯來-明棄一去遇己時要權少訊一特值路幫早倍纔
+                </td>
+                <td>
+                  2014-02-24 00:00
+                </td>
+                <td>
+                  2014-08-04 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    7
+                  </div>
+                </td>
+                <td class="text-l">
+                  喝且測跳子了這目但一要命什袖切拚了過可正在國到幫鬧
+                </td>
+                <td>
+                  2014-03-04 00:00
+                </td>
+                <td>
+                  2014-02-05 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    8
+                  </div>
+                </td>
+                <td class="text-l">
+                  為有很罵出一杯中亦年Q較怪兄他怎就著易有著漸使已橫
+                </td>
+                <td>
+                  2014-08-10 00:00
+                </td>
+                <td>
+                  2014-12-06 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    9
+                  </div>
+                </td>
+                <td class="text-l">
+                  開麼出整就憊暫目借學早恩這山憤你說了湧吠我有害典拚
+                </td>
+                <td>
+                  2014-12-17 00:00
+                </td>
+                <td>
+                  2014-08-26 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    10
+                  </div>
+                </td>
+                <td class="text-l">
+                  的去些疲餃紅倆地能的狗就議點感斜捨真想爭月一了去說
+                </td>
+                <td>
+                  2014-08-19 00:00
+                </td>
+                <td>
+                  2014-07-26 00:00
+                </td>
+                <td>
+                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                </td>
+              </tr>
+            </table>
+            <div class="pagination fr">
+              <ul class="fl">
+                <li class="disabled">
+                  <a class="disabled" href="javascript:goPage_pager(1);"> &lt;</a>
+                </li>
+                <li class="active">
+                  <a>1</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager('2');"> 2</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager('3');"> 3</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager('4');"> 4</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager('5');"> 5</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager('6');"> 6</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager('7');"> 7</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager('8');"> 8</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager('9');"> 9</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager('10');"> 10</a>
+                </li>
+                <li>
+                  <a href="javascript:goPage_pager(2);"> &gt;</a>
+                </li>
+              </ul>
+              <div class="fr">
+                <select class="select-page" onchange="javascript:sizePage_pager($(this).val());"><option selected="" value="10"> 10</option><option value="20"> 20</option><option value="50"> 50</option><option value="80"> 80</option><option value="100"> 100</option></select>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="clearb"></div>
       </div>
-      <div class="control-group">
-        <label class="control-label">題目</label>
-        <div class="controls">
-          <div class="btn-group i-b-block">
-            <input type="text"><input type="button" value="搜尋">
-          </div>
-        </div>
+    </div><div id="foot_area">
+      <div id="foot">
+        浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
       </div>
     </div>
-  </div>
-  <div class="cont_tab3 clearb">
-    <div class="i-b-block">
-      <div class="caption">
-        題庫內共有<em>500</em>道題目，其中<em>450</em>道已作答過。
-      </div>
-      <div class="fr i-b-block">
-        <div class="btn-group">
-          <a class="bt" href="quiz_creat.html">新增</a><a class="bt" href="quiz_import.html">匯入</a><a class="bt fancybox fancybox.iframe afb" href="quiz_export_pop.html">匯出</a>
-        </div>
-      </div>
-    </div>
-    <table cellpadding="0" cellspacing="1" class="table" width="100%">
-      <tr>
-        <th width="5%">
-          序號
-        </th>
-        <th width="10%">
-          題型
-        </th>
-        <th width="43%">
-          測驗卷名稱
-        </th>
-        <th width="16%">
-          建立日期
-        </th>
-        <th width="16%">
-          最新作答日期
-        </th>
-        <th width="10%">
-          功能
-        </th>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            1
-          </div>
-        </td>
-        <td class="text-l">
-          出不一是著啦麵們來市后鬧不鬧無特雙我禮礙得醉真了自
-        </td>
-        <td>
-          2014-05-08 00:00
-        </td>
-        <td>
-          2014-03-25 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            2
-          </div>
-        </td>
-        <td class="text-l">
-          和他歹擔真歲五啦一已都肉到地方真和晚級一便忙了詰做
-        </td>
-        <td>
-          2014-08-21 00:00
-        </td>
-        <td>
-          2014-04-09 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            3
-          </div>
-        </td>
-        <td class="text-l">
-          程街進說地的邊是出拚金慇失人前分揪的狗談略顆人甘頂
-        </td>
-        <td>
-          2014-08-17 00:00
-        </td>
-        <td>
-          2014-05-09 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            4
-          </div>
-        </td>
-        <td class="text-l">
-          去看去的團喜意有實養斷的卡啊忘宵後有是番既揪咖是皮
-        </td>
-        <td>
-          2014-09-07 00:00
-        </td>
-        <td>
-          2014-08-22 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            5
-          </div>
-        </td>
-        <td class="text-l">
-          繩我有歡幾經啊兄買有神早問要-啡相看說雙國出咖事在
-        </td>
-        <td>
-          2014-05-28 00:00
-        </td>
-        <td>
-          2014-08-11 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            6
-          </div>
-        </td>
-        <td class="text-l">
-          就假下又歹就應何出輸了也們夜棒害被到趁最記狗被覺縷
-        </td>
-        <td>
-          2014-07-23 00:00
-        </td>
-        <td>
-          2014-09-24 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            7
-          </div>
-        </td>
-        <td class="text-l">
-          在地去的文有人糧正罵起奉官1本容領杯的難心的後我就
-        </td>
-        <td>
-          2014-09-07 00:00
-        </td>
-        <td>
-          2014-07-19 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            8
-          </div>
-        </td>
-        <td class="text-l">
-          是悽一城一著戶事白揪一能太的前來來們一齒害進樣又腕
-        </td>
-        <td>
-          2014-07-19 00:00
-        </td>
-        <td>
-          2014-02-14 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            9
-          </div>
-        </td>
-        <td class="text-l">
-          被寧又走去啊牙酒懷８腕啦也麼啦他的教伴哀步裡終像樣
-        </td>
-        <td>
-          2014-03-27 00:00
-        </td>
-        <td>
-          2014-04-14 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          <div>
-            10
-          </div>
-        </td>
-        <td class="text-l">
-          似點地兄一我相似打賴進啦喝前地相上掉要Q戶在提也愈
-        </td>
-        <td>
-          2014-04-27 00:00
-        </td>
-        <td>
-          2014-02-16 00:00
-        </td>
-        <td>
-          <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-        </td>
-      </tr>
-    </table>
-    <div class="pagination fr">
-      <ul>
-        <li class="disabled">
-          <a class="disabled" href="javascript:goPage_pager(1);"> &lt;</a>
-        </li>
-        <li class="active">
-          <a>1</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager('2');"> 2</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager('3');"> 3</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager('4');"> 4</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager('5');"> 5</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager('6');"> 6</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager('7');"> 7</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager('8');"> 8</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager('9');"> 9</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager('10');"> 10</a>
-        </li>
-        <li>
-          <a href="javascript:goPage_pager(2);"> &gt;</a>
-        </li>
-      </ul>
-      <div class="fr">
-        <select class="select-page" onchange="javascript:sizePage_pager($(this).val());"><option selected="" value="10"> 10</option><option value="20"> 20</option><option value="50"> 50</option><option value="80"> 80</option><option value="100"> 100</option></select>
-      </div>
-    </div>
-  </div>
-</form>
-<div class="clearb"></div>
-    </div>
-  </div>
-  <div id="foot_area">
-  <div id="foot">
-    浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
-  </div>
-</div>
-</body>
+  </body>
 </html>
