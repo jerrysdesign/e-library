@@ -127,13 +127,13 @@ function renumber()
 
 // chenge style & radio checked
 // active 事件
-function active()
-{
-	$('.active').removeClass('active');
-	$(this).addClass("active");
-	var isActive = $(this).hasClass('active');
-	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
-}
+// function active()
+// {
+// 	$('.active').removeClass('active');
+// 	$(this).addClass("active");
+// 	var isActive = $(this).hasClass('active');
+// 	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
+// }
 
 // [ exam ] checkbox - checked all
 function chk_all()
@@ -305,13 +305,12 @@ function btn_enable()
 
 	if($success)
 	{
-		$('.center-block.i-b-block > input:eq(0)').removeClass('disabled');
+		$('.center-block > input:eq(0)').attr('disabled', false);
 	}
 	else
 	{
-		$('.center-block.i-b-block > input:eq(0)').addClass('disabled');
+		$('.center-block > input:eq(0)').attr('disabled', 'disabled');
 	}
-	console.log('0000')
 }
 
 // select subject
@@ -574,20 +573,7 @@ function additem()
 			return false;
 		}
 		_qas.append(
-			"<li class='control-group'>"+
-				"<label class='control-label'><label class='radio'>"+
-				"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'><b>"+ count +"</b></label></label>"+
-				"<div class='controls'>"+
-					"<a class='btn remove' href='javascript:;'>刪除選項</a>"+
-					"<textarea rows='1'></textarea>"+
-					"<div class='i-b-block'>"+
-						"<img class='pic'>&nbsp;"+
-						"<input type='file' class='ipt_upload_img file'>&nbsp;"+
-						"<a class='bt insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
-						"<a class='bt remove_img' href='javascript:;'>刪除圖片</a>"+
-					"</div>"+
-				"</div>"+
-			"</li>");
+			"<li class='is-table'><div class='control-group'><div class='control-label'><div class='radioholder'><span class='tick'></span><input name='projecttype' type='radio' value=''><b>"+ count +"</b></div></div><div class='controls'><textarea class='width-100' rows='1'></textarea><div class='i-b-block'><img class='pic' src=''><input class='ipt_upload_img file' type='file'> <a class='btn insert_img' href='javascript:;'>插入圖片</a> </div></div></div></li>");
 
 		if(count == 6)
 		{
@@ -598,7 +584,7 @@ function additem()
 		var new_element = _qas.children('li').last();
 		$('.insert_img',new_element).on('click',insert_img);
 		$('.file',new_element).on('change',change_img);
-		$('.quiz_add_subject > li').on('click',active);
+		// $('.quiz_add_subject > li').on('click',active);
 	});
 }
 
@@ -619,7 +605,7 @@ function renumber()
 	$(".quiz_add_subject > li").each(function()
 	{
 		var _num  = $(this).index() + 1,
-			_this = $(this).find('.radio > b'),
+			_this = $(this).find('.radioholder > b'),
 			_rdo  = _this.text(_num);
 		switch ($(_this,this).text())
 		{
@@ -631,7 +617,7 @@ function renumber()
 			case '6' : _this.text('F');break;
 		}
 	});
-};
+}
 
 // chenge style & radio checked
 // active 事件
@@ -703,7 +689,7 @@ function tr_remove()
 	if($('.chk:checked').length >= 1)
 	{
 		var _result = confirm('Want to delete?');
-		if(_result == true)
+		if(_result == true) 
 		{
 			$('td .chk:checked').parents('tr').remove();
 		}
@@ -824,7 +810,7 @@ $(function(){
 	$('#news').append('<div id="newsbox"></div>');
 	$('#news').find('a').addClass('fancybox').attr({"href":"#newsbox","title":"最新消息"});
 	$('#news a').each(function()
-	{	
+	{
 		var _this = $(this).text();
 		$(this).click(function()
 		{
@@ -838,16 +824,16 @@ $(function(){
 	$("input.fancybox").fancybox();
 	$(".afb").fancybox({
 		wrapCSS		: '_admin_fancybox',
-		padding 	: 0,
-		scrolling 	: 'no',
-		closeBtn 	: false
+		padding		: 0,
+		scrolling	: 'no',
+		closeBtn	: false
 	});
 	$(".alert").fancybox({
 		maxWidth	: 300,
 		maxHeight	: 120,
 		fitToView	: false,
 		autoSize	: false,
-		closeBtn 	: false
+		closeBtn	: false
 	});
 
 	// fixed-header
