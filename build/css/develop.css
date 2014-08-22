@@ -169,8 +169,8 @@ ul.a_btn_c2 li { display: block; }
 .upper-alpha li:nth-child(6) .icon-list { background-position: left -120px; }
 .upper-alpha li:nth-child(7) .icon-list { background-position: left -144px; }
 .upper-alpha li:nth-child(8) .icon-list { background-position: left -168px; }
-.upper-alpha li .icon-list.tft { background-position: left -144px; }
-.upper-alpha li .icon-list.tff { background-position: left -168px; }
+.upper-alpha li .icon-list.tft { background-position: left -144px; float: none; }
+.upper-alpha li .icon-list.tff { background-position: left -168px; float: none; }
 .upper-alpha li img { max-width: 206px; }
 .upper-alpha li + li { margin-top: 10px; }
 
