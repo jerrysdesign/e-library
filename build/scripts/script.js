@@ -1,57 +1,44 @@
 // 插入圖片
 function insert_img()
 {
-  $('body').on('click','.insert_img',function()
-  {
-    var _this = $(this).prev();
-        _this.click();
-    if(_this.parent().find('img').size() == 0)
-    {
-      _this.parent().prepend('<img class="pic"/>')
-    }
-  });
+	$(this).prev().click();
 };
 
 // 預覽插入圖片
-function change_img(){
-$('body').on('change','.file',function()
-  {
-    var path,
-        clip = $(this).prev(':eq(1)'),
-        FileReader = window.FileReader;
+function change_img()
+{
+	var path,
+		clip = $(this).prev(),
+		FileReader = window.FileReader;
 
-    // 篩選圖檔格式
-    var ext = $(this).val().split('.').pop().toLowerCase();
-    if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
-    {
-      alert('只允許上傳PNG或JPG影像檔');
-      $(this).empty();
-      return false;
-    }
-    var $this = $(this);
-    if(FileReader)
-    {
-      var reader = new FileReader(),
-        file = this.files[0];
-      reader.onload = function(e) {
-        var _v = e.target.result;
-        clip.attr("src", e.target.result);
-        $this.prev('.pic').attr("src", e.target.result);
-      };
-      reader.readAsDataURL(file);
-    }
-    else
-    {
-      path = $(this).val();
-      if (/"\w\W"/.test(path))
-      {
-        path = path.slice(1, -1);
-      }
-      clip.attr("src", path);
-      $this.prev('.pic').attr("src", path);
-    }
-    $this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
-  });
+	// 篩選圖檔格式
+	var  ext = $(this).val().split('.').pop().toLowerCase();
+	
+	if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
+	{
+		$(this).replaceWith($('.file:eq(0)').val('').clone(true));
+		alert('只允許上傳PNG或JPG影像檔');
+		return false;
+	}
+	var $this = $(this);
+	if(FileReader)
+	{
+		var reader = new FileReader(),
+		file = this.files[0];
+		reader.onload = function(e)
+		{
+			var _v = e.target.result;
+			clip.attr("src", e.target.result);
+			$this.prev('.pic').attr("src", e.target.result);
+		};
+		reader.readAsDataURL(file);
+	}
+	else
+	{
+		path = $(this).val();
+		clip.attr("src", path);
+	}
+	$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
 }
 
 // 刪除圖片
@@ -59,14 +46,14 @@ function remove_img()
 {
 	$('body').on('click','.remove_img',function()
 	{
-		$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').remove().end().find('input').val('');
+		$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').removeClass('view').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
 	});
 }
 
 // 增加選項
 function additem()
 {
-	$(".add").click(function()
+	$('.add').click(function()
 	{
 		var _qas  = $(".quiz_add_subject"),
 			count = _qas.find('li').size();
@@ -77,34 +64,41 @@ function additem()
 			return false;
 		}
 		_qas.append(
-			"<li class= \'control-group item" + count + "\'>" +
+			"<li class='control-group'>"+
 				"<label class='control-label'><label class='radio'>"+
 				"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'><b>"+ count +"</b></label></label>"+
 				"<div class='controls'>"+
 					"<a class='btn remove' href='javascript:;'>刪除選項</a>"+
 					"<textarea rows='1'></textarea>"+
 					"<div class='i-b-block'>"+
-										"<input type='file' class='ipt_upload_img file'>&nbsp;"+
+						"<img class='pic'>&nbsp;"+
+						"<input type='file' class='ipt_upload_img file'>&nbsp;"+
 						"<a class='bt insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
 						"<a class='bt remove_img' href='javascript:;'>刪除圖片</a>"+
 					"</div>"+
 				"</div>"+
 			"</li>");
-		if(count == 6){
+
+		if(count == 6)
+		{
 			$(".add").attr("disabled", true);
 		}
-		Remove();
 		renumber();
+		
+		var new_element = _qas.children('li').last();
+		$('.insert_img',new_element).on('click',insert_img);
+		$('.file',new_element).on('change',change_img);
+		$('.quiz_add_subject > li').on('click',active);
 	});
 }
 
 // 刪除選項
 function Remove()
 {
-	$(".remove").click(function()
+	$('body').on('click','.remove',function()
 	{
 		$(".add").attr("disabled", false);
-		$(this).parents("li[class*='item']").remove();
+		$(this).parents("li").remove();
 		renumber();
 	});
 }
@@ -112,11 +106,11 @@ function Remove()
 // 答案編號
 function renumber()
 {
-		$(".quiz_add_subject > li").each(function()
-		{
-			var _num  = $(this).index() + 1,
-				_this = $(this).find('.radio > b'),
-				_rdo  = _this.text(_num);
+	$(".quiz_add_subject > li").each(function()
+	{
+		var _num  = $(this).index() + 1,
+			_this = $(this).find('.radio > b'),
+			_rdo  = _this.text(_num);
 		switch ($(_this,this).text())
 		{
 			case '1' : _this.text('A');break;
@@ -126,8 +120,144 @@ function renumber()
 			case '5' : _this.text('E');break;
 			case '6' : _this.text('F');break;
 		}
-		});
+	});
 };
+
+// chenge style & radio checked
+// active 事件
+function active()
+{
+	$('.active').removeClass('active');
+	$(this).addClass("active");
+	var isActive = $(this).hasClass('active');
+	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
+}
+
+// [ exam ] checkbox - checked all
+function chk_all()
+{
+	var _this = $(this);
+	if(_this.prop('checked'))
+	{
+		$('.chk').prop('checked',true);
+	}
+	else
+	{
+		$('.chk').prop('checked',false);
+	}
+}
+
+// [ exam ] tr - up & down
+function tr_ud()
+{
+	if($('.chk:checked').length == 1)
+	{
+		var row = $('td .chk:checked').parents('tr:first').css('color','blue'),
+			row_count = $("table > tbody > tr").length;
+		if ($(this).is('.exam-up') && row.index() > 1)
+		{
+			row.insertBefore(row.prev());
+		}
+		else if($(this).is('.exam-down') && row.index() < row_count)
+		{
+			row.insertAfter(row.next());
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
+// [ exam ] btn - mode
+function btn_mode()
+{
+	var _length = $('input.chk:checked').size();
+	switch (_length)
+	{
+		case 0:
+			$('.exam-up,.exam-down,.exam-remove').addClass('disabled');
+			break;
+		case 1:
+			$('.disabled').removeClass('disabled');
+			break;
+		default:
+			$('.exam-remove').removeClass('disabled');
+			$('.exam-up,.exam-down').addClass('disabled');
+			break;
+	}
+}
+
+// [ exam ] tr - remove
+function tr_remove()
+{
+	if($('.chk:checked').length >= 1)
+	{
+		var _result = confirm('Want to delete?');
+		if(_result == true)
+		{
+			$('td .chk:checked').parents('tr').remove();
+		}
+	}
+}
+
+// [ exam ] tr - removeclass
+function tr_reclass()
+{
+	$('tr').css('color','black');
+}
+
+
+// [ exam ] caption - thead_fixed
+function thead_fixed()
+{
+	var $win   = $(window),
+		$cont  = $('.container'),
+		$tbfix = $cont.find('.tb_fixed'),
+		$btn_wrap = $cont.find('.btn_wrap'),
+		$thead = $('thead.tb_fixed');
+		_contOffset = $cont.offset().top,
+		_fixed = $tbfix.hasClass('fixed');
+
+	if($win.scrollTop() >= _contOffset)
+	{
+		if(!_fixed){
+			$tbfix.addClass('fixed');
+		}
+	}
+	else
+	{
+		if(_fixed)
+		{
+			$tbfix.removeClass('fixed');
+		}
+	}
+}
+
+// barCharts
+function barCharts()
+{
+	//＊＊/ nofp = number of people
+	// 單位最大人數
+	// 100/單位最大人數為基數
+
+	// barChart gap text
+	var _sum = 0;
+	$('.chart__bars:first .chart__bar').each(function(){
+		_sum += Number($(this).data('nofp'));
+	});
+	$('.chart__numbers > li > span').each(function(key){
+		var _k = key + 1,
+			_s = _sum / 5;
+		$(this).text(_s * _k);
+	});
+
+	// barChart width
+	$('.chart__bar').each(function( key, bar )
+	{
+		var nofp = $(this).data('nofp');
+		$(this).css('width', ( nofp / _sum ) * 100 + '%');
+	});
+}
 
 $(function(){
 	// search
@@ -209,10 +339,36 @@ $(function(){
 		autoSize	: false,
 		closeBtn 	: false
 	});
-	
-	insert_img();
-  	change_img();
+
+	// fixed-header
+	// source: https://github.com/markmalek/Fixed-Header-Table
+	// 測驗結果表格
+	$('.js-fixed-header-01').fixedHeaderTable(
+	{
+		altClass: 'odd',
+		footer: false,
+		fixedColumns: 1
+	});
+
+	$('.insert_img').on('click',insert_img);
+	$('.file').on('change',change_img);
+	$('.quiz_add_subject > li').on('click',active);
 	remove_img();
+	Remove();
 	additem();
 	renumber();
+	barCharts();
+
+	// [ exam ] table - remove & up & down
+	$('.chk').on('click',tr_reclass);
+	$('.exam-remove').on('click',tr_remove);
+	$('.exam-up,.exam-down').on('click',tr_ud);
+	$('th .chk:first').on('change',chk_all);
+	$('input.chk').on('change',btn_mode);
+
+	if($('.container').has('.tb_fixed').size() == 1)
+	{
+		$(window).scroll(thead_fixed);
+	}
+
 });

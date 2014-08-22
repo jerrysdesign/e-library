@@ -1,12 +1,13 @@
+@charset "UTF-8";
 .controls:hover .remove { font: 0/0 a; text-shadow: none; border: 0 none; color: transparent; }
 
 .a_btn_c2:after, .pd2040:after, .pd2020:after { content: ""; display: table; clear: both; }
 
 .fr { float: right; }
 
-.fl, .test dt { float: left; }
+.fl, .test dt, .upper-alpha li .icon-list { float: left; }
 
-.oh { overflow: hidden; }
+.oh:after { content: ""; display: table; clear: both; }
 
 .center-block { margin-left: auto; margin-right: auto; text-align: center; }
 
@@ -98,11 +99,10 @@
 .controls { padding-left: 10px; margin-left: 17%; border-left: 1px solid #09277b; }
 
 .cont_tab4 .control-group { padding: 10px; }
-.cont_tab4 .control-group:hover { background-color: #f7f7f7; }
 
 .controls { position: relative; }
 .controls .remove { display: none; }
-.controls:hover .remove { position: absolute; top: -16px; right: -16px; height: 32px; width: 32px; background-image: url("../images/con-remove.png"); background-position: center; display: block; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; background-color: white; }
+.controls:hover .remove { position: absolute; top: -24px; right: -24px; height: 32px; width: 32px; background-image: url("../images/icon-remove.png"); background-position: center; display: block; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; background-color: white; }
 
 .masthead { background-color: #bbbbbb; position: relative; }
 .masthead .cont { padding: 20px 0; position: relative; }
@@ -159,12 +159,20 @@ ul.a_btn_c2 li { display: block; }
 
 .cont_tab2 input { height: auto !important; }
 
-.upper-alpha li { padding-left: 32px; min-height: 24px; background: url(../images/upper-alpha.png) no-repeat; }
-.upper-alpha li + li { margin-top: 5px; }
-.upper-alpha li:nth-child(1) { background-position: left 0; }
-.upper-alpha li:nth-child(2) { background-position: left -24px; }
-.upper-alpha li:nth-child(3) { background-position: left -48px; }
-.upper-alpha li:nth-child(4) { background-position: left -72px; }
+.upper-alpha li { margin-left: 32px; }
+.upper-alpha li .icon-list { height: 24px; width: 24px; background: url(../images/upper-alpha.png) no-repeat; margin-right: 10px; }
+.upper-alpha li:nth-child(1) .icon-list { background-position: left 0; }
+.upper-alpha li:nth-child(2) .icon-list { background-position: left -24px; }
+.upper-alpha li:nth-child(3) .icon-list { background-position: left -48px; }
+.upper-alpha li:nth-child(4) .icon-list { background-position: left -72px; }
+.upper-alpha li:nth-child(5) .icon-list { background-position: left -96px; }
+.upper-alpha li:nth-child(6) .icon-list { background-position: left -120px; }
+.upper-alpha li:nth-child(7) .icon-list { background-position: left -144px; }
+.upper-alpha li:nth-child(8) .icon-list { background-position: left -168px; }
+.upper-alpha li .icon-list.tft { background-position: left -144px; }
+.upper-alpha li .icon-list.tff { background-position: left -168px; }
+.upper-alpha li img { max-width: 206px; }
+.upper-alpha li + li { margin-top: 10px; }
 
 .quiz_list_stylesass { counter-reset: list 0; }
 .quiz_list_stylesass > li { position: relative; }
@@ -186,3 +194,51 @@ ul.a_btn_c2 li { display: block; }
 .warning .strong { background: url(../images/icon-warning.png) 0 10px no-repeat; padding-left: 50px; font-weight: bold; line-height: 40px; display: block; font-size: 16px; }
 .warning .block { width: 40%; margin-left: -30%; position: absolute; bottom: 0; left: 60%; }
 .warning .block:after { content: ""; display: table; clear: both; }
+
+.trtable_wrapper { width: 1000px; height: 400px; overflow-x: auto; overflow-y: auto; }
+
+.trtable { margin: 0; border: 1px solid #b3b3b3; }
+.trtable th { background-color: #e6e6e6; }
+.trtable th, .trtable td { text-align: center; padding: 0; }
+.trtable th span + span, .trtable td span + span { color: white; background: #d9d9d9; line-height: 1; }
+.trtable th span, .trtable td span { display: block; padding: 0.5em; }
+.trtable td { background-color: #eef4d6; color: #72cb1b; border-color: white; vertical-align: middle; }
+.trtable .error { background-color: #f9d6d7; color: #e95d4b; }
+.trtable th { background: white; }
+.trtable th span { white-space: nowrap; }
+
+.quiz_add_subject .control-label { margin-bottom: 0; }
+.quiz_add_subject .control-group { padding: 10px; border: 5px solid transparent; cursor: pointer; }
+.quiz_add_subject .control-group:hover { background-color: #f2f2f2; }
+.quiz_add_subject .control-group.active { background-color: #f7faea; border: 5px solid #d8e4a7; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.quiz_add_subject input[type="radio"] { display: none; }
+.quiz_add_subject input[type="radio"] + b { display: block; font-size: 3em; line-height: 60px; color: gray; text-align: center; text-indent: 1em; }
+.quiz_add_subject input[type="radio"]:checked + b { color: #c6d880; }
+
+.chart { width: 100%; margin: 30px auto 0; }
+.chart h6 { width: 150px; float: left; font-size: 1.5em; margin: 10px 0; text-align: center; }
+.chart ol > li + li { margin-top: 20px; }
+
+.chart__numbers { height: 30px; margin-left: 150px; position: relative; }
+.chart__numbers:after { content: ""; display: table; clear: both; }
+.chart__numbers li { text-align: right; height: 30px; display: inline-block; float: left; width: 20%; }
+.chart__numbers li span { color: #a6a6a6; }
+.chart__numbers li:first-child:before { content: "0"; position: absolute; right: 100%; color: #a6a6a6; }
+
+.chart__bars { background: rgba(0, 0, 0, 0.05); margin-left: 150px; -webkit-border-radius: 0; -moz-border-radius: 0 4px 4px 0; border-radius: 0 4px 4px 0; }
+.chart__bars li { position: relative; padding: 5px 0; }
+.chart__bars li:hover .chart__bar { background-color: #ff7276; }
+.chart__bars li:hover .chart__bar:before { color: #205791; content: attr(data-nofp) "人"; position: absolute; left: 100%; top: 0.5em; width: 4em; margin-left: 10px; }
+.chart__bars li:hover .chart__bar.right { background-color: #bbd74e; }
+
+.chart__bar { position: relative; height: 30px; background-color: #fbc2c4; width: 0; -webkit-transition: width 1s ease-in-out; -moz-transition: width 1s ease-in-out; -o-transition: width 1s ease-in-out; transition: width 1s ease-in-out; }
+.chart__bar.right { background-color: #c6d880; }
+
+.chart__left_lable { color: gray; width: 4em; position: absolute; top: 1em; right: 100%; text-align: center; }
+
+.tb_fixed.fixed { position: fixed; }
+
+.btn_wrap { top: 40px; width: 1000px; padding-top: 20px; background: #f7f7f7; }
+
+thead.fixed { top: 101px; background: #f7f7f7; position: fixed; }
+thead.fixed th { padding: 0.583em; }

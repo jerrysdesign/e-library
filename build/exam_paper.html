@@ -2,61 +2,65 @@
 <html lang="zh-TW">
   <head>
     <meta charset="UTF-8">
-    <title>管理題目</title>
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
-    <link rel="stylesheet" type="text/css" href="css/master.css" />
-    <link rel="stylesheet" type="text/css" href="css/admin.css" />
-    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+    <title>
+      浩學圖書館數位圖書館
+    </title>
+    <link href="vender/fixed-header-table/css/defaultTheme.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <link href="css/master.css" rel="stylesheet" type="text/css">
+    <link href="css/admin.css" rel="stylesheet" type="text/css">
+    <!--[if lte IE 7]
+      link rel="stylesheet" type="text/css" href="css/ie7.css"-->
     <script src="scripts/jquery-1.9.0.min.js"></script>
+    <script src="vender/fixed-header-table/jquery.fixedheadertable.min.js"></script>
     <script src="scripts/jquery.fancybox.js"></script>
-    <script src="scripts/script.js"></script>
     <script src="scripts/admin_menu.js"></script>
+    <script src="scripts/script.js"></script>
   </head>
   <body>
     <div id="head_area">
-      <div id="head">
-        <h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
-        <div id="head_nav">
-          <ul>
-            <li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
-            <li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
-            <li><a href="about.html">關於我們</a>&nbsp;|</li>
-            <li><a href="help.html">服務說明</a>&nbsp;|</li>
-            <li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
-            <li><a href="#" class="lang">E</a></li>
-            <li><a href="#" class="lang">繁</a></li>
-            <li><a href="#" class="lang">簡</a></li>
-            <li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
-          </ul>
-        </div>
-      </div>
+    	<div id="head">
+    		<h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
+    		<div id="head_nav">
+    			<ul>
+    				<li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
+    				<li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
+    				<li><a href="about.html">關於我們</a>&nbsp;|</li>
+    				<li><a href="help.html">服務說明</a>&nbsp;|</li>
+    				<li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
+    				<li><a href="#" class="lang">E</a></li>
+    				<li><a href="#" class="lang">繁</a></li>
+    				<li><a href="#" class="lang">簡</a></li>
+    				<li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
+    			</ul>
+    		</div>
+    	</div>
     </div><div class="menu_wrap">
-      <div id="menu_area">
-        <div id="menu_bar">
-          <ul id="menu">
-            <li><a href="#">圖書管理</a>
-              <ul class="sub_menu">
-                <li><a href="admin_ebook_main.html">版權書管理</a></li>
-                <li><a href="ebook_free_main.html">自有版權書管理</a></li>
-              </ul>
-            </li>
-            <li><a href="#">閱讀歷程</a></li>
-            <li><a href="#">數位電子內容管理平台</a>
-              <ul class="sub_menu">
-                <li><a href="ebook_main.html">電子書維護</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+    	<div id="menu_area">
+    		<div id="menu_bar">
+    			<ul id="menu">
+    				<li><a href="#">圖書管理</a>
+    					<ul class="sub_menu">
+    						<li><a href="admin_ebook_main.html">版權書管理</a></li>
+    						<li><a href="ebook_free_main.html">自有版權書管理</a></li>
+    					</ul>
+    				</li>
+    				<li><a href="#">閱讀歷程</a></li>
+    				<li><a href="#">數位電子內容管理平台</a>
+    					<ul class="sub_menu">
+    						<li><a href="ebook_main.html">電子書維護</a></li>
+    					</ul>
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
     </div><div id="cont_area">
       <div id="cont">
         <div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
         <form class="cf" enctype="multipart/form-data" method="post">
           <div class="cont_tab2">
             <h2>
-              <div class="icon04"></div>
-              測驗
+              <span class="icon04"></span>測驗
             </h2>
             <div class="pd2040">
               <div class="control-group">
@@ -117,7 +121,7 @@
                   </div>
                 </td>
                 <td>
-                  孫高之橫成目
+                  一幾人我不教
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -126,10 +130,10 @@
                   78%
                 </td>
                 <td>
-                  2014-10-15 00:00
+                  2014-01-14 00:00
                 </td>
                 <td>
-                  2014-12-17 00:00
+                  2014-06-07 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -142,7 +146,7 @@
                   </div>
                 </td>
                 <td>
-                  捨就他纔課進
+                  沒疲家變裡惡
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -151,10 +155,10 @@
                   78%
                 </td>
                 <td>
-                  2014-12-05 00:00
+                  2014-04-09 00:00
                 </td>
                 <td>
-                  2014-11-03 00:00
+                  2014-04-04 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -167,7 +171,7 @@
                   </div>
                 </td>
                 <td>
-                  一拚在憊人上
+                  舊過他們麵下
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -176,10 +180,10 @@
                   78%
                 </td>
                 <td>
-                  2014-11-04 00:00
+                  2014-09-15 00:00
                 </td>
                 <td>
-                  2014-12-29 00:00
+                  2014-12-20 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -192,7 +196,7 @@
                   </div>
                 </td>
                 <td>
-                  和的的睜麼是
+                  開就的其是在
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -201,10 +205,10 @@
                   78%
                 </td>
                 <td>
-                  2014-03-05 00:00
+                  2014-11-17 00:00
                 </td>
                 <td>
-                  2014-04-24 00:00
+                  2014-04-21 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -217,7 +221,7 @@
                   </div>
                 </td>
                 <td>
-                  無水烤橋比喝
+                  就痛慢掃穿書
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -226,10 +230,10 @@
                   78%
                 </td>
                 <td>
-                  2014-02-24 00:00
+                  2014-05-28 00:00
                 </td>
                 <td>
-                  2014-05-25 00:00
+                  2014-10-30 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -242,7 +246,7 @@
                   </div>
                 </td>
                 <td>
-                  月的幾履人今
+                  和就顧媽邊互
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -251,10 +255,10 @@
                   78%
                 </td>
                 <td>
-                  2014-07-05 00:00
+                  2014-08-10 00:00
                 </td>
                 <td>
-                  2014-04-08 00:00
+                  2014-01-29 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -267,7 +271,7 @@
                   </div>
                 </td>
                 <td>
-                  的的簫南發實
+                  地始封上禮受
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -276,10 +280,10 @@
                   78%
                 </td>
                 <td>
-                  2014-01-13 00:00
+                  2014-01-15 00:00
                 </td>
                 <td>
-                  2014-05-29 00:00
+                  2014-07-09 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -292,7 +296,7 @@
                   </div>
                 </td>
                 <td>
-                  沒富碰過金插
+                  我疼其再團歹
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -301,10 +305,10 @@
                   78%
                 </td>
                 <td>
-                  2014-08-10 00:00
+                  2014-03-15 00:00
                 </td>
                 <td>
-                  2014-09-01 00:00
+                  2014-03-04 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -317,7 +321,7 @@
                   </div>
                 </td>
                 <td>
-                  發金程還爭街
+                  的喊上咖這結
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -326,10 +330,10 @@
                   78%
                 </td>
                 <td>
-                  2014-10-07 00:00
+                  2014-09-05 00:00
                 </td>
                 <td>
-                  2014-05-28 00:00
+                  2014-12-09 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -342,7 +346,7 @@
                   </div>
                 </td>
                 <td>
-                  會水前血山下
+                  些響要的恨忘
                 </td>
                 <td class="text-l">
                   是非題：5題<br>選擇題：6題</br>
@@ -351,10 +355,10 @@
                   78%
                 </td>
                 <td>
-                  2014-12-13 00:00
+                  2014-08-24 00:00
                 </td>
                 <td>
-                  2014-12-21 00:00
+                  2014-09-24 00:00
                 </td>
                 <td>
                   <a href="#"> 修改</a><br><a href="#"> 檢視</a><br><a href="#"> 統計</a>
@@ -409,9 +413,9 @@
         <div class="clearb"></div>
       </div>
     </div><div id="foot_area">
-      <div id="foot">
-        浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
-      </div>
+    	<div id="foot">
+    		浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
+    	</div>
     </div>
   </body>
 </html>

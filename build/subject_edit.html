@@ -2,61 +2,65 @@
 <html lang="zh-TW">
   <head>
     <meta charset="UTF-8">
-    <title>管理題目</title>
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
-    <link rel="stylesheet" type="text/css" href="css/master.css" />
-    <link rel="stylesheet" type="text/css" href="css/admin.css" />
-    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+    <title>
+      浩學圖書館數位圖書館
+    </title>
+    <link href="vender/fixed-header-table/css/defaultTheme.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <link href="css/master.css" rel="stylesheet" type="text/css">
+    <link href="css/admin.css" rel="stylesheet" type="text/css">
+    <!--[if lte IE 7]
+      link rel="stylesheet" type="text/css" href="css/ie7.css"-->
     <script src="scripts/jquery-1.9.0.min.js"></script>
+    <script src="vender/fixed-header-table/jquery.fixedheadertable.min.js"></script>
     <script src="scripts/jquery.fancybox.js"></script>
-    <script src="scripts/script.js"></script>
     <script src="scripts/admin_menu.js"></script>
+    <script src="scripts/script.js"></script>
   </head>
   <body>
     <div id="head_area">
-      <div id="head">
-        <h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
-        <div id="head_nav">
-          <ul>
-            <li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
-            <li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
-            <li><a href="about.html">關於我們</a>&nbsp;|</li>
-            <li><a href="help.html">服務說明</a>&nbsp;|</li>
-            <li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
-            <li><a href="#" class="lang">E</a></li>
-            <li><a href="#" class="lang">繁</a></li>
-            <li><a href="#" class="lang">簡</a></li>
-            <li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
-          </ul>
-        </div>
-      </div>
+    	<div id="head">
+    		<h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
+    		<div id="head_nav">
+    			<ul>
+    				<li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
+    				<li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
+    				<li><a href="about.html">關於我們</a>&nbsp;|</li>
+    				<li><a href="help.html">服務說明</a>&nbsp;|</li>
+    				<li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
+    				<li><a href="#" class="lang">E</a></li>
+    				<li><a href="#" class="lang">繁</a></li>
+    				<li><a href="#" class="lang">簡</a></li>
+    				<li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
+    			</ul>
+    		</div>
+    	</div>
     </div><div class="menu_wrap">
-      <div id="menu_area">
-        <div id="menu_bar">
-          <ul id="menu">
-            <li><a href="#">圖書管理</a>
-              <ul class="sub_menu">
-                <li><a href="admin_ebook_main.html">版權書管理</a></li>
-                <li><a href="ebook_free_main.html">自有版權書管理</a></li>
-              </ul>
-            </li>
-            <li><a href="#">閱讀歷程</a></li>
-            <li><a href="#">數位電子內容管理平台</a>
-              <ul class="sub_menu">
-                <li><a href="ebook_main.html">電子書維護</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+    	<div id="menu_area">
+    		<div id="menu_bar">
+    			<ul id="menu">
+    				<li><a href="#">圖書管理</a>
+    					<ul class="sub_menu">
+    						<li><a href="admin_ebook_main.html">版權書管理</a></li>
+    						<li><a href="ebook_free_main.html">自有版權書管理</a></li>
+    					</ul>
+    				</li>
+    				<li><a href="#">閱讀歷程</a></li>
+    				<li><a href="#">數位電子內容管理平台</a>
+    					<ul class="sub_menu">
+    						<li><a href="ebook_main.html">電子書維護</a></li>
+    					</ul>
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
     </div><div id="cont_area">
       <div id="cont">
         <div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
         <form class="cf" enctype="multipart/form-data" method="post">
           <div class="cont_tab2">
             <h2>
-              <div class="icon04"></div>
-              題目設定
+              <span class="icon04"></span>題目設定
             </h2>
             <div class="pd2040">
               <div class="control-group">
@@ -69,8 +73,7 @@
           </div>
           <div class="cont_tab2">
             <h2>
-              <div class="icon04"></div>
-              題目管理
+              <span class="icon04"></span>題目管理
             </h2>
             <div class="pd2040">
               <div class="control-group">
@@ -131,13 +134,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  會傻為還纔們了疑前兩天來纔再的被-舒疑好是真夜悽使
+                  子弟不不對花們萄無就瘦鍛上岸真葡得生互煮事身先6不
                 </td>
                 <td>
-                  2014-12-31 00:00
+                  2014-12-14 00:00
                 </td>
                 <td>
-                  2014-07-01 00:00
+                  2014-11-16 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -153,13 +156,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  苦陽不有的疲目奏明就害答堆裡著老兩來月茶吃人嬉要實
+                  害也這啡會電我-下進不是還間著這三算就要前陽童-有
                 </td>
                 <td>
-                  2014-11-13 00:00
+                  2014-07-18 00:00
                 </td>
                 <td>
-                  2014-07-02 00:00
+                  2014-05-22 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -175,13 +178,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  憤還這真罵去光們憑停可就要老似的中也去斷皮番快禮像
+                  笑意稱程閒農不測啊像月何輸說觸棄1起人柚倒地難點中
                 </td>
                 <td>
-                  2014-10-09 00:00
+                  2014-06-27 00:00
                 </td>
                 <td>
-                  2014-12-29 00:00
+                  2014-05-18 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -197,13 +200,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  後人經有挨是一嬉樣地可我年意不你何就來較爸個黎了和
+                  煮容們但只不不的快是棒媽盲談進上來麵樣人死地問無的
                 </td>
                 <td>
-                  2014-09-01 00:00
+                  2014-02-05 00:00
                 </td>
                 <td>
-                  2014-02-08 00:00
+                  2014-12-01 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -219,13 +222,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  切來點了有響知結地真被悠容受盲本憊的理兄的有又份憊
+                  參是本悲狗值興-愈以保賺倆我泡談窪地將☆平地少人是
                 </td>
                 <td>
-                  2014-03-31 00:00
+                  2014-01-21 00:00
                 </td>
                 <td>
-                  2014-12-08 00:00
+                  2014-03-29 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -241,13 +244,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  人他過杯來-明棄一去遇己時要權少訊一特值路幫早倍纔
+                  後很競不到一盲上半天在這本地亂條更啊該有們的很啊中
                 </td>
                 <td>
-                  2014-02-24 00:00
+                  2014-01-31 00:00
                 </td>
                 <td>
-                  2014-08-04 00:00
+                  2014-12-04 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -263,13 +266,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  喝且測跳子了這目但一要命什袖切拚了過可正在國到幫鬧
+                  疑易童子不啦頭但也喝鑼就較個論捨為會下這黃進拜見見
                 </td>
                 <td>
-                  2014-03-04 00:00
+                  2014-08-30 00:00
                 </td>
                 <td>
-                  2014-02-05 00:00
+                  2014-04-12 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -285,13 +288,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  為有很罵出一杯中亦年Q較怪兄他怎就著易有著漸使已橫
+                  苦黑命倆道老中的這開比句甘出須做了啦非爭啡導前勞問
                 </td>
                 <td>
-                  2014-08-10 00:00
+                  2014-01-24 00:00
                 </td>
                 <td>
-                  2014-12-06 00:00
+                  2014-07-27 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -307,13 +310,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  開麼出整就憊暫目借學早恩這山憤你說了湧吠我有害典拚
+                  悲廣容的孩得可他再地去聲而弱不地不憐到就們火導另又
                 </td>
                 <td>
-                  2014-12-17 00:00
+                  2014-07-19 00:00
                 </td>
                 <td>
-                  2014-08-26 00:00
+                  2014-12-22 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -329,13 +332,13 @@
                   </div>
                 </td>
                 <td class="text-l">
-                  的去些疲餃紅倆地能的狗就議點感斜捨真想爭月一了去說
+                  泡合人提喟炮自意走都去時義苦聲又人台堪行一著油怎早
                 </td>
                 <td>
-                  2014-08-19 00:00
+                  2014-08-08 00:00
                 </td>
                 <td>
-                  2014-07-26 00:00
+                  2014-06-23 00:00
                 </td>
                 <td>
                   <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
@@ -390,9 +393,9 @@
         <div class="clearb"></div>
       </div>
     </div><div id="foot_area">
-      <div id="foot">
-        浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
-      </div>
+    	<div id="foot">
+    		浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
+    	</div>
     </div>
   </body>
 </html>

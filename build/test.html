@@ -2,53 +2,58 @@
 <html lang="zh-TW">
   <head>
     <meta charset="UTF-8">
-    <title>管理題目</title>
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
-    <link rel="stylesheet" type="text/css" href="css/master.css" />
-    <link rel="stylesheet" type="text/css" href="css/admin.css" />
-    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+    <title>
+      浩學圖書館數位圖書館
+    </title>
+    <link href="vender/fixed-header-table/css/defaultTheme.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <link href="css/master.css" rel="stylesheet" type="text/css">
+    <link href="css/admin.css" rel="stylesheet" type="text/css">
+    <!--[if lte IE 7]
+      link rel="stylesheet" type="text/css" href="css/ie7.css"-->
     <script src="scripts/jquery-1.9.0.min.js"></script>
+    <script src="vender/fixed-header-table/jquery.fixedheadertable.min.js"></script>
     <script src="scripts/jquery.fancybox.js"></script>
-    <script src="scripts/script.js"></script>
     <script src="scripts/admin_menu.js"></script>
+    <script src="scripts/script.js"></script>
   </head>
   <body>
     <div id="head_area">
-      <div id="head">
-        <h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
-        <div id="head_nav">
-          <ul>
-            <li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
-            <li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
-            <li><a href="about.html">關於我們</a>&nbsp;|</li>
-            <li><a href="help.html">服務說明</a>&nbsp;|</li>
-            <li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
-            <li><a href="#" class="lang">E</a></li>
-            <li><a href="#" class="lang">繁</a></li>
-            <li><a href="#" class="lang">簡</a></li>
-            <li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
-          </ul>
-        </div>
-      </div>
+    	<div id="head">
+    		<h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
+    		<div id="head_nav">
+    			<ul>
+    				<li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
+    				<li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
+    				<li><a href="about.html">關於我們</a>&nbsp;|</li>
+    				<li><a href="help.html">服務說明</a>&nbsp;|</li>
+    				<li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
+    				<li><a href="#" class="lang">E</a></li>
+    				<li><a href="#" class="lang">繁</a></li>
+    				<li><a href="#" class="lang">簡</a></li>
+    				<li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
+    			</ul>
+    		</div>
+    	</div>
     </div><div class="menu_wrap">
-      <div id="menu_area">
-        <div id="menu_bar">
-          <ul id="menu">
-            <li><a href="#">圖書管理</a>
-              <ul class="sub_menu">
-                <li><a href="admin_ebook_main.html">版權書管理</a></li>
-                <li><a href="ebook_free_main.html">自有版權書管理</a></li>
-              </ul>
-            </li>
-            <li><a href="#">閱讀歷程</a></li>
-            <li><a href="#">數位電子內容管理平台</a>
-              <ul class="sub_menu">
-                <li><a href="ebook_main.html">電子書維護</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+    	<div id="menu_area">
+    		<div id="menu_bar">
+    			<ul id="menu">
+    				<li><a href="#">圖書管理</a>
+    					<ul class="sub_menu">
+    						<li><a href="admin_ebook_main.html">版權書管理</a></li>
+    						<li><a href="ebook_free_main.html">自有版權書管理</a></li>
+    					</ul>
+    				</li>
+    				<li><a href="#">閱讀歷程</a></li>
+    				<li><a href="#">數位電子內容管理平台</a>
+    					<ul class="sub_menu">
+    						<li><a href="ebook_main.html">電子書維護</a></li>
+    					</ul>
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
     </div><div id="cont_area">
       <div class="masthead cf">
         <div class="cont">
@@ -57,13 +62,20 @@
               測驗卷
             </div>
           </div>
-          <div class="masthead_content">
-            <div class="control-group">
-              <label class="control-label">名稱</label>
-              <div class="controls">
-                <div class="inline-grop">
-                  <input type="text" value="假字假字假字假字假字假字假字假字假字"><a class="bt fancybox fancybox.iframe afb" href="timer_pop.html">開始測驗</a>
-                </div>
+          <div class="masthead_content test">
+            <div class="row">
+              <div class="fl">
+                <h3 class="eptitle">
+                  睡齒短停透震烤還鬧靜台一目受往也人畫的謹似讓論出多在是裡蹶盲興爸憊家來
+                </h3>
+              </div>
+              <div class="fr">
+                共<span class="quiz_total">5</span>題
+              </div>
+            </div>
+            <div class="row">
+              <div class="fr">
+                <a class="bt" href="javascript:;">修改測驗卷</a><a class="bt fancybox fancybox.iframe afb" href="timer_pop.html">開始測驗</a>
               </div>
             </div>
           </div>
@@ -73,137 +85,287 @@
         <div id="cont">
           <ol class="quiz_list_stylesass">
             <li>
+              <!--結構更動--><!--選擇題 start-->
               <div class="cont_tab2">
                 <div class="pd2040">
                   <p class="pd2020">
-                    雖則不知，互相信賴，思想也漸糢糊起來，老人懷疑地問。把我們龍頭割去！就可觸到金錢，咖啡要做我老友。暫時的時空靜止。居然宣佈了戰爭，有時再往親戚家去，我不明白，導發反抗力的火戰。呢個禮拜，四城門的競爭，有點疲憊！
-                    
-                    明夜沒得再看啦！來和他們一拚！所以窮的人，在閃爍地放亮。
+                    似爭憑己趕如平此和要一爭算掉去賴奉捧遂割很得唯權如自這生現輸百過最和趕中溪哀走圍短一夜輸揪
                   </p>
                   <ol class="upper-alpha pd2020">
                     <li>
-                      不教臉紅而已。
+                      <!--純文字狀態-->
+                      <div class="icon-list"></div>
+                      實在想不到！
                     </li>
                     <li>
+                      <!--純圖片狀態-->
+                      <div class="icon-list"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                    <li>
+                      <!--有文有圖狀態-->
+                      <div class="icon-list"></div>
+                      他麼命罵來早失你方番傍點就們個的眼城的真啊後.恍相憐的我頂來疲我害聲腕啦壺坐鑼把暇了了起0
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <!--選擇題 end-->
+            </li>
+            <li>
+              <!--是非題 start-->
+              <div class="cont_tab2">
+                <div class="pd2040">
+                  <p class="pd2020">
+                    目不運什沒人皮害一亙遮啦山上似贊咖了歲雙怎金番渡熱到-臉仔了的用要損他我不說命過受以點真禮
+                  </p>
+                  <ol class="upper-alpha pd2020">
+                    <li>
+                      <!--是非: 是-->
+                      <div class="icon-list tft"></div>
+                      ２２８運去台中！
+                    </li>
+                    <li>
+                      <!--是非: 否-->
+                      <div class="icon-list tff"></div>
+                      也不知什麼是方向，盲目地前進！
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <!--是非題 end-->
+            </li>
+            <li>
+              <!--結構更動--><!--選擇題 start-->
+              <div class="cont_tab2">
+                <div class="pd2040">
+                  <p class="pd2020">
+                    如多地和分些到甲著了他北富罵團須啊暫憐不憑繼計悲中看你害都疲邊會有聲拚春麵易一教在的種了老
+                  </p>
+                  <ol class="upper-alpha pd2020">
+                    <li>
+                      <!--純文字狀態-->
+                      <div class="icon-list"></div>
+                      農民播種犁田，互相提攜走向前去。
+                    </li>
+                    <li>
+                      <!--純圖片狀態-->
+                      <div class="icon-list"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                    <li>
+                      <!--有文有圖狀態-->
+                      <div class="icon-list"></div>
+                      地何怎你掉感也運鬧的城的上～了還本運的鬧完戒掉啡要富點到又醉城狺煩裡到們幾寶人去挨老重況媽
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <!--選擇題 end-->
+            </li>
+            <li>
+              <!--是非題 start-->
+              <div class="cont_tab2">
+                <div class="pd2040">
+                  <p class="pd2020">
+                    示傳雙要比調要去身還我不罵那需到切街啡他和前利忙功啡他歲們來都最都他北是這的地花腔怪歲思的
+                  </p>
+                  <ol class="upper-alpha pd2020">
+                    <li>
+                      <!--是非: 是-->
+                      <div class="icon-list tft"></div>
+                      比狗還輸！
+                    </li>
+                    <li>
+                      <!--是非: 否-->
+                      <div class="icon-list tff"></div>
+                      何故世上的人類們，不能成功，也就便宜，現在只有覺悟，一寸光陰一寸金，一份貼心，體軀支持不住了，一樣是歹命人！
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <!--是非題 end-->
+            </li>
+            <li>
+              <!--結構更動--><!--選擇題 start-->
+              <div class="cont_tab2">
+                <div class="pd2040">
+                  <p class="pd2020">
+                    非現這一作得后和咖弱是我辨一快去看遮議繼住這錢發軀龍在來了上喝讓拿龍.和城光喊厭天有到亦閒
+                  </p>
+                  <ol class="upper-alpha pd2020">
+                    <li>
+                      <!--純文字狀態-->
+                      <div class="icon-list"></div>
+                      一夜的花費，值得說什麼爭麵皮！
+                    </li>
+                    <li>
+                      <!--純圖片狀態-->
+                      <div class="icon-list"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                    <li>
+                      <!--有文有圖狀態-->
+                      <div class="icon-list"></div>
+                      弟油不輸就分像以就家譁在比啊方度睜和什的啊的是和捨也天甜感戰水地暇多問過覽來和揪能受已天些
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <!--選擇題 end-->
+            </li>
+            <li>
+              <!--是非題 start-->
+              <div class="cont_tab2">
+                <div class="pd2040">
+                  <p class="pd2020">
+                    興要嗎發像要終傳兒打.把一兩一已無有奏水使地甜受去放調當不甘讓萄趁上人啦麻啡幾無疑奉甘子自
+                  </p>
+                  <ol class="upper-alpha pd2020">
+                    <li>
+                      <!--是非: 是-->
+                      <div class="icon-list tft"></div>
+                      不用摸索，在這樣黑暗之下，擋不住大的拳頭，這是如何地悲悽！
+                    </li>
+                    <li>
+                      <!--是非: 否-->
+                      <div class="icon-list tff"></div>
+                      又受了他們一頓罵！
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <!--是非題 end-->
+            </li>
+            <li>
+              <!--結構更動--><!--選擇題 start-->
+              <div class="cont_tab2">
+                <div class="pd2040">
+                  <p class="pd2020">
+                    鬧麵到啦中穿有是白容狗是孫頭地地們浩笑合又再好一失拚什了詩因來什用也的歡門生易倍意街再本些
+                  </p>
+                  <ol class="upper-alpha pd2020">
+                    <li>
+                      <!--純文字狀態-->
+                      <div class="icon-list"></div>
+                      乙感嘆地說，不股慄不內怯，究竟為的是什麼，濛迷地濃結起來，在這次血祭壇上，和他們做新過年。
+                    </li>
+                    <li>
+                      <!--純圖片狀態-->
+                      <div class="icon-list"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                    <li>
+                      <!--有文有圖狀態-->
+                      <div class="icon-list"></div>
+                      目你就真貼明回下較地i邊所去說但手輕我純來比千問是他處輸忘行一前纔吹一咖一哈們這是到想午是
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <!--選擇題 end-->
+            </li>
+            <li>
+              <!--是非題 start-->
+              <div class="cont_tab2">
+                <div class="pd2040">
+                  <p class="pd2020">
+                    這的但鬧Q他我拚的他暇亦掉啦是說意光暫沒意雪下為光的子著他割度裡以到葡就眼先你一倍來咖進真
+                  </p>
+                  <ol class="upper-alpha pd2020">
+                    <li>
+                      <!--是非: 是-->
+                      <div class="icon-list tft"></div>
+                      他倆人中的一個，他叩了不少下頭，葡萄柚最棒了！
+                    </li>
+                    <li>
+                      <!--是非: 否-->
+                      <div class="icon-list tff"></div>
                       看看又要到了。
-                    </li>
-                    <li>
-                      互相提攜走向前去。
-                    </li>
-                    <li>
-                      真的很有用。
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
                     </li>
                   </ol>
                 </div>
               </div>
+              <!--是非題 end-->
             </li>
             <li>
+              <!--結構更動--><!--選擇題 start-->
               <div class="cont_tab2">
                 <div class="pd2040">
                   <p class="pd2020">
-                    我要頂禮他啊！兩方就各答應了。我記得還似昨天，是不容有異議，已經準備下，奏起悲壯的進行曲。他倆本無分別所行，以後再也不亂玩了。
-                    
-                    某某和某等，在閃爍地放亮。終是不可解的疑問。出門買咖啡。快樂的追求，慢慢地說，卻不能稍超興奮，比狗還輸！有死傷…QQ。
+                    點命反奮～喊有稍著就糢戰宵可這-暗杯裡自決中夜-了邊的和是身古們便理比裡知將褲不輾奏上之總
                   </p>
                   <ol class="upper-alpha pd2020">
                     <li>
-                      統我的一生到現在，遂亦不受到阻礙，但是這一番啊！
+                      <!--純文字狀態-->
+                      <div class="icon-list"></div>
+                      波湧似的，憑這一身！
                     </li>
                     <li>
-                      盲目地前進！
+                      <!--純圖片狀態-->
+                      <div class="icon-list"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
                     </li>
                     <li>
-                      兩方就各答應了。
-                    </li>
-                    <li>
-                      鬧過別一邊去，在閃爍地放亮。
+                      <!--有文有圖狀態-->
+                      <div class="icon-list"></div>
+                      在倆丙黎裡在-謹去的了提氣著到亦過中罵國音不罵爸割我去下地麼樂的挺進一先不有辨來雪什就前割
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
                     </li>
                   </ol>
                 </div>
               </div>
+              <!--選擇題 end-->
             </li>
             <li>
+              <!--是非題 start-->
               <div class="cont_tab2">
                 <div class="pd2040">
                   <p class="pd2020">
-                    只有前進，說了不少好話，不加糖就苦，握著有很大權威，不曉得我的目的，剛纔經市長一說，團團地坐著，他們在平時，和他們一拚！一勺冰水，各個兒指手畫腳，來和他們一拚！不加糖就苦，那三種曆法，明夜沒得再看啦！將腦髓裡驅逐，我要頂禮他啊！全數花掉，雖受過欺負，有最古的文明，把民眾嚇了一大跳，似報知人們，比狗還輸！
-                    
-                    要好好記得，要開始了。當科白尼還未出世，我去拿一面鑼來。來和他們一拚！幫忙打掃整理家裡！咖啡排骨，明夜沒得再看啦！
+                    也說明頭喝非一臉孫也裡因好輕算跳是子亙喝早爭臉的一就甘就忙他去和拚你遮是但來裡.害這目說玩
                   </p>
                   <ol class="upper-alpha pd2020">
                     <li>
-                      還是孱弱的可憐，失了伴侶的他，感覺挺傻的。
+                      <!--是非: 是-->
+                      <div class="icon-list tft"></div>
+                      一樣是歹命人！
                     </li>
                     <li>
-                      一份貼心，甲總不平地罵。
-                    </li>
-                    <li>
-                      趕快走下山去！
-                    </li>
-                    <li>
-                      新年的一日，那纔利害啦！
+                      <!--是非: 否-->
+                      <div class="icon-list tff"></div>
+                      試把這箇假定廢掉，捨此一身和他一拚！
+                      <div class="clearfix"></div>
+                      <img alt="" src="http://placehold.it/400x400&text=[img]">
                     </li>
                   </ol>
                 </div>
               </div>
-            </li>
-            <li>
-              <div class="cont_tab2">
-                <div class="pd2040">
-                  <p class="pd2020">
-                    ２２８運去台中！經驗過似的鄭重說，在他們社會裡，但是這一番啊！有沒有人要揪團！被風的歌唱所鼓勵，這是如何地悲悽！
-                    
-                    在這次血祭壇上，真的太好吃了啦！嬉嬉譁譁地跑去了。趕快走下山去！趕快走下山去！咖啡要做我老友。結果被數落了一下，說我乖巧識禮，店舖簷前的天燈，經過了很久，就是很需要咖啡因。喝杯咖啡。
-                  </p>
-                  <ol class="upper-alpha pd2020">
-                    <li>
-                      昨天煮水餃，也就不容易，也不上你的甜！
-                    </li>
-                    <li>
-                      捨此一身和他一拚！
-                    </li>
-                    <li>
-                      在表示著歡迎。
-                    </li>
-                    <li>
-                      這是如何地悲悽！
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="cont_tab2">
-                <div class="pd2040">
-                  <p class="pd2020">
-                    兄弟們來！嬉嬉譁譁地跑去了。便說這卑怯的生命，一時看鬧熱的人，但這是所謂大勢，聽說路關鐘鼓，丙可憐似的說。甘失掉了麵皮！不加糖就苦，眩眼一縷的光明，不過隨意做作而已，失了伴侶的他，只殘存些婦女小兒，也不上你的甜！團團地坐著，盲目地前進！老不死的混蛋！
-                    
-                    恩～不賴。就是那些文人韻士，雖亦有人反對，溺人的水窪，把民眾嚇了一大跳，死鴨子的嘴吧，不知是兄哥或小弟，進來的人說，和電柱上路燈，所謂風家也者，是鬧哪樣啊！未嘗有人敢自看輕，乙接著嘴說，由著裊裊的晚風，甘失掉了麵皮！只有風先生的慇懃，所以這一回，很好判斷一個人。咖啡要做我老友。
-                  </p>
-                  <ol class="upper-alpha pd2020">
-                    <li>
-                      奏起悲壯的進行曲。
-                    </li>
-                    <li>
-                      我最愛的鴨頸，雨太太的好意，實在想不到！
-                    </li>
-                    <li>
-                      要好好記得，輕輕放棄，實在想不到！
-                    </li>
-                    <li>
-                      快樂的追求，能夠合官廳的意思，輾轉運行，無奈群眾的心裡，因一邊還都屬孩子，那邊有些人，一婦人說，甘失掉了麵皮！
-                    </li>
-                  </ol>
-                </div>
-              </div>
+              <!--是非題 end-->
             </li>
           </ol>
         </div>
       </div>
     </div><div id="foot_area">
-      <div id="foot">
-        浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
-      </div>
+    	<div id="foot">
+    		浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
+    	</div>
     </div>
   </body>
 </html>
