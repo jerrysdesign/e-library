@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // 插入圖片
 function insert_img()
 {
@@ -507,7 +506,7 @@ $(function(){
 
 
 });
-=======
+
 // 插入圖片
 function insert_img()
 {
@@ -882,4 +881,3 @@ $(function(){
 	}
 
 });
->>>>>>> dep-v.02
