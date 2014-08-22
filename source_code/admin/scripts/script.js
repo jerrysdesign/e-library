@@ -64,7 +64,7 @@ function additem()
 			return false;
 		}
 		_qas.append(
-			"<li class='is-table'><div class='control-group'><div class='control-label'><div class='radioholder'><span class='tick'></span><input name='projecttype' type='radio' value=''><b>"+ count +"</b></div></div><div class='controls'>	<a class='btn remove' href='javascript:;'>刪除選項</a> <textarea class='width-100' rows='1'></textarea><div class='i-b-block'><img class='pic' src=''><input class='ipt_upload_img file' type='file'> <a class='btn insert_img' href='javascript:;'>插入圖片</a> </div></div></div></li>");
+			"<li class='is-table'><div class='control-group'><div class='control-label'><div class='radioholder'><span class='tick'></span><input name='projecttype' type='radio' value=''><b>"+ count +"</b></div></div><div class='controls'>	<a class='remove' href='javascript:;'>刪除選項</a> <textarea class='width-100' rows='1'></textarea><div class='i-b-block'><img class='pic' src=''><input class='ipt_upload_img file' type='file'> <a class='btn insert_img' href='javascript:;'>插入圖片</a> </div></div></div></li>");
 
 		if(count == 6)
 		{
@@ -458,7 +458,6 @@ $(function(){
 	$('.insert_img').on('click',insert_img);
 	$('.file').on('change',change_img);
 	$('.radioholder').on('click',radioholder);
-
 	remove_img();
 	Remove();
 	additem();
