@@ -502,7 +502,7 @@ $(function(){
 
 	$('.center-block.i-b-block > input:eq(0)').on('click',check_val);
 	$('.quiz_subject,.quiz_add_subject').find('textarea').on('keyup',btn_enable);
-	$('.radioholder').on('click',btn_enable);
+	// $('.radioholder').on('click',btn_enable);
 
 
 });
@@ -581,7 +581,7 @@ function additem()
 		}
 		renumber();
 		
-		var new_element = _qas.children('li').last();
+		// var new_element = _qas.children('li').last();
 		$('.insert_img',new_element).on('click',insert_img);
 		$('.file',new_element).on('change',change_img);
 		// $('.quiz_add_subject > li').on('click',active);
@@ -621,13 +621,13 @@ function renumber()
 
 // chenge style & radio checked
 // active 事件
-function active()
-{
-	$('.active').removeClass('active');
-	$(this).addClass("active");
-	var isActive = $(this).hasClass('active');
-	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
-}
+// function active()
+// {
+// 	$('.active').removeClass('active');
+// 	$(this).addClass("active");
+// 	var isActive = $(this).hasClass('active');
+// 	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
+// }
 
 // [ exam ] checkbox - checked all
 function chk_all()
@@ -848,7 +848,7 @@ $(function(){
 
 	$('.insert_img').on('click',insert_img);
 	$('.file').on('change',change_img);
-	$('.quiz_add_subject > li').on('click',active);
+	// $('.quiz_add_subject > li').on('click',active);
 	remove_img();
 	Remove();
 	additem();
