@@ -4,17 +4,17 @@
 
 
 .btn {
+	font-family: $buttonFontFamily;
+	font-size: 1em;
+	line-height: 1.6813;
+	font-weight: 500;
 	text-decoration: none;
 	color: #000;
-	border-radius: 2px;
-	font-family: $buttonFontFamily;
-	border: 1px solid darken(#fff, 20);
-	border-bottom-color: darken(#fff, 30);
-	//line-height: 1.6813;
-	padding: .7em 1.1em .6em 1.1em;
-	font-weight: 500;
-	// font-size: .85em;
 	@include gradient(darken(#fff, 1), darken(#fff, 12));
+	border-radius: 2px;
+	border: 1px solid darken(#fff, 20);
+	padding: .7em 1.1em .6em 1.1em;
+	border-bottom-color: darken(#fff, 30);
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
 	box-shadow: none;
 	&:hover {
@@ -27,29 +27,33 @@
 	@include gradient(lighten(#000, 30), #000);
 }
 .btn-red {
-	border-color: darken(#ef6465, 25);
-	border-bottom-color: darken(#ef6465, 35);
-	@include gradient(#ef6465, darken(#ef6465, 20));
+	border-color: darken($colorAlizarin, 5);
+	border-bottom-color: darken($colorAlizarin, 10);
+	@include gradient($colorAlizarin, darken($colorAlizarin, 3));
 }
 .btn-orange {
-	border-color: darken(#f48a30, 15);
-	border-bottom-color: darken(#f48a30, 25);
-	@include gradient(#f48a30, darken(#f48a30, 10));
+	// #e67e22
+	border-color: darken($colorCarrot, 5);
+	border-bottom-color: darken($colorCarrot, 10);
+	@include gradient($colorCarrot, darken($colorCarrot, 3));
 }
 .btn-green {
-	border-color: darken(#90af45, 18);
-	border-bottom-color: darken(#90af45, 28);
-	@include gradient(#90af45, darken(#90af45, 15));
+	// #2ecc71
+	border-color: darken($colorEmerland, 5);
+	border-bottom-color: darken($colorEmerland, 10);
+	@include gradient($colorEmerland, darken($colorEmerland, 3));
 }
 .btn-blue {
-	border-color: darken(#1c7ab4, 17);
-	border-bottom-color: darken(#1c7ab4, 27);
-	@include gradient(#1c7ab4, darken(#1c7ab4, 10));
+	// #3498db
+	border-color: darken($colorPeterRiver, 5);
+	border-bottom-color: darken($colorPeterRiver, 10);
+	@include gradient($colorPeterRiver, darken($colorPeterRiver, 3));
 }
 .btn-yellow {
-	border-color: darken(#f3c835, 20);
-	border-bottom-color: darken(#f3c835, 30);
-	@include gradient(#f3c835, darken(#f3c835, 15));
+	// #f1c40f
+	border-color: darken($colorSunFlower, 5);
+	border-bottom-color: darken($colorSunFlower, 10);
+	@include gradient($colorSunFlower, darken($colorSunFlower, 3));
 }
 .btn-black {
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
@@ -81,19 +85,19 @@
 	background: #000;
 }
 .btn-red:hover {
-	background: darken(#ef6465, 20);
+	background: darken($colorAlizarin, 10);
 }
 .btn-orange:hover {
-	background: darken(#f48a30, 10);
+	background: darken($colorCarrot, 10);
 }
 .btn-green:hover {
-	background: darken(#90af45, 15);
+	background: darken($colorEmerland, 10);
 }
 .btn-blue:hover {
-	background: darken(#1c7ab4, 10);
+	background: darken($colorPeterRiver, 10);
 }
 .btn-yellow:hover {
-	background: darken(#f3c835, 15);
+	background: darken($colorSunFlower, 10);
 }
 
 .btn-small {
