@@ -367,9 +367,13 @@ $holder-height: 3.6em
 	@include pie-clearfix
 	> * 
 		@include is-show-inline
-		// vertical-align: bottom; //因應頁面-新增題目是非題
+		// 因應頁面-新增題目是非題選擇
+		vertical-align: bottom
+		
 // 限定題目圖片顯示大小
-.pic
-.view
-	widh: 260px
-	
+img.pic
+	display: none
+	&.view
+		display: inline-block
+		max-widh: 260px
+		width: 260px
