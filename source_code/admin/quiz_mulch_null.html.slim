@@ -1,5 +1,6 @@
 #cont_area
-  .masthead.cf
+  .masthead
+    /! 結構更動
     .cont
       .masthead_head
         .masthead_title 題目
@@ -12,22 +13,21 @@
             option value="是非題" 是非題
             option value="選擇題" 是非題
             //option value="quiz_mulch_null" disabled="" 1212select="" 選擇題
-  .container.cf
+  .container
     .cont.cont_tab4
       .pd2040
-        /! 結構更動
         .quiz_subject
           .control-group
             label.control-label
               h3 題目
             .controls
               .row
-                textarea rows="1"
+                textarea.width-100 rows="1"
               .i-b-block
                 == render "partials/quiz_add_photo" , :locals => {:f => "else"}
         h3.title 設定正確答案
         ol.quiz_add_subject
-          li.dt
+          li.is-table
             .control-group
               .control-label
                 .radioholder
@@ -35,11 +35,11 @@
                   input type="radio" name="projecttype" value="" checked=""
                   b A
               .controls
-                a.btn.remove href="javascript:;" 刪除選項
-                textarea rows="1"
+                //a.btn.remove href="javascript:;" 刪除選項
+                textarea.width-100 rows="1"
                 .i-b-block
                   == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-          li.dt
+          li.is-table
             .control-group
               .control-label
                 .radioholder
@@ -47,18 +47,16 @@
                   input type="radio" name="projecttype" value=""
                   b B
               .controls
-                a.btn.remove href="javascript:;" 刪除選項
-                textarea rows="1"
+                //a.btn.remove href="javascript:;" 刪除選項
+                textarea.width-100 rows="1"
                 .i-b-block
                   == render "partials/quiz_add_photo" , :locals => {:f => "else"}
-        .dt
+        .is-table
           .control-group
-            label.control-label
+            .control-label
             .controls
-              a.bt.add href="javascript:;" 增加選項
-        /! 結構更動 end
-    .cont
-      .center-block.i-b-block
-        input.bt.disabled type="button" disabled="disabled" value="儲存"
-        input.bt type="button" value="取消" onclick="history.back()"
-        
+              a.btn.btn-blue.add href="javascript:;" 增加選項
+    .center-block
+      input.btn.btn-green.disabled type="button" disabled="disabled" value="儲存"
+      input.btn.btn-red type="button" value="取消" onclick="history.back()"
+    /! 結構更動 end
