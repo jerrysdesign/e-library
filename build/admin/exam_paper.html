@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>自有版權書管理測驗</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/master.css" />
+	<link rel="stylesheet" type="text/css" href="css/admin.css" />
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+	<script src="scripts/jquery-1.9.0.min.js"></script>
+	<script src="scripts/jquery.fancybox.js"></script>
+	<script src="scripts/script.js"></script>
+	<script src="scripts/admin_menu.js"></script>
+</head>
+<body>
+	<div id="head_area">
+		<div id="head">
+			<h1 id="logo"><a href="admin_main.html">E-Library管理後台</a></h1>
+			<div id="head_nav">
+				<ul>
+					<li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a href="#">帳號登出&nbsp;|</a></li>
+					<li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
+					<li><a href="about.html">關於我們</a>&nbsp;|</li>
+					<li><a href="help.html">服務說明</a>&nbsp;|</li>
+					<li><a href="http://cms.edupal.com.tw:8080/cms/docs/Shuttle_Elibrary_Admin_User_Guide.pdf">使用手冊</a></li>
+					<li><a href="#" class="lang">E</a></li>
+					<li><a href="#" class="lang">繁</a></li>
+					<li><a href="#" class="lang">簡</a></li>
+					<li><a href="#" class="lang"><img src="images/admin2.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="menu_area">
+		<div id="menu_bar">
+			<ul id="menu">
+				<li><a href="#">圖書管理</a>
+					<ul class="sub_menu">
+						<li><a href="admin_ebook_main.html">版權書管理</a></li>
+						<li><a href="ebook_free_main.html">自有版權書管理</a></li>
+					</ul>
+				</li>
+				<li><a href="#">閱讀歷程</a></li>
+				<li><a href="#">數位電子內容管理平台</a>
+					<ul class="sub_menu">
+						<li><a href="ebook_main.html">電子書維護</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="cont_area">
+		<div id="cont">
+			<div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
+			<form method="post" enctype="multipart/form-data">
+				<div class="cont_tab2">
+					<h2><div class="icon04"></div>測驗</h2>
+					<div class="pd2040">
+						<table cellpadding="0" cellspacing="0" width="100%">
+							<tr><th width="17%">共有500道題目</th><td width="83%"><input class="a_b01 mg-0" type="button" value="管理題目" onclick="javascript:location.href='subject_edit.html'"></td></tr>
+							<tr><th>測驗卷名稱</th><td><input type="text" class="w01"><input class="a_b01" type="button" value="搜尋"></td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="cont_tab3 clearb">
+					<table cellpadding="0" cellspacing="1" width="100%">
+						<caption>共有<em>210</em>張測驗卷，其中<em>100</em>張已測驗過。
+							<div class="btn_area"><input type="button" class="a_b01" value="新增測驗卷" onclick="javascript:location.href='exam_paper_list_null.html'"></div>
+						</caption>
+						<tr>
+							<th width="5%">序號</th>
+							<th width="33%">測驗卷名稱</th>
+							<th width="10%">題數</th>
+							<th width="10%">平均正確率</th>
+							<th width="16%">建立日期</th>
+							<th width="16%">測驗日期</th>
+							<th width="10%">功能</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>數學_第二章</td>
+							<td>是非題：5題<br>選擇題：6題</td>
+							<td>78%</td>
+							<td>2014/07/03 15:13 </td>
+							<td>2014/07/05 20:13</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>沉默_閱讀測驗</td>
+							<td>是非題：5題<br>選擇題：6題</td>
+							<td>--</td>
+							<td>2014/07/01 18:13</td>
+							<td>尚未測驗</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
+							<td>2014/05/30 12:00</td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
+							<td>2014/05/30 12:00</td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
+							<td>2014/05/30 12:00</td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
+							<td>2014/05/30 12:00</td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
+							<td>2014/05/30 12:00</td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
+							<td>2014/05/30 12:00</td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
+							<td>2014/05/30 12:00</td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">檢視</a><br><a href="#">統計</a></td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>是不是這樣的夜晚你才會這樣的想起我_閱讀測驗</td>
+							<td>選擇題：28題</td>
+							<td>78%</td>
+							<td>2014/05/30 12:00</td>
+							<td>2014/05/30 12:00</td>
+							<td><a href="#">修改</a><br><a href="#">預覽</a><br><a href="#">統計</a></td>
+						</tr>
+					</table>
+					<div class="pager">
+						<ul>
+							<li><a href="javascript:goPage_pager(1);">&lt;</a></li>
+							<li class="current"><a>1</a></li>
+							<li><a href="javascript:goPage_pager(2);">2</a></li>
+							<li><a href="javascript:goPage_pager(3);">3</a></li>
+							<li><a href="javascript:goPage_pager(4);">4</a></li>
+							<li><a href="javascript:goPage_pager(5);">5</a></li>
+							<li><a href="javascript:goPage_pager(6);">6</a></li>
+							<li><a href="javascript:goPage_pager(7);">7</a></li>
+							<li><a href="javascript:goPage_pager(8);">8</a></li>
+							<li><a href="javascript:goPage_pager(9);">9</a></li>
+							<li><a href="javascript:goPage_pager(10);">10</a></li>
+							<li><a href="javascript:goPage_pager(2);">&gt;</a></li>
+						</ul>
+						<div class="sltbox">
+							<select onchange="javascript:sizePage_pager($(this).val());" class="search_slt">
+								<option value="10" selected="">10</option>
+								<option value="20">20</option>
+								<option value="50">50</option>
+								<option value="80">80</option>
+								<option value="100">100</option>
+							</select>
+						</div>
+					</div>					
+				</div>
+			</form>
+			<div class="clearb"></div>
+		</div>
+	</div>
+	<div id="foot_area">
+		<div id="foot">
+			浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
+		</div>
+	</div>
+</body>
+</html>
