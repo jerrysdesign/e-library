@@ -187,19 +187,48 @@ ul.a_btn_c2 li
 
 .upper-alpha
 	li
-		padding-left: 32px
-		min-height: 24px
-		background: url(#{$l2}/upper-alpha.png) no-repeat
-	li + li
-		margin-top: 5px
-	li:nth-child(1)
-		background-position: left 0
-	li:nth-child(2)
-		background-position: left -24px
-	li:nth-child(3)
-		background-position: left -48px
-	li:nth-child(4)
-		background-position: left -72px
+		margin-left: 32px
+
+		.icon-list
+			+size(24px)
+			background: url(#{$l2}/upper-alpha.png) no-repeat
+			@extend %fl
+			display: inline-block
+			margin-right: 10px
+
+		// 選擇題
+		&:nth-child(1)
+			.icon-list
+				background-position: left 0
+		&:nth-child(2)
+			.icon-list
+				background-position: left -24px
+		&:nth-child(3)
+			.icon-list
+				background-position: left -48px
+		&:nth-child(4)
+			.icon-list
+				background-position: left -72px
+		&:nth-child(5)
+			.icon-list
+				background-position: left -96px
+		&:nth-child(6)
+			.icon-list
+				background-position: left -120px
+		
+		// 是非題
+		.icon-list.tft
+			background-position: left -144px
+			float: none
+		.icon-list.tff
+			background-position: left -168px
+			float: none
+	
+		img
+			max-width: 206px
+		& + li
+			margin-top: 10px
+
 
 
 
