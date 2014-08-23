@@ -2,7 +2,7 @@
   .masthead.cf
     .cont
       == render "partials/testing_header" , :locals => {:f => "view"}
-  .container.cf
+  .container
     #cont
       /! 結構更動 start
       ol.quiz_list_stylesass
@@ -72,5 +72,5 @@
                   .icon-list.tff
         /! 是非題 end
       .center-block.i-b-block 
-        input type="button" value="返回" onclick="history.back()"
+        input.btn.btn-red type="button" value="離開" onclick="history.back()"
       /! 結構更動 end

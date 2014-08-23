@@ -7,7 +7,7 @@
       .controls
         .inline-grop
           input type="text" value=""
-          a class="bt fancybox fancybox.iframe afb" href="timer_pop.html" 開始測驗
+          a class="btn btn-blue fancybox fancybox.iframe afb" href="timer_pop.html" 開始測驗
 
 - if f == "true"
   .masthead_head
@@ -18,7 +18,7 @@
       .controls
         .inline-grop
           input type="text" value="假字假字假字假字假字假字假字假字假字"
-          a class="bt fancybox fancybox.iframe afb" href="timer_pop.html" 開始測驗
+          a class="btn btn-blue fancybox fancybox.iframe afb" href="timer_pop.html" 開始測驗
 
 - if f == "view"
   .masthead_head
@@ -33,8 +33,8 @@
         | 題
     .row
       .fr
-        a.bt href="javascript:;" 修改測驗卷
-        a class="bt fancybox fancybox.iframe afb" href="timer_pop.html" 開始測驗
+        a.btn.btn-blue<> href="javascript:;" 修改測驗卷
+        a<> class="btn btn-green fancybox fancybox.iframe afb" href="timer_pop.html" 開始測驗
 
 - if f == "testing"
   .masthead_head
@@ -56,4 +56,4 @@
       .fr
         | 測驗進行中，尚餘
         span style="margin-right: 10px" =lorem_date("%H:%M:%S")
-        a.bt.fancybox.alert href="#alert" 停止測驗
+        a.btn.btn-red.fancybox.alert href="#alert" 停止測驗
