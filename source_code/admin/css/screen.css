@@ -27,6 +27,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 17, ../sass/libs/_reset.scss */
 ul, ol { list-style: none; }
 
+/* line 25, ../sass/libs/_reset.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; *overflow: visible; }
+
 /* line 28, ../sass/libs/_reset.scss */
 textarea { resize: vertical; }
 
@@ -123,16 +126,16 @@ select { margin-bottom: 0 !important; }
 .error, .success { margin-left: 5px; font-weight: normal; font-size: 0.85em; }
 
 /* line 202, ../sass/libs/_forms.scss */
-input.input-error, textarea.input-error, select.input-error, .input-error { border-color: #da3e5a; -webkit-box-shadow: 0 0 0 2px rgba(218, 62, 90, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; -moz-box-shadow: 0 0 0 2px rgba(218, 62, 90, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; box-shadow: 0 0 0 2px rgba(218, 62, 90, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
+input.input-error, textarea.input-error, select.input-error, .input-error { border-color: #c0392b; -webkit-box-shadow: 0 0 0 2px rgba(218, 62, 90, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; -moz-box-shadow: 0 0 0 2px rgba(218, 62, 90, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; box-shadow: 0 0 0 2px rgba(218, 62, 90, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
 
 /* line 209, ../sass/libs/_forms.scss */
-input.input-success, textarea.input-success, select.input-success, .input-success { border-color: #18a011; -webkit-box-shadow: 0 0 0 2px rgba(24, 160, 17, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; -moz-box-shadow: 0 0 0 2px rgba(24, 160, 17, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; box-shadow: 0 0 0 2px rgba(24, 160, 17, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
+input.input-success, textarea.input-success, select.input-success, .input-success { border-color: #2ecc71; -webkit-box-shadow: 0 0 0 2px rgba(24, 160, 17, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; -moz-box-shadow: 0 0 0 2px rgba(24, 160, 17, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; box-shadow: 0 0 0 2px rgba(24, 160, 17, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
 
 /* line 216, ../sass/libs/_forms.scss */
-input.input-gray, textarea.input-gray, select.input-gray, .input-gray { border-color: #ccc; -webkit-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; -moz-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
+input.input-gray, textarea.input-gray, select.input-gray, .input-gray { border-color: #cccccc; -webkit-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; -moz-box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
 
 /* line 222, ../sass/libs/_forms.scss */
-input:focus, textarea:focus { outline: none; border-color: #5ca9e4; -webkit-box-shadow: 0 0 0 2px rgba(70, 161, 231, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; -moz-box-shadow: 0 0 0 2px rgba(70, 161, 231, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; box-shadow: 0 0 0 2px rgba(70, 161, 231, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
+input:focus, textarea:focus { outline: none; border-color: #3498db; -webkit-box-shadow: 0 0 0 2px rgba(70, 161, 231, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; -moz-box-shadow: 0 0 0 2px rgba(70, 161, 231, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; box-shadow: 0 0 0 2px rgba(70, 161, 231, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
 
 /* line 229, ../sass/libs/_forms.scss */
 input.input-search, input[type="search"] { padding-right: 10px; padding-left: 10px; margin-bottom: 0; border-radius: 15px; }
