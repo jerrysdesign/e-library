@@ -1139,6 +1139,8 @@ h2, .lang, #menu a, .backtop { height: 38px; border: 1px solid #3c74c5; }
 
 /* line 109, ../sass/screen.sass */
 .test { padding: 0 40px; }
+/* line 113, ../sass/screen.sass */
+.test dl > * { display: inline-block !important; }
 /* line 115, ../sass/screen.sass */
 .test dl > *:nth-child(1):after, .test dl > *:nth-child(2):after { content: "/"; display: inline-block; margin: 0 5px; }
 /* line 119, ../sass/screen.sass */

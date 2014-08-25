@@ -110,8 +110,8 @@ img
 	padding: 0 40px
 	// 超靠北結構
 	dl
-		@extend %is-inlineblock-block
 		> *
+			display: inline-block !important
 			&:nth-child(1):after , &:nth-child(2):after
 				content: "/"
 				display: inline-block
