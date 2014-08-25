@@ -94,6 +94,11 @@ $infoColor		: #31708f #d9edf7 #bce8f1;
 $warningColor	: #8a6d3b #fcf8e3 #faebcc;
 $errorColor		: #a94442 #f2dede #ebccd1;
 
+// Form Colors
+$inputError		: $colorPomegranate;
+$inputSuccess	: $colorEmerland;
+$inputGray		: $black-20;
+$inputFocus		: $colorPeterRiver;
 
 //
 $labelLine		: lighten(desaturate($primary, 30%), 20%);

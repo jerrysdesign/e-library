@@ -200,28 +200,28 @@ input.input-error,
 textarea.input-error,
 select.input-error,
 .input-error {
-	border-color: #da3e5a;
+	border-color: $inputError;
 	@include box-shadow(0 0 0 2px rgba(218, 62, 90, .3),0 1px 2px rgba(0, 0, 0, .2) inset);
 }
 input.input-success,
 textarea.input-success,
 select.input-success,
 .input-success  {
-	border-color: #18a011 ;
+	border-color: $inputSuccess ;
 	@include box-shadow(0 0 0 2px rgba(24, 160, 17, .3),0 1px 2px rgba(0, 0, 0, .2) inset);
 }
 input.input-gray,
 textarea.input-gray,
 select.input-gray,
 .input-gray {
-	border-color: #ccc;
+	border-color: $inputGray;
 	@include box-shadow(0 0 0 2px rgba(204, 204, 204, .3),0 1px 2px rgba(0, 0, 0, .2) inset);
 }
 
 input:focus,
 textarea:focus {
 	outline: none;
-	border-color: #5ca9e4;
+	border-color: $inputFocus;
 	@include box-shadow(0 0 0 2px rgba(70, 161, 231, .3), 0 1px 2px rgba(0, 0, 0, .2) inset);
 }
 
