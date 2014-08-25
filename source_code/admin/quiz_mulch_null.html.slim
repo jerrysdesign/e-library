@@ -4,15 +4,16 @@
     .cont
       .masthead_head
         .masthead_title 題目
-      .masthead_content
-        //== render "partials/type" , :locals => {:f => "mulch"}
-        .selectholder
-          label for="projectcompletion" 選擇題
-          select#projectcompletion name="projectcompletion" onchange="location = this.options[this.selectedIndex].value"
-            //option value="quiz_mulch_null" 是非題
-            option value="是非題" 是非題
-            option value="選擇題" 是非題
-            //option value="quiz_mulch_null" disabled="" 1212select="" 選擇題
+      .masthead_content.units-row.end
+        .unit-33
+          //== render "partials/type" , :locals => {:f => "mulch"}
+          .selectholder
+            label for="projectcompletion" 選擇題
+            select#projectcompletion name="projectcompletion" onchange="location = this.options[this.selectedIndex].value"
+              //option value="quiz_mulch_null" 是非題
+              option value="是非題" 是非題
+              option value="選擇題" 是非題
+              //option value="quiz_mulch_null" disabled="" 1212select="" 選擇題
   .container
     .cont.cont_tab4
       .pd2040
@@ -57,6 +58,6 @@
             .controls
               a.btn.btn-blue.add href="javascript:;" 增加選項
     .center-block
-      input.btn.btn-green.disabled type="button" disabled="disabled" value="儲存"
+      input.btn.btn-green type="button" disabled="disabled" value="儲存"
       input.btn.btn-red type="button" value="取消" onclick="history.back()"
     /! 結構更動 end
