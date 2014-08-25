@@ -12,7 +12,7 @@ module ViewHelpers
 	end
 
 	def lorem_q_tf
-			['O','X'].sample
+		['O','X'].sample
 	end
 
 	def lorem_q_tf_error

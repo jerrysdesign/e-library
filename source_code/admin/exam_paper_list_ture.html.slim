@@ -10,7 +10,7 @@
             .inline-grop
               input type="text"
               input type="button" value="開始測驗" onclick="javascript:;"
-  .container.cf
+  .container
     .cont
       .cont_tab3
         .i-b-block.tb_fixed.btn_wrap
@@ -37,6 +37,5 @@
               / th width="10%" 功能
           tbody
               == render "partials/quiz_list" , :locals => {:f => "ture"}
-      .center-block.i-b-block
-        input type="button" value="儲存"
-        input type="button" value="取消" onclick="history.back()"
+
+      == render :partial => "partials/components/btn_state.html.slim" , :locals => {:f => "def"}

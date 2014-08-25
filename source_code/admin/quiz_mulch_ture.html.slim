@@ -5,8 +5,8 @@
         .masthead_title 題目
       .masthead_content
         == render "partials/type" , :locals => {:f => "mulch"}
-  .container.cf
-    .cont.cont_tab4
+  .container
+    .cont.cont_tab4.cf
       .pd2040
         .control-group
           label.control-label 題目
@@ -41,7 +41,4 @@
           .controls
             a.bt.add href="javascript:;" 增加選項
 
-    .cont
-      .center-block.i-b-block
-        input type="button" value="儲存"
-        input type="button" value="取消" onclick="history.back()"
+    == render "partials/quiz_list" , :locals => {:f => "else"}

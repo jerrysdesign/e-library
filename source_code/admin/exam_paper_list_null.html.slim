@@ -10,9 +10,9 @@
             .inline-grop
               input type="text"
               input type="button" value="開始測驗" onclick="javascript:;"
-  .container.cf
+  .container
     .cont
-      .cont_tab3
+      .cont_tab3.cf
         .i-b-block.btn_area
           .caption.fl
             | 已加入
@@ -35,6 +35,5 @@
             th width="10%" 最新作答日期
             / th width="10%" 功能
           == render "partials/quiz_list" , :locals => {:f => "else"}
-      .center-block.i-b-block
-        input type="button" value="儲存" 
-        input type="button" value="取消" onclick="history.back()"
+
+    == render :partial => "partials/components/btn_state.html.slim" , :locals => {:f => "def"}

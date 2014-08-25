@@ -44,10 +44,7 @@
 					</table>
 				</div>
 			</div>
-			<ul class="a_btn_c2">
-				<li><input class="a_b01" type="button" value="儲存"></li>
-				<li><input class="a_b02" type="button" value="取消" onclick="location.href='config_edit.html'"></li>
-			</ul>				
+			<%= render :partial => "partials/components/btn_state.html.slim" , :locals => {:f => "def"}%>
 		</form>
 		<div class="clearb"></div>
 	</div>

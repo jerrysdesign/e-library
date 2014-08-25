@@ -24,8 +24,6 @@
               input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  T
             label.radio
               input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"  F
-  .container.cf
+  .container
     .cont
-      .center-block.i-b-block
-        input type="button" value="儲存"
-        input type="button" value="取消" onclick="history.back()"
+      == render "partials/quiz_list" , :locals => {:f => "else"}
