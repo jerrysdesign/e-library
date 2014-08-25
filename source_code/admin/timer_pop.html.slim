@@ -1,38 +1,38 @@
 doctype html
 html lang="zh-tw"
-  head
-    meta charset="UTF-8"
-    title 加入項目
-    link rel="stylesheet" type="text/css" href="css/admin.css"
-    link rel="stylesheet" type="text/css" href="css/screen.css"
-  body
-    form.cf
-      ._afb_toolbar_out
-        ._afb_toolbar
-          h2 測驗時間
-          a.fancybox-close title="Close" href="javascript:parent.jQuery.fancybox.close();"
-      ._afb_main
-        .cont_tab3
-          .pd2020
-            .i-b-block.row
-              label.radio
-                input#optionsRadios1 checked="" name="optionsRadios" type="radio" value="option1" style="width: 50px"
-                  | 計時
-              select style="width: 250px"
-                - (1..5).each do |n|
-                  option #{n}
-            .i-b-block.row
-              label.radio
-                input#optionsRadios2 name="optionsRadios" type="radio" value="option2" style="width: 50px"
-                  | 不計時
-      ._afb_footbar_out
-        ._afb_footbar
-          .i-b-block
-            .caption.fl
-              | 已加入
-              span  0 
-              | 題
-            .fr
-              .btn-group.i-b-block
-                input type="button" value="開始" onclick="parent.location='testing.html'"
-                input type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"
+	head
+		meta charset="UTF-8"
+		title 加入項目
+		link rel="stylesheet" type="text/css" href="css/admin.css"
+		link rel="stylesheet" type="text/css" href="css/screen.css"
+	body
+		form.cf
+			._afb_toolbar_out
+				._afb_toolbar
+					h2 測驗時間
+					a.fancybox-close title="Close" href="javascript:parent.jQuery.fancybox.close();"
+			._afb_main
+				.cont_tab3
+					.pd2020
+						.i-b-block.row
+							label.radio
+								input#optionsRadios1 checked="" name="optionsRadios" type="radio" value="option1" style="width: 50px"
+									| 計時
+							select style="width: 250px"
+								- (1..5).each do |n|
+									option #{n}
+						.i-b-block.row
+							label.radio
+								input#optionsRadios2 name="optionsRadios" type="radio" value="option2" style="width: 50px"
+									| 不計時
+			._afb_footbar_out
+				._afb_footbar
+					.i-b-block
+						.caption.fl
+							| 已加入
+							span  0 
+							| 題
+						.fr
+							.btn-group.i-b-block
+								input type="button" value="開始" onclick="parent.location='testing.html'"
+								input type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"

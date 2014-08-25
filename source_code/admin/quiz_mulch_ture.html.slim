@@ -1,44 +1,44 @@
 #cont_area
-  .masthead.cf
-    .cont
-      .masthead_head
-        .masthead_title 題目
-      .masthead_content
-        == render "partials/type" , :locals => {:f => "mulch"}
-  .container
-    .cont.cont_tab4.cf
-      .pd2040
-        .control-group
-          label.control-label 題目
-          .controls
-            .row
-              textarea rows="1"
-                = zh_lorem_paragraphs 3
-            .i-b-block.row
-              == render "partials/quiz_add_photo" , :locals => {:f => "ture"}
-        .control-label.title 設定正確答案
-        ol.quiz_add_subject
-          li.control-group
-            label.control-label
-              label.radio
-                input type="radio" name="optionsRadios" value="a"  A
-            .controls
-              .row.i-b-block
-                input type="text" value="=zh_lorem_sentences 1"
-              .i-b-block.row
-                == render "partials/quiz_add_photo" , :locals => {:f => "ture"}
-          li.control-group
-            label.control-label
-              label.radio
-                input type="radio" name="optionsRadios" value="b"  B
-            .controls
-              .row
-                input type="text" value="=zh_lorem_sentences 1"
-              .i-b-block.row
-                == render "partials/quiz_add_photo" , :locals => {:f => "ture"}
-        .control-group
-          label.control-label
-          .controls
-            a.bt.add href="javascript:;" 增加選項
+	.masthead.cf
+		.cont
+			.masthead_head
+				.masthead_title 題目
+			.masthead_content
+				== render "partials/type" , :locals => {:f => "mulch"}
+	.container
+		.cont.cont_tab4.cf
+			.pd2040
+				.control-group
+					label.control-label 題目
+					.controls
+						.row
+							textarea rows="1"
+								= zh_lorem_paragraphs 3
+						.i-b-block.row
+							== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
+				.control-label.title 設定正確答案
+				ol.quiz_add_subject
+					li.control-group
+						label.control-label
+							label.radio
+								input type="radio" name="optionsRadios" value="a"  A
+						.controls
+							.row.i-b-block
+								input type="text" value="=zh_lorem_sentences 1"
+							.i-b-block.row
+								== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
+					li.control-group
+						label.control-label
+							label.radio
+								input type="radio" name="optionsRadios" value="b"  B
+						.controls
+							.row
+								input type="text" value="=zh_lorem_sentences 1"
+							.i-b-block.row
+								== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
+				.control-group
+					label.control-label
+					.controls
+						a.bt.add href="javascript:;" 增加選項
 
-    == render "partials/quiz_list" , :locals => {:f => "else"}
+		== render "partials/quiz_list" , :locals => {:f => "else"}

@@ -1,44 +1,44 @@
 doctype html
 html lang="zh-tw"
-  head
-    meta charset="UTF-8"
-    title 加入項目
-    link rel="stylesheet" type="text/css" href="css/admin.css"
-    link rel="stylesheet" type="text/css" href="css/screen.css"
-  body
-    form.cf
-      ._afb_toolbar_out
-        ._afb_toolbar
-          h2 加入項目
-          a.fancybox-close title="Close" href="javascript:parent.jQuery.fancybox.close();"
-      ._afb_main
-        .cont_tab3
-          .pd2020
-            .i-b-block
-              .caption.fl
-                | 已加入
-                span  0 
-                | 題
-              .fr
-                .btn-group.i-b-block
-                  input type="text"
-                  a.bt href="quiz_add_pop_search.html" 搜尋
-            table.table.table_striped cellpadding="0" cellspacing="1" width="100%"
-              tr
-                th width="10%": input type="checkbox"
-                th width="10%" 題型
-                th 題目
-                th width="15%" 建立日期
-              // ture or else
-              == render "partials/quiz_list_pop" , :locals => {:f => "ture"}
-      ._afb_footbar_out
-        ._afb_footbar
-          .i-b-block
-            .caption.fl
-              | 已加入
-              span  0 
-              | 題
-            .fr
-              .btn-group.i-b-block
-                input type="button" value="加入" onclick="javascript:location.href='exam_paper_list_ture.html'"
-                input type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"
+	head
+		meta charset="UTF-8"
+		title 加入項目
+		link rel="stylesheet" type="text/css" href="css/admin.css"
+		link rel="stylesheet" type="text/css" href="css/screen.css"
+	body
+		form.cf
+			._afb_toolbar_out
+				._afb_toolbar
+					h2 加入項目
+					a.fancybox-close title="Close" href="javascript:parent.jQuery.fancybox.close();"
+			._afb_main
+				.cont_tab3
+					.pd2020
+						.i-b-block
+							.caption.fl
+								| 已加入
+								span  0 
+								| 題
+							.fr
+								.btn-group.i-b-block
+									input type="text"
+									a.bt href="quiz_add_pop_search.html" 搜尋
+						table.table.table_striped cellpadding="0" cellspacing="1" width="100%"
+							tr
+								th width="10%": input type="checkbox"
+								th width="10%" 題型
+								th 題目
+								th width="15%" 建立日期
+							// ture or else
+							== render "partials/quiz_list_pop" , :locals => {:f => "ture"}
+			._afb_footbar_out
+				._afb_footbar
+					.i-b-block
+						.caption.fl
+							| 已加入
+							span  0 
+							| 題
+						.fr
+							.btn-group.i-b-block
+								input type="button" value="加入" onclick="javascript:location.href='exam_paper_list_ture.html'"
+								input type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"
