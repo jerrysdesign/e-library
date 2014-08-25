@@ -3,44 +3,41 @@
 // ------------------------------------------------------------
 
 .masthead
-	background-color: #bbb
-	position: relative
-	.cont
-		padding: 20px 0
+	background-color: lighten($colorBelizeHole, 45)
+
+	.masthead__inner
 		position: relative
-		+pie-clearfix
+		@extend .units-split
+		@extend %static-container
+		@extend %cont
+		@extend .units-row-end
 
-.masthead_head
-	width: 10%
-	float: left
-	vertical-align: top
-	&:before
-		content: " "
-		position: absolute
-		//z-index: -1
-		display: block
-		top: 0
-		bottom: 0
-		left: 0
-		width: 10%
-		border-right: 1px solid #ddd
+	.masthead__head
+		vertical-align: top
+		@extend .unit-20
+		@include autoheight
+		&:before
+			border-right: 1px solid lighten($colorBelizeHole, 35)
+			right: 0
+			left: auto
 
-.masthead_title
-	background: url(#{$l2}/icon-edit.png) no-repeat left center
-	height: 51px
-	line-height: 51px
-	padding-left: 40px
-	color: #666
+	.masthead__content
+		@extend .unit-80
 
-.masthead_content
-	width: 90%
-	float: left
+	.masthead__title
+		background: url(#{$l2}/icon-edit.png) no-repeat left center
+		height: $styleMenuHeight
+		line-height: $styleMenuHeight
+		padding-left: $styleMenuHeight
+		color: $black-60
 
 /* reset .control-label 與 .controls */
 .masthead
+	.control-group
+		width: 100%
 	.control-label
-		width: 9%
-		line-height: 41px
+		line-height: $styleMenuHeight
 		margin-bottom: 0
+		@extend %text-centered
 	.controls
 		margin-left: 10%

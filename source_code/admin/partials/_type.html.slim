@@ -1,16 +1,40 @@
-.control-group
-	label.control-label 類型
-	.controls
-		select style="width:200px" onchange="location = this.options[this.selectedIndex].value"
+/ .control-group
+/ 	label.control-label 類型
+/ 	.controls
+/ 		select style="width:200px" onchange="location = this.options[this.selectedIndex].value"
+/ 			- if f == "torf"
+/ 				option
+/ 				option selected="" 是非題 
+/ 				option value="quiz_mulch_null" 選擇題
+/ 			- if f == "mulch"
+/ 				option
+/ 				option value="quiz_tf_null" 是非題
+/ 				option selected="" 選擇題
+/ 			/ - else
+/ 			/   option
+/ 			/   option 是非題 
+/ 			/   option 選擇題
+
+.is-table
+	.control-group
+		.control-label 類型
+		.controls
+			- if f == "else"
+				.selectholder
+					label for="projectcompletion" 請選擇
+					select#projectcompletion name="projectcompletion"
+						option value="是非題" 是非題
+						option value="選擇題" 選擇題
 			- if f == "torf"
-				option
-				option selected="" 是非題 
-				option value="quiz_mulch_null" 選擇題
+				.selectholder
+					label for="projectcompletion" 是非
+					select#projectcompletion name="projectcompletion"
+						option value="是非題" 是非題
+						option value="選擇題" 選擇題
+
 			- if f == "mulch"
-				option
-				option value="quiz_tf_null" 是非題
-				option selected="" 選擇題
-			/ - else
-			/   option
-			/   option 是非題 
-			/   option 選擇題
+				.selectholde
+					label for="projectcompletion" 選擇題
+					select#projectcompletion name="projectcompletion"
+						option value="是非題" 是非題
+						option value="選擇題" 選擇題

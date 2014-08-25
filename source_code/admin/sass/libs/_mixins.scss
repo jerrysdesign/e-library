@@ -12,27 +12,27 @@
 
 // Mixins for list style types
 @mixin unordered {
-    list-style-position: outside; 
-    list-style-type: disc;
+	list-style-position: outside; 
+	list-style-type: disc;
 }
 
 @mixin unordered-inside {
-    list-style-position: inside; 
-    list-style-type: disc;
+	list-style-position: inside; 
+	list-style-type: disc;
 }
 
 @mixin ordered {
-    list-style-position: outside; 
-    list-style-type: decimal;
+	list-style-position: outside; 
+	list-style-type: decimal;
 }
 
 @mixin ordered-inside {
-    list-style-position: inside; 
-    list-style-type: decimal;
+	list-style-position: inside; 
+	list-style-type: decimal;
 }
 
 @mixin nobullet {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 
@@ -41,7 +41,7 @@
 // ------------------------------------------------------------
 
 @mixin _transition($prop:all, $duration:0.2s, $timing:ease-in-out, $delay:0s) {
-    @include transition($prop $duration $timing $delay);
+	@include transition($prop $duration $timing $delay);
 }
 
 
@@ -50,22 +50,22 @@
 // ------------------------------------------------------------
 
 @mixin link-active-styles {
-    &:hover, &:focus, &:active {
-        @content; 
-    }
+	&:hover, &:focus, &:active {
+		@content; 
+	}
 }
-    
-    
+	
+	
 // ------------------------------------------------------------
 // Align things vertically (http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
 // ------------------------------------------------------------
 
 @mixin vertical-align {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 
@@ -75,51 +75,51 @@
 
 // Reference widths from settings file
 @mixin respond-to($media-min, $IE9: true) {
-    @if $IE9 == true {
-        .lt-ie9 & {
-            @content;
-        }
-        @media screen and (min-width: $media-min) {
-            @content;
-        }
-    }
-    @else {
-        @media screen and (min-width: $media-min) {
-            @content;
-        }
-    }
+	@if $IE9 == true {
+		.lt-ie9 & {
+			@content;
+		}
+		@media screen and (min-width: $media-min) {
+			@content;
+		}
+	}
+	@else {
+		@media screen and (min-width: $media-min) {
+			@content;
+		}
+	}
 }
 
 @mixin respond-to-max($media-max, $IE9: true) {
-    @if $IE9 == true {
-        .lt-ie9 & {
-            @content;
-        }
-        @media screen and (max-width: $media-max - 1px) {
-            @content;
-        }
-    }
-    @else {
-        @media screen and (max-width: $media-max - 1px) {
-            @content;
-        }
-    }
+	@if $IE9 == true {
+		.lt-ie9 & {
+			@content;
+		}
+		@media screen and (max-width: $media-max - 1px) {
+			@content;
+		}
+	}
+	@else {
+		@media screen and (max-width: $media-max - 1px) {
+			@content;
+		}
+	}
 }
 
 @mixin respond-to-min-max($media-min, $media-max, $IE9: true) {
-    @if $IE9 == true {
-        .lt-ie9 & {
-            @content;
-        }
-        @media screen and (min-width: $media-min) and (max-width: $media-max)  {
-            @content;
-        }
-    }
-    @else {
-        @media screen and (min-width: $media-min) and (max-width: $media-max) {
-            @content;
-        }
-    }
+	@if $IE9 == true {
+		.lt-ie9 & {
+			@content;
+		}
+		@media screen and (min-width: $media-min) and (max-width: $media-max)  {
+			@content;
+		}
+	}
+	@else {
+		@media screen and (min-width: $media-min) and (max-width: $media-max) {
+			@content;
+		}
+	}
 }
 
 
@@ -131,15 +131,15 @@
 // Name retina images [name]2x.
 
 @mixin image-2x($image, $width, $height) {
-    @media (min--moz-device-pixel-ratio: 1.3),
-        (-o-min-device-pixel-ratio: 2.6/2),
-        (-webkit-min-device-pixel-ratio: 1.3),
-        (min-device-pixel-ratio: 1.3),
-        (min-resolution: 1.3dppx) {
-        /* on retina, use image that's scaled by 2 */
-        background-image: url($image);
-        background-size: $width $height;
-    }
+	@media (min--moz-device-pixel-ratio: 1.3),
+		(-o-min-device-pixel-ratio: 2.6/2),
+		(-webkit-min-device-pixel-ratio: 1.3),
+		(min-device-pixel-ratio: 1.3),
+		(min-resolution: 1.3dppx) {
+		/* on retina, use image that's scaled by 2 */
+		background-image: url($image);
+		background-size: $width $height;
+	}
 }
 
 // ------------------------------------------------------------
@@ -149,8 +149,8 @@
 // http://codepen.io/sturobson/pen/hdKyv
 
 @mixin rgba($color, $value) {
-    background-color: $color;
-    background-color: rgba($color, $value);
+	background-color: $color;
+	background-color: rgba($color, $value);
 }
 
 
@@ -163,55 +163,55 @@
 // Perfect for use in breakpoints to use different columns
 
 @mixin grid_columns($columns) {
-    @for $i from 1 through $columns {
-        .col-#{$columns}-#{$i}{
-            width: ((100% / $columns)*$i);      
-        }
-    }
-    @for $i from 1 through $columns {
-        .push-#{$columns}-#{$i}{
-            margin-left: ((100% / $columns)*$i);        
-        }
-    }
-    @for $i from 1 through $columns {
-        .pull-#{$columns}-#{$i}{
-            margin-right: ((100% / $columns)*$i);       
-        }
-    }
-    .push-disable#{$columns} {
-        margin-left: 0;     
-    }
-    .pull-disable#{$columns} {
-        margin-right: 0;        
-        
-    }
-    .hide-at#{$columns} {
-        display: none;
-    }
-    .block-show-at#{$columns} {
-        display: block;
-    }
-    .inline-show-at#{$columns} {
-        display: inline;
-        display: inline-block;
-    }
+	@for $i from 1 through $columns {
+		.col-#{$columns}-#{$i}{
+			width: ((100% / $columns)*$i);      
+		}
+	}
+	@for $i from 1 through $columns {
+		.push-#{$columns}-#{$i}{
+			margin-left: ((100% / $columns)*$i);        
+		}
+	}
+	@for $i from 1 through $columns {
+		.pull-#{$columns}-#{$i}{
+			margin-right: ((100% / $columns)*$i);       
+		}
+	}
+	.push-disable#{$columns} {
+		margin-left: 0;     
+	}
+	.pull-disable#{$columns} {
+		margin-right: 0;        
+		
+	}
+	.hide-at#{$columns} {
+		display: none;
+	}
+	.block-show-at#{$columns} {
+		display: block;
+	}
+	.inline-show-at#{$columns} {
+		display: inline;
+		display: inline-block;
+	}
 }
 
 @mixin grid {   
-    // Widths
-    *[class*="col-"] {
-        width: 100%; 
-        display: block;
-    }
-    // Floats
-    *[class*="as-grid"] {
-        float: left;
-        display: inline;
-        display: inline-block;
-    }
-    // Gutters
-    *[class*="with-gutter"] {
-    }
+	// Widths
+	*[class*="col-"] {
+		width: 100%; 
+		display: block;
+	}
+	// Floats
+	*[class*="as-grid"] {
+		float: left;
+		display: inline;
+		display: inline-block;
+	}
+	// Gutters
+	*[class*="with-gutter"] {
+	}
 }
 
 
@@ -223,12 +223,12 @@
 // 原生7,8不支援color的transparent，所以采用2;
 
 @mixin ir($height:99) {
-    //1
-    color: transparent;
-    //2
-    font: 0/0 a;
-    text-shadow: none;
-    border: 0 none;
+	//1
+	color: transparent;
+	//2
+	font: 0/0 a;
+	text-shadow: none;
+	border: 0 none;
 }
 
 
@@ -239,18 +239,18 @@
 // Width × Height. Accepts all units.
 
 @mixin size($size) {
-    $height: nth($size, 1);
-    $width: $height;
+	$height: nth($size, 1);
+	$width: $height;
 
-    @if length($size) > 1 {
-        $height: nth($size, 2);
-    }
-    @if $height == auto or (type-of($height) == number and not unitless($height)) {
-        height: $height;
-    }
-    @if $width == auto or (type-of($width) == number and not unitless($width)) {
-        width: $width;
-    }
+	@if length($size) > 1 {
+		$height: nth($size, 2);
+	}
+	@if $height == auto or (type-of($height) == number and not unitless($height)) {
+		height: $height;
+	}
+	@if $width == auto or (type-of($width) == number and not unitless($width)) {
+		width: $width;
+	}
 }
 
 
@@ -259,23 +259,23 @@
 // ------------------------------------------------------------
 
 @mixin gradient($startColor: #555, $endColor: #333) {
-    @include filter-gradient($startColor, $endColor);
-    @include background-image(linear-gradient($startColor, $endColor));
+	@include filter-gradient($startColor, $endColor);
+	@include background-image(linear-gradient($startColor, $endColor));
 }
 
 @mixin selection($r, $g, $b) {
-    ::selection {
-        background: rgb($r, $g, $b);
-    }
-    ::-moz-selection {
-        background: rgb($r, $g, $b);
-    }
-    img::selection {
-        background: transparent;
-    }
-    img::-moz-selection {
-        background: transparent;
-    }
+	::selection {
+		background: rgb($r, $g, $b);
+	}
+	::-moz-selection {
+		background: rgb($r, $g, $b);
+	}
+	img::selection {
+		background: transparent;
+	}
+	img::-moz-selection {
+		background: transparent;
+	}
 }
 
 @mixin placeholder($color: $input-color-placeholder) {
@@ -291,39 +291,39 @@
 
   // If we have a retina image then add styles for it too
   @if file_exists(retina_filename($image)) {
-    @media
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (   -moz-min-device-pixel-ratio: 2),
-    only screen and (    -ms-min-device-pixel-ratio: 2),
-    only screen and (     -o-min-device-pixel-ratio: 2/1),
-    only screen and (        min-device-pixel-ratio: 2),
-    only screen and (                min-resolution: 192dpi),
-    only screen and (                min-resolution: 2dppx) {
-      @include background-size(image-width($image) auto);
-      background-image: image-url(retina_filename($image));
-    }
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   -moz-min-device-pixel-ratio: 2),
+	only screen and (    -ms-min-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+	  @include background-size(image-width($image) auto);
+	  background-image: image-url(retina_filename($image));
+	}
   }
 }
 
 // Grid
 @mixin block($num) {
-    width: (($gridWidth - ($gridGutterWidth * $num)) / $num / ($gridWidth / 100)) * 1%;
+	width: (($gridWidth - ($gridGutterWidth * $num)) / $num / ($gridWidth / 100)) * 1%;
 }
 
 @mixin column($num) {
-    width: (($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * 1%;
+	width: (($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * 1%;
 }
 
 @mixin columns($factor, $num) {
-    width: ((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * $factor) + (($gridGutterWidth / ($gridWidth / 100)) * ($factor - 1)) * 1%;
+	width: ((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * $factor) + (($gridGutterWidth / ($gridWidth / 100)) * ($factor - 1)) * 1%;
 }
 
 @mixin column-push($num) {
-    left: ((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) + $gridGutterWidth/($gridWidth/100)) * 1%;
+	left: ((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) + $gridGutterWidth/($gridWidth/100)) * 1%;
 }
 
 @mixin columns-push($factor, $num) {
-    left: (((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * $factor) + (($gridGutterWidth / ($gridWidth / 100)) * ($factor - 1)) + $gridGutterWidth/($gridWidth/100)) * 1%;
+	left: (((($gridWidth - ($gridGutterWidth * ($num - 1))) / $num / ($gridWidth / 100)) * $factor) + (($gridGutterWidth / ($gridWidth / 100)) * ($factor - 1)) + $gridGutterWidth/($gridWidth/100)) * 1%;
 }
 
 
@@ -335,122 +335,122 @@
 // Type and rhythm
 
 @mixin first-letter {
-    font-size: 4em;
-    line-height: 0.75em;
-    float: left;
-    position: relative;
-    padding-right: 6px;
-    margin-top: -2px;
-    font-weight: normal;
-    color: $bodyColor;
+	font-size: 4em;
+	line-height: 0.75em;
+	float: left;
+	position: relative;
+	padding-right: 6px;
+	margin-top: -2px;
+	font-weight: normal;
+	color: $bodyColor;
 }
 
 @mixin supersmall {
-    font-size: $superSmallFontSize;
+	font-size: $superSmallFontSize;
 }
 
 @mixin small {
-    font-size: $smallFontSize;
+	font-size: $smallFontSize;
 }
 
 @mixin big {
-    font-size: $bigFontSize;
+	font-size: $bigFontSize;
 }
 
 @mixin inputbig {
-    padding: 2px 0;
-    font-size: $bigFontSize;
+	padding: 2px 0;
+	font-size: $bigFontSize;
 }
 
 @mixin text-centered {
-    text-align: center;
+	text-align: center;
 }
 
 @mixin text-right {
-    text-align: right;
+	text-align: right;
 }
 
 @mixin text-uppercase {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 @mixin text-lowercase {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 @mixin nowrap {
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 @mixin zero {
-    margin: 0 !important;
-    padding: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 @mixin clear {
-    clear: both;
+	clear: both;
 }
 
 @mixin last {
-    margin-right: 0 !important;
+	margin-right: 0 !important;
 }
 
 @mixin pause {
-    margin-bottom: 0.75em !important;
+	margin-bottom: 0.75em !important;
 }
 
 @mixin end {
-    margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 @mixin no-leader {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 @mixin no-trailer {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 @mixin handle {
-    cursor: move;
+	cursor: move;
 }
 
 @mixin normal {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 @mixin bold {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 @mixin italic {
-    font-style: italic;
+	font-style: italic;
 }
 
 @mixin req {
-    font-weight: normal;
-    color: $colorRed;
+	font-weight: normal;
+	color: $colorRed;
 }
 
 @mixin highlight {
-    background-color: #ffff9e !important;
+	background-color: #ffff9e !important;
 }
 
 @mixin close {
-    padding: 4px 6px;
-    line-height: 1;
-    font-size: 18px;
-    cursor: pointer;
-    color: $black;
-    text-decoration: none;
-    opacity: 0.4;
-    &:before {
-        content: '\00D7';
-    }
-    &:hover {
-        color: $black;
-        opacity: 1;
-    }
+	padding: 4px 6px;
+	line-height: 1;
+	font-size: 18px;
+	cursor: pointer;
+	color: $black;
+	text-decoration: none;
+	opacity: 0.4;
+	&:before {
+		content: '\00D7';
+	}
+	&:hover {
+		color: $black;
+		opacity: 1;
+	}
 }
 
 // ------------------------------------------------------------
@@ -458,24 +458,24 @@
 // ------------------------------------------------------------
 
 @mixin is-hidden {
-    display: none;
+	display: none;
 }
 
 @mixin is-show-block {
-    display: block;
+	display: block;
 }
 
 @mixin is-show-inline {
-    display: inline;
-    display: inline-block;
-    float: none !important;
-    // @include has-layout-zoom;
-    // @include has-layout-block;
+	display: inline;
+	display: inline-block;
+	float: none !important;
+	// @include has-layout-zoom;
+	// @include has-layout-block;
 }
 
 @mixin is-table {
-    display: table;
-    width: 100%;
+	display: table;
+	width: 100%;
 }
 // @mixin clearfix {
 //     @include clearfix;
@@ -486,8 +486,8 @@
 // }
 
 @mixin max-width {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 
@@ -496,29 +496,41 @@
 // -------------------------------------------------------
 
 @mixin fl {
-    @include float(left);
+	@include float(left);
 }
 
 @mixin fr {
-    @include float(right);
+	@include float(right);
 }
 
 @mixin rf {
-    @include reset-float;
+	@include reset-float;
 }
 
 @mixin oh {
-    @include clearfix;
+	@include clearfix;
 }
 
 // block需有寬度margin左右設定auto才能居中
 @mixin center-block {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center
 }
 
 @mixin is-center-block {
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin autoheight {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		//z-index: -1;
+		display: block;
+		top: 0;
+		bottom: 0;
+	}
 }

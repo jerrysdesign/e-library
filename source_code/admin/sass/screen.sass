@@ -84,6 +84,11 @@ img
 @import "modules/tr_table"
 
 //
+%cont, .cont
+	padding: 20px 0
+	position: relative
+	@extend .units-container
+
 /* import master */
 // 先暫時放一下
 @import "master"
@@ -98,8 +103,8 @@ img
 	width: 100%
 
 .container
-	background-color: #f7f7f7
-	padding: 30px
+	background-color: darken(white, 3)
+	@extend %cont
 
 .test
 	position: relative
@@ -330,31 +335,34 @@ $holder-height: 2em
 	.tick
 		background-color: $primary
 
+$selectholder: 2em
+$selectholderSize: 40px
+
 .selectholder
-	clear: both
+	// clear: both
 	width: 100%
-	background: $black-10
-	font-size: $holder-height / 1.5
-	height: $holder-height
+	background: $black-0
+	font-size: 100%
+	height: $selectholderSize
+	line-height: $selectholderSize
 	color: #666
-	+transition(.1s ease-out)
+	+transition(.2s ease-out)
 	cursor: pointer
 	.desc
 		display: inline-block
-		vertical-align: middle
-		padding-left: .8em
-		line-height: $holder-height
+		padding-left: $selectholderSize/2*.75
+		line-height: $selectholderSize
 	.pulldown
 		float: right
 		vertical-align: middle
-		width: $holder-height
+		width: $selectholderSize
 		height: 100%
 		background-color: $black-15
 		background-image: url(#{$l2}/pulldown.png)
 		background-size: cover
 		+transition(.1s ease-out)
 	&:hover
-		background-color: $black-15
+		background-color: $black-0
 
 .activeselectholder
 	background-color: $black-15
@@ -376,7 +384,7 @@ $holder-height: 2em
 		display: block
 		border-bottom: solid 1px $black-65
 		padding-left: .8em
-		line-height: $holder-height
+		line-height: $selectholderSize
 		+transition(background-color .1s ease-out)
 		&:last-child
 			border-bottom: none

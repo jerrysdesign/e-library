@@ -1,10 +1,9 @@
 #cont_area
 	.masthead
-		/! 結構更動
-		.cont
-			.masthead_head
-				.masthead_title 題目
-			.masthead_content.units-row.end
+		.masthead__inner
+			.masthead__head
+				.masthead__title 題目
+			.masthead__content.units-row.end
 				.unit-33
 					//== render "partials/type" , :locals => {:f => "mulch"}
 					.selectholder
@@ -60,4 +59,3 @@
 		.center-block
 			input.btn.btn-green type="button" disabled="disabled" value="儲存"
 			input.btn.btn-red type="button" value="取消" onclick="history.back()"
-		/! 結構更動 end
