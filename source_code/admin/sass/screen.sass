@@ -270,12 +270,23 @@ ul.a_btn_c2 li
 		font-size: 1.2em
 		margin-bottom: 20px
 
+	.remove_img
+		+is-hidden
+
+	.cur
+		+is-show-inline
+
 .quiz_add_subject
 	li
 		display: table
 		width: 100%
 		margin: 20px 0
 
+		.remove_img
+			+is-hidden
+
+		.cur
+			+is-show-inline
 
 $holder-height: 2em
 
@@ -404,5 +415,6 @@ img.pic
 	display: none
 	&.view
 		display: inline-block
-		max-widh: 260px
+		max-width: 260px
 		width: 260px
+		margin-right: 5px
