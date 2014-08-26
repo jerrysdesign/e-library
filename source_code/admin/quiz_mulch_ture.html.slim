@@ -6,13 +6,13 @@
 			.masthead__content
 				== render "partials/type" , :locals => {:f => "mulch"}
 	.container
-		.cont.cont_tab4.cf
+		.cont.cont_tab4
 			.pd2040
 				.control-group
 					label.control-label 題目
 					.controls
 						.row
-							textarea rows="1"
+							textarea.width-100 rows="2"
 								= zh_lorem_paragraphs 3
 						.i-b-block.row
 							== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
@@ -39,6 +39,6 @@
 				.control-group
 					label.control-label
 					.controls
-						a.bt.add href="javascript:;" 增加選項
+						a.btn.add href="javascript:;" 增加選項
 
 		== render "partials/quiz_list" , :locals => {:f => "else"}

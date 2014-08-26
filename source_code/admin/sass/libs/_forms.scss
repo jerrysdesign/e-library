@@ -135,7 +135,7 @@ fieldset.forms-row {
 }
 .forms-section {
 	font-weight: bold;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid $black-15;
 	padding: 0 0 10px 0;
 	margin-bottom: 1em;
 	line-height: 1;
@@ -167,13 +167,13 @@ select[multiple="multiple"] {
 	position: relative;
 	z-index: 2;
 	font-family: $inputFontFamily;
-	border: 1px solid #ccc;
+	border: 1px solid $black-15;
 	margin: 0;
 	padding: 3px 2px;
 	background-color: white;
 	color: $bodyColor;
 	font-size: 1em;
-	line-height: 1;
+	// line-height: 1;
 	border-radius: 1px;
 	@include box-shadow(0 1px 2px rgba(0, 0, 0, .1) inset);
 	@include transition(border ease .5s);
@@ -182,14 +182,9 @@ input[type="range"] {
 	position: relative;
 	top: 3px;
 }
-textarea {
-	line-height: 1.4em;
-}
 select {
 	margin-bottom: 0 !important;
 }
-
-/* Errors and Success */
 .error,
 .success {
 	margin-left: 5px;
@@ -232,26 +227,71 @@ input[type="search"] {
 	margin-bottom: 0;
 	border-radius: 15px;
 }
-.input-append,
-.input-prepend {
-	display: inline-block;
+// .input-append,
+// .input-prepend {
+// 	display: inline-block;
+// 	background-color: $black-15;
+// 	height: 23px;
+// 	border: 1px solid $black-15;
+// 	margin: 0;
+// 	padding: 1px 8px;
+// 	color: #333;
+// 	font-size: 1em;
+// 	line-height: 23px;
+// }
+// .input-prepend {
+// 	margin-right: -1px;
+// }
+// .input-append {
+// 	position: relative;
+// 	z-index: 1;
+// 	margin-left: -1px;
+// }
+
+$base-line: 18px;
+$font-size-small: 11px;
+// Append & Prepend
+.input-groups {
+	display: table !important;
+}
+.input-groups input {
+	width: 100%;
+}
+.input-groups input,
+.input-groups .input-append,
+.input-groups .input-prepend,
+.input-groups .btn-append {
+	display: table-cell !important;
+}
+.input-groups .btn-append,
+.input-groups .input-append,
+.input-groups .input-prepend {
+	width: 1%;
+	vertical-align: middle;
+}
+.input-groups .input-append,
+.input-groups .input-prepend {
 	background-color: #eee;
-	height: 23px;
 	border: 1px solid #ccc;
 	margin: 0;
-	padding: 1px 8px;
-	color: #333;
-	font-size: 1em;
-	line-height: 23px;
+	//padding: .35em .75em .25em .75em;
+	color: rgba(0, 0, 0, .5);
+	line-height: $base-line;
+	font-size: $font-size-small;
+	white-space: nowrap;
 }
-.input-prepend {
-	margin-right: -1px;
+.input-groups .input-prepend {
+	border-right: none;
 }
-.input-append {
+.input-groups .input-append {
 	position: relative;
 	z-index: 1;
-	margin-left: -1px;
+	border-left: none;
 }
-
+.input-groups .btn-append .btn {
+	display: block;
+	height: auto;
+	border-radius: 0 2px 2px 0;
+}
 /* Placeholder */
 @include placeholder($colorGrayLight);

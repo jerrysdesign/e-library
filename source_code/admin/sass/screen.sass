@@ -45,7 +45,7 @@ img
 @import "libs/grid"
 
 
-// ::Componet
+// ::Component
 // ------------------------------------------------------------
 // // Navs
 // @import "libs/navs"
@@ -62,8 +62,8 @@ img
 // ::Modules
 // ------------------------------------------------------------
 
-@import "libs/reset_forms"
-@import "libs/reset_tables"
+// @import "libs/reset_forms"
+// @import "libs/reset_tables"
 
 // ::Helpers
 // ------------------------------------------------------------
@@ -93,6 +93,9 @@ img
 	background-color: $black-0
 	@extend %cont
 
+.table-bordered
+	background-color: $black-0
+
 /* import master */
 // 先暫時放一下
 @import "master"
@@ -116,7 +119,7 @@ img
 	font-size: 18px
 .quiz_total
 .test
-	padding: 0 40px
+	padding-left: 20px
 	// 超靠北結構
 	dl
 		> *
@@ -148,6 +151,7 @@ img
 
 .row
 	+pie-clearfix
+	margin-bottom: 5px
 .row + .row
 	margin-top: 5px
 // 合併進 > #head, #menu_bar, #cont, #foot
@@ -157,10 +161,7 @@ img
 .cont_tab4
 	background-color: #FFF
 	margin-bottom: 10px
-// 合併進reset
-textarea
-	line-height: 30px
-	border: 1px solid #ddd
+
 
 .control-label.title
 	float: none
@@ -177,8 +178,6 @@ textarea
 
 // 待合併組件
 
-textarea
-	border: 1px solid #ddd !important
 .a_b01, .a_b02
 	line-height: 32px !important
 .a_b02
@@ -186,13 +185,7 @@ textarea
 .sub_menu
 	z-index: 999
 ul.a_btn_c2 li
-	display: inline-block !important
-	float: none !important
-	+has-layout-zoom
-	+has-layout-block
-.cont_tab2
-	input
-		height: auto !important
+	@extend is-show-inline
 
 .upper-alpha
 	li
@@ -421,7 +414,7 @@ $selectholderSize: 40px
 		@include is-show-inline
 		// 因應頁面-新增題目是非題選擇
 		vertical-align: bottom
-		
+
 // 限定題目圖片顯示大小
 img.pic
 	display: none
@@ -430,3 +423,40 @@ img.pic
 		max-width: 260px
 		width: 260px
 		margin-right: 5px
+
+// Alert box
+%alert-block, .alert-block
+	padding: 8px 35px 8px 14px
+	margin-bottom: 20px
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
+	color: nth($warningColor, 1)
+	background-color: nth($warningColor, 2)
+	border: 1px solid nth($warningColor, 3)
+.alert--warning
+%alert--warning
+	@extend %alert-block
+.alert--success
+	color: nth($successColor, 1)
+	background-color: nth($successColor, 2)
+	border: 1px solid nth($successColor, 3)
+%alert--success
+	@extend %alert-block
+	@extend .alert--success
+.alert--info
+	color: nth($infoColor, 1)
+	background-color: nth($infoColor, 2)
+	border: 1px solid nth($infoColor, 3)
+%alert--info
+	@extend %alert-block
+	@extend .alert--info
+.alert--error
+	@extend %alert
+	color: nth($errorColor, 1)
+	background-color: nth($errorColor, 2)
+	border: 1px solid nth($errorColor, 3)
+%alert--error
+	@extend %alert-block
+	@extend .alert--error
+
+.caption
+	@extend %alert--info

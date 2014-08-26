@@ -1,7 +1,7 @@
 #cont_area
 	#cont
 		|  <div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
-		form.cf enctype="multipart/form-data" method="post" 
+		form enctype="multipart/form-data" method="post" 
 			.cont_tab2
 				h2
 					span.icon04
@@ -10,25 +10,24 @@
 					.control-group
 						label.control-label 共有500道題目
 						.controls
-							input.bt onclick="javascript:location.href='subject_edit.html'" type="button" value="管理題目"
+							input.btn.btn-blue onclick="javascript:location.href='subject_edit.html'" type="button" value="管理題目"
 					.control-group
 						label.control-label 測驗卷名稱
 						.controls
 							.btn-group.i-b-block
 								input type="text" 
-								input type="button" value="搜尋"
+								input.btn.btn-blue type="button" value="搜尋"
 			
 			.cont_tab3.clearb
 				.i-b-block
-					.caption
+					span.caption
 						| 共有
 						em 210
 						| 張測驗卷，其中
 						em 100
 						| 張已測驗過。
-					.fr.i-b-block
-						.btn-group
-							input.bt onclick="javascript:location.href='exam_paper_list_null.html'" type="button" value="新增測驗卷"
+					.fr
+						input.btn.btn-blue onclick="javascript:location.href='exam_paper_list_null.html'" type="button" value="新增測驗卷"
 				table.table cellpadding="0" cellspacing="1" width="100%" 
 					tr
 						th width="5%"  序號
