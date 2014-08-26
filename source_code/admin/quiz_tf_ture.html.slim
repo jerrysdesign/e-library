@@ -5,13 +5,13 @@
 				.masthead__title 題目
 			.masthead__content
 				== render "partials/type" , :locals => {:f => "torf"}
-	.container.cf
+	.container
 		.cont.cont_tab4
 			.pd2040
 				.control-group
 					label.control-label 題目
 					.controls
-						textarea rows="1"
+						textarea.width-100 rows="2"
 							= lorem_paragraphs 2
 						.clearfix
 						.i-b-block

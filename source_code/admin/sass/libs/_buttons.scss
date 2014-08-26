@@ -136,6 +136,7 @@
 .btn-disabled,
 .btn-disabled:hover {
 	color: #999;
+	cursor: default;
 }
 
 .btn:focus .halflings,
@@ -193,7 +194,7 @@
 }
 .btn-append,
 .btn-group .btn {
-	padding: 7px 1.1em 6px 1.1em;
+	//padding: 7px 1.1em 6px 1.1em;
 }
 
 /* Append  */

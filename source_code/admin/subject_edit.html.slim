@@ -35,16 +35,18 @@
 								input type="button" value="搜尋"
 			
 			.cont
-				.fl.caption
-					| 題庫內共有
-					em 500
-					| 道題目，其中
-					em 450
-					| 道已作答過。
-				.fr
-					a.btn.btn-blue<> href="quiz_creat.html" 新增
-					a.btn.btn-blue<> href="quiz_import.html" 匯入
-					a<> class="btn fancybox fancybox.iframe afb" href="quiz_export_pop.html" 匯出
+				.row
+					.fl
+						span.caption
+							| 題庫內共有
+							em 500
+							| 道題目，其中
+							em 450
+							| 道已作答過。
+					.fr
+						a.btn.btn-blue<> href="quiz_creat.html" 新增
+						a.btn.btn-blue<> href="quiz_import.html" 匯入
+						a<> class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_export_pop.html" 匯出
 				table.table.table-bordered.table-striped
 					thead
 						tr

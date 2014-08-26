@@ -4,27 +4,27 @@
 			.masthead__head
 				.masthead__title 測驗卷
 			.masthead__content
-				.control-group
-					label.control-label 名稱
-					.controls
-						.inline-grop
-							input type="text"
-							input type="button" value="開始測驗" onclick="javascript:;"
+				.is-table
+					.control-group
+						.control-label 名稱
+						.controls
+							input.width-70 type="text" placeholder="名稱"
+							input.btn.btn-blue.fr type="button" value="開始測驗" onclick="javascript:;"
 	.container
 		.cont
 			.cont_tab3
-				.i-b-block.tb_fixed.btn_wrap
-					.caption.fl
-						| 已加入
-						span  5 
-						| 題
-					.fr.i-b-block
-						.btn-group
-							a class="bt fancybox fancybox.iframe afb" href="quiz_add_pop_ture.html" 加入
-							a.bt.exam-remove.disabled href="javascript:;" 移除
-						.btn-group
-							a.bt.exam-up.disabled href="javascript:;" 上移
-							a.bt.exam-down.disabled href="javascript:;" 下移
+				.row
+					.fl
+						span.caption
+							| 已加入
+							span  5 
+							| 題
+					.fr
+						a<> class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_add_pop_ture.html" 加入
+						a.btn.btn-red.exam-remove.disabled<> href="javascript:;" 移除
+
+						a.btn.exam-up.disabled<> href="javascript:;" 上移
+						a.btn.exam-down.disabled<> href="javascript:;" 下移
 				table.table.table_striped cellpadding="0" cellspacing="1" width="100%"
 					thead.tb_fixed
 						tr
