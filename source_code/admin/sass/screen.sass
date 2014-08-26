@@ -28,7 +28,6 @@ a
 img
 	background: $transparent url(#{$l2}/loading.gif) no-repeat 50% 50%
 
-
 // ::Import styles
 // ------------------------------------------------------------
 // Base level typography
@@ -95,6 +94,9 @@ img
 
 .table-bordered
 	background-color: $black-0
+
+.is-table + .is-table
+	margin-top: 10px
 
 /* import master */
 // 先暫時放一下
@@ -426,8 +428,8 @@ img.pic
 
 // Alert box
 %alert-block, .alert-block
+	+is-show-inline
 	padding: 8px 35px 8px 14px
-	margin-bottom: 20px
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
 	color: nth($warningColor, 1)
 	background-color: nth($warningColor, 2)
@@ -460,3 +462,19 @@ img.pic
 
 .caption
 	@extend %alert--info
+
+$radius: 0
+.select
+	font: inherit
+	font-weight: 400
+	border: 1px solid #ccc
+	padding: 5px
+	background: #fff
+	min-width: 260px
+	border-radius: $radius
+	appearance: button
+	-moz-appearance: button
+	-webkit-appearance: button
+	background-image: url(#{$l2}/arrow_b3.gif)
+	background-position: right 50%
+	background-repeat: no-repeat

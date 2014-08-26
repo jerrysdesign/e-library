@@ -7,25 +7,27 @@
 					span.icon04
 					| 測驗
 				.pd2040
-					.control-group
-						label.control-label 共有500道題目
-						.controls
-							input.btn.btn-blue onclick="javascript:location.href='subject_edit.html'" type="button" value="管理題目"
-					.control-group
-						label.control-label 測驗卷名稱
-						.controls
-							.btn-group.i-b-block
-								input type="text" 
+					.is-table
+						.control-group
+							.control-label 共有500道題目
+							.controls
+								input.btn.btn-blue onclick="javascript:location.href='subject_edit.html'" type="button" value="管理題目"
+					.is-table
+						.control-group
+							label.control-label 測驗卷名稱
+							.controls
+								input.width-70 type="text" placeholder="測驗卷名稱"
 								input.btn.btn-blue type="button" value="搜尋"
 			
 			.cont_tab3.clearb
-				.i-b-block
-					span.caption
-						| 共有
-						em 210
-						| 張測驗卷，其中
-						em 100
-						| 張已測驗過。
+				.row
+					.fl
+						span.caption
+							| 共有
+							em 210
+							| 張測驗卷，其中
+							em 100
+							| 張已測驗過。
 					.fr
 						input.btn.btn-blue onclick="javascript:location.href='exam_paper_list_null.html'" type="button" value="新增測驗卷"
 				table.table cellpadding="0" cellspacing="1" width="100%" 
