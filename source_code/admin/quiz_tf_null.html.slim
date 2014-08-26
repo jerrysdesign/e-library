@@ -1,4 +1,4 @@
-#cont_area
+g#cont_area
 	.masthead
 		.masthead__inner
 			.masthead__head
@@ -12,10 +12,12 @@
 					.control-group
 						label.control-label 題目
 						.controls
-							textarea rows="2"
+							textarea.width-100 rows="2"
 							.clearfix
 							.i-b-block
 								== render "partials/quiz_add_photo" , :locals => {:f => "else"}
+								.alert-block.alert--error.center-block
+									span 插入圖片檔案最大為 2 Mb，格式限定 jpg、png。
 				.is-table
 					.control-group
 						label.control-label
@@ -25,6 +27,3 @@
 								input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  T
 							label.radio
 								input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"  F
-	.container
-		.cont
-			== render "partials/quiz_list" , :locals => {:f => "else"}

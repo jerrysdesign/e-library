@@ -8,14 +8,15 @@
 	.container
 		.cont.cont_tab4
 			.pd2040
-				.control-group
-					label.control-label 題目
-					.controls
-						.row
-							textarea.width-100 rows="2"
-								= zh_lorem_paragraphs 3
-						.i-b-block.row
-							== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
+				.is-table
+					.control-group
+						label.control-label 題目
+						.controls
+							.row
+								textarea.width-100 rows="2"
+									= zh_lorem_paragraphs 3
+							.i-b-block.row
+								== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
 				.control-label.title 設定正確答案
 				ol.quiz_add_subject
 					li.control-group
