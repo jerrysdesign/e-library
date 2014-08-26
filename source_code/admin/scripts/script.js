@@ -39,45 +39,63 @@ function change_img()
 		clip.attr("src", path);
 	}
 	$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
+	btn_enable();
 }
 
 // 刪除圖片
 function remove_img()
 {
-	$('body').on('click','.remove_img',function()
-	{
-		$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').removeClass('view').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
-	});
+	$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
+	btn_enable();
 }
 
 // 增加選項
 function additem()
 {
-	$('.add').click(function()
+	var _qas  = $(".quiz_add_subject"),
+		count = _qas.find('li').size();
+	
+	count++;
+	if(count > 6)
 	{
-		var _qas  = $(".quiz_add_subject"),
-			count = _qas.find('li').size();
-		
-		count++;
-		if(count > 6)
-		{
-			return false;
-		}
-		_qas.append(
-			"<li class='is-table'><div class='control-group'><div class='control-label'><div class='radioholder'><span class='tick'></span><input name='projecttype' type='radio' value=''><b>"+ count +"</b></div></div><div class='controls'> <a class='remove' href='javascript:;'>刪除選項</a> <textarea class='width-100' rows='1'></textarea><div class='i-b-block'><img class='pic' src=''><input class='ipt_upload_img file' type='file'> <a class='btn insert_img' href='javascript:;'>插入圖片</a> </div></div></div></li>");
+		return false;
+	}
+	_qas.append(
+		"<li class='is-table'>"+
+			"<div class='control-group'>"+
+				"<div class='control-label'>"+
+					"<div class='radioholder'>"+
+						"<span class='tick'></span>"+
+						"<input name='projecttype' type='radio' value=''>"+
+						"<b>"+ count +"</b>"+
+					"</div>"+
+				"</div>"+
+				"<div class='controls'>"+
+					"<a class='remove' href='javascript:;'>刪除選項</a>"+
+					"<textarea class='width-100' rows='1'></textarea>"+
+					"<div class='i-b-block'>"+
+						"<img class='pic' src=''>"+
+						"<input class='ipt_upload_img file' type='file'>"+
+						"<a class='btn btn-blue insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
+						"<a class='btn btn-red remove_img' href='javascript:;'>刪除圖片</a>"+
+					"</div>"+
+				"</div>"+
+			"</div>"+
+		"</li>");
 
-		if(count == 6)
-		{
-			$(".add").attr("disabled", true);
-		}
-		renumber();
-		
-		var new_element = _qas.children('li').last();
-		$('.insert_img',new_element).on('click',insert_img);
-		$('.file',new_element).on('change',change_img);
-		$('.radioholder').on('click',radioholder);
-		$('body').on('click',this,btn_enable);
-	});
+	if(count == 6)
+	{
+		$(".add").attr("disabled", true);
+	}
+	renumber();
+	
+	var new_element = _qas.children('li').last();
+	$('.insert_img',new_element).on('click',insert_img);
+	$('.file',new_element).on('change',change_img);
+	$('.remove_img').on('click',remove_img);
+	$('.radioholder').on('click',radioholder);
+	$('.quiz_subject,.quiz_add_subject').find('textarea').on('keyup',btn_enable);
+	btn_enable();
 }
 
 // 刪除選項
@@ -110,6 +128,36 @@ function renumber()
 			case '6' : _this.text('F');break;
 		}
 	});
+}
+
+// 判斷儲存按鈕是否啓用
+function btn_enable()
+{
+	var $textarea = $('textarea'),
+		$quiz_a_s = $('.activeradioholder').size(),
+		$success  = true;
+
+	$textarea.each(function( _idx )
+	{
+		if($(this).val().trim() == '' && $('.remove_img').eq(_idx).is(':hidden'))
+		{
+			$success = false;
+		}
+	});
+
+	if($quiz_a_s == 0)
+	{
+		$success = false;
+	}
+
+	if($success)
+	{
+		$('.center-block > input:eq(0)').attr('disabled', false);
+	}
+	else
+	{
+		$('.center-block > input:eq(0)').attr('disabled', true);
+	}
 }
 
 // [ exam ] checkbox - checked all
@@ -186,7 +234,6 @@ function tr_reclass()
 	$('tr').css('color','black');
 }
 
-
 // [ exam ] caption - thead_fixed
 function thead_fixed()
 {
@@ -216,7 +263,7 @@ function thead_fixed()
 // barCharts
 function barCharts()
 {
-	//＊＊/ nofp = number of people
+	// nofp = number of people
 	// 單位最大人數
 	// 100/單位最大人數為基數
 
@@ -239,57 +286,6 @@ function barCharts()
 	});
 }
 
-// 檢核設定正確答案及題目內容輸入欄位
-function check_val()
-{
-	var $textarea = $('textarea'),
-		$quiz_a_s = $('.activeradioholder').size();
-
-	$textarea.each(function()
-	{
-		if($(this).val().trim() == '')
-		{
-			alert('輸入文字欄位不得為空');
-			return false;
-		}
-	});
-
-	if($quiz_a_s == 0)
-	{
-		alert('請設定正確答案');
-		return false;
-	}
-}
-
-// 判斷儲存按鈕是否啓用
-function btn_enable()
-{
-	var $textarea  = $('textarea'),
-		$quiz_a_s = $('.activeradioholder').size(),
-		$success = true;
-
-	$textarea.each(function()
-	{
-		if($(this).val().trim() == '')
-		{
-			$success = false;
-		}
-	});
-
-	if($quiz_a_s == 0)
-	{
-		$success = false;
-	}
-
-	if($success)
-	{
-		$('.center-block > input:eq(0)').attr('disabled', false);
-	}
-	else
-	{
-		$('.center-block > input:eq(0)').attr('disabled', 'disabled');
-	}
-}
 
 // select subject
 function selectholder()
@@ -455,12 +451,15 @@ $(function(){
 		fixedColumns: 1
 	});
 
+	// [ quiz ] - add subject
 	$('.insert_img').on('click',insert_img);
+	$('.remove_img').on('click',remove_img);
 	$('.file').on('change',change_img);
 	$('.radioholder').on('click',radioholder);
-	remove_img();
+	$('.add').on('click',additem);
+	$('.radioholder').on('click',btn_enable);
+	$('.quiz_subject,.quiz_add_subject').find('textarea').on('keyup',btn_enable);
 	Remove();
-	additem();
 	selectholder();
 	renumber();
 	barCharts();
@@ -471,14 +470,8 @@ $(function(){
 	$('.exam-up,.exam-down').on('click',tr_ud);
 	$('th .chk:first').on('change',chk_all);
 	$('input.chk').on('change',btn_mode);
-
 	if($('.container').has('.tb_fixed').size() == 1)
 	{
 		$(window).scroll(thead_fixed);
 	}
-
-	$('.center-block.i-b-block > input:eq(0)').on('click',check_val);
-	$('.quiz_subject,.quiz_add_subject').find('textarea').on('keyup',btn_enable);
-	$('.radioholder').on('click',btn_enable);
-
 });
