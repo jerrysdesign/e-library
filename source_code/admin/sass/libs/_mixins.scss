@@ -496,11 +496,15 @@
 // -------------------------------------------------------
 
 @mixin fl {
-	@include float(left);
+	@include float-left;
+	display: inline-block;
+	@include pie-clearfix;
 }
 
 @mixin fr {
-	@include float(right);
+	@include float-right;
+	display: inline-block;
+	@include pie-clearfix;
 }
 
 @mixin rf {

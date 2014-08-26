@@ -14,101 +14,101 @@
 %monospace  {   font-family: $monospace }   // Monospace Fonts
 
 %first-letter, .first-letter::first-letter {
-    @include first-letter;
+	@include first-letter;
 }
 
 %supersmall, .supersmall {
-    @include supersmall;
+	@include supersmall;
 }
 
 %small, .small {
-    @include small;
+	@include small;
 }
 
 %big, .big {
-    @include big;
+	@include big;
 }
 
 %inputbig, input.big {
-    @include inputbig;
+	@include inputbig;
 }
 
 %text-centered, .text-centered {
-    @include text-centered;
+	@include text-centered;
 }
 
 %text-right, .text-right {
-    @include text-right;
+	@include text-right;
 }
 
 %text-uppercase, .text-uppercase {
-    @include text-uppercase;
+	@include text-uppercase;
 }
 
 %text-lowercase, .lowercase {
-    @include text-lowercase;
+	@include text-lowercase;
 }
 
 %nowrap, .nowrap {
-    @include nowrap;
+	@include nowrap;
 }
 
 %zero, .zero {
-    @include zero;
+	@include zero;
 }
 
 %clear, .clear {
-    @include clear;
+	@include clear;
 }
 
 %last, .last {
-    @include last;
+	@include last;
 }
 
 %pause, .pause {
-    @include pause;
+	@include pause;
 }
 
 %end, .end {
-    @include end;
+	@include end;
 }
 
 %no-leader, .no-leader {
-    @include no-leader;
+	@include no-leader;
 }
 
 %no-trailer, .no-trailer {
-    @include no-trailer;
+	@include no-trailer;
 }
 
 %handle, .handle {
-    @include handle;
+	@include handle;
 }
 
 %normal, .normal {
-    @include normal;
+	@include normal;
 }
 
 %bold, .bold {
-    @include bold;
+	@include bold;
 }
 
 %italic, .italic {
-    @include italic;
+	@include italic;
 }
 
 %req,
 .req,
 .required {
-    @include req;
+	@include req;
 }
 
 %highlight, .highlight {
-    @include highlight;
+	@include highlight;
 }
 
 %close, .close {
-    @include close;
+	@include close;
 }
 
 // ------------------------------------------------------------
@@ -117,19 +117,19 @@
 
 // Show / hides
 .is-hidden, %is-hidden {
-    @include is-hidden;
+	@include is-hidden;
 }
 
 .is-show-block, %is-show-block {
-    @include is-show-block;
+	@include is-show-block;
 }
 
 .is-show-inline, %is-shown-inline {
-    @include is-show-inline;
+	@include is-show-inline;
 }
 
 .is-table, %is-table {
-    @include is-table;
+	@include is-table;
 }
 
 // Clearfixes
@@ -143,7 +143,7 @@
 
 // Images
 %max-width {
-    @include max-width;
+	@include max-width;
 }
 
 // -------------------------------------------------------
@@ -151,47 +151,47 @@
 // -------------------------------------------------------
 
 %ir {
-    @include ir;
+	@include ir;
 }
 
 /* Float-left */
 .fl, %fl {
-    @include float(left);
+	@include fl;
 }
 
 /* Float-right */
 .fr, %fr {
-    @include float(right);
+	@include fr;
 }
 
 /* Rest-float */
 .rf, %rf {
-    @include reset-float;
+	@include reset-float;
 }
 
 /* Overflow hidden */
 .oh, %oh {
-    @include clearfix;
+	@include clearfix;
 }
 
 /* Center block */
 %center-block, .center-block {
-    @include center-block;
+	@include center-block;
 }
 
 /* Clear float hack */
 .cearfix, %pie-clearfix {
-    @include pie-clearfix;
+	@include pie-clearfix;
 }
 
 第一層子元素變行內區塊
 %is-horizontal, .is-horizontal {
-    display: block;
-    @include pie-clearfix;
-    > * {
-        @include is-show-inline;
-        // vertical-align: bottom; //因應頁面-新增題目是非題
-    }
+	display: block;
+	@include pie-clearfix;
+	> * {
+		@include is-show-inline;
+		// vertical-align: bottom; //因應頁面-新增題目是非題
+	}
 }
 
 // 第一層子元素變行內區塊

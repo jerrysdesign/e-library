@@ -2,7 +2,6 @@
 // $Table
 // ------------------------------------------------------------
 
-
 tfoot th,
 tfoot td {
 	background-color: $tfootBackgroundColor;
@@ -31,20 +30,21 @@ table.table-simple th {
 table.table-simple caption {
 	padding-left: 0;
 }
-table.table-bordered td,
-table.table-bordered th {
-  border: 1px solid #ddd;
-}
-table.table-stroked td,
-table.table-stroked th {
-  border-bottom: 1px solid #eee;
-}
-table.table-striped tbody tr:nth-child(odd) td {
-  background-color: $colorStripedTable;
-}
-table.table-hovered tbody tr:hover td,
-table.table-hovered thead tr:hover th {
-	background-color: $colorHoveredTable;
+table {
+	&.table-bordered {
+		td, th { border: 1px solid #ddd;}
+	}
+	&.table-stroked {
+		td, th { border-bottom: 1px solid #eee;}
+	}
+	&.table-striped {
+		tbody tr:nth-child(even) td { background-color: lighten($colorStripedTable, 100);}
+		tbody tr:nth-child(odd) td { background-color: $colorStripedTable;}
+	}
+	&.table-hovered tbody tr:hover td,
+	&.table-hovered thead tr:hover th {
+		background-color: $colorHoveredTable;
+	}
 }
 
 /* Responsive Tables */

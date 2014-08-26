@@ -4,6 +4,8 @@
 
 
 .btn {
+	display: inline-block;
+	vertical-align: top;
 	font-family: $buttonFontFamily;
 	font-size: 1em;
 	line-height: 1.6813;
@@ -13,7 +15,8 @@
 	@include gradient(darken(#fff, 1), darken(#fff, 12));
 	border-radius: 2px;
 	border: 1px solid darken(#fff, 20);
-	padding: .7em 1.1em .6em 1.1em;
+	// padding: .7em 1.1em .6em 1.1em; 
+	padding: .4em 1.1em .4em 1.1em;
 	border-bottom-color: darken(#fff, 30);
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
 	box-shadow: none;
@@ -29,25 +32,25 @@
 .btn-red {
 	border-color: darken($colorAlizarin, 5);
 	border-bottom-color: darken($colorAlizarin, 10);
-	@include gradient($colorAlizarin, darken($colorAlizarin, 3));
+	@include gradient($colorAlizarin, darken($colorAlizarin, 5));
 }
 .btn-orange {
 	// #e67e22
 	border-color: darken($colorCarrot, 5);
 	border-bottom-color: darken($colorCarrot, 10);
-	@include gradient($colorCarrot, darken($colorCarrot, 3));
+	@include gradient($colorCarrot, darken($colorCarrot, 5));
 }
 .btn-green {
 	// #2ecc71
 	border-color: darken($colorEmerland, 5);
 	border-bottom-color: darken($colorEmerland, 10);
-	@include gradient($colorEmerland, darken($colorEmerland, 3));
+	@include gradient($colorEmerland, darken($colorEmerland, 5));
 }
 .btn-blue {
 	// #3498db
 	border-color: darken($colorPeterRiver, 5);
 	border-bottom-color: darken($colorPeterRiver, 10);
-	@include gradient($colorPeterRiver, darken($colorPeterRiver, 3));
+	@include gradient($colorPeterRiver, darken($colorPeterRiver, 5));
 }
 .btn-yellow {
 	// #f1c40f
