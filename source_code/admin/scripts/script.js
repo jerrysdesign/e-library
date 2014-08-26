@@ -1,3 +1,79 @@
+// 選擇新增題型
+function selectholder()
+{
+	$(".selectholder").each(function(){
+		var description;
+
+		$(this).children().hide();
+		description = $(this).find("label").text();
+		$(this).append("<span class=\"desc\">" + description + "</span>");
+		$(this).append("<span class=\"pulldown\"></span>");
+		$(this).append("<div class=\"selectdropdown\"></div>");
+		$(this).children("select").children("option").each(function(){
+			var $drop, name;
+
+			if ($(this).attr("value") !== "0") {
+				$drop = $(this).parent().siblings(".selectdropdown");
+				href = $(this).attr("value");
+				name = $(this).text();
+				$drop.append("<span" + " href=" + href + ">" + name + "</span>");
+			}
+		});
+		$(this).click(function() {
+			if ($(this).hasClass("activeselectholder")) {
+				$(this).children(".selectdropdown").slideUp(100);
+				$(this).removeClass("activeselectholder");
+				if ($(this).children("select").val() !== "0") {
+					$(this).children(".desc").fadeOut(50, function() {
+						$(this).text($(this).text());
+						$(this).fadeIn(50);
+					});
+				}
+			} else {
+				$(".activeselectholder").each(function() {
+					$(this).children(".selectdropdown").slideUp(100);
+					if ($(this).children("select").val() !== "0") {
+						$(this).children(".desc").fadeOut(100, function() {
+							$(this).text($(this).text());
+							$(this).fadeIn(100);
+						});
+					}
+					$(this).removeClass("activeselectholder");
+				});
+				$(this).children(".selectdropdown").slideDown(100);
+				$(this).addClass("activeselectholder");
+				if ($(this).children("select").val() !== "0") {
+					$(this).children(".desc").fadeOut(100, function() {
+						$(this).text($(this).siblings("select").children("option[value=0]").text());
+						$(this).fadeIn(50);
+					});
+				}
+			}
+		});
+	});
+	$(".selectholder .selectdropdown span").click(function(){
+		var value;
+
+		$(this).siblings().removeClass("active");
+		$(this).addClass("active");
+		var href  = $(this).attr('href');
+			value = $(this).text();
+		$(this).parent().siblings("select").val(value);
+		$(this).parent().siblings(".desc").fadeOut(100, function(){
+			$(this).text(value);
+			$(this).fadeIn(100);
+		});
+		window.location = href;
+	});
+}
+
+// 設定正確答案
+function radioholder()
+{
+	$('.radioholder').removeClass("activeradioholder");
+	$(this).addClass('activeradioholder').children("input[type=radio]").prop("checked", true);
+}
+
 // 插入圖片
 function insert_img()
 {
@@ -286,79 +362,6 @@ function barCharts()
 	});
 }
 
-
-// select subject
-function selectholder()
-{
-	$(".selectholder").each(function() {
-		var description;
-
-		$(this).children().hide();
-		description = $(this).children("b").text();
-		$(this).append("<span class=\"desc\">" + description + "</span>");
-		$(this).append("<span class=\"pulldown\"></span>");
-		$(this).append("<div class=\"selectdropdown\"></div>");
-		$(this).children("select").children("option").each(function() {
-			var $drop, name;
-
-			if ($(this).attr("value") !== "0") {
-				$drop = $(this).parent().siblings(".selectdropdown");
-				name = $(this).attr("value");
-				$drop.append("<span>" + name + "</span>");
-			}
-		});
-		$(this).click(function() {
-			if ($(this).hasClass("activeselectholder")) {
-				$(this).children(".selectdropdown").slideUp(100);
-				$(this).removeClass("activeselectholder");
-				if ($(this).children("select").val() !== "0") {
-					$(this).children(".desc").fadeOut(50, function() {
-						$(this).text($(this).siblings("select").val());
-						$(this).fadeIn(50);
-					});
-				}
-			} else {
-				$(".activeselectholder").each(function() {
-					$(this).children(".selectdropdown").slideUp(100);
-					if ($(this).children("select").val() !== "0") {
-						$(this).children(".desc").fadeOut(100, function() {
-							$(this).text($(this).siblings("select").val());
-							$(this).fadeIn(100);
-						});
-					}
-					$(this).removeClass("activeselectholder");
-				});
-				$(this).children(".selectdropdown").slideDown(100);
-				$(this).addClass("activeselectholder");
-				if ($(this).children("select").val() !== "0") {
-					$(this).children(".desc").fadeOut(100, function() {
-						$(this).text($(this).siblings("select").children("option[value=0]").text());
-						$(this).fadeIn(50);
-					});
-				}
-			}
-		});
-	});
-	$(".selectholder .selectdropdown span").click(function() {
-		var value;
-
-		$(this).siblings().removeClass("active");
-		$(this).addClass("active");
-		value = $(this).text();
-		$(this).parent().siblings("select").val(value);
-		$(this).parent().siblings(".desc").fadeOut(100, function() {
-			$(this).text(value);
-			$(this).fadeIn(100);
-		});
-	});
-}
-
-// select ans
-function radioholder()
-{
-	$('.radioholder').removeClass("activeradioholder");
-	$(this).addClass('activeradioholder').children("input[type=radio]").prop("checked", true);
-}
 
 $(function(){
 	// search
