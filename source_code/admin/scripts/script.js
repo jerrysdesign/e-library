@@ -152,7 +152,7 @@ function additem()
 					"<div class='i-b-block'>"+
 						"<img class='pic' src=''>"+
 						"<input class='ipt_upload_img file' type='file'>"+
-						"<a class='btn btn-blue insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
+						"<a class='btn insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
 						"<a class='btn btn-red remove_img' href='javascript:;'>刪除圖片</a>"+
 					"</div>"+
 				"</div>"+
