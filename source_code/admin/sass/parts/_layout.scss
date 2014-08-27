@@ -55,14 +55,18 @@ $total_width: 1000px;
 #head_nav {
 	width: 7 / 10 * $total_width
 }
-
+// 標題 h2 背景
+%h2bg {
+	background: url('#{$l2}/h2bg3.gif') repeat-x 0 0;
+	color: $black-0;
+}
 %style_menu {
 	height: $styleMenuHeight;
 	line-height: $styleMenuHeight;
 	@include adjust-font-size-to(16px);
 }
 %style_menu_bg {
-	background: url(#{$l2}/h2bg3.gif) repeat-x 0 0; //h2bg3要改名
+	@extend %h2bg;
 	color: #fff;
 }
 

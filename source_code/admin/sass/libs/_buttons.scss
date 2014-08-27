@@ -25,21 +25,21 @@
 		background: darken(#fff, 12);
 	}
 }
-.btn-black {
-	border-color: #000;
-	@include gradient(lighten(#000, 30), #000);
-}
+// .btn-black {
+// 	border-color: #000;
+// 	@include gradient(lighten(#000, 30), #000);
+// }
 .btn-red {
 	border-color: darken($colorAlizarin, 5);
 	border-bottom-color: darken($colorAlizarin, 10);
 	@include gradient($colorAlizarin, darken($colorAlizarin, 5));
 }
-.btn-orange {
-	// #e67e22
-	border-color: darken($colorCarrot, 5);
-	border-bottom-color: darken($colorCarrot, 10);
-	@include gradient($colorCarrot, darken($colorCarrot, 5));
-}
+// .btn-orange {
+// 	// #e67e22
+// 	border-color: darken($colorCarrot, 5);
+// 	border-bottom-color: darken($colorCarrot, 10);
+// 	@include gradient($colorCarrot, darken($colorCarrot, 5));
+// }
 .btn-green {
 	// #2ecc71
 	border-color: darken($colorEmerland, 5);
@@ -52,72 +52,75 @@
 	border-bottom-color: darken($colorPeterRiver, 10);
 	@include gradient($colorPeterRiver, darken($colorPeterRiver, 5));
 }
-.btn-yellow {
-	// #f1c40f
-	border-color: darken($colorSunFlower, 5);
-	border-bottom-color: darken($colorSunFlower, 10);
-	@include gradient($colorSunFlower, darken($colorSunFlower, 3));
-}
-.btn-black {
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
-}
+// .btn-yellow {
+// 	// #f1c40f
+// 	border-color: darken($colorSunFlower, 5);
+// 	border-bottom-color: darken($colorSunFlower, 10);
+// 	@include gradient($colorSunFlower, darken($colorSunFlower, 3));
+// }
+// .btn-black {
+// 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+// }
 .btn-red,
-.btn-orange,
+// .btn-orange,
+// .btn-yellow,
 .btn-green,
-.btn-blue,
-.btn-yellow {
+.btn-blue
+{
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.24);
 }
 .btn-black,
 .btn-red,
-.btn-orange,
+// .btn-orange,
+// .btn-yellow,
 .btn-green,
-.btn-blue,
-.btn-yellow {
+.btn-blue
+{
 	color: #fff;
 }
 .btn-black:hover,
 .btn-red:hover,
-.btn-orange:hover,
+// .btn-orange:hover,
+// .btn-yellow:hover,
 .btn-green:hover,
-.btn-blue:hover,
-.btn-yellow:hover {
+.btn-blue:hover
+{
 	color: rgba(255, 255, 255, .8);
 }
-.btn-black:hover {
-	background: #000;
-}
+// .btn-black:hover {
+// 	background: #000;
+// }
 .btn-red:hover {
 	background: darken($colorAlizarin, 10);
 }
-.btn-orange:hover {
-	background: darken($colorCarrot, 10);
-}
+// .btn-orange:hover {
+// 	background: darken($colorCarrot, 10);
+// }
 .btn-green:hover {
 	background: darken($colorEmerland, 10);
 }
 .btn-blue:hover {
 	background: darken($colorPeterRiver, 10);
 }
-.btn-yellow:hover {
-	background: darken($colorSunFlower, 10);
-}
+// .btn-yellow:hover {
+// 	background: darken($colorSunFlower, 10);
+// }
 
-.btn-small {
-	font-size: .7em;
-}
-.btn-big {
-	font-size: 1.2em;
-	line-height: $baseLine / $em;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-}
-.btn-round {
-	border-radius: 20px;
-}
+// .btn-small {
+// 	font-size: .7em;
+// }
+// .btn-big {
+// 	font-size: 1.2em;
+// 	line-height: $baseLine / $em;
+// 	padding-left: 1.5em;
+// 	padding-right: 1.5em;
+// }
+// .btn-round {
+// 	border-radius: 20px;
+// }
 
-.btn-active,
-.btn-active:hover,
+// .btn-active,
+// .btn-active:hover,
 .btn.disabled,
 .btn[disabled],
 .btn-disabled,
@@ -127,10 +130,10 @@
 	border: 1px solid darken(#fff, 30);
 	text-shadow: 0 1px 1px #fff;
 }
-.btn-active,
-.btn-active:hover {
-	color: #666;
-}
+// .btn-active,
+// .btn-active:hover {
+// 	color: #666;
+// }
 .btn.disabled,
 .btn[disabled],
 .btn-disabled,
@@ -139,71 +142,71 @@
 	cursor: default;
 }
 
-.btn:focus .halflings,
-.btn:hover .halflings {
-	color: $colorGrayDark;
-}
-.btn-black:hover .halflings,
-.btn-red:hover .halflings,
-.btn-orange:hover .halflings,
-.btn-green:hover .halflings,
-.btn-blue:hover .halflings,
-.btn-yellow:hover .halflings {
-	color: rgba(255, 255, 255, .8);
-}
-.btn-disabled:hover .halflings {
-	color: #999;
-}
+// .btn:focus .halflings,
+// .btn:hover .halflings {
+// 	color: $colorGrayDark;
+// }
+// .btn-black:hover .halflings,
+// .btn-red:hover .halflings,
+// .btn-orange:hover .halflings,
+// .btn-green:hover .halflings,
+// .btn-blue:hover .halflings,
+// .btn-yellow:hover .halflings {
+// 	color: rgba(255, 255, 255, .8);
+// }
+// .btn-disabled:hover .halflings {
+// 	color: #999;
+// }
 
-.btn-active .halflings {
-	color: #555;
-}
+// .btn-active .halflings {
+// 	color: #555;
+// }
 
 /* Group  */
-.btn-single,
-.btn-group {
-	display: inline-block;
-	margin-right: 2px;
-	@include pie-clearfix;
-	vertical-align: bottom;
-}
-.btn-single > .btn,
-.btn-single > input,
-.btn-group > .btn,
-.btn-group > input {
-	float: left;
-	border-radius: 0;
-	margin-left: -1px;
-}
-.btn-single > .btn {
-	border-radius: 4px;
-}
-.btn-group > .btn:first-child {
-	border-radius: 4px 0 0 4px;
-}
-.btn-group > .btn:last-child {
-	border-radius: 0 4px 4px 0;
-}
-.btn-group > .btn.btn-round:first-child,
-.btn-group > .input-search:first-child {
-	border-radius: 15px 0 0 15px;
-}
-.btn-group > .btn.btn-round:last-child,
-.btn-group > .input-search:last-child {
-	border-radius: 0 15px 15px 0;
-}
-.btn-append,
-.btn-group .btn {
-	//padding: 7px 1.1em 6px 1.1em;
-}
+// .btn-single,
+// .btn-group {
+// 	display: inline-block;
+// 	margin-right: 2px;
+// 	@include pie-clearfix;
+// 	vertical-align: bottom;
+// }
+// .btn-single > .btn,
+// .btn-single > input,
+// .btn-group > .btn,
+// .btn-group > input {
+// 	float: left;
+// 	border-radius: 0;
+// 	margin-left: -1px;
+// }
+// .btn-single > .btn {
+// 	border-radius: 4px;
+// }
+// .btn-group > .btn:first-child {
+// 	border-radius: 4px 0 0 4px;
+// }
+// .btn-group > .btn:last-child {
+// 	border-radius: 0 4px 4px 0;
+// }
+// .btn-group > .btn.btn-round:first-child,
+// .btn-group > .input-search:first-child {
+// 	border-radius: 15px 0 0 15px;
+// }
+// .btn-group > .btn.btn-round:last-child,
+// .btn-group > .input-search:last-child {
+// 	border-radius: 0 15px 15px 0;
+// }
+// .btn-append,
+// .btn-group .btn {
+// 	//padding: 7px 1.1em 6px 1.1em;
+// }
 
 /* Append  */
-.btn-append {
-	position: relative;
-	top: -1px;
-	margin-left: -2px;
-	border-radius:  0 4px 4px 0;
-}
+// .btn-append {
+// 	position: relative;
+// 	top: -1px;
+// 	margin-left: -2px;
+// 	border-radius:  0 4px 4px 0;
+// }
 
 /* FF fix */
 @-moz-document url-prefix("http://") {

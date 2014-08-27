@@ -39,7 +39,7 @@ img
 // // Forms
 @import "libs/forms"
 // Images
-@import "libs/images"
+// @import "libs/images"
 // Grid system
 @import "libs/grid"
 
@@ -55,7 +55,7 @@ img
 // Button
 @import "libs/buttons"
 // // Blocks
-@import "libs/blocks"
+// @import "libs/blocks"
 
 
 // ::Modules
@@ -67,7 +67,7 @@ img
 // ::Helpers
 // ------------------------------------------------------------
 @import "libs/helpers"
-@import "libs/colors"
+// @import "libs/colors"
 
 
 // ::Page Styles
@@ -102,17 +102,13 @@ img
 // 先暫時放一下
 @import "master"
 
-
-// 標題 h2 背景
-%h2bg
-	background: url('#{$l2}/h2bg.gif') repeat-x 0 0
 // 解決.control-group .control-label .controls 組件定位
 .dt
 	display: table
 	width: 100%
 
 .container
-	background-color: darken(white, 3)
+	// background-color: darken($black-0, 3)
 	@extend %cont
 
 .test
@@ -161,7 +157,7 @@ img
 .a_btn_c2
 	@extend %pie-clearfix
 .cont_tab4
-	background-color: #FFF
+	background-color: $black-0
 	margin-bottom: 10px
 
 
@@ -234,9 +230,6 @@ ul.a_btn_c2 li
 			margin-top: 10px
 
 
-
-
-
 // fix 改變box-sizing
 .cont_tab h2, .cont_tab li, .cont_tab2 h2
 	clear: both
@@ -263,12 +256,12 @@ ul.a_btn_c2 li
 .quiz_subject
 	@extend %is-table
 	width: 1000px
-	@include background-image(linear-gradient(white, $black-5 80%, $black-5))
+	@include background-image(linear-gradient($black-0, $black-5 80%, $black-5))
 	border-bottom: 5px solid darken($colorPeterRiver, 10)
 	margin: -20px -40px -40px -40px
 	padding: 20px 40px 60px 40px
 	+ h3
-		background-color: #fff
+		background-color: $black-0
 		padding: 10px 30px
 		display: inline-block
 		font-size: 1.2em
@@ -304,7 +297,7 @@ $holder-height: 2em
 
 .activeradioholder
 	background: lighten($primary, 10%)
-	color: #fff
+	color: $black-0
 
 .radioholder
 	//.desc
@@ -387,7 +380,7 @@ $selectholderSize: 40px
 	top: 0
 	left: 0
 	background: $black-80
-	color: $white
+	color: $black-0
 	display: none
 	clear: both
 	span
@@ -429,21 +422,22 @@ img.pic
 // Alert box
 %alert-block, .alert-block
 	+is-show-inline
-	padding: 5px 35px 5px 14px
+	padding: 5px 10px
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
-	color: nth($warningColor, 1)
-	background-color: nth($warningColor, 2)
-	border: 1px solid nth($warningColor, 3)
-.alert--warning
-%alert--warning
-	@extend %alert-block
-.alert--success
-	color: nth($successColor, 1)
-	background-color: nth($successColor, 2)
-	border: 1px solid nth($successColor, 3)
-%alert--success
-	@extend %alert-block
-	@extend .alert--success
+// .alert--warning
+// 	color: nth($warningColor, 1)
+// 	background-color: nth($warningColor, 2)
+// 	border: 1px solid nth($warningColor, 3)
+// %alert--warning
+// 	@extend %alert-block
+// 	@extend .alert--warning
+// .alert--success
+// 	color: nth($successColor, 1)
+// 	background-color: nth($successColor, 2)
+// 	border: 1px solid nth($successColor, 3)
+// %alert--success
+// 	@extend %alert-block
+// 	@extend .alert--success
 .alert--info
 	color: nth($infoColor, 1)
 	background-color: nth($infoColor, 2)
@@ -469,8 +463,8 @@ $radius: 0
 	font-weight: 400
 	border: 1px solid #ccc
 	padding: 5px
-	background: #fff
-	min-width: 260px
+	background: $black-0
+	min-width: 200px
 	border-radius: $radius
 	appearance: button
 	-moz-appearance: button

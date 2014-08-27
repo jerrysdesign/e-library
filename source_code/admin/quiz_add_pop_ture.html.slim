@@ -14,15 +14,14 @@ html lang="zh-tw"
 			._afb_main
 				.cont_tab3
 					.pd2020
-						.i-b-block
+						.row
 							.caption.fl
 								| 已加入
 								span  0 
 								| 題
 							.fr
-								.btn-group.i-b-block
-									input type="text"
-									a.bt href="quiz_add_pop_search.html" 搜尋
+								input type="text"
+								a.btn.btn-blue<> href="quiz_add_pop_search.html" 搜尋
 						table.table.table_striped cellpadding="0" cellspacing="1" width="100%"
 							tr
 								th width="10%": input type="checkbox"
@@ -33,12 +32,6 @@ html lang="zh-tw"
 							== render "partials/quiz_list_pop" , :locals => {:f => "ture"}
 			._afb_footbar_out
 				._afb_footbar
-					.i-b-block
-						.caption.fl
-							| 已加入
-							span  0 
-							| 題
-						.fr
-							.btn-group.i-b-block
-								input type="button" value="加入" onclick="javascript:location.href='exam_paper_list_ture.html'"
-								input type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"
+					.center-block
+						input.btn.btn-blue type="button" value="加入" onclick="javascript:location.href='exam_paper_list_ture.html'"
+						input.btn.btn-red type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"

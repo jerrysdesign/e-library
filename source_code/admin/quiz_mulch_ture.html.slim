@@ -3,7 +3,7 @@
 		.masthead__inner
 			.masthead__head
 				.masthead__title 題目
-			.masthead__content
+			.masthead__content.units-row.end
 				== render "partials/type" , :locals => {:f => "mulch"}
 	.container
 		.cont.cont_tab4
@@ -37,9 +37,8 @@
 								input type="text" value="=zh_lorem_sentences 1"
 							.i-b-block.row
 								== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
-				.control-group
-					label.control-label
-					.controls
-						a.btn.add href="javascript:;" 增加選項
-
-		== render "partials/quiz_list" , :locals => {:f => "else"}
+				.is-table
+					.control-group
+						.control-label
+						.controls
+							a.btn.btn-blue.add href="javascript:;" 增加選項

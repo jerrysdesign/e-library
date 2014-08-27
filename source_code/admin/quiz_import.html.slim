@@ -6,7 +6,8 @@
 					span.icon04
 					| 匯入題目
 				.pd2040
-					| 供選取5題
+					.alert-block.alert--info
+						| 共選取5題
 					.fr
 						a.btn.btn-blue<> href="subject_edit.html" 匯入
 						a.btn.btn-red<> href="javascript:;" onclick="history.back()" 取消
@@ -16,11 +17,8 @@
 						p.pd2020
 							=zh_lorem_paragraphs 2 
 						ol.upper-alpha.pd2020
-							li
-								=zh_lorem_sentences 1
-							li
-								=zh_lorem_sentences 1
-							li
-								=zh_lorem_sentences 1
-							li
-								=zh_lorem_sentences 1
+							-6.times do
+								li
+									.icon-list
+									=zh_lorem_sentences 1
+		

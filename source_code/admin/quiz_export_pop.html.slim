@@ -14,15 +14,14 @@ html lang="zh-tw"
 			._afb_main
 				.cont_tab3
 					.pd2020
-						.i-b-block
+						.row
 							.caption.fl
 								| 共有
 								span  500 
 								| 題
 							.fr
-								.btn-group.i-b-block
-									input type="text"
-									input type="button" value="搜尋"
+								input type="text"
+								a.btn.btn-blue<> href="quiz_add_pop_search.html" 搜尋
 						table.table.table_striped cellpadding="0" cellspacing="1" width="100%"
 							tr
 								th width="10%": input type="checkbox"
@@ -33,12 +32,6 @@ html lang="zh-tw"
 							== render "partials/quiz_list_pop_asset" , :locals => {:f => "ture"}
 			._afb_footbar_out
 				._afb_footbar
-					.i-b-block
-						.caption.fl
-							| 已選擇
-							span  0 
-							| 題
-						.fr
-							.btn-group.i-b-block
-								input type="button" value="輸出"
-								input type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"
+					.center-block
+						input.btn.btn-blue<> type="button" value="輸出"
+						input.btn.btn-red<> type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"
