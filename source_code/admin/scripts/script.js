@@ -170,7 +170,7 @@ function additem()
 	$('.file',new_element).on('change',change_img);
 	$('.remove_img').on('click',remove_img);
 	$('.radioholder').on('click',radioholder);
-	$('.quiz_subject,.quiz_add_subject').find('textarea').on('keyup',btn_enable);
+	$('.cont_tab4 textarea').on('focus',c_val_bf);
 	btn_enable();
 }
 
@@ -206,7 +206,33 @@ function renumber()
 	});
 }
 
+// 判斷欄位是否綁定功能
+function c_val_bf()
+{
+
+	var	_txa   = $('textarea');
+		_len   = _txa.length,
+		_vlen  = 0;
+
+	$('textarea').each(function( _idx )
+	{
+		if($(this).val().trim() != '' || $('.remove_img').eq(_idx).is(':visible'))
+		{
+			_vlen ++;
+		}
+		if( _vlen + 1  >= _len )
+		{
+			_txa.on('keyup',btn_enable);
+		}
+		else
+		{
+			_txa.off('keyup',btn_enable);
+		}
+	});
+}
+
 // 判斷儲存按鈕是否啓用
+ii = 0;
 function btn_enable()
 {
 	var $textarea = $('textarea'),
@@ -234,6 +260,8 @@ function btn_enable()
 	{
 		$('.center-block > input:eq(0)').attr('disabled', true);
 	}
+	ii ++;
+	console.log('綁定次數' + ' - ' + ii);
 }
 
 // [ exam ] checkbox - checked all
@@ -339,11 +367,10 @@ function thead_fixed()
 // barCharts
 function barCharts()
 {
+	// barChart gap text
 	// nofp = number of people
 	// 單位最大人數
 	// 100/單位最大人數為基數
-
-	// barChart gap text
 	var _sum = 0;
 	$('.chart__bars:first .chart__bar').each(function(){
 		_sum += Number($(this).data('nofp'));
@@ -364,6 +391,7 @@ function barCharts()
 
 
 $(function(){
+
 	// search
 	var _speed = 300;
 	$(".search").focus(function()
@@ -461,7 +489,7 @@ $(function(){
 	$('.radioholder').on('click',radioholder);
 	$('.add').on('click',additem);
 	$('.radioholder').on('click',btn_enable);
-	$('.quiz_subject,.quiz_add_subject').find('textarea').on('keyup',btn_enable);
+	$('.cont_tab4 textarea').on('focus',c_val_bf);
 	Remove();
 	selectholder();
 	renumber();
