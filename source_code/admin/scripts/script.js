@@ -171,6 +171,7 @@ function additem()
 	$('.remove_img').on('click',remove_img);
 	$('.radioholder').on('click',radioholder);
 	$('.cont_tab4 textarea').on('focus',c_val_bf);
+	$('.width-100:last').focus().bind(c_val_bf());
 	btn_enable();
 }
 
