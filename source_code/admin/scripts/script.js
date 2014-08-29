@@ -114,14 +114,14 @@ function change_img()
 		path = $(this).val();
 		clip.attr("src", path);
 	}
-	$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
+	$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur').next().hide();
 	btn_enable();
 }
 
 // 刪除圖片
 function remove_img()
 {
-	$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
+	$(this).removeClass('cur').next().show().prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
 	btn_enable();
 }
 
@@ -220,7 +220,7 @@ function c_val_bf()
 		{
 			_vlen ++;
 		}
-		if( _vlen + 1  >= _len )
+		if( ( _vlen + 1 >= _len )  && $('.activeradioholder').size() != 0)
 		{
 			_txa.on('keyup',btn_enable);
 		}
