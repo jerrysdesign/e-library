@@ -72,6 +72,7 @@ function radioholder()
 {
 	$('.radioholder').removeClass("activeradioholder");
 	$(this).addClass('activeradioholder').children("input[type=radio]").prop("checked", true);
+	btn_enable();
 }
 
 // 插入圖片
@@ -154,6 +155,7 @@ function additem()
 						"<input class='ipt_upload_img file' type='file'>"+
 						"<a class='btn insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
 						"<a class='btn btn-red remove_img' href='javascript:;'>刪除圖片</a>"+
+						"<span class='alert-block'>插入圖片檔案最大為 2 Mb，格式限定 jpg、png。</span>"+
 					"</div>"+
 				"</div>"+
 			"</div>"+
@@ -170,8 +172,7 @@ function additem()
 	$('.file',new_element).on('change',change_img);
 	$('.remove_img').on('click',remove_img);
 	$('.radioholder').on('click',radioholder);
-	$('.cont_tab4 textarea').on('focus',c_val_bf);
-	$('.width-100:last').focus().bind(c_val_bf());
+	$('.width-100:last').bind('focus',c_val_bf).focus();
 	btn_enable();
 }
 
@@ -224,6 +225,7 @@ function c_val_bf()
 		if( ( _vlen + 1 >= _len )  && $('.activeradioholder').size() != 0)
 		{
 			_txa.on('keyup',btn_enable);
+			return false;
 		}
 		else
 		{
@@ -489,7 +491,6 @@ $(function(){
 	$('.file').on('change',change_img);
 	$('.radioholder').on('click',radioholder);
 	$('.add').on('click',additem);
-	$('.radioholder').on('click',btn_enable);
 	$('.cont_tab4 textarea').on('focus',c_val_bf);
 	Remove();
 	selectholder();
