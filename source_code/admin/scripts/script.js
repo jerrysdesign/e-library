@@ -235,7 +235,6 @@ function c_val_bf()
 }
 
 // 判斷儲存按鈕是否啓用
-ii = 0;
 function btn_enable()
 {
 	var $textarea = $('textarea'),
@@ -263,8 +262,6 @@ function btn_enable()
 	{
 		$('.center-block > input:eq(0)').attr('disabled', true);
 	}
-	ii ++;
-	console.log('綁定次數' + ' - ' + ii);
 }
 
 // [ exam ] checkbox - checked all
