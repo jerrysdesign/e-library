@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>進入測驗</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/style01.css" />
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+	<script src="scripts/jquery-1.9.0.min.js"></script>
+	<script src="scripts/jquery.fancybox.js"></script>
+	<script src="scripts/script.js"></script>
+</head>
+<body>
+	<div id="head_area">
+		<div id="head">
+			<h1 id="logo"><a href="index.html">南門國中圖書館</a></h1>
+			<div id="head_nav">
+				<ul>
+					<li>歡迎光臨！&nbsp;測試人員&nbsp;您好！<a class="fancybox fancybox.iframe" href="login.html">帳號登入&nbsp;|</a></li>
+					<li><a class="fancybox fancybox.iframe" href="settings.html">帳號設定</a>&nbsp;|</li>
+					<li><a href="about.html">關於我們</a>&nbsp;|</li>
+					<li><a href="help.html">服務說明</a></li>
+					<li><a href="#" class="lang">E</a></li>
+					<li><a href="#" class="lang">繁</a></li>
+					<li><a href="#" class="lang">簡</a></li>
+					<li><a href="#" class="lang">後</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="menu_area" class="quiz_h">
+		<div id="menu_bar">
+			<div class="quiz_h_c1"><span>測驗卷</span></div>
+			<div class="quiz_h_c2">
+				<h2 class="quiz_h_title">別在我睡著的時候打電話給我_閱讀測驗<span>共50題</span></h2>
+				<div class="quiz_h_description">測驗進行中，尚餘<em>5</em>分<em>00</em>秒<a href="javascript:void(0)" id="q_submit" class="btn02">送出測驗</a></div>
+			</div>
+			<div class="clearb"></div>
+		</div>
+	</div>
+	<div id="cont_area">
+		<div id="cont">
+			<div id="quizs"><!-- class="quizs_ans"-->
+				<ol>
+					<li><!--li class="wrong"-->
+						<h3>小明發現甲與乙兩種生物同樣都是貓科動物;今已知甲是動物界、脊索動物門、哺乳綱、食肉目、貓科的動物，請問下列何者正確?</h3>
+						<ul>
+							<li><span>A</span><div class="q_topic"><p>甲與乙都不是屬於動物界</p></div></li><!--li class="ans"-->
+							<li><span>B</span><div class="q_topic"><p>只有甲為食肉目</p></div></li>
+							<li><span>C</span><div class="q_topic"><p>甲與乙同為哺乳綱</p></div></li>
+							<li><span>D</span><div class="q_topic"><p>甲與乙種名相同</p></div></li>
+						</ul>
+					</li>
+					<li>
+						<h3>那些動物不屬於哺乳類動物?</h3>
+						<ul>
+							<li><span>A</span><div class="q_topic"><p>鴨嘴獸</p></div></li>
+							<li><span>B</span><div class="q_topic"><p>台灣</p></div></li>
+							<li><span>C</span><div class="q_topic"><div class="q_pic"><img src="images/books10.jpg"></div></div></li>
+							<li><span>C</span><div class="q_topic"><p>麻雀</p><div class="q_pic"><img src="images/books03.jpg"></div></div></li>
+						</ul>
+					</li>
+					<li>
+						<h3>《詩經》是我國最早的一部詩歌總集，其中六義乃：風、雅、頌、賦、比、興，保存至今作品僅餘三百零五篇，取其整數，故曰「詩三百」。
+							<div class="q_pic"><img src="images/books02.jpg"></div></h3>
+						<ul>
+							<li><span>T</span><div class="q_topic"></div></li>
+							<li><span>F</span></li>
+						</ul>
+					</li>
+					<li>
+						<h3><br><div class="q_pic"><img src="images/books02.jpg"></div></h3>
+						<ul>
+							<li><span>O</span><div class="q_topic"></div></li>
+							<li><span>X</span><div class="q_topic"></div></li>
+						</ul>
+					</li>
+					<li>
+						<h3>關於這張圖片，下列描述何者為真?<div class="q_pic"><img src="images/books06.jpg"></div></h3>
+						<ul>
+							<li><span>√</span><div class="q_topic"></div></li>
+							<li><span>X</span><div class="q_topic"></div></li>
+						</ul>
+					</li>
+				</ol>
+				<div class="clearb"></div>
+			</div>
+		</div>
+	</div>
+	<div id="foot_area">
+		<div id="foot">
+			浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESERVED.
+		</div>
+	</div>
+
+	<!-- box_quiz -->
+	<div id="box_quizs" class="fancybox box_quizs">
+		<h2><div class="icon14"></div><span>進入測驗</span></h2>
+		<div class="q_cont">測驗進行中，尚餘<em>5</em>分<em>00</em>秒<br>老師結束測驗或倒數結束後尚未送出測驗卷者，不納入計分。</div>
+		<div class="q_btn">
+			<input type="button" class="btn02" value="離開">
+			<input type="button" class="btn02 quiz_btn" value="進入測驗">
+		</div>
+	</div><!-- box_quiz//-->
+</body>
+</html>
+<script>
+
+function RemainTime(){
+	SysSecond = '300', // total quiz time in seconds
+	InterValObj = window.setInterval(SetRemainTime, 1000);
+
+	function SetRemainTime(){
+	    if (SysSecond > 0){ 
+	        SysSecond = SysSecond - 1; 
+	        var second = Math.floor(SysSecond % 60);  
+	        var minite = Math.floor(SysSecond / 60);
+	        $('.quiz_h_description,.q_cont').find('em').text(minite).next('em').text(second);
+	    }else{
+	        window.clearInterval(InterValObj);
+			var $box = $('#box_quizs'),
+				_t1 = '測驗結束',
+				_t2 = '離開測驗',
+				_t3 = '測驗時間已結束，您未送出測驗，將不納入計分';
+			$.fancybox.open({
+				href : '#box_quizs',
+				closeBtn : false,
+			    helpers : {overlay : {closeClick : false}},
+				keys : {close : null},
+			});
+			$box.find('h2 > span').html(_t1).parent().next().text(_t3).next().children(":eq(0)").remove().end().children(":eq(0)").val(_t2).on('click',function(){
+				// submit
+				window.location.href='client_book_detail.html';
+			});
+	    }
+	}
+}
+
+$(function(){
+	
+	// ans - choose
+	$('#quizs').on('click','ul > li',function(){
+		$(this).addClass('choose').siblings().removeClass('choose');
+	});
+	
+	// quiz - before
+	$('.box_quizs').fancybox({
+		beforeLoad : function(){$('body').css('overflow','hidden')},
+		closeBtn : false,
+	    helpers : {overlay : {closeClick : false}},
+		keys : {close : null},
+		afterClose : function(){
+			$('body').css('overflow','auto');
+		}
+	}).click();
+	$('.quiz_btn').on('click',function(){
+		$.fancybox.close();
+		return false;
+	}).prev().on('click',function(){
+		 window.location.href='client_book_detail.html';
+	});
+
+	// quiz - submit
+	$('#q_submit').on('click',function(){
+		var $box = $('#box_quizs'),
+			_t1 = '送出測驗',
+			_t2 = '取消',
+			_t3 = '送出測驗後即無法修改答案，確定送出？';
+		$.fancybox({
+			href : '#box_quizs',
+			closeBtn : false,
+		    helpers : {overlay : {closeClick : false}},
+			keys : {close : null},
+		});
+		$box.find('h2 > span').html(_t1).parent().next().text(_t3).next().children(":eq(0)").val(_t2).on('click',function(){
+			// cancel
+			window.location.href='javascript:void(0)';
+			$.fancybox.close();
+			return false;
+		}).next().val(_t1).on('click',function(){
+			// submit
+			window.location.href='client_book_detail.html';
+		});
+	});
+
+	RemainTime();
+});
+</script>
