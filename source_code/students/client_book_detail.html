@@ -63,7 +63,6 @@
 						<li><a href="#">電子資訊(5)</a></li>
 					</ul>
 				</div>
-				<div id="banner"><img src="images/banner.jpg"></div>				
 				<div id="news">
 					<h2><div class="icon02"></div>最新消息</h2>
 					<ol>
@@ -79,11 +78,13 @@
 						<li class="no10"><a href="#">亦可離線閱讀。</a></li>
 					</ol>
 				</div>				
+				<div id="banner"><img src="images/banner.jpg"></div>
 			</div>
 			<div id="books">
 				<div id="book_detail">
 					<h2><div class="icon05"></div>書籍資料</h2>
 					<div class="col_1">
+						<a class="cover" href="#"></a>
 						<img src="images/books01.jpg">
 						<h3>請和我一起閱讀土地的詩行：屏東詩旅手札</h3>
 						<dl>
@@ -97,18 +98,17 @@
 							<dt>適讀年齡</dt><dd>國中以上</dd>
 						</dl>
 						<ul class="bd_bt">
-							<li><a href="#" class="btn01">線上瀏覽</a></li>
+							<li><a href="#" class="btn03">線上瀏覽</a></li>
 							<li><a href="#" class="btn02"><span class="reserve">&#9684;</span>預約</a></li>
-							<li><a href="quiz_results_list.html" class="btn03">測驗紀錄</a></li>
-							<li><a href="quiz.html" class="btn04">進入測驗</a></li>
+							<li><a href="quiz_results_list.html" class="btn02">測驗紀錄</a></li>
+							<li><a href="quiz.html" class="btn02">進入測驗</a></li>
 						</ul>
 						<div class="tabs">
 							<ul class="d_tabs">
 								<li><a href="#d_tab1">簡介</a></li>
 								<li><a href="#d_tab2">目錄</a></li>
-								<li><a href="#d_tab3">導讀</a></li>
-								<li><a href="#d_tab4">名人推薦</a></li>
-								<li><a href="#d_tab5">得獎紀錄</a></li>
+								<li><a href="#d_tab3">學習單</a></li>
+								<li><a href="#d_tab4">心得分享</a></li>
 							</ul>
 							<ul class="d_cont">
 								<li id="d_tab1">
@@ -132,9 +132,171 @@
 										<li>走在歷史的餘影．阿朗壹古道</li>
 									</ol>
 								</li>
-								<li id="d_tab3">尚無導讀資訊</li>
-								<li id="d_tab4">尚無名人推薦資訊</li>
-								<li id="d_tab5">尚無得獎紀錄</li>
+								<li id="d_tab3">
+									<div id="main-page" align="center">
+										<div id="ktagdialog"></div>
+										<div id="book_case">
+											<div id="pager">
+												<table width="100%" cellspacing="0" cellpadding="0" class="list_table">
+													<thead>
+														<tr>
+															<th style="width:10%">序號</th>
+															<th style="width:40%">名稱</th>
+															<th style="width:15%">上傳帳號</th>
+															<th style="width:25%">上傳日期</th>
+															<th style="width:10%">功能</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>test</td>
+															<td>test</td>
+															<td>2014/08/19 19:12:20</td>
+															<td><a href="javascript:void(0);">下載</a></td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td>test</td>
+															<td>test</td>
+															<td>2014/08/19 19:12:13</td>
+															<td><a href="javascript:void(0);">下載</a></td>
+														</tr>
+													</tbody>
+												</table>
+												<div class="pager">
+													<ul>
+														<li class="prev"><a href="javascript:goPage_pager(1);">&lt;</a></li>
+														<li class="current"><a>1</a></li>
+														<li class="next"><a href="javascript:goPage_pager(1);">&gt;</a></li>
+													</ul>
+													<div class="sltbox">
+														<select onchange="javascript:sizePage_pager($(this).val());" class="search_slt">
+															<option value="10">10</option>
+															<option value="20" selected="">20</option>
+															<option value="50">50</option>
+															<option value="80">80</option>
+															<option value="100">100</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li id="d_tab4">
+									<div id="main-page" align="center">
+										<div id="ktagdialog"></div>
+										<div id="book_case">
+											<div id="pager">
+												<table width="100%" cellspacing="0" cellpadding="0" class="list_table">
+													<thead>
+														<tr>
+															<th style="width:10%">序號</th>
+															<th style="width:15%">帳號</th>
+															<th style="width:65%">內容</th>
+															<th style="width:10%">功能</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>test</td>
+															<td>test</td>
+															<td>
+																<a href="javascript:void(0);">編輯</a><br>
+																<a href="javascript:void(0);">刪除</a>
+															</td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td>test</td>
+															<td>test</td>
+															<td>
+																<a href="javascript:void(0);">編輯</a><br>
+																<a href="javascript:void(0);">刪除</a>
+															</td>
+														</tr>
+														<tr>
+															<td>3</td>
+															<td>test</td>
+															<td>test</td>
+															<td>
+																<a href="javascript:void(0);">編輯</a><br>
+																<a href="javascript:void(0);">刪除</a>
+															</td>
+														</tr>
+														<tr>
+															<td>4</td>
+															<td>test</td>
+															<td>test</td>
+															<td>
+																<a href="javascript:void(0);">編輯</a><br>
+																<a href="javascript:void(0);">刪除</a>
+															</td>
+														</tr>
+														<tr>
+															<td>5</td>
+															<td>test</td>
+															<td>test</td>
+															<td>
+																<a href="javascript:void(0);">編輯</a><br>
+																<a href="javascript:void(0);">刪除</a>
+															</td>
+														</tr>
+														<tr>
+															<td>6</td>
+															<td>test</td>
+															<td>test</td>
+															<td>
+																<a href="javascript:void(0);">編輯</a><br>
+																<a href="javascript:void(0);">刪除</a>
+															</td>
+														</tr>
+														<tr>
+															<td>7</td>
+															<td>test</td>
+															<td>test</td>
+															<td>
+																<a href="javascript:void(0);">編輯</a><br>
+																<a href="javascript:void(0);">刪除</a>
+															</td>
+														</tr>
+														<tr>
+															<td>8</td>
+															<td>test</td>
+															<td>test</td>
+															<td>
+																<a href="javascript:void(0);">編輯</a><br>
+																<a href="javascript:void(0);">刪除</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<div class="pager">
+													<ul>
+														<li class="prev"><a href="javascript:goPage_pager(1);">&lt;</a></li>
+														<li class="current"><a>1</a></li>
+														<li><a>2</a></li>
+														<li><a>3</a></li>
+														<li><a>4</a></li>
+														<li><a>5</a></li>
+														<li class="next"><a href="javascript:goPage_pager(1);">&gt;</a></li>
+													</ul>
+													<div class="sltbox">
+														<select onchange="javascript:sizePage_pager($(this).val());" class="search_slt">
+															<option value="10">10</option>
+															<option value="20" selected="">20</option>
+															<option value="50">50</option>
+															<option value="80">80</option>
+															<option value="100">100</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
 							</ul>
 						</div>
 					</div>

@@ -25,18 +25,22 @@ $(function(){
 	// fixed_head & back-top
 	var $win = $(window),
 		$menu = $('#menu_area'),
-		_menuOffset = $menu.offset().top;
+		$cont = $('#cont_area'),
+		_menuOffset = $menu.offset().top,
+		_menuheight = $menu.outerHeight(true);
 
 	$win.scroll(function() {
 		var _fixed = $menu.hasClass('fixed');
 		if ($win.scrollTop() >= _menuOffset) {
 			if (!_fixed) {
 				$menu.addClass('fixed');
+				$cont.css('margin-top',_menuheight);
 				$('.backtop').fadeIn();
 			}
 		} else {
 			if (_fixed) {
 				$menu.removeClass('fixed');
+				$cont.css('margin-top','0');
 				$('.backtop').fadeOut();
 			}
 		}

@@ -33,7 +33,7 @@
 			<div class="quiz_h_c1"><span>測驗卷</span></div>
 			<div class="quiz_h_c2">
 				<h2 class="quiz_h_title">別在我睡著的時候打電話給我_閱讀測驗<span>共50題</span></h2>
-				<div class="quiz_h_description">測驗進行中，尚餘<em>5</em>分<em>00</em>秒<a href="javascript:void(0)" id="q_submit">送出測驗</a></div>
+				<div class="quiz_h_description">測驗進行中，尚餘<em>5</em>分<em>00</em>秒<a href="javascript:void(0)" id="q_submit" class="btn02">送出測驗</a></div>
 			</div>
 			<div class="clearb"></div>
 		</div>
@@ -98,7 +98,7 @@
 		<h2><div class="icon14"></div><span>進入測驗</span></h2>
 		<div class="q_cont">測驗進行中，尚餘<em>5</em>分<em>00</em>秒<br>老師結束測驗或倒數結束後尚未送出測驗卷者，不納入計分。</div>
 		<div class="q_btn">
-			<input type="button" class="btn01" value="離開">
+			<input type="button" class="btn02" value="離開">
 			<input type="button" class="btn02 quiz_btn" value="進入測驗">
 		</div>
 	</div><!-- box_quiz//-->
@@ -128,7 +128,7 @@ function RemainTime(){
 			    helpers : {overlay : {closeClick : false}},
 				keys : {close : null},
 			});
-			$box.find('h2 > span').html(_t1).parent().next().text(_t3).next().children(":eq(0)").remove().end().children(":eq(0)").width('100%').val(_t2).on('click',function(){
+			$box.find('h2 > span').html(_t1).parent().next().text(_t3).next().children(":eq(0)").remove().end().children(":eq(0)").val(_t2).on('click',function(){
 				// submit
 				window.location.href='client_book_detail.html';
 			});
