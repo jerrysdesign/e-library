@@ -122,7 +122,7 @@ function change_img()
 // 刪除圖片
 function remove_img()
 {
-	$(this).removeClass('cur').next().show().prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
+	$(this).removeClass('cur').next().show().end().prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
 	btn_enable();
 }
 
