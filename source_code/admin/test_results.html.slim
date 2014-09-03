@@ -46,21 +46,27 @@
 									li
 										.chart__bar data-nofp="10"
 										.chart__left_lable A
+										.chart__right_lable
 									li
 										.chart__bar.right data-nofp="30"
 										.chart__left_lable B
+										.chart__right_lable
 									li
 										.chart__bar data-nofp="5"
 										.chart__left_lable C
+										.chart__right_lable
 									li
 										.chart__bar data-nofp="15"
 										.chart__left_lable D
+										.chart__right_lable
 									li
 										.chart__bar data-nofp="5"
 										.chart__left_lable E
+										.chart__right_lable
 									li
 										.chart__bar data-nofp="10"
 										.chart__left_lable F
+										.chart__right_lable
 						- (5..10).each do |n|
 							li
 								h6 第#{n}題
@@ -68,9 +74,11 @@
 									li
 										.chart__bar data-nofp="10"
 										.chart__left_lable.right O
+										.chart__right_lable
 									li
 										.chart__bar.right data-nofp="20"
 										.chart__left_lable X
+										.chart__right_lable
 		.cont_tab4
 			.trtable_wrapper
 				table.table.trtable.js-fixed-header-01 border="0" 
@@ -97,7 +105,7 @@
 									span
 										| 作答
 					tbody
-						-50.times do
+						-3.times do
 							tr
 								th =zh_lorem_name
 								-10.times do

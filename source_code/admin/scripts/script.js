@@ -369,26 +369,41 @@ function barCharts()
 {
 	// barChart gap text
 	// nofp = number of people
-	// 單位最大人數
-	// 100/單位最大人數為基數
 	var _sum = 0;
 	$('.chart__bars:first .chart__bar').each(function(){
 		_sum += Number($(this).data('nofp'));
-	});
-	$('.chart__numbers > li > span').each(function(key){
-		var _k = key + 1,
-			_s = _sum / 5;
-		$(this).text(Math.floor(_s * _k));
 	});
 
 	// barChart width
 	$('.chart__bar').each(function( key, bar )
 	{
-		var nofp = $(this).data('nofp');
-		$(this).css('width', ( nofp / _sum ) * 100 + '%');
+		var $this = $(this),
+			label = $this.siblings('.chart__right_lable'),
+			 nofp = $this.data('nofp'),
+			width = (( nofp / _sum ) * 100);
+
+		$this.css('width', width + '%');
+		label.text( $(this).data('nofp') + ' 人 / ' + width.toFixed(1) + ' %').css('left', width + 2 + '%');
 	});
 }
 
+// table_autoheight
+function table_autoheight()
+{
+	var $tr    = $('.fht-table tbody tr'),
+		_size  = $tr.size() / 2,
+		_thh   = $('.fht-table thead tr:eq(0)').height(),
+		_tbh   = $tr.eq(0).height(),
+		_sh    = 20,
+		_autoh = (_size * _tbh) + _thh + _sh;
+
+	console.log(_autoh);
+	if(_size < 11)
+	{
+		$('.fht-tbody').height('auto');
+		$('.trtable_wrapper').height(_autoh);
+	}
+}
 
 $(function(){
 
@@ -481,6 +496,7 @@ $(function(){
 		footer: false,
 		fixedColumns: 1
 	});
+	table_autoheight();
 
 	// [ quiz ] - add subject
 	$('.insert_img').on('click',insert_img);

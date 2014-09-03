@@ -47,7 +47,7 @@ $chart_bar_color 					: nth($errorColor, 3), nth($successColor, 3)
 				background-color: darken(saturate(nth($chart_bar_color, 1), 20%), 15%) 
 				&:before
 					color: nth($infoColor, 1)
-					content: attr(data-nofp) "人"
+					// content: attr(data-nofp) "人"
 					position: absolute
 					left: 100%
 					top: .5em
@@ -55,6 +55,8 @@ $chart_bar_color 					: nth($errorColor, 3), nth($successColor, 3)
 					margin-left: 10px
 				&.right
 					background-color: darken(saturate(nth($chart_bar_color, 2),10%), 10%)
+			.chart__right_lable
+				color: $black-50
 .chart__bar
 	position: relative
 	height: $chart_bar_height
@@ -72,4 +74,10 @@ $chart_bar_color 					: nth($errorColor, 3), nth($successColor, 3)
 	position: absolute
 	top: 1em
 	right: 100%
+	text-align: center
+
+.chart__right_lable
+	color: $black-20
+	position: absolute
+	top: 1em
 	text-align: center
