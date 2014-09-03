@@ -37,6 +37,10 @@
 	@include text-centered;
 }
 
+%text-left, .text-left {
+	@include text-left;
+}
+
 %text-right, .text-right {
 	@include text-right;
 }
