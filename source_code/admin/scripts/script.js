@@ -383,7 +383,7 @@ function barCharts()
 			width = (( nofp / _sum ) * 100);
 
 		$this.css('width', width + '%');
-		label.text( $(this).data('nofp') + ' 人 / ' + width.toFixed(1) + ' %').css('left', width + 2 + '%');
+		label.text(width.toFixed(1) + ' % (' + $(this).data('nofp') + '人)').css('left', width + 2 + '%');
 	});
 }
 
@@ -397,12 +397,28 @@ function table_autoheight()
 		_sh    = 20,
 		_autoh = (_size * _tbh) + _thh + _sh;
 
-	console.log(_autoh);
 	if(_size < 11)
 	{
 		$('.fht-tbody').height('auto');
 		$('.trtable_wrapper').height(_autoh);
 	}
+}
+
+// accuracy_rate
+function accuracy_rate()
+{
+	$('.trtable th span + span').each(function(i){
+		var error = 0;
+		$(this).parents('.fht-thead').next()
+		.find('td:nth-child(' + (i + 2) +')')
+		.each(function(i)
+		{
+			error += $(this).find('.error').length;
+		});
+		var _len = $('.fht-tbody:eq(1) tbody tr').length,
+			_accuracyrate = ( _len - error) / _len * 100 + '%';
+		$(this).text(_accuracyrate);
+	});
 }
 
 $(function(){
@@ -496,6 +512,7 @@ $(function(){
 		footer: false,
 		fixedColumns: 1
 	});
+	accuracy_rate();
 	table_autoheight();
 
 	// [ quiz ] - add subject
