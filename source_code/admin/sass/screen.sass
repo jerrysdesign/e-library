@@ -234,11 +234,15 @@ ul.a_btn_c2 li
 .cont_tab h2, .cont_tab li, .cont_tab2 h2
 	clear: both
 
-.ipt_upload_img
+%upload-fiie
 	visibility: hidden
 	width: 1px
 	height: 1px
 	position: absolute
+
+.ipt_upload_img,
+.upload-fiie--img
+	@extend %upload-fiie
 .is-inlineblock-show
 	img
 		&.pic
