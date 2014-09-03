@@ -378,7 +378,7 @@ function barCharts()
 	$('.chart__bar').each(function( key, bar )
 	{
 		var $this = $(this),
-			label = $this.siblings('.chart__right_lable'),
+			label = $this.siblings('.chart__right-lable'),
 			 nofp = $this.data('nofp'),
 			width = (( nofp / _sum ) * 100);
 
