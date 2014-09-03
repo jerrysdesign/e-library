@@ -36,20 +36,17 @@
 				table.table.trtable.js-fixed-header-01 border="0" 
 					thead
 						tr
-							th width="10%"
-								div
-									span 帳號 \ 正確率 \ 題目
-
+							th.th-title width="10%"
+								span
+									| 題目 \ 正確率 \ 學生帳號
 							- (1..10).each do |n|
 								th scope="col"
-									div
-										span
-											| #{n}.(
-											=lorem_q_m
-											| )
-										span
-											| &nbsp;
-
+									span.no
+										| #{n}.(
+										=lorem_q_m
+										| )
+									span
+										| &nbsp;
 							- (11..30).each do |n|
 								th scope="col"
 									span.no
