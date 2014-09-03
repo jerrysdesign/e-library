@@ -5,15 +5,15 @@
 		tr
 			td width="6%"
 				input.chk type="checkbox"
-			td width="6%"
+			td width="8%"
 				| #{n}
 			td width="8%"
 				| 是非
-			td.text-l
+			td.text-left
 				=zh_lorem_words 90
-			td
+			td width="12%"
 				=lorem_date("%Y/%m/%d", 2014..2014)
-			td width="10%"
+			td width="12%"
 				=lorem_date("%Y/%m/%d", 2014..2014)
 			/ td
 			/   a href="javascript:;" 修改
@@ -24,5 +24,6 @@
 - else
 	tr
 		td colspan="6"
-			.alert-block.alert--error.unit-50.center-block.unit-push-25
-				| 尚未加入任何項目
+			.center-block
+				.alert-block.alert--error.unit-50
+					| 尚未加入任何項目
