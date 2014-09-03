@@ -7,16 +7,17 @@
 .trtable
 	// 與主樣式衝突
 	margin: 0
-	border: 1px solid $black-30
+	// border: 1px solid $black-30
 	th
-		background-color: $black-10
+		//background-color: $black-10
 
 	th, td
 		text-align: center
+		vertical-align: middle
 		padding: 0
 		span + span
 			color: $white
-			background: $black-15
+			background: #85d640
 			line-height: 1
 			
 	th , td
@@ -34,6 +35,10 @@
 		background-color: darken(nth($errorColor, 2), 3%) 
 		color: lighten(nth($errorColor, 1), 30%) 
 	th
-		background: $white
+		background-color: $white
+		&.th-title
+			background: darken($white, 7)
+		.no
+			background: darken($white, 3)
 		span
 			white-space: nowrap
