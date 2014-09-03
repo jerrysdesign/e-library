@@ -93,7 +93,7 @@ function change_img()
 	
 	if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
 	{
-		$(this).replaceWith($('.file:eq(0)').val('').clone(true));
+		$(this).replaceWith($('.file--img:eq(0)').val('').clone(true));
 		alert('只允許上傳PNG或JPG影像檔');
 		return false;
 	}
@@ -122,7 +122,7 @@ function change_img()
 // 刪除圖片
 function remove_img()
 {
-	$(this).removeClass('cur').next().show().end().prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
+	$(this).removeClass('cur').next().show().end().prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file--img:eq(0)').val('').clone(true));
 	btn_enable();
 }
 
@@ -152,7 +152,7 @@ function additem()
 					"<textarea class='width-100' rows='1'></textarea>"+
 					"<div class='i-b-block'>"+
 						"<img class='pic' src=''>"+
-						"<input class='ipt_upload_img file' type='file'>"+
+						"<input class='upload-fiie--img file' type='file'>"+
 						"<a class='btn insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
 						"<a class='btn btn-red remove_img' href='javascript:;'>刪除圖片</a>"+
 						"<span class='alert-block'>插入圖片檔案最大為 2 Mb，格式限定 jpg、png。</span>"+
@@ -169,7 +169,7 @@ function additem()
 	
 	var new_element = _qas.children('li').last();
 	$('.insert_img',new_element).on('click',insert_img);
-	$('.file',new_element).on('change',change_img);
+	$('.file--img',new_element).on('change',change_img);
 	$('.remove_img').on('click',remove_img);
 	$('.radioholder').on('click',radioholder);
 	$('.width-100:last').bind('focus',c_val_bf).focus();
@@ -518,7 +518,7 @@ $(function(){
 	// [ quiz ] - add subject
 	$('.insert_img').on('click',insert_img);
 	$('.remove_img').on('click',remove_img);
-	$('.file').on('change',change_img);
+	$('.file--img').on('change',change_img);
 	$('.radioholder').on('click',radioholder);
 	$('.add').on('click',additem);
 	$('.cont_tab4 textarea').on('focus',c_val_bf);
@@ -537,4 +537,9 @@ $(function(){
 	{
 		$(window).scroll(thead_fixed);
 	}
+	// 匯入題目
+	$('.insert_excel').click(function()
+	{
+		$(this).prev().click();
+	})
 });
