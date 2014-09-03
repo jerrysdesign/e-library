@@ -26,6 +26,5 @@
 								input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  T
 							label.radio
 								input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"  F
-	/ .container
-	/ 	.cont
-	/ 		== render "partials/quiz_list" , :locals => {:f => "else"}
+		
+		== render :partial => "partials/components/btn_state.html.slim" , :locals => {:f => "def"}

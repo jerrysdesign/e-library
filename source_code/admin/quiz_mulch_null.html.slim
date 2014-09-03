@@ -48,6 +48,7 @@
 						.control-label
 						.controls
 							a.btn.btn-blue.add href="javascript:;" 增加選項
-		.center-block
-			input.btn.btn-green type="button" disabled="disabled" value="儲存"
-			input.btn.btn-red type="button" value="取消" onclick="history.back()"
+		/ .center-block
+		/ 	input.btn.btn-green type="button" disabled="disabled" value="儲存"
+		/ 	input.btn.btn-red type="button" value="取消" onclick="history.back()"
+		== render :partial => "partials/components/btn_state.html.slim" , :locals => {:f => "disabled"}
