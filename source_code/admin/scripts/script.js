@@ -504,4 +504,9 @@ $(function(){
 	{
 		$(window).scroll(thead_fixed);
 	}
+	// 匯入題目
+	$('.insert_excel').click(function()
+	{
+		$(this).prev().click();
+	})
 });
