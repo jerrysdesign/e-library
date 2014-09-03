@@ -46,7 +46,8 @@
 										=lorem_q_m
 										| )
 									span
-										| 作答
+										| &nbsp;
+
 							- (11..30).each do |n|
 								th scope="col"
 									span.no
@@ -54,9 +55,9 @@
 										=lorem_q_tf
 										| )
 									span
-										| 作答
+										| &nbsp;
 					tbody
-						-30.times do
+						-6.times do
 							tr
 								th =zh_lorem_name
 								-10.times do
@@ -78,19 +79,19 @@
 								h6 第#{n}題
 								ul.chart__bars
 									li
-										.chart__bar data-nofp="10"
+										.chart__bar data-nofp="80"
 										.chart__left_lable A
 										.chart__right-lable
 									li
-										.chart__bar.right data-nofp="30"
+										.chart__bar.right data-nofp="5"
 										.chart__left_lable B
 										.chart__right-lable
 									li
-										.chart__bar data-nofp="5"
+										.chart__bar data-nofp="2"
 										.chart__left_lable C
 										.chart__right-lable
 									li
-										.chart__bar data-nofp="15"
+										.chart__bar data-nofp="3"
 										.chart__left_lable D
 										.chart__right-lable
 									li
@@ -98,7 +99,7 @@
 										.chart__left_lable E
 										.chart__right-lable
 									li
-										.chart__bar data-nofp="10"
+										.chart__bar data-nofp="0"
 										.chart__left_lable F
 										.chart__right-lable
 						- (5..10).each do |n|
