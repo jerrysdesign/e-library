@@ -232,6 +232,7 @@ function c_val_bf()
 			_txa.off('keyup',btn_enable);
 		}
 	});
+	console.log('123');
 }
 
 // 判斷儲存按鈕是否啓用
@@ -285,7 +286,7 @@ function tr_ud()
 	{
 		var row = $('td .chk:checked').parents('tr:first').css('color','blue'),
 			row_count = $("table > tbody > tr").length;
-		if ($(this).is('.exam-up') && row.index() > 1)
+		if ($(this).is('.exam-up') && row.index() >= 1)
 		{
 			row.insertBefore(row.prev());
 		}
@@ -293,11 +294,23 @@ function tr_ud()
 		{
 			row.insertAfter(row.next());
 		}
+		re_no();
 	}
 	else
 	{
 		return false;
 	}
+}
+
+// [ exam ] td - re_number
+function re_no()
+{
+	var _tr = $('.table_striped tbody tr');
+	_tr.each(function(idx)
+	{
+		$(this).children('td:eq(1)').text(idx + 1);
+	});
+
 }
 
 // [ exam ] btn - mode
@@ -416,7 +429,7 @@ function accuracy_rate()
 			error += $(this).find('.error').length;
 		});
 		var _len = $('.fht-tbody:eq(1) tbody tr').length,
-			_accuracyrate = ( _len - error) / _len * 100 + '%';
+			_accuracyrate = Math.floor(( _len - error) / _len * 100) + '%';
 		$(this).text(_accuracyrate);
 	});
 }
@@ -519,7 +532,7 @@ $(function(){
 	$('.insert_img').on('click',insert_img);
 	$('.remove_img').on('click',remove_img);
 	$('.file--img').on('change',change_img);
-	$('.radioholder').on('click',radioholder);
+	$('.radioholder,.radio-tf').on('click',radioholder);
 	$('.add').on('click',additem);
 	$('.cont_tab4 textarea').on('focus',c_val_bf);
 	Remove();
