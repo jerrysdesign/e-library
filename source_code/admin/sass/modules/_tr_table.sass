@@ -17,7 +17,8 @@
 		padding: 0
 		span + span
 			color: $white
-			background: #85d640
+			background: $barColor1
+			// @include background-image(linear-gradient( $barColor1 50%, $barColor2 50%))
 			line-height: 1
 			
 	th , td
@@ -42,3 +43,5 @@
 			background: darken($white, 3)
 		span
 			white-space: nowrap
+
+
