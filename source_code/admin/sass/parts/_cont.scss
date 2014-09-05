@@ -1,8 +1,9 @@
 #cont_area {
-	background: url(#{$l2}/bg01.jpg) 0 0 fixed;
-  // @include background-image (radial-gradient( at 50% top, rgba(1, 68, 177, 0.6) 0%, rgba(77, 144, 254, 0) 75%), radial-gradient( at right top, #794aa2 0%, rgba(43, 26, 57, 0.8) 57%));
-  // background-color: #0144b1;
+	// background: url(#{$l2}/bg01.jpg) 0 0 fixed;
+  @include background-image (radial-gradient( at 50% top, rgba(1, 68, 177, 0.6) 0%, rgba(77, 144, 254, 0) 75%), radial-gradient( at right top, #794aa2 0%, rgba(43, 26, 57, 0.8) 57%));
+  background-color: #0144b1;
 }
+.breadcrumbs, .breadcrumbs a { color: lighten(#014EB1, 40)}
 
 #cont {
 	word-break: break-all;

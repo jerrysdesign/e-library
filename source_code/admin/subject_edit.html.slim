@@ -45,26 +45,45 @@
 							| 道已作答過。
 					.fr
 						a.btn.btn-blue<> href="quiz_creat.html" 新增
-						a.btn.btn-blue<> href="quiz_import.html" 匯入
+						input.upload-fiie--excel type='file'
+						a.btn.btn-blue.insert_excel<> href="javascript:;" 匯入
 						a<> class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_export_pop.html" 匯出
-				table.table.table-bordered.table-striped
+				table.table-02
 					thead
 						tr
 							th width="5%"  序號
 							th width="10%"  題型
-							th width="43%"  測驗卷名稱
+							th width="43%"  題目名稱
 							th width="16%"  建立日期
 							th width="16%"  最新作答日期
 							th width="10%"  功能
 					tbody
-						- (1..10).each do |n|
+						- (1..5).each do |n|
 							tr
 								td.text-centered
-									| 1
+									| #{n}
 								td.text-centered
 									| 選擇題
 								td.text-l
 									=zh_lorem_words 25
+								td.text-centered
+									=lorem_date("%Y-%m-%d %H:%M", 2014..2014)
+								td.text-centered
+									=lorem_date("%Y-%m-%d %H:%M", 2014..2014)
+								td.text-centered
+									a href="#"  檢視
+									br
+									a href="#"  刪除
+						- (6..10).each do |n|
+							tr
+								td.text-centered
+									| #{n}
+								td.text-centered
+									| 選擇題
+								td.text-l
+									/! 如果有圖片
+									=zh_lorem_words 25
+									= image_tag(lorem_image("156x123"))
 								td.text-centered
 									=lorem_date("%Y-%m-%d %H:%M", 2014..2014)
 								td.text-centered

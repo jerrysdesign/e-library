@@ -485,3 +485,80 @@ $radius: 0
 	background-image: url(#{$l2}/arrow_b3.gif)
 	background-position: right 50%
 	background-repeat: no-repeat
+
+//
+#quizs
+	ol > li
+		color: #7a4c1f
+		float: left
+	background-color: #fff
+	padding: 40px
+	ul > li
+		float: left
+
+.q_topic
+	float: left
+
+#quizs
+	overflow: hidden
+	ol > li, ul > li
+		width: 97%
+	ol
+		> li
+			padding: 0 0 40px 40px
+			list-style: decimal
+			list-style-position: inside
+		h3
+			font-size: 16px
+			line-height: 1.6em
+			display: inline
+			color: #7a4c1f
+	ul
+		margin-top: 15px
+		> li
+			margin: 0 0 20px 18px
+			color: #666
+		li span
+			float: left
+			width: 30px
+			margin-right: 10px
+			border: 1px solid #ccc
+			border-radius: 50%
+			cursor: pointer
+			text-align: center
+			line-height: 30px
+	.q_pic img
+		margin-right: 5px
+	.q_topic
+		width: 94%
+	ul
+		.choose span
+			color: #fff
+			background-color: #f29b76
+			border-color: #f29b76
+		p
+			padding: 6px 0
+	&.quizs_ans
+		.ans
+			position: relative
+			em
+				position: absolute
+				top: 6px
+				left: -46px
+				color: #88c997
+			span
+				color: #fff
+				border-color: #88c997
+				background-color: #88c997
+.table-02
+	@extend .table
+	@extend .table-bordered
+	@extend .table-striped
+	th
+		background-color: #3C78CA
+		background: url("../images/h2bg3.gif") repeat-x 0 0
+		padding: .8em .4em
+		min-height: 40px
+		color: #fff
+		thead &
+			border-color: #3C78CA

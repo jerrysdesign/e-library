@@ -4,74 +4,69 @@
 			== render "partials/testing_header" , :locals => {:f => "testing"}
 	.container
 		#cont
-			ol.quiz_list_stylesass
-				/! 結構更動 start
-				/! 選擇題 start
-				li
-					.cont_tab2
-						.pd2040
-							p.pd2020
-								=zh_lorem_words 45
-							ol.upper-alpha.pd2020
-								li
-									/! 純文字狀態
-									.icon-list
-									=zh_lorem_sentences 1
-								li
-									/! 純圖片狀態
-									.icon-list
-									img src="http://placehold.it/400x400&text=[img]" alt=""
-								li
-									/! 有文有圖狀態
-									.icon-list
-									=zh_lorem_words 45
-									.clearfix
-									img src="http://placehold.it/400x400&text=[img]" alt=""
-				/! 選擇題 end
-				/! 是非題 start
-				li
-					.cont_tab2
-						.pd2040
-							/! 題目只有文
-							p.pd2020
-								=zh_lorem_words 45 
-							ol.upper-alpha.pd2020
-								li
-									/! 是非: 是
-									.icon-list.tft
-								li
-									/! 是非: 否
-									.icon-list.tff
-				li
-					.cont_tab2
-						.pd2040
-							/! 題目只有圖
-							p.pd2020
-								img src="http://placehold.it/400x400&text=[img]" alt=""
-							ol.upper-alpha.pd2020
-								li
-									/! 是非: 是
-									.icon-list.tft
-								li
-									/! 是非: 否
-									.icon-list.tff
-				li
-					.cont_tab2
-						.pd2040
-							/! 題目有圖文
-							p.pd2020
-								=zh_lorem_words 45 
-								.clearfix
-								img src="http://placehold.it/400x400&text=[img]" alt=""
-							ol.upper-alpha.pd2020
-								li
-									/! 是非: 是
-									.icon-list.tft
-								li
-									/! 是非: 否
-									.icon-list.tff
-				/! 是非題 end
-				/! 結構更動 end
+			div#quizs.quizs_ans
+				ol
+					/! 選擇題
+					li
+						h3
+							=zh_lorem_words 45
+							/! 如果有圖片的話
+							.q_pic
+								= image_tag(lorem_image("150x150"))
+						ul
+							li
+								span A
+								.q_topic
+									/! 如果是圖片的話
+									.q_pic
+										= image_tag(lorem_image("150x150"))
+							li
+								span B
+								.q_topic
+									p =zh_lorem_sentences 1
+									/! 如果有圖片的話
+									.q_pic
+										= image_tag(lorem_image("150x150"))
+							li
+								span C
+								.q_topic
+									p =zh_lorem_sentences 1
+							li
+								span D
+								.q_topic
+									p =zh_lorem_sentences 1
+							li
+								span E
+								.q_topic
+									p =zh_lorem_sentences 1
+							li
+								span F
+								.q_topic
+									p =zh_lorem_sentences 1
+					/! 是非 O X
+					li
+						h3 =zh_lorem_words 45
+						ul
+							li
+								span O
+							li
+								span X
+					/! 是非 √ X
+					li
+						h3 =zh_lorem_words 45
+						ul
+							li
+								span √
+							li
+								span X
+					/! 是非 T F
+					li
+						h3 =zh_lorem_words 45
+						ul
+							li
+								span T
+							li
+								span F
 / .fancybox
 #alert.warning style="display:none"
 	strong.strong 確定要停止測驗？

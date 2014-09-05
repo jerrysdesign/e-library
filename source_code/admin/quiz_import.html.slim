@@ -1,6 +1,7 @@
 #cont_area
 	#cont
 		form enctype="multipart/form-data" method="post" 
+			
 			.cont_tab2
 				h2
 					span.icon04
@@ -12,14 +13,51 @@
 						input.upload-fiie--excel type='file'
 						a.btn.btn-blue.insert_excel<> href="javascript:;" 匯入
 						a.btn.btn-red<> href="javascript:;" onclick="history.back()" 取消
-			-5.times do
-				.cont_tab2
-					.pd2040
-						p.pd2020
-							=zh_lorem_paragraphs 2 
-						ol.upper-alpha.pd2020
-							-6.times do
-								li
-									.icon-list
-									=zh_lorem_sentences 1
-		
+			#quizs.quizs_ans
+				ol
+					/! 選擇題
+					li
+						h3
+							=zh_lorem_words 45
+							/! 如果有圖片的話
+							.q_pic
+								= image_tag(lorem_image("150x150"))
+						ul
+							li
+								span A
+								.q_topic
+									/! 如果是圖片的話
+									.q_pic
+										= image_tag(lorem_image("150x150"))
+							li
+								span B
+								.q_topic
+									p =zh_lorem_sentences 1
+									/! 如果有圖片的話
+									.q_pic
+										= image_tag(lorem_image("150x150"))
+							li
+								span C
+								.q_topic
+									p =zh_lorem_sentences 1
+							li
+								span D
+								.q_topic
+									p =zh_lorem_sentences 1
+							li
+								span E
+								.q_topic
+									p =zh_lorem_sentences 1
+							li
+								span F
+								.q_topic
+									p =zh_lorem_sentences 1
+
+					/! 是非 T F
+					li
+						h3 =zh_lorem_words 45
+						ul
+							li
+								span T
+							li
+								span F
