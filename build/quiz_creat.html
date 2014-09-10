@@ -7,8 +7,8 @@
     </title>
     <link href="vender/fixed-header-table/css/defaultTheme.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
-    <link href="css/master.css" rel="stylesheet" type="text/css">
     <link href="css/admin.css" rel="stylesheet" type="text/css">
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
     <!--[if lte IE 7]
       link rel="stylesheet" type="text/css" href="css/ie7.css"-->
     <script src="scripts/jquery-1.9.0.min.js"></script>
@@ -55,28 +55,40 @@
     		</div>
     	</div>
     </div><div id="cont_area">
-      <div class="masthead cf">
-        <div class="cont">
-          <div class="masthead_head">
-            <div class="masthead_title">
+      <div class="masthead">
+        <div class="masthead__inner">
+          <div class="masthead__head">
+            <div class="masthead__title">
               題目
             </div>
           </div>
-          <div class="masthead_content">
-            <div class="control-group">
-              <label class="control-label">類型</label>
-              <div class="controls">
-                <select onchange="location = this.options[this.selectedIndex].value" style="width:200px"></select>
+          <div class="masthead__content">
+            <div class="is-table">
+              <div class="control-group">
+                <div class="control-label">
+                  類型
+                </div>
+                <div class="controls">
+                  <div class="selectholder">
+                    <label for="projectcompletion">請選擇</label><select id="projectcompletion" name="projectcompletion"><option value="quiz_tf_null.htm">是非題</option><option value="quiz_mulch_null.html">選擇題</option></select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container cf">
+      <div class="container">
         <div class="cont">
-          <div class="center-block i-b-block">
-            <input type="button" value="儲存"><input onclick="history.back()" type="button" value="取消">
-          </div>
+          <tr>
+            <td colspan="6">
+              <div class="center-block">
+                <div class="alert-block alert--error unit-50">
+                  尚未加入任何項目
+                </div>
+              </div>
+            </td>
+          </tr>
         </div>
       </div>
     </div><div id="foot_area">

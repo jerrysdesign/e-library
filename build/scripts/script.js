@@ -1,8 +1,85 @@
+// 選擇新增題型
+function selectholder()
+{
+	$(".selectholder").each(function(){
+		var description;
+
+		$(this).children().hide();
+		description = $(this).find("label").text();
+		$(this).append("<span class=\"desc\">" + description + "</span>");
+		$(this).append("<span class=\"pulldown\"></span>");
+		$(this).append("<div class=\"selectdropdown\"></div>");
+		$(this).children("select").children("option").each(function(){
+			var $drop, name;
+
+			if ($(this).attr("value") !== "0") {
+				$drop = $(this).parent().siblings(".selectdropdown");
+				href = $(this).attr("value");
+				name = $(this).text();
+				$drop.append("<span" + " href=" + href + ">" + name + "</span>");
+			}
+		});
+		$(this).click(function() {
+			if ($(this).hasClass("activeselectholder")) {
+				$(this).children(".selectdropdown").slideUp(100);
+				$(this).removeClass("activeselectholder");
+				if ($(this).children("select").val() !== "0") {
+					$(this).children(".desc").fadeOut(50, function() {
+						$(this).text($(this).text());
+						$(this).fadeIn(50);
+					});
+				}
+			} else {
+				$(".activeselectholder").each(function() {
+					$(this).children(".selectdropdown").slideUp(100);
+					if ($(this).children("select").val() !== "0") {
+						$(this).children(".desc").fadeOut(100, function() {
+							$(this).text($(this).text());
+							$(this).fadeIn(100);
+						});
+					}
+					$(this).removeClass("activeselectholder");
+				});
+				$(this).children(".selectdropdown").slideDown(100);
+				$(this).addClass("activeselectholder");
+				if ($(this).children("select").val() !== "0") {
+					$(this).children(".desc").fadeOut(100, function() {
+						$(this).text($(this).siblings("select").children("option[value=0]").text());
+						$(this).fadeIn(50);
+					});
+				}
+			}
+		});
+	});
+	$(".selectholder .selectdropdown span").click(function(){
+		var value;
+
+		$(this).siblings().removeClass("active");
+		$(this).addClass("active");
+		var href  = $(this).attr('href');
+			value = $(this).text();
+		$(this).parent().siblings("select").val(value);
+		$(this).parent().siblings(".desc").fadeOut(100, function(){
+			$(this).text(value);
+			$(this).fadeIn(100);
+		});
+		window.location = href;
+	});
+}
+
+// 設定正確答案
+function radioholder()
+{
+	$('.radioholder').removeClass("activeradioholder");
+	$(this).addClass('activeradioholder').children("input[type=radio]").prop("checked", true);
+	btn_enable();
+}
+
 // 插入圖片
 function insert_img()
 {
 	$(this).prev().click();
-};
+}
 
 // 預覽插入圖片
 function change_img()
@@ -16,7 +93,7 @@ function change_img()
 	
 	if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
 	{
-		$(this).replaceWith($('.file:eq(0)').val('').clone(true));
+		$(this).replaceWith($('.file--img:eq(0)').val('').clone(true));
 		alert('只允許上傳PNG或JPG影像檔');
 		return false;
 	}
@@ -38,58 +115,65 @@ function change_img()
 		path = $(this).val();
 		clip.attr("src", path);
 	}
-	$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur');
+	$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur').next().hide();
+	btn_enable();
 }
 
 // 刪除圖片
 function remove_img()
 {
-	$('body').on('click','.remove_img',function()
-	{
-		$(this).removeClass('cur').prev().text('插入圖片').parent().find('img').removeClass('view').siblings('input').replaceWith($('.file:eq(0)').val('').clone(true));
-	});
+	$(this).removeClass('cur').next().show().end().prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file--img:eq(0)').val('').clone(true));
+	btn_enable();
 }
 
 // 增加選項
 function additem()
 {
-	$('.add').click(function()
+	var _qas  = $(".quiz_add_subject"),
+		count = _qas.find('li').size();
+	
+	count++;
+	if(count > 6)
 	{
-		var _qas  = $(".quiz_add_subject"),
-			count = _qas.find('li').size();
-		
-		count++;
-		if(count > 6)
-		{
-			return false;
-		}
-		_qas.append(
-			"<li class='control-group'>"+
-				"<label class='control-label'><label class='radio'>"+
-				"<input id='optionsRadios1' name='optionsRadios' type='radio' value='option1'><b>"+ count +"</b></label></label>"+
-				"<div class='controls'>"+
-					"<a class='btn remove' href='javascript:;'>刪除選項</a>"+
-					"<textarea rows='1'></textarea>"+
-					"<div class='i-b-block'>"+
-						"<img class='pic'>&nbsp;"+
-						"<input type='file' class='ipt_upload_img file'>&nbsp;"+
-						"<a class='bt insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
-						"<a class='bt remove_img' href='javascript:;'>刪除圖片</a>"+
+		return false;
+	}
+	_qas.append(
+		"<li class='is-table'>"+
+			"<div class='control-group'>"+
+				"<div class='control-label'>"+
+					"<div class='radioholder'>"+
+						"<span class='tick'></span>"+
+						"<input name='projecttype' type='radio' value=''>"+
+						"<b>"+ count +"</b>"+
 					"</div>"+
 				"</div>"+
-			"</li>");
+				"<div class='controls'>"+
+					"<a class='remove' href='javascript:;'>刪除選項</a>"+
+					"<textarea class='width-100' rows='1'></textarea>"+
+					"<div class='i-b-block'>"+
+						"<img class='pic' src=''>"+
+						"<input class='upload-fiie--img file' type='file'>"+
+						"<a class='btn insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
+						"<a class='btn btn-red remove_img' href='javascript:;'>刪除圖片</a>"+
+						"<span class='alert-block'>插入圖片檔案最大為 2 Mb，格式限定 jpg、png。</span>"+
+					"</div>"+
+				"</div>"+
+			"</div>"+
+		"</li>");
 
-		if(count == 6)
-		{
-			$(".add").attr("disabled", true);
-		}
-		renumber();
-		
-		var new_element = _qas.children('li').last();
-		$('.insert_img',new_element).on('click',insert_img);
-		$('.file',new_element).on('change',change_img);
-		$('.quiz_add_subject > li').on('click',active);
-	});
+	if(count == 6)
+	{
+		$(".add").attr("disabled", true);
+	}
+	renumber();
+	
+	var new_element = _qas.children('li').last();
+	$('.insert_img',new_element).on('click',insert_img);
+	$('.file--img',new_element).on('change',change_img);
+	$('.remove_img').on('click',remove_img);
+	$('.radioholder').on('click',radioholder);
+	$('.width-100:last').bind('focus',c_val_bf).focus();
+	btn_enable();
 }
 
 // 刪除選項
@@ -100,6 +184,7 @@ function Remove()
 		$(".add").attr("disabled", false);
 		$(this).parents("li").remove();
 		renumber();
+		btn_enable();
 	});
 }
 
@@ -109,7 +194,7 @@ function renumber()
 	$(".quiz_add_subject > li").each(function()
 	{
 		var _num  = $(this).index() + 1,
-			_this = $(this).find('.radio > b'),
+			_this = $(this).find('.radioholder > b'),
 			_rdo  = _this.text(_num);
 		switch ($(_this,this).text())
 		{
@@ -121,16 +206,63 @@ function renumber()
 			case '6' : _this.text('F');break;
 		}
 	});
-};
+}
 
-// chenge style & radio checked
-// active 事件
-function active()
+// 判斷欄位是否綁定功能
+function c_val_bf()
 {
-	$('.active').removeClass('active');
-	$(this).addClass("active");
-	var isActive = $(this).hasClass('active');
-	isActive ? $(this).find('input[type="radio"]').prop('checked',true) : '';
+
+	var	_txa   = $('textarea');
+		_len   = _txa.length,
+		_vlen  = 0;
+
+	$('textarea').each(function( _idx )
+	{
+		if($(this).val().trim() != '' || $('.remove_img').eq(_idx).is(':visible'))
+		{
+			_vlen ++;
+		}
+		if( ( _vlen + 1 >= _len )  && $('.activeradioholder').size() != 0)
+		{
+			_txa.on('keyup',btn_enable);
+			return false;
+		}
+		else
+		{
+			_txa.off('keyup',btn_enable);
+		}
+	});
+	console.log('123');
+}
+
+// 判斷儲存按鈕是否啓用
+function btn_enable()
+{
+	var $textarea = $('textarea'),
+		$quiz_a_s = $('.activeradioholder').size(),
+		$success  = true;
+
+	$textarea.each(function( _idx )
+	{
+		if($(this).val().trim() == '' && $('.remove_img').eq(_idx).is(':hidden'))
+		{
+			$success = false;
+		}
+	});
+
+	if($quiz_a_s == 0)
+	{
+		$success = false;
+	}
+
+	if($success)
+	{
+		$('.center-block > input:eq(0)').attr('disabled', false);
+	}
+	else
+	{
+		$('.center-block > input:eq(0)').attr('disabled', true);
+	}
 }
 
 // [ exam ] checkbox - checked all
@@ -154,7 +286,7 @@ function tr_ud()
 	{
 		var row = $('td .chk:checked').parents('tr:first').css('color','blue'),
 			row_count = $("table > tbody > tr").length;
-		if ($(this).is('.exam-up') && row.index() > 1)
+		if ($(this).is('.exam-up') && row.index() >= 1)
 		{
 			row.insertBefore(row.prev());
 		}
@@ -162,12 +294,25 @@ function tr_ud()
 		{
 			row.insertAfter(row.next());
 		}
+		re_no();
 	}
 	else
 	{
 		return false;
 	}
 }
+
+// [ exam ] td - re_number
+function re_no()
+{
+	var _tr = $('.table_striped tbody tr');
+	_tr.each(function(idx)
+	{
+		$(this).children('td:eq(1)').text(idx + 1);
+	});
+
+}
+
 // [ exam ] btn - mode
 function btn_mode()
 {
@@ -206,7 +351,6 @@ function tr_reclass()
 	$('tr').css('color','black');
 }
 
-
 // [ exam ] caption - thead_fixed
 function thead_fixed()
 {
@@ -236,30 +380,62 @@ function thead_fixed()
 // barCharts
 function barCharts()
 {
-	//＊＊/ nofp = number of people
-	// 單位最大人數
-	// 100/單位最大人數為基數
-
 	// barChart gap text
+	// nofp = number of people
 	var _sum = 0;
 	$('.chart__bars:first .chart__bar').each(function(){
 		_sum += Number($(this).data('nofp'));
-	});
-	$('.chart__numbers > li > span').each(function(key){
-		var _k = key + 1,
-			_s = _sum / 5;
-		$(this).text(_s * _k);
 	});
 
 	// barChart width
 	$('.chart__bar').each(function( key, bar )
 	{
-		var nofp = $(this).data('nofp');
-		$(this).css('width', ( nofp / _sum ) * 100 + '%');
+		var $this = $(this),
+			label = $this.siblings('.chart__right-lable'),
+			 nofp = $this.data('nofp'),
+			width = (( nofp / _sum ) * 100);
+
+		$this.css('width', width + '%');
+		label.text(width.toFixed(1) + ' % (' + $(this).data('nofp') + '人)').css('left', width + 2 + '%');
+	});
+}
+
+// table_autoheight
+function table_autoheight()
+{
+	var $tr    = $('.fht-table tbody tr'),
+		_size  = $tr.size() / 2,
+		_thh   = $('.fht-table thead tr:eq(0)').height(),
+		_tbh   = $tr.eq(0).height(),
+		_sh    = 20,
+		_autoh = (_size * _tbh) + _thh + _sh;
+
+	if(_size < 11)
+	{
+		$('.fht-tbody').height('auto');
+		$('.trtable_wrapper').height(_autoh);
+	}
+}
+
+// accuracy_rate
+function accuracy_rate()
+{
+	$('.trtable th span + span').each(function(i){
+		var error = 0;
+		$(this).parents('.fht-thead').next()
+		.find('td:nth-child(' + (i + 2) +')')
+		.each(function(i)
+		{
+			error += $(this).find('.error').length;
+		});
+		var _len = $('.fht-tbody:eq(1) tbody tr').length,
+			_accuracyrate = Math.floor(( _len - error) / _len * 100) + '%';
+		$(this).text(_accuracyrate);
 	});
 }
 
 $(function(){
+
 	// search
 	var _speed = 300;
 	$(".search").focus(function()
@@ -314,7 +490,7 @@ $(function(){
 	$('#news').append('<div id="newsbox"></div>');
 	$('#news').find('a').addClass('fancybox').attr({"href":"#newsbox","title":"最新消息"});
 	$('#news a').each(function()
-	{	
+	{ 
 		var _this = $(this).text();
 		$(this).click(function()
 		{
@@ -327,17 +503,17 @@ $(function(){
 	$(".fancybox").fancybox();
 	$("input.fancybox").fancybox();
 	$(".afb").fancybox({
-		wrapCSS		: '_admin_fancybox',
-		padding 	: 0,
-		scrolling 	: 'no',
-		closeBtn 	: false
+		wrapCSS     : '_admin_fancybox',
+		padding     : 0,
+		scrolling   : 'no',
+		closeBtn    : false
 	});
 	$(".alert").fancybox({
-		maxWidth	: 300,
-		maxHeight	: 120,
-		fitToView	: false,
-		autoSize	: false,
-		closeBtn 	: false
+		maxWidth  : 300,
+		maxHeight : 120,
+		fitToView : false,
+		autoSize  : false,
+		closeBtn  : false
 	});
 
 	// fixed-header
@@ -349,13 +525,18 @@ $(function(){
 		footer: false,
 		fixedColumns: 1
 	});
+	accuracy_rate();
+	table_autoheight();
 
+	// [ quiz ] - add subject
 	$('.insert_img').on('click',insert_img);
-	$('.file').on('change',change_img);
-	$('.quiz_add_subject > li').on('click',active);
-	remove_img();
+	$('.remove_img').on('click',remove_img);
+	$('.file--img').on('change',change_img);
+	$('.radioholder,.radio-tf').on('click',radioholder);
+	$('.add').on('click',additem);
+	$('.cont_tab4 textarea').on('focus',c_val_bf);
 	Remove();
-	additem();
+	selectholder();
 	renumber();
 	barCharts();
 
@@ -365,10 +546,13 @@ $(function(){
 	$('.exam-up,.exam-down').on('click',tr_ud);
 	$('th .chk:first').on('change',chk_all);
 	$('input.chk').on('change',btn_mode);
-
 	if($('.container').has('.tb_fixed').size() == 1)
 	{
 		$(window).scroll(thead_fixed);
 	}
-
+	// 匯入題目
+	$('.insert_excel').click(function()
+	{
+		$(this).prev().click();
+	})
 });

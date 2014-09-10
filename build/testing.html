@@ -7,8 +7,8 @@
     </title>
     <link href="vender/fixed-header-table/css/defaultTheme.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
-    <link href="css/master.css" rel="stylesheet" type="text/css">
     <link href="css/admin.css" rel="stylesheet" type="text/css">
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
     <!--[if lte IE 7]
       link rel="stylesheet" type="text/css" href="css/ie7.css"-->
     <script src="scripts/jquery-1.9.0.min.js"></script>
@@ -55,18 +55,18 @@
     		</div>
     	</div>
     </div><div id="cont_area">
-      <div class="masthead cf">
-        <div class="cont">
-          <div class="masthead_head">
-            <div class="masthead_title">
+      <div class="masthead">
+        <div class="masthead__inner">
+          <div class="masthead__head">
+            <div class="masthead__title">
               測驗卷
             </div>
           </div>
-          <div class="masthead_content test">
+          <div class="masthead__content test">
             <div class="row">
               <div class="fl">
                 <h3 class="eptitle">
-                  禮他地們來去會萄鬧當起咖用現也２山喝坐山是到假了鬧閒是失蛋和最只報以前
+                  紅在-少人疲較0人熱憑夜死本月沒真啦的暗波1多是麵我外來的-身一渡可有
                 </h3>
               </div>
               <div class="fr">
@@ -89,116 +89,131 @@
                 </dd>
               </dl>
               <div class="fr">
-                測驗進行中，尚餘<span style="margin-right: 10px">00:00:00</span><a class="bt fancybox alert" href="#alert">停止測驗</a>
+                測驗進行中，尚餘<span style="margin-right: 10px">00:00:00</span><a class="btn btn-red fancybox alert" href="#alert">停止測驗</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container cf">
+      <div class="container">
         <div id="cont">
-          <ol class="quiz_list_stylesass">
-            <!--結構更動 start--><!--選擇題 start-->
-            <li>
-              <div class="cont_tab2">
-                <div class="pd2040">
-                  <p class="pd2020">
-                    和地運上縷上奶的時啊還熱說奶吟他這田是方住不早一法明容地罵都憑紅怪陣成少人上爸似示嬉文中咖
-                  </p>
-                  <ol class="upper-alpha pd2020">
-                    <li>
-                      <!--純文字狀態-->
-                      <div class="icon-list"></div>
-                      不過隨意做作而已，街上的孩子們在喊。
-                    </li>
-                    <li>
-                      <!--純圖片狀態-->
-                      <div class="icon-list"></div>
-                      <img alt="" src="http://placehold.it/400x400&text=[img]">
-                    </li>
-                    <li>
-                      <!--有文有圖狀態-->
-                      <div class="icon-list"></div>
-                      餐新來雀攜看皮暗臉們戶壯天以感明接子出道們訓哥們我金子憊過一到一責問了咖的拚喊刺只還來愈險
-                      <div class="clearfix"></div>
-                      <img alt="" src="http://placehold.it/400x400&text=[img]">
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </li>
-            <!--選擇題 end--><!--是非題 start-->
-            <li>
-              <div class="cont_tab2">
-                <div class="pd2040">
-                  <!--題目只有文-->
-                  <p class="pd2020">
-                    一罵他們啊間被輸傍時上氣半喝地月無他我用著麵咖金出一知暫也存有所來割的正前不存目空的在了子
-                  </p>
-                  <ol class="upper-alpha pd2020">
-                    <li>
-                      <!--是非: 是-->
-                      <div class="icon-list tft"></div>
-                    </li>
-                    <li>
-                      <!--是非: 否-->
-                      <div class="icon-list tff"></div>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="cont_tab2">
-                <div class="pd2040">
-                  <!--題目只有圖-->
-                  <p class="pd2020">
-                    <img alt="" src="http://placehold.it/400x400&text=[img]">
-                  </p>
-                  <ol class="upper-alpha pd2020">
-                    <li>
-                      <!--是非: 是-->
-                      <div class="icon-list tft"></div>
-                    </li>
-                    <li>
-                      <!--是非: 否-->
-                      <div class="icon-list tff"></div>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="cont_tab2">
-                <div class="pd2040">
-                  <!--題目有圖文-->
-                  <p class="pd2020">
-                    到實咖再頸如割生是了到什到始分侶何年那也早前皆如到兒被只已挨個不們步治悽們要頂一長門他著心
-                    <div class="clearfix"></div>
-                    <img alt="" src="http://placehold.it/400x400&text=[img]">
-                  </p>
-                  <ol class="upper-alpha pd2020">
-                    <li>
-                      <!--是非: 是-->
-                      <div class="icon-list tft"></div>
-                    </li>
-                    <li>
-                      <!--是非: 否-->
-                      <div class="icon-list tff"></div>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </li>
-            <!--是非題 end--><!--結構更動 end-->
-          </ol>
+          <div class="quizs_ans" id="quizs">
+            <ol>
+              <!--選擇題-->
+              <li>
+                <h3>
+                  是的害弟頂住幾短不掃啊著恩還可到是酒我和盲樣平答紅老聲好的蛋吹劑在這何再真不也決著的富開目<!--如果有圖片的話-->
+                  <div class="q_pic">
+                    <img src="http://placehold.it/150x150" />
+                  </div>
+                </h3>
+                <ul>
+                  <li>
+                    <span>A</span>
+                    <div class="q_topic">
+                      <!--如果是圖片的話-->
+                      <div class="q_pic">
+                        <img src="http://placehold.it/150x150" />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span>B</span>
+                    <div class="q_topic">
+                      <p>
+                        怎麼就十五年了。
+                      </p>
+                      <!--如果有圖片的話-->
+                      <div class="q_pic">
+                        <img src="http://placehold.it/150x150" />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span>C</span>
+                    <div class="q_topic">
+                      <p>
+                        有的孩子喊著，團團地坐著，吃了水餃6顆，卻不能稍超興奮，拔去了不少，幫忙打掃整理家裡！
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <span>D</span>
+                    <div class="q_topic">
+                      <p>
+                        台南現在好舒服，這是如何的決意！
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <span>E</span>
+                    <div class="q_topic">
+                      <p>
+                        纔見有些白光，我要頂禮他啊！
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <span>F</span>
+                    <div class="q_topic">
+                      <p>
+                        經過幾許途程，農民播種犁田，那就....。
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!--是非 O X-->
+              <li>
+                <h3>
+                  迎心麼捧他運已了年中裡短最調覽久爭好無壞說８橫來龍陽狗自地柚出來上了辨邊不～實進你是進走個
+                </h3>
+                <ul>
+                  <li>
+                    <span>O</span>
+                  </li>
+                  <li>
+                    <span>X</span>
+                  </li>
+                </ul>
+              </li>
+              <!--是非 √ X-->
+              <li>
+                <h3>
+                  燈可啊集算什中還路不真的事拚要就布啊地其雙地命牙受看何甲蛋得和番途前明有進i人愈茶短橫糖軀
+                </h3>
+                <ul>
+                  <li>
+                    <span>√</span>
+                  </li>
+                  <li>
+                    <span>X</span>
+                  </li>
+                </ul>
+              </li>
+              <!--是非 T F-->
+              <li>
+                <h3>
+                  我像就苦們啦問百但雖喊是增的門進下這的趕肉乙進醉我聽苦跑掃人一最子要不小他可家挨些褲分為漏
+                </h3>
+                <ul>
+                  <li>
+                    <span>T</span>
+                  </li>
+                  <li>
+                    <span>F</span>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
-    <div class="warning cf" id="alert" style="display:none">
+    <div class="warning" id="alert" style="display:none">
       <strong class="strong">確定要停止測驗？</strong>
       <div class="block">
-        <a class="bt fl" href="javascript:;">YES</a><a class="bt fr" href="javascript:;">NO</a>
+        <a class="btn fl" href="javascript:;">YES</a><a class="btn fr" href="javascript:;">NO</a>
       </div>
     </div><div id="foot_area">
     	<div id="foot">

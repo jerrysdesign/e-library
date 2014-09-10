@@ -5,11 +5,11 @@
     <title>
       加入項目
     </title>
-    <link href="css/master.css" rel="stylesheet" type="text/css">
     <link href="css/admin.css" rel="stylesheet" type="text/css">
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <form class="cf">
+    <form>
       <div class="_afb_toolbar_out">
         <div class="_afb_toolbar">
           <h2>
@@ -21,14 +21,12 @@
       <div class="_afb_main">
         <div class="cont_tab3">
           <div class="pd2020">
-            <div class="i-b-block">
+            <div class="row">
               <div class="caption fl">
                 已加入<span> 0 </span>題
               </div>
               <div class="fr">
-                <div class="btn-group i-b-block">
-                  <input type="text"><a class="bt" href="quiz_add_pop_search.html">搜尋</a>
-                </div>
+                <input type="text"> <a class="btn btn-blue" href="quiz_add_pop_search.html">搜尋</a> 
               </div>
             </div>
             <table cellpadding="0" cellspacing="1" class="table table_striped" width="100%">
@@ -48,7 +46,9 @@
               </tr>
               <tr>
                 <td colspan="6">
-                  尚未加入任何項目
+                  <div class="alert-block alert--error unit-50 center-block">
+                    尚未加入任何項目
+                  </div>
                 </td>
               </tr>
             </table>
@@ -57,15 +57,8 @@
       </div>
       <div class="_afb_footbar_out">
         <div class="_afb_footbar">
-          <div class="i-b-block">
-            <div class="caption fl">
-              已加入<span> 0 </span>題
-            </div>
-            <div class="fr">
-              <div class="btn-group i-b-block">
-                <input onclick="javascript:parent.jQuery.fancybox.close();" type="button" value="加入"><input onclick="javascript:parent.jQuery.fancybox.close();" type="button" value="取消">
-              </div>
-            </div>
+          <div class="center-block">
+            <input class="btn btn-blue" onclick="javascript:parent.jQuery.fancybox.close();" type="button" value="加入">  <input class="btn btn-red" onclick="javascript:parent.jQuery.fancybox.close();" type="button" value="取消"> 
           </div>
         </div>
       </div>

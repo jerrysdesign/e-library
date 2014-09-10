@@ -7,8 +7,8 @@
     </title>
     <link href="vender/fixed-header-table/css/defaultTheme.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
-    <link href="css/master.css" rel="stylesheet" type="text/css">
     <link href="css/admin.css" rel="stylesheet" type="text/css">
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
     <!--[if lte IE 7]
       link rel="stylesheet" type="text/css" href="css/ie7.css"-->
     <script src="scripts/jquery-1.9.0.min.js"></script>
@@ -55,50 +55,56 @@
     		</div>
     	</div>
     </div><div id="cont_area">
-  <div class="masthead cf">
-    <div class="cont">
-      <div class="masthead_head">
-        <div class="masthead_title">
+  <div class="masthead">
+    <div class="masthead__inner">
+      <div class="masthead__head">
+        <div class="masthead__title">
           題目
         </div>
       </div>
-      <div class="masthead_content">
-        <div class="control-group">
-          <label class="control-label">類型</label>
-          <div class="controls">
-            <select onchange="location = this.options[this.selectedIndex].value" style="width:200px"><option></option><option selected="">是非題 </option><option value="quiz_mulch_null">選擇題</option></select>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container cf">
-    <div class="cont cont_tab4">
-      <div class="pd2040">
-        <div class="control-group">
-          <label class="control-label">題目</label>
-          <div class="controls">
-            <textarea rows="2"></textarea>
-            <div class="clearfix"></div>
-            <div class="i-b-block">
-              <img class="pic" src=""><input class="ipt_upload_img file" type="file">&nbsp;<a class="bt insert_img" href="javascript:;">插入圖片</a>&nbsp;<a class="bt remove_img" href="javascript:;">刪除圖片</a>
+      <div class="masthead__content">
+        <div class="is-table">
+          <div class="control-group">
+            <div class="control-label">
+              類型
+            </div>
+            <div class="controls">
+              <div class="selectholder">
+                <label for="projectcompletion">是非題</label><select id="projectcompletion" name="projectcompletion"><option value="quiz_tf_null.htm">是非題</option><option value="quiz_mulch_null.html">選擇題</option></select>
+              </div>
             </div>
           </div>
         </div>
-        <div class="control-group">
-          <label class="control-label">設定正確答案</label>
-          <div class="controls">
-            <label class="radio"><input id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> T</input></label><label class="radio"><input id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> F</input></label>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cont cont_tab4">
+      <div class="pd2040">
+        <div class="is-table">
+          <div class="control-group">
+            <label class="control-label">題目</label>
+            <div class="controls">
+              <textarea class="width-100" rows="2"></textarea>
+              <div class="clearfix"></div>
+              <div class="i-b-block">
+                <img class="pic" src=""><input class="upload-fiie--img file--img" type="file"> <a class="btn insert_img" href="javascript:;">插入圖片</a>  <a class="btn btn-red remove_img" href="javascript:;">刪除圖片</a> <span class="alert-block">插入圖片檔案最大為 2 Mb，格式限定 jpg、png。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="is-table">
+          <div class="control-group">
+            <label class="control-label">設定正確答案</label>
+            <div class="controls">
+              <label class="radio"><input class="radio-tf" id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> T</input></label><label class="radio"><input class="radio-tf" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> F</input></label>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container cf">
-    <div class="cont">
-      <div class="center-block i-b-block">
-        <input type="button" value="儲存"><input onclick="history.back()" type="button" value="取消">
-      </div>
+    <div class="center-block">
+      <input class="btn btn-green" disabled="disabled" type="button" value="儲存"><input class="btn btn-red" onclick="history.back()" type="button" value="取消">
     </div>
   </div>
 </div><div id="foot_area">

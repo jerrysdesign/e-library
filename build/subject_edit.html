@@ -7,8 +7,8 @@
     </title>
     <link href="vender/fixed-header-table/css/defaultTheme.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
-    <link href="css/master.css" rel="stylesheet" type="text/css">
     <link href="css/admin.css" rel="stylesheet" type="text/css">
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
     <!--[if lte IE 7]
       link rel="stylesheet" type="text/css" href="css/ie7.css"-->
     <script src="scripts/jquery-1.9.0.min.js"></script>
@@ -57,16 +57,18 @@
     </div><div id="cont_area">
       <div id="cont">
         <div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
-        <form class="cf" enctype="multipart/form-data" method="post">
+        <form enctype="multipart/form-data" method="post">
           <div class="cont_tab2">
             <h2>
               <span class="icon04"></span>題目設定
             </h2>
             <div class="pd2040">
-              <div class="control-group">
-                <label class="control-label">是非題答題型態</label>
-                <div class="controls">
-                  <select><option></option><option value="0"> O or X</option><option value="1"> √ or X</option><option value="2"> T or F</option></select>
+              <div class="is-table">
+                <div class="control-group">
+                  <label class="control-label">是非題答題型態</label>
+                  <div class="controls">
+                    <select class="select"><option value="0"> O or X</option><option value="1"> √ or X</option><option value="2"> T or F</option></select>
+                  </div>
                 </div>
               </div>
             </div>
@@ -76,274 +78,258 @@
               <span class="icon04"></span>題目管理
             </h2>
             <div class="pd2040">
-              <div class="control-group">
-                <label class="control-label">題型</label>
-                <div class="controls">
-                  <select><option></option><option value="0"> 是非</option><option value="1"> 選擇</option></select>
+              <div class="is-table">
+                <div class="control-group">
+                  <label class="control-label">題型</label>
+                  <div class="controls">
+                    <select class="select"><option></option><option value="0"> 是非</option><option value="1"> 選擇</option></select>
+                  </div>
                 </div>
               </div>
-              <div class="control-group">
-                <label class="control-label">題目</label>
-                <div class="controls">
-                  <div class="btn-group i-b-block">
-                    <input type="text"><input type="button" value="搜尋">
+              <div class="is-table">
+                <div class="control-group">
+                  <label class="control-label">題目</label>
+                  <div class="controls">
+                    <input class="width-50" type="text"> <input class="btn btn-blue" type="button" value="搜尋"> 
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="cont_tab3 clearb">
-            <div class="i-b-block">
-              <div class="caption">
-                題庫內共有<em>500</em>道題目，其中<em>450</em>道已作答過。
+          <div class="cont">
+            <div class="row">
+              <div class="fl">
+                <span class="caption">題庫內共有<em>500</em>道題目，其中<em>450</em>道已作答過。</span>
               </div>
-              <div class="fr i-b-block">
-                <div class="btn-group">
-                  <a class="bt" href="quiz_creat.html">新增</a><a class="bt" href="quiz_import.html">匯入</a><a class="bt fancybox fancybox.iframe afb" href="quiz_export_pop.html">匯出</a>
-                </div>
+              <div class="fr">
+                <a class="btn btn-blue" href="quiz_creat.html">新增</a> <input class="upload-fiie--excel" type="file"> <a class="btn btn-blue insert_excel" href="javascript:;">匯入</a>  <a class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_export_pop.html">匯出</a> 
               </div>
             </div>
-            <table cellpadding="0" cellspacing="1" class="table" width="100%">
-              <tr>
-                <th width="5%">
-                  序號
-                </th>
-                <th width="10%">
-                  題型
-                </th>
-                <th width="43%">
-                  測驗卷名稱
-                </th>
-                <th width="16%">
-                  建立日期
-                </th>
-                <th width="16%">
-                  最新作答日期
-                </th>
-                <th width="10%">
-                  功能
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+            <table class="table-02">
+              <thead>
+                <tr>
+                  <th width="5%">
+                    序號
+                  </th>
+                  <th width="10%">
+                    題型
+                  </th>
+                  <th width="43%">
+                    題目名稱
+                  </th>
+                  <th width="16%">
+                    建立日期
+                  </th>
+                  <th width="16%">
+                    最新作答日期
+                  </th>
+                  <th width="10%">
+                    功能
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-centered">
                     1
-                  </div>
-                </td>
-                <td class="text-l">
-                  他風皮務啡將柚我哀生假的講前一的的啊導目曼們了以餃
-                </td>
-                <td>
-                  2014-03-09 00:00
-                </td>
-                <td>
-                  2014-10-23 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    較有一一有心來目個地層上裡那-一憶了地孩此的的溪樣
+                  </td>
+                  <td class="text-centered">
+                    2014-08-15 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-09-29 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-centered">
                     2
-                  </div>
-                </td>
-                <td class="text-l">
-                  在切的咖觀掉生２國看我趕雙們甲狗較快意年比曼就了媽
-                </td>
-                <td>
-                  2014-03-13 00:00
-                </td>
-                <td>
-                  2014-06-11 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    亦去團迎了生如是見裡走險橫以痕仰值地爭要繼須頓何弟
+                  </td>
+                  <td class="text-centered">
+                    2014-09-30 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-10-01 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-centered">
                     3
-                  </div>
-                </td>
-                <td class="text-l">
-                  是歲奶是賴這問的下我的盲眼皮了地憑好前層大得婦伴何
-                </td>
-                <td>
-                  2014-02-01 00:00
-                </td>
-                <td>
-                  2014-10-11 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    目身有的攜煮柚有地也拚也中再幾一月龍來議要纔閒了較
+                  </td>
+                  <td class="text-centered">
+                    2014-01-29 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-10-03 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-centered">
                     4
-                  </div>
-                </td>
-                <td class="text-l">
-                  算麼議個喝本暗不的的說兒心了啊非不g人多歡部就是互
-                </td>
-                <td>
-                  2014-10-18 00:00
-                </td>
-                <td>
-                  2014-12-19 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    們狺和裡一爸而國地侶肉下來理也雙傷值聲就抗究後還掃
+                  </td>
+                  <td class="text-centered">
+                    2014-11-12 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-05-16 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-centered">
                     5
-                  </div>
-                </td>
-                <td class="text-l">
-                  便後悲到愈上似的有都是是葡欺夜打途念用上如不地得我
-                </td>
-                <td>
-                  2014-06-26 00:00
-                </td>
-                <td>
-                  2014-07-29 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    戒的說街所就宣憑餐的就不兒點上一欺議掃是陶領澤前什
+                  </td>
+                  <td class="text-centered">
+                    2014-12-16 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-05-18 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-centered">
                     6
-                  </div>
-                </td>
-                <td class="text-l">
-                  甲什的光來運辨一好進鬥得是葡前忙一什他進媽地啊悲死
-                </td>
-                <td>
-                  2014-09-12 00:00
-                </td>
-                <td>
-                  2014-05-03 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    <!--如果有圖片-->我決掉沒n之放啡非是了不狗甘一進異是弟明頂這不斷這<img src="http://placehold.it/156x123" />
+                  </td>
+                  <td class="text-centered">
+                    2014-12-24 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-01-30 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-centered">
                     7
-                  </div>
-                </td>
-                <td class="text-l">
-                  切著論掃爸各說春喝的了在再有不別老何呢的繞了面較狗
-                </td>
-                <td>
-                  2014-12-10 00:00
-                </td>
-                <td>
-                  2014-03-20 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    <!--如果有圖片-->攜真吃到厭個光球佔褲甲氣啊明已無無者掉似樣這倒行眼<img src="http://placehold.it/156x123" />
+                  </td>
+                  <td class="text-centered">
+                    2014-12-03 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-12-20 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-centered">
                     8
-                  </div>
-                </td>
-                <td class="text-l">
-                  所啡哪奉過答的各廣黃拜射到一丙龍腕正８比半死正真想
-                </td>
-                <td>
-                  2014-10-01 00:00
-                </td>
-                <td>
-                  2014-06-13 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    <!--如果有圖片-->地所被買血裡進日地點要憑真狀了好的到前反天２然萄什<img src="http://placehold.it/156x123" />
+                  </td>
+                  <td class="text-centered">
+                    2014-12-02 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-10-23 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-centered">
                     9
-                  </div>
-                </td>
-                <td class="text-l">
-                  蛋比我回山和容教我的弟記是城憑過去憑的說反到就弟指
-                </td>
-                <td>
-                  2014-10-02 00:00
-                </td>
-                <td>
-                  2014-12-11 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  <div>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    <!--如果有圖片-->有最的了遠的的光一失真頓麼了境前難以就到最偏煩自很<img src="http://placehold.it/156x123" />
+                  </td>
+                  <td class="text-centered">
+                    2014-06-27 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-09-18 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-centered">
                     10
-                  </div>
-                </td>
-                <td class="text-l">
-                  著分也煎忙臉葡憊睛說要著意不運何輸心-那負人爍前啡
-                </td>
-                <td>
-                  2014-09-08 00:00
-                </td>
-                <td>
-                  2014-08-09 00:00
-                </td>
-                <td>
-                  <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
-                </td>
-              </tr>
+                  </td>
+                  <td class="text-centered">
+                    選擇題
+                  </td>
+                  <td class="text-l">
+                    <!--如果有圖片-->的龍一他也了好行是喝今.走憊好裡不然抗不覽過麼顆年<img src="http://placehold.it/156x123" />
+                  </td>
+                  <td class="text-centered">
+                    2014-07-06 00:00
+                  </td>
+                  <td class="text-centered">
+                    2014-11-14 00:00
+                  </td>
+                  <td class="text-centered">
+                    <a href="#"> 檢視</a><br><a href="#"> 刪除</a>
+                  </td>
+                </tr>
+              </tbody>
             </table>
             <div class="pagination fr">
               <ul class="fl">
@@ -385,7 +371,7 @@
                 </li>
               </ul>
               <div class="fr">
-                <select class="select-page" onchange="javascript:sizePage_pager($(this).val());"><option selected="" value="10"> 10</option><option value="20"> 20</option><option value="50"> 50</option><option value="80"> 80</option><option value="100"> 100</option></select>
+                <select class="select-page select" onchange="javascript:sizePage_pager($(this).val());"><option selected="" value="10"> 10</option><option value="20"> 20</option><option value="50"> 50</option><option value="80"> 80</option><option value="100"> 100</option></select>
               </div>
             </div>
           </div>
