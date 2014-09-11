@@ -13,7 +13,7 @@
 	.container
 		.cont
 			.cont_tab3
-				.row
+				.row.tb_fixed
 					.fl
 						span.caption
 							| 已加入
@@ -31,9 +31,9 @@
 							th width="6%": input.chk type="checkbox"
 							th width="6%" 序號
 							th width="8%" 題型
-							th 題目
-							th width="10%" 建立日期
-							th width="10%" 最新作答日期
+							th width="56%" 題目
+							th width="12%" 建立日期
+							th width="12%" 最新作答日期
 							/ th width="10%" 功能
 					tbody
 							== render "partials/quiz_list" , :locals => {:f => "ture"}

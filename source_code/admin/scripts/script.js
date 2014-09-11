@@ -366,6 +366,7 @@ function thead_fixed()
 	{
 		if(!_fixed){
 			$tbfix.addClass('fixed');
+			$('.table_striped').css('margin-top',81);
 		}
 	}
 	else
@@ -373,6 +374,7 @@ function thead_fixed()
 		if(_fixed)
 		{
 			$tbfix.removeClass('fixed');
+			$('.table_striped').css('margin-top',0);
 		}
 	}
 }
