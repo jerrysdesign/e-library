@@ -70,8 +70,8 @@ function selectholder()
 // 設定正確答案
 function radioholder()
 {
-	$('.radioholder').removeClass("activeradioholder");
-	$(this).addClass('activeradioholder').children("input[type=radio]").prop("checked", true);
+	$('.radioholder').removeClass("activeradioholder").children("input[type=radio]").attr("checked", false);
+	$(this).addClass('activeradioholder').children("input[type=radio]").attr("checked", true);
 	btn_enable();
 }
 
@@ -152,7 +152,7 @@ function additem()
 					"<textarea class='width-100' rows='1'></textarea>"+
 					"<div class='i-b-block'>"+
 						"<img class='pic' src=''>"+
-						"<input class='upload-fiie--img file' type='file'>"+
+						"<input class='upload-fiie--img file--img' type='file'>"+
 						"<a class='btn insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
 						"<a class='btn btn-red remove_img' href='javascript:;'>刪除圖片</a>"+
 						"<span class='alert-block'>插入圖片檔案最大為 2 Mb，格式限定 jpg、png。</span>"+
@@ -232,7 +232,6 @@ function c_val_bf()
 			_txa.off('keyup',btn_enable);
 		}
 	});
-	console.log('123');
 }
 
 // 判斷儲存按鈕是否啓用
