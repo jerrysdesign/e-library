@@ -8,37 +8,42 @@
 	.container
 		.cont.cont_tab4
 			.pd2040
-				.is-table
+				.quiz_subject
 					.control-group
-						label.control-label 題目
+						label.control-label
+							h3 題目
 						.controls
 							.row
-								textarea.width-100 rows="2"
-									= zh_lorem_paragraphs 3
-							.i-b-block.row
+								textarea.width-100 rows="2" =zh_lorem_sentences 3
+							.i-b-block
 								== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
-				.control-label.title 設定正確答案
+				h3.title 設定正確答案
 				ol.quiz_add_subject
-					li.control-group
-						label.control-label
-							label.radio
-								input type="radio" name="optionsRadios" value="a"  A
-						.controls
-							.row.i-b-block
-								input type="text" value="=zh_lorem_sentences 1"
-							.i-b-block.row
-								== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
-					li.control-group
-						label.control-label
-							label.radio
-								input type="radio" name="optionsRadios" value="b"  B
-						.controls
-							.row
-								input type="text" value="=zh_lorem_sentences 1"
-							.i-b-block.row
-								== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
+					li.is-table
+						.control-group
+							.control-label
+								.radioholder
+									span.tick
+									input type="radio" name="projecttype" value="a" checked=""
+									b A
+							.controls
+								textarea.width-100 rows="2" =zh_lorem_sentences 1
+								.i-b-block
+									== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
+					li.is-table
+						.control-group
+							.control-label
+								.radioholder.activeradioholder
+									span.tick
+									input type="radio" name="projecttype" value="b" checked="checked"
+									b B
+							.controls
+								textarea.width-100 rows="2" =zh_lorem_sentences 1
+								.i-b-block
+									== render "partials/quiz_add_photo" , :locals => {:f => "ture"}
 				.is-table
 					.control-group
 						.control-label
 						.controls
 							a.btn.btn-blue.add href="javascript:;" 增加選項
+		== render :partial => "partials/components/btn_state.html.slim" , :locals => {:f => "disabled"}
