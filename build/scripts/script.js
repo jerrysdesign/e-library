@@ -222,7 +222,7 @@ function c_val_bf()
 		{
 			_vlen ++;
 		}
-		if( ( _vlen + 1 >= _len )  && $('.activeradioholder,.radio-tf').size() != 0)
+		if( ( _vlen + 1 >= _len )  && $('.activeradioholder,.radio-tf:checked').size() != 0)
 		{
 			_txa.on('keyup',btn_enable);
 			return false;
@@ -238,7 +238,7 @@ function c_val_bf()
 function btn_enable()
 {
 	var $textarea = $('textarea'),
-		$quiz_a_s = $('.activeradioholder,.radio-tf').size(),
+		$quiz_a_s = $('.activeradioholder,.radio-tf:checked').size(),
 		$success  = true;
 
 	$textarea.each(function( _idx )
@@ -540,6 +540,7 @@ $(function(){
 	selectholder();
 	renumber();
 	barCharts();
+	btn_enable();
 
 	// [ exam ] table - remove & up & down
 	$('.chk').on('click',tr_reclass);
