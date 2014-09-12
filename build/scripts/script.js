@@ -222,7 +222,7 @@ function c_val_bf()
 		{
 			_vlen ++;
 		}
-		if( ( _vlen + 1 >= _len )  && $('.activeradioholder').size() != 0)
+		if( ( _vlen + 1 >= _len )  && $('.activeradioholder,.radio-tf').size() != 0)
 		{
 			_txa.on('keyup',btn_enable);
 			return false;
@@ -238,7 +238,7 @@ function c_val_bf()
 function btn_enable()
 {
 	var $textarea = $('textarea'),
-		$quiz_a_s = $('.activeradioholder').size(),
+		$quiz_a_s = $('.activeradioholder,.radio-tf').size(),
 		$success  = true;
 
 	$textarea.each(function( _idx )
