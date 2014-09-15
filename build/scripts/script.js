@@ -256,11 +256,11 @@ function btn_enable()
 
 	if($success)
 	{
-		$('.center-block > input:eq(0)').attr('disabled', false);
+		$('.if--validation').attr('disabled', false);
 	}
 	else
 	{
-		$('.center-block > input:eq(0)').attr('disabled', true);
+		$('.if--validation').attr('disabled', true);
 	}
 }
 
