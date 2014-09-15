@@ -9,12 +9,30 @@
 				| #{n}
 			td width="8%"
 				| 是非
+			/! 無圖
 			td.text-left width="54%"
 				=zh_lorem_words 90
 			td width="12%"
 				=lorem_date("%Y/%m/%d", 2014..2014)
 			td width="12%"
 				=lorem_date("%Y/%m/%d", 2014..2014)
+		/! 新增有圖狀態範例
+		tr
+			td width="6%"
+				input.chk type="checkbox"
+			td width="8%"
+				| #{n}
+			td width="8%"
+				| 是非
+			/! 有圖
+			td.text-left width="54%"
+				=zh_lorem_words 90
+				img.pic.view src="http://placehold.it/260x162&text=([img)]"
+			td width="12%"
+				=lorem_date("%Y/%m/%d", 2014..2014)
+			td width="12%"
+				=lorem_date("%Y/%m/%d", 2014..2014)
+				
 			/ td
 			/   a href="javascript:;" 修改
 			/   br
