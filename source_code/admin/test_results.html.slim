@@ -78,19 +78,19 @@
 								h6 第#{n}題
 								ul.chart__bars
 									li
-										.chart__bar data-nofp="80"
+										.chart__bar data-nofp="10"
 										.chart__left_lable A
 										.chart__right-lable
 									li
-										.chart__bar.right data-nofp="5"
+										.chart__bar.right data-nofp="50"
 										.chart__left_lable B
 										.chart__right-lable
 									li
-										.chart__bar data-nofp="2"
+										.chart__bar data-nofp="10"
 										.chart__left_lable C
 										.chart__right-lable
 									li
-										.chart__bar data-nofp="3"
+										.chart__bar data-nofp="10"
 										.chart__left_lable D
 										.chart__right-lable
 									li
@@ -98,9 +98,12 @@
 										.chart__left_lable E
 										.chart__right-lable
 									li
-										.chart__bar data-nofp="0"
+										.chart__bar data-nofp="5"
 										.chart__left_lable F
 										.chart__right-lable
+									/! 未答題
+									li
+										.chart__bar.empty data-nofp="10"
 						- (5..10).each do |n|
 							li
 								h6 第#{n}題
@@ -110,6 +113,9 @@
 										.chart__left_lable.right O
 										.chart__right-lable
 									li
-										.chart__bar.right data-nofp="20"
+										.chart__bar.right data-nofp="80"
 										.chart__left_lable X
 										.chart__right-lable
+									/! 未答題
+									li
+										.chart__bar.empty data-nofp="10"

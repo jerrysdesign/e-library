@@ -54,15 +54,16 @@ $chart_bar_color 				: nth($errorColor, 3), nth($successColor, 2)
 		position: relative
 		padding: 5px 0
 		.chart__bar
+			// 未答題
+			&.empty
+				display: none
 		&:hover
 			.chart__bar
 				background-color: darken(saturate(nth($chart_bar_color, 1), 20%), 15%) 
 				&:before
 					color: nth($infoColor, 1)
-
 				&.right
 					background-color: darken(saturate(nth($chart_bar_color, 2),20%), 30%)
-
 			.chart__right-lable
 				color: $black-50
 // A.B.C.D.O.X
