@@ -380,6 +380,7 @@ input.big { padding: 2px 0; font-size: 1.2em; }
 
 .chart__bars { background: rgba(0, 0, 0, 0.05); margin-left: 150px; -webkit-border-radius: 0 4px 4px 0; -moz-border-radius: 0 4px 4px 0; -ms-border-radius: 0 4px 4px 0; -o-border-radius: 0 4px 4px 0; border-radius: 0 4px 4px 0; }
 .chart__bars li { position: relative; padding: 5px 0; }
+.chart__bars li .chart__bar.empty { display: none; }
 .chart__bars li:hover .chart__bar { background-color: #e48695; }
 .chart__bars li:hover .chart__bar:before { color: #31708f; }
 .chart__bars li:hover .chart__bar.right { background-color: #85d640; }
