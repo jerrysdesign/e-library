@@ -702,6 +702,8 @@ table img.pic.view { display: block; }
 
 .alert--error { color: #a94442; background-color: #f2dede; border: 1px solid #ebccd1; }
 
+.caption.fl { float: left !important; }
+
 .select { font: inherit; font-weight: 400; border: 1px solid #cccccc; padding: 5px; background: white; min-width: 200px; border-radius: 0; appearance: button; -moz-appearance: button; -webkit-appearance: button; background-image: url(../images/arrow_b3.gif); background-position: right 50%; background-repeat: no-repeat; }
 
 #quizs { background-color: white; padding: 40px; }
