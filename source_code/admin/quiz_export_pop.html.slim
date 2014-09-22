@@ -32,6 +32,12 @@ html lang="zh-tw"
 							== render "partials/quiz_list_pop_asset" , :locals => {:f => "ture"}
 			._afb_footbar_out
 				._afb_footbar
+					/! 2014-09-22 新增內容
+					.caption.fl
+						| 已選取
+						span  0 
+						| 題
+					/! 2014-09-22 新增內容/
 					.center-block
 						input.btn.btn-blue<> type="button" value="輸出"
 						input.btn.btn-red<> type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"
