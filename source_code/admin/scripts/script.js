@@ -521,11 +521,14 @@ $(function(){
 		closeBtn    : false
 	});
 	$(".alert").fancybox({
-		maxWidth  : 300,
-		maxHeight : 120,
-		fitToView : false,
-		autoSize  : false,
-		closeBtn  : false
+		maxWidth        : 240,
+		maxHeight       : 120,
+		scrolling       : 'no',
+		transitionIn    : 'elastic',
+		transitionOut   : 'elastic',
+		fitToView       : false,
+		autoSize        : false,
+		closeBtn        : false
 	});
 
 	// fixed-header

@@ -36,10 +36,15 @@
 						a.btn.btn-blue<> href="quiz_creat.html" 新增
 						input.upload-fiie--excel type='file'
 						a.btn.btn-blue.insert_excel<> href="javascript:;" 匯入
+						/! 2014-09-23
+						/! 如果內容有誤
+						a#trigger-alert.btn.btn-blue.fancybox.alert style="display:none"; href="#alert" 匯入
+						/! <script type="text/javascript">document.getElementById('trigger-alert').click();</script>
+						/! 如果內容有誤/
 						a<> class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_export_pop.html" 匯出
-						/! 2014-09-23 更動
+						/! 2014-09-23
 						a<> class="btn btn-blue fancybox fancybox.iframe afb" href="subject_edit_pop.html" 設定
-						/! 2014-09-23 更動/
+						/! 2014-09-23/
 				table.table-02
 					thead
 						tr
@@ -87,3 +92,11 @@
 				// paginatio
 				== render "partials/components/paginatio"
 		.clearb
+/! 2014-09-23
+/! 如果內容有誤
+/ .fancybox
+#alert.warning style="display:none"
+	strong.strong 檔案內容有誤！
+	.block.center-block
+		a.btn.brn-blue onclick="javascript:parent.jQuery.fancybox.close();" href="javascript:;" OK
+/! 如果內容有誤/
