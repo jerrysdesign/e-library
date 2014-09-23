@@ -409,7 +409,7 @@ input.big { padding: 2px 0; font-size: 1.2em; }
 .btn-group input { width: auto !important; }
 .btn-group input + input, .btn-group a + a { margin-left: -2px; }
 
-.center-block input, .spacing-block input { margin-left: 10px; marfin-right: 10px; }
+.center-block input, .spacing-block input { margin-left: 10px; margin-right: 10px; }
 
 .inline-grop { overflow: hidden; *zoom: 1; }
 .inline-grop input { width: auto !important; }
