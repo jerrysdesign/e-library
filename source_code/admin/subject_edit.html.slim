@@ -34,7 +34,10 @@
 							| 道已作答過。
 					.fr
 						a.btn.btn-blue<> href="quiz_creat.html" 新增
-						input.upload-fiie--excel type='file'
+						/! 2014-09-23
+						form id="fileupload-id" action="" method="POST" enctype="multipart/form-data"
+							input.upload-fiie--excel type='file'
+						/! 2014-09-23/
 						a.btn.btn-blue.insert_excel<> href="javascript:;" 匯入
 						a<> class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_export_pop.html" 匯出
 						/! 2014-09-23
