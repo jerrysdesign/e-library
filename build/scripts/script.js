@@ -126,6 +126,17 @@ function remove_img()
 	btn_enable();
 }
 
+function max_cont()
+{
+	var _qas  = $(".quiz_add_subject"),
+		count = _qas.find('li').size();
+
+	if(count == 6)
+	{
+		$(".add").attr("disabled", true);
+	}
+}
+
 // 增加選項
 function additem()
 {
@@ -510,11 +521,14 @@ $(function(){
 		closeBtn    : false
 	});
 	$(".alert").fancybox({
-		maxWidth  : 300,
-		maxHeight : 120,
-		fitToView : false,
-		autoSize  : false,
-		closeBtn  : false
+		maxWidth        : 240,
+		maxHeight       : 120,
+		scrolling       : 'no',
+		transitionIn    : 'elastic',
+		transitionOut   : 'elastic',
+		fitToView       : false,
+		autoSize        : false,
+		closeBtn        : false
 	});
 
 	// fixed-header
@@ -542,6 +556,8 @@ $(function(){
 	barCharts();
 	btn_enable();
 
+	max_cont();
+	
 	// [ exam ] table - remove & up & down
 	$('.chk').on('click',tr_reclass);
 	$('.exam-remove').on('click',tr_remove);
