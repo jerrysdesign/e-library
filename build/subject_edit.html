@@ -58,7 +58,8 @@
       <div id="cont">
         <div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
         <form enctype="multipart/form-data" method="post">
-          <!--2014-09-23 更動--><!--2014-09-23 更動/-->
+          <!--2014-09-23 更動-->
+          <!--2014-09-23 更動/-->
           <div class="cont_tab2">
             <h2>
               <span class="icon04"></span>題目管理
@@ -88,7 +89,17 @@
                 <span class="caption">題庫內共有<em>500</em>道題目，其中<em>450</em>道已作答過。</span>
               </div>
               <div class="fr">
-                <a class="btn btn-blue" href="quiz_creat.html">新增</a> <input class="upload-fiie--excel" type="file"> <a class="btn btn-blue insert_excel" href="javascript:;">匯入</a> <!--2014-09-23--><!--如果內容有誤--><a class="btn btn-blue fancybox alert" id="trigger-alert" style="display:none">; href="#alert" 匯入</a><!--<script type="text/javascript">document.getElementById('trigger-alert').click();</script>--><!--如果內容有誤/--> <a class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_export_pop.html">匯出</a> <!--2014-09-23--> <a class="btn btn-blue fancybox fancybox.iframe afb" href="subject_edit_pop.html">設定</a> <!--2014-09-23/-->
+                <a class="btn btn-blue" href="quiz_creat.html">新增</a> 
+                <!--2014-09-23-->
+                <form action="" enctype="multipart/form-data" id="fileupload-id" method="POST">
+                  <input class="upload-fiie--excel" type="file">
+                </form>
+                <!--2014-09-23/-->
+                 <a class="btn btn-blue insert_excel" href="javascript:;">匯入</a> 
+                 <a class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_export_pop.html">匯出</a> 
+                <!--2014-09-23-->
+                 <a class="btn btn-blue fancybox fancybox.iframe afb" href="subject_edit_pop.html">設定</a> 
+                <!--2014-09-23/-->
               </div>
             </div>
             <table class="table-02">
@@ -364,15 +375,7 @@
         </form>
         <div class="clearb"></div>
       </div>
-    </div>
-    <!--2014-09-23--><!--如果內容有誤-->
-    <div class="warning" id="alert" style="display:none">
-      <strong class="strong">檔案內容有誤！</strong>
-      <div class="block center-block">
-        <a class="btn brn-blue" href="javascript:;" onclick="javascript:parent.jQuery.fancybox.close();">OK</a>
-      </div>
-    </div>
-    <!--如果內容有誤/--><div id="foot_area">
+    </div><div id="foot_area">
     	<div id="foot">
     		浩鑫股份有限公司&nbsp;COPYRIGHT&nbsp;&copy;&nbsp;2013&nbsp;SHUTTLE&nbsp;INC.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESREVED.
     	</div>
