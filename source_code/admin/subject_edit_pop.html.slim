@@ -1,0 +1,34 @@
+doctype html
+html lang="zh-tw"
+	head
+		meta charset="UTF-8"
+		title 題目設定
+		link rel="stylesheet" type="text/css" href="css/admin.css"
+		link rel="stylesheet" type="text/css" href="css/screen.css"
+	body
+		form
+			._afb_toolbar_out
+				._afb_toolbar
+					h2 題目設定
+					a.fancybox-close title="Close" href="javascript:parent.jQuery.fancybox.close();"
+			._afb_main
+				.cont_tab3
+					.pd2020.center-block style="width:60%"
+						.is-table
+							.control-group
+								lable.control-label style="width:45%" 是非題答題選項
+								.controls
+									.row
+										label.radio
+			 								input.radio-tf type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  O or X
+			 						.row
+			 							label.radio
+			 								input.radio-tf type="radio" name="optionsRadios" id="optionsRadios2" value="option2"  √ or X
+			 						.row
+			 							label.radio
+			 								input.radio-tf type="radio" name="optionsRadios" id="optionsRadios3" value="option3"  T or F
+			._afb_footbar_out
+				._afb_footbar
+					.center-block
+						input.btn.btn-blue<> type="button" value="確定" onclick="parent.location='subject_edit.html'"
+						/ input.btn.btn-red<> type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"

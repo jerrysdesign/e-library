@@ -1,20 +1,9 @@
 #cont_area
 	#cont
 		|  <div class="breadcrumbs">目前位置：圖書管理&nbsp;&gt;&nbsp;自有版權書管理&nbsp;&gt;&nbsp;測驗&nbsp;&gt;&nbsp;(<a href="ebook_free_main.html">回上一頁</a>)</div>
-		form enctype="multipart/form-data" method="post" 
-			.cont_tab2
-				h2
-					span.icon04
-					| 題目設定
-				.pd2040
-					.is-table
-						.control-group
-							label.control-label 是非題答題型態
-							.controls
-								select.select
-									option value="0"  O or X
-									option value="1"  √ or X
-									option value="2"  T or F
+		form enctype="multipart/form-data" method="post"
+			/! 2014-09-23 更動
+			/! 2014-09-23 更動/
 			.cont_tab2
 				h2
 					span.icon04
@@ -48,6 +37,9 @@
 						input.upload-fiie--excel type='file'
 						a.btn.btn-blue.insert_excel<> href="javascript:;" 匯入
 						a<> class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_export_pop.html" 匯出
+						/! 2014-09-23 更動
+						a<> class="btn btn-blue fancybox fancybox.iframe afb" href="subject_edit_pop.html" 設定
+						/! 2014-09-23 更動/
 				table.table-02
 					thead
 						tr
