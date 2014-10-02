@@ -5,6 +5,7 @@ html lang="zh-tw"
 		title 輸出題目
 		link rel="stylesheet" type="text/css" href="css/admin.css"
 		link rel="stylesheet" type="text/css" href="css/screen.css"
+		script src="scripts/jquery-1.9.0.min.js"
 	body
 		form
 			._afb_toolbar_out
@@ -41,3 +42,20 @@ html lang="zh-tw"
 					.center-block
 						input.btn.btn-blue<> type="button" value="輸出"
 						input.btn.btn-red<> type="button" value="取消" onclick="javascript:parent.jQuery.fancybox.close();"
+		
+		// checked all function
+		// 因iframe無載入共用頁面之script的checked all function，又該function需在各個input:check加上 class .chk ，感覺太麻煩，先用以下 js 解決以此問題，故直接取頁面上之 :check element ，之後有可能打架，需再想個方式解決
+		javascript:
+			$(document).ready(function() {
+			  $("th :checkbox").click(function() {
+				if (this.checked) {
+				  $("td :checkbox").each(function() {
+					this.checked = true;
+				  });
+				} else {
+				  $(":checkbox").each(function() {
+					this.checked = false;
+				  });
+				}
+			  });
+			});
