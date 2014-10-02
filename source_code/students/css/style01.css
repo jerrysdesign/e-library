@@ -34,7 +34,7 @@ a.lang{border-radius: 0 0 5px 5px}
 /* 01 head */
 #head_area{height:80px}
 	#logo{text-indent:-9999px}
-	#logo a{width:260px;height:60px;margin:10px;background:url('../images/logo.png') no-repeat 0 0}
+	#logo a{width:260px;height:60px;margin:10px;background:url('../images/logo.png') no-repeat 0 0;background-size: 260px auto;}
 	
 	/* nav */
 	#head_nav{width:700px;float:right}
@@ -296,4 +296,4 @@ a.lang{border-radius: 0 0 5px 5px}
 		.q_dh_c3{float:right}
 
 /* 04 foot */
-#foot{padding:30px 0 30px 200px;background:url('../images/logo.png') no-repeat 0 60%;text-align:right}
+#foot{padding:30px 0 30px 200px;background:url('../images/logo.png') no-repeat 0 60%;background-size: 260px auto;text-align:right}
