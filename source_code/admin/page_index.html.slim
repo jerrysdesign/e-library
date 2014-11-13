@@ -1,0 +1,65 @@
+html lang="zh-TW"
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" 
+    title 頁面傳送門
+    meta name="description" content=""
+    css:
+      body {
+        text-align: center;
+      }
+      .indexlink {
+        display: block;
+        padding: 10px;
+        width: 40%;
+        float: left;
+      }
+  body
+    // 後台首頁
+    = link_to("admin_main.htm / 後台首頁", "/admin_main.htm", :class => "indexlink")
+    // 系統新增公告
+    = link_to("bulletin_add.htm / 系統新增公告", "/bulletin_add.htm", :class => "indexlink")
+    // 系統公告維護
+    = link_to("bulletin_main.htm / 系統公告維護", "/bulletin_main.htm", :class => "indexlink")
+    // 基本資料維護
+    = link_to("config_edit.htm / 基本資料維護", "/config_edit.htm", :class => "indexlink")
+    // 自有版權書管理
+    = link_to("ebook_free_main.htm / 自有版權書管理", "/ebook_free_main.htm", :class => "indexlink")
+    // 測驗卷列表
+    = link_to("exam_paper.htm / 測驗卷列表", "/exam_paper.htm", :class => "indexlink")
+    // 測驗卷列表無題目狀態
+    = link_to("exam_paper_list_null.htm / 測驗卷列表無題目狀態", "/exam_paper_list_null.htm", :class => "indexlink")
+    // 測驗卷列表有題目狀態
+    = link_to("exam_paper_list_ture.htm / 測驗卷列表有題目狀態", "/exam_paper_list_ture.htm", :class => "indexlink")
+    // 加入題目POP無題目狀態
+    = link_to("quiz_add_pop_null.htm / 加入題目POP無題目狀態", "/quiz_add_pop_null.htm", :class => "indexlink")
+    // 加入題目POP有題目狀態
+    = link_to("quiz_add_pop_ture.htm / 加入題目POP有題目狀態", "/quiz_add_pop_ture.htm", :class => "indexlink")
+    // 加入題目POP搜尋
+    = link_to("quiz_add_pop_search.htm / 加入題目POP搜尋", "/quiz_add_pop_search.htm", :class => "indexlink")
+    // 新增題型
+    = link_to("quiz_creat.htm / 新增題型", "/quiz_creat.htm", :class => "indexlink")
+    // 輸出題目
+    = link_to("quiz_export_pop.htm / 輸出題目", "/quiz_export_pop.htm", :class => "indexlink")
+    // 匯入題目
+    = link_to("quiz_import.htm / 匯入題目", "/quiz_import.htm", :class => "indexlink")
+    // 新增選擇題無資料狀態
+    = link_to("quiz_mulch_null.htm / 新增選擇題無資料狀態", "/quiz_mulch_null.htm", :class => "indexlink")
+    // 新增選擇題有資料狀態
+    = link_to("quiz_mulch_ture.htm / 新增選擇題有資料狀態", "/quiz_mulch_ture.htm", :class => "indexlink")
+    // 新增是非題無資料狀態
+    = link_to("quiz_tf_null.htm / 新增是非題無資料狀態", "/quiz_tf_null.htm", :class => "indexlink")
+    // 新增是非題有資料狀態
+    = link_to("quiz_tf_ture.htm / 新增是非題有資料狀態", "/quiz_tf_ture.htm", :class => "indexlink")
+    // 題目列表
+    = link_to("subject_edit.htm / 題目列表", "/subject_edit.htm", :class => "indexlink")
+    // 題目設定POP
+    = link_to("subject_edit_pop.htm / 題目設定POP", "/subject_edit_pop.htm", :class => "indexlink")
+    // 測驗卷檢視
+    = link_to("test.htm / 測驗卷檢視", "/test.htm", :class => "indexlink")
+    // 測驗中
+    = link_to("testing.htm / 測驗中", "/testing.htm", :class => "indexlink")
+    // 測驗結果
+    = link_to("test_results.htm / 測驗結果", "/test_results.htm", :class => "indexlink")
+    // 測驗時間設定POP
+    = link_to("timer_pop.htm / 測驗時間設定POP", "/timer_pop.htm", :class => "indexlink")
