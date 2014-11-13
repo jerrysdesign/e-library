@@ -13,4 +13,8 @@ source_code/admin/.sass-cache
 source_code/admin/css/*.css
 source_code/admin/stylesheets/*.css
 
+vender/fixed-header-table/.gitignore
 build/vender/fixed-header-table/.gitignore
+
+build/sass
+build/partials
