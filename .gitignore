@@ -7,23 +7,22 @@
 .coffeescript-cache
 config.rb
 fire_app_log.txt
-.sass-cache*/
+.sass-cache/
 
 
 # Source
 #
 file_tree.txt
-doc*/
-source*/
+doc/
+source/
 
 
 # Source Code
 #
-source_code/stylesheets*/
-source_code/admin/css*/
-source_code/admin/stylesheets*/
-
+source_code/stylesheets/
+source_code/admin/css/
+source_code/admin/stylesheets/
 source_code/admin/vender/**/*.gitignore
 build/vender/**/*.gitignore
-build/sass*/
-build/partials*/
+build/sass/
+build/partials/
