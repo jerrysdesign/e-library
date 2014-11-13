@@ -1,20 +1,29 @@
-*.scssc
-*.sassc
-*.coffeescript-cache
+#.gitignore
 
-file_tree.txt
+# Fire.app
+#
+.scssc
+.sassc
+.coffeescript-cache
+config.rb
 fire_app_log.txt
-doc/
-source/ICON
+.sass-cache*/
 
-source_code/admin/fire_app_log.txt
-source_code/admin/.sass-cache
 
-source_code/admin/css/*.css
-source_code/admin/stylesheets/*.css
+# Source
+#
+file_tree.txt
+doc*/
+source*/
 
-vender/fixed-header-table/.gitignore
-build/vender/fixed-header-table/.gitignore
 
-build/sass
-build/partials
+# Source Code
+#
+source_code/stylesheets*/
+source_code/admin/css*/
+source_code/admin/stylesheets*/
+
+source_code/admin/vender/**/*.gitignore
+build/vender/**/*.gitignore
+build/sass*/
+build/partials*/
