@@ -85,8 +85,8 @@ function insert_img()
 function change_img()
 {
 	var path,
-		clip = $(this).prev(),
-		FileReader = window.FileReader;
+			clip = $(this).prev(),
+			FileReader = window.FileReader;
 
 	// 篩選圖檔格式
 	var  ext = $(this).val().split('.').pop().toLowerCase();
