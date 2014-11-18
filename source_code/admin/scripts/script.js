@@ -574,3 +574,43 @@ $(function(){
 		$(this).prev().click();
 	})
 });
+
+
+// 表單驗證
+// 用 form.smart-forms 在外容器與欄位用 attr[name] 做hook
+
+$(function() {
+	$(".smart-forms").validate({
+		errorClass: "state-error",
+		validClass: "state-success",
+		errorElement: "em",
+		rules: {
+			// exam_paper_list_null
+			examname_001: {
+				required: false,
+				maxlength: 40
+			}
+		},
+		messages:{
+			examname_001: {
+				required: "請填寫測驗卷名稱!",
+				maxlength: "限40個字內"
+			}
+		},
+		highlight: function(element, errorClass, validClass) {
+			$(element).closest('.field').addClass(errorClass).removeClass(validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			$(element).closest('.field').removeClass(errorClass).addClass(validClass);
+		},
+		errorPlacement: function(error, element) {
+			if (element.is(":radio") || element.is(":checkbox")) {
+				element.closest('.option-group').after(error);
+			} else {
+				//error.insertAfter(element.parent());
+				error.insertAfter(element);
+			}
+		}
+	});
+});
+
