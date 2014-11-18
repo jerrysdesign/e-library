@@ -160,7 +160,7 @@ function additem()
 				"</div>"+
 				"<div class='controls'>"+
 					"<a class='remove' href='javascript:;'>刪除選項</a>"+
-					"<textarea class='width-100' rows='1'></textarea>"+
+					"<textarea class='width-100' rows='2'></textarea>"+
 					"<div class='i-b-block'>"+
 						"<img class='pic' src=''>"+
 						"<input class='upload-fiie--img file--img' type='file'>"+
