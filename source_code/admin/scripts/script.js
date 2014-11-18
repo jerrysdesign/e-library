@@ -250,6 +250,7 @@ function btn_enable()
 {
 	var $textarea = $('textarea'),
 		$quiz_a_s = $('.activeradioholder,.radio-tf:checked').size(),
+		$table__alertblock = $('table').find($('.alert-block')),
 		$success  = true;
 
 	$textarea.each(function( _idx )
@@ -262,6 +263,10 @@ function btn_enable()
 
 	if($quiz_a_s == 0)
 	{
+		$success = false;
+	}
+
+	if($table__alertblock.hasClass("alert--error")) {
 		$success = false;
 	}
 
