@@ -1,5 +1,19 @@
+// 題庫表格內容
+
+
+// 使用頁面
+// exam_paper_list_null.html.slim
+// exam_paper_list_ture.html.slim
+// quiz_add_pop_null.html.slim
+// quiz_add_pop_search.html
+// quiz_add_pop_ture.html.slim
+// quiz_creat.html.slim
+// quiz_export_pop.html.slim
+
+
 // 是否有數據
-// 新增
+
+// 有的話
 - if f == "ture"
 	- (1..500).each do |n|
 		tr
@@ -20,28 +34,25 @@
 		tr
 			td width="6%"
 				input.chk type="checkbox"
-			td width="8%"
+			/! /2014-11-17 表格td寬度移除
+			td
 				| #{n}
-			td width="8%"
+			td
 				| 是非
 			/! 有圖
 			td.text-left width="54%"
 				=zh_lorem_words 45
 				img.pic.view src="http://placehold.it/260x162&text=([img)]"
-			td width="12%"
+			td
 				=lorem_date("%Y/%m/%d", 2014..2014)
-			td width="12%"
+			td
 				=lorem_date("%Y/%m/%d", 2014..2014)
-				
+			/! /2014-11-17/
 			/ td
-			/   a href="javascript:;" 修改
-			/   br
-			/   a href="javascript:;" 檢視
-			/   br
-			/   a href="javascript:;" 統計
+// 沒有的話
 - else
 	tr
 		td colspan="6"
 			.center-block
 				.alert-block.alert--error.unit-50
-					| 尚未加入任何項目
+					| 尚無新增任何題目
