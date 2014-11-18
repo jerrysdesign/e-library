@@ -1,15 +1,7 @@
 #cont_area
 	.masthead
 		.masthead__inner
-			.masthead__head
-				.masthead__title 測驗卷
-			.masthead__content
-				.is-table
-					.control-group
-						.control-label 名稱
-						.controls
-							input.width-70 type="text" placeholder="名稱"
-							input.btn.btn-blue.fr type="button" value="開始測驗" onclick="javascript:;"
+			== render "partials/exam_paper_list_masthead__inner"
 	.container
 		.cont
 			.cont_tab3

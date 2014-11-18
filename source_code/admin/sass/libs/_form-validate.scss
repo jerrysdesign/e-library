@@ -1,0 +1,96 @@
+/*  
+--------------------------------------------------
+@Start smart forms
+-------------------------------------------------- 
+*/
+
+$flat-colors:					black, blue, green, purple, red, yellow;
+$flat-colors-1:				#34495E, #3498db, #2ecc71, #9B59B6, #e74c3c, #ed9c28;
+$flat-colors-2:				#2c3e50, #2c81ba, #27ad60, #8E44AD, #c44133, #d58512;
+$flat-colors-black:		#34495E, #2c3e50;
+$flat-colors-blue:		#3498db, #2c81ba;
+$flat-colors-green:		#2ecc71, #27ad60;
+$flat-colors-purple:	#9B59B6, #8E44AD;
+$flat-colors-red:			#e74c3c, #c44133;
+$flat-colors-yellow:	#ed9c28, #d58512;
+
+
+/* @validaion - error state
+------------------------------------- */
+.state-error .gui-input,
+.state-error .gui-textarea,
+.state-error.select > select,
+.state-error.select-multiple > select,
+.state-error input:hover + .checkbox, 
+.state-error input:hover + .radio,
+.state-error input:focus + .checkbox, 
+.state-error input:focus + .radio,
+.state-error .checkbox, 
+.state-error .radio{
+	background:#FEEFE9;
+	border-color:#E46B66;
+}
+
+.state-error .gui-input ~ .field-icon i,
+.state-error .gui-textarea ~ .field-icon i{  color: nth($flat-colors-red, 1);}
+.state-error.select .arrow {color: nth($flat-colors-red, 1);}
+.state-error.select:before {border-left:1px solid #E46B66;}
+.state-error .gui-input ~ .input-hint,
+.state-error.file .gui-file:hover + .gui-input, 
+.state-error .gui-textarea ~ .input-hint {border-color:#E46B66;}
+.state-error + em{ 
+	display: block!important;
+	margin-top: 6px;
+	padding: 0 3px;
+	font-style: normal;
+	line-height: normal;
+	color:#CC0000;
+	font-size:0.85em;
+}
+
+
+/* @validaion - success state 
+-------------------------------------------------- */
+.state-success .gui-input,
+.state-success .gui-textarea,
+.state-success.select > select,
+.state-success.select-multiple > select,
+.state-success input:hover + .checkbox, 
+.state-success input:hover + .radio,
+.state-success input:focus + .checkbox, 
+.state-success input:focus + .radio, 
+.state-success .checkbox, 
+.state-success .radio{
+	background:#EAFCD8;
+	border-color:nth($flat-colors-green, 1);
+}
+
+.state-success .gui-input ~ .field-icon i,
+.state-success .gui-textarea ~ .field-icon i{  color: nth($flat-colors-green, 1);}
+.state-success.select .arrow {color: nth($flat-colors-green, 1);}
+.state-success.select:before {border-left:1px solid nth($flat-colors-green, 1);}
+.state-success .gui-input ~ .input-hint,
+.state-success.file .gui-file:hover + .gui-input, 
+.state-success .gui-textarea ~ .input-hint {border-color:nth($flat-colors-green, 1);}
+
+/* @form element :hover state 
+-------------------------------------------- */
+.gui-input:hover,
+.gui-textarea:hover,
+.select > select:hover,
+.select-multiple select:hover, 
+.gui-input:hover ~ .input-hint,
+.file .gui-file:hover + .gui-input,
+.gui-textarea:hover ~ .input-hint{
+	border-color: #62D0BA;
+}
+
+
+
+// override
+em.state-error {
+	display: inline-block;
+	line-height: 2.1em;
+	padding-left: 10px;
+	padding-top: 5px;
+}
