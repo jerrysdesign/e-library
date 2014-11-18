@@ -437,7 +437,7 @@ function table_autoheight()
 // accuracy_rate
 function accuracy_rate()
 {
-	$('.trtable th span + span').each(function(i){
+	$('.trtable .percentage').each(function(i){
 		var error = 0;
 		$(this).parents('.fht-thead').next()
 		.find('td:nth-child(' + (i + 2) +')')
