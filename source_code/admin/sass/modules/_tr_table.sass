@@ -15,12 +15,7 @@
 		text-align: center
 		vertical-align: middle
 		padding: 0
-		span + span
-			color: $white
-			background: $barColor1
-			// @include background-image(linear-gradient( $barColor1 50%, $barColor2 50%))
-			line-height: 1
-			
+		
 	th , td
 		span
 			display: block
@@ -39,11 +34,15 @@
 		background-color: $white
 		&.th-title
 			background: darken($white, 7)
-		.no
-			background: darken($white, 3)
 		span
 			white-space: nowrap
-
+	.no
+		background: darken($white, 7)
+	.percentage, .percentage-title
+		color: $white
+		background: $barColor1
+		// @include background-image(linear-gradient( $barColor1 50%, $barColor2 50%))
+		line-height: 1
 
 // 測驗卷列表 - 表頭固定
 thead.tb_fixed.fixed, .row.tb_fixed.fixed

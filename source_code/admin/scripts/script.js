@@ -85,8 +85,8 @@ function insert_img()
 function change_img()
 {
 	var path,
-		clip = $(this).prev(),
-		FileReader = window.FileReader;
+			clip = $(this).prev(),
+			FileReader = window.FileReader;
 
 	// 篩選圖檔格式
 	var  ext = $(this).val().split('.').pop().toLowerCase();
@@ -160,7 +160,7 @@ function additem()
 				"</div>"+
 				"<div class='controls'>"+
 					"<a class='remove' href='javascript:;'>刪除選項</a>"+
-					"<textarea class='width-100' rows='1'></textarea>"+
+					"<textarea class='width-100' rows='2'></textarea>"+
 					"<div class='i-b-block'>"+
 						"<img class='pic' src=''>"+
 						"<input class='upload-fiie--img file--img' type='file'>"+
@@ -250,6 +250,7 @@ function btn_enable()
 {
 	var $textarea = $('textarea'),
 		$quiz_a_s = $('.activeradioholder,.radio-tf:checked').size(),
+		$table__alertblock = $('table').find($('.alert-block')),
 		$success  = true;
 
 	$textarea.each(function( _idx )
@@ -262,6 +263,10 @@ function btn_enable()
 
 	if($quiz_a_s == 0)
 	{
+		$success = false;
+	}
+
+	if($table__alertblock.hasClass("alert--error")) {
 		$success = false;
 	}
 
@@ -432,7 +437,7 @@ function table_autoheight()
 // accuracy_rate
 function accuracy_rate()
 {
-	$('.trtable th span + span').each(function(i){
+	$('.trtable .percentage').each(function(i){
 		var error = 0;
 		$(this).parents('.fht-thead').next()
 		.find('td:nth-child(' + (i + 2) +')')

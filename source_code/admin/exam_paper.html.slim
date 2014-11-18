@@ -11,7 +11,7 @@
 						.control-group
 							.control-label 共有500道題目
 							.controls
-								input.btn.btn-blue onclick="javascript:location.href='subject_edit.html'" type="button" value="管理題目"
+								input.btn.btn-blue onclick="javascript:location.href='subject_edit.html'" type="button" value="測驗頁面"
 					.is-table
 						.control-group
 							label.control-label 測驗卷名稱
@@ -33,12 +33,14 @@
 						input.btn.btn-blue.mg-l_5 onclick="javascript:location.href='exam_paper_list_null.html'" type="button" value="新增測驗卷"
 				table.table cellpadding="0" cellspacing="1" width="100%" 
 					tr
+						/! /2014-11-17 移除表格 td 寬度
 						th width="38%"  測驗卷名稱
-						th width="10%"  題數
-						th width="10%"  平均正確率
-						th width="16%"  建立日期
-						th width="16%"  測驗日期
-						th width="10%"  功能
+						th  題數
+						th  平均正確率
+						th  建立日期
+						th  測驗日期
+						th  功能
+						/!  2014-11-17 移除表格 td 寬度/
 					- (1..10).each do |n|
 						tr
 							td.text-left
