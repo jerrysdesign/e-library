@@ -20,9 +20,15 @@
 								span.quiz_total 5
 								| 題
 						.row
-							.fl
+							.fl.date-num
 								| 測驗已結束，共計
-								span style="margin-right: 10px" =lorem_date("%H:%M:%S")
+								span.date-hh 00
+								| 小時
+								span.date-mm 00
+								| 分
+								span.date-ss 00
+								| 秒
+
 							dl.fl
 								dt 繳交人數
 								dd 90
