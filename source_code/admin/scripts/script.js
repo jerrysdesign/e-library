@@ -79,25 +79,28 @@ function radioholder()
 function insert_img()
 {
 	$(this).prev().click();
+	var _img = $(this).parent().find('.pic')
 }
 
 // 預覽插入圖片
 function change_img()
 {
 	var path,
-			clip = $(this).prev(),
-			FileReader = window.FileReader;
+		clip = $(this).prev(),
+		FileReader = window.FileReader;
 
 	// 篩選圖檔格式
-	var  ext = $(this).val().split('.').pop().toLowerCase();
-	
-	if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
+	var $this = $(this),
+		$pic  = $this.prev(),
+		$ext  = $this.val().split('.').pop().toLowerCase();
+
+	if ($.inArray($ext, ['png', 'jpg', 'jpeg']) == -1 )
 	{
-		$(this).replaceWith($('.file--img:eq(0)').val('').clone(true));
+		$this.replaceWith($('.file--img:eq(0)').val('').clone(true));
 		alert('只允許上傳PNG或JPG影像檔');
 		return false;
 	}
-	var $this = $(this);
+
 	if(FileReader)
 	{
 		var reader = new FileReader(),
@@ -115,7 +118,16 @@ function change_img()
 		path = $(this).val();
 		clip.attr("src", path);
 	}
-	$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur').next().hide();
+
+	// 偵測圖檔內容格式
+	$pic.off('error');
+	$pic.load(function(){
+		$pic.addClass('view').end().next().text('更換圖片').next().addClass('cur').next().hide();
+	});
+	$pic.error(function(){
+		$pic.removeClass('view').next().next().text('插入圖片').next().removeClass('cur').next().show();
+		alert('只允許上傳PNG或JPG影像檔');
+	});
 	btn_enable();
 }
 
@@ -124,6 +136,7 @@ function remove_img()
 {
 	$(this).removeClass('cur').next().show().end().prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file--img:eq(0)').val('').clone(true));
 	btn_enable();
+	$('.pic').off('error');
 }
 
 function max_cont()
@@ -179,7 +192,7 @@ function additem()
 	renumber();
 	
 	var new_element = _qas.children('li').last();
-	$('.insert_img',new_element).on('click',insert_img);
+	$('.insert_img',new_element).click(insert_img);
 	$('.file--img',new_element).on('change',change_img);
 	$('.remove_img').on('click',remove_img);
 	$('.radioholder').on('click',radioholder);
@@ -549,7 +562,7 @@ $(function(){
 	table_autoheight();
 
 	// [ quiz ] - add subject
-	$('.insert_img').on('click',insert_img);
+	$('.insert_img').click(insert_img);
 	$('.remove_img').on('click',remove_img);
 	$('.file--img').on('change',change_img);
 	$('.radioholder,.radio-tf').on('click',radioholder);
