@@ -13,7 +13,7 @@
 							| 題
 					.fr
 						a<> class="btn btn-blue fancybox fancybox.iframe afb" href="quiz_add_pop_ture.html" 加入
-						a.btn.btn-red.exam-remove.disabled<> href="javascript:;" 移除
+						a.btn.btn-red.exam-remove.disabled<> href="javascript:;" onClick="tr_remove('Want to delete?', 'success', 'cancel')" 移除
 
 						a.btn.exam-up.disabled<> href="javascript:;" 上移
 						a.btn.exam-down.disabled<> href="javascript:;" 下移
@@ -24,4 +24,4 @@
 					tbody
 							== render "partials/quiz_list" , :locals => {:f => "ture"}
 
-		== render :partial => "partials/components/btn_state.html.slim" , :locals => {:f => "no-validation"}
+		== render :partial => "partials/components/btn_state.html.slim" , :locals => {:f => "no-validation"}

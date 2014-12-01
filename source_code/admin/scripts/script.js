@@ -67,11 +67,44 @@ function selectholder()
 	});
 }
 
+// Alert 基本設定
+function alert_reset () {
+	alertify.set({
+		labels : {
+			ok     : "OK",
+			cancel : "Cancel"
+		},
+		delay : 5000,
+		buttonReverse : false,
+		buttonFocus   : "ok"
+	});
+}
+
+// Alert
+function alert_default(cont){
+	alert_reset();
+	alertify.alert(cont);
+	return false;
+}
+
+// Confirm
+function alert_confirm(cont, success, error){
+	alert_reset();
+	alertify.confirm(cont, function (e) {
+		if (e) {
+			alertify.success(success);
+		} else {
+			alertify.error(error);
+		}
+	});
+	return false;
+}
+
 // 設定正確答案
 function radioholder()
 {
-	$('.radioholder').removeClass("activeradioholder").children("input[type=radio]").attr("checked", false);
-	$(this).addClass('activeradioholder').children("input[type=radio]").attr("checked", true);
+	$('.radioholder').removeClass('activeradioholder').children('input[type=radio]').attr('checked', false);
+	$(this).addClass('activeradioholder').children('input[type=radio]').attr('checked', true);
 	btn_enable();
 }
 
@@ -85,19 +118,21 @@ function insert_img()
 function change_img()
 {
 	var path,
-			clip = $(this).prev(),
-			FileReader = window.FileReader;
+		clip = $(this).prev(),
+		FileReader = window.FileReader,
+		alertstring = '只允許上傳PNG或JPG影像檔';
 
 	// 篩選圖檔格式
-	var  ext = $(this).val().split('.').pop().toLowerCase();
-	
-	if ($.inArray(ext, ['png', 'jpg', 'jpeg']) == -1)
+	var $this = $(this),
+		$pic  = $this.prev(),
+		$ext  = $this.val().split('.').pop().toLowerCase();
+
+	if ($.inArray($ext, ['png', 'jpg', 'jpeg']) == -1 )
 	{
-		$(this).replaceWith($('.file--img:eq(0)').val('').clone(true));
-		alert('只允許上傳PNG或JPG影像檔');
-		return false;
+		$this.replaceWith($('.file--img:eq(0)').val('').clone(true));
+		alert_default(alertstring);
 	}
-	var $this = $(this);
+
 	if(FileReader)
 	{
 		var reader = new FileReader(),
@@ -105,42 +140,50 @@ function change_img()
 		reader.onload = function(e)
 		{
 			var _v = e.target.result;
-			clip.attr("src", e.target.result);
-			$this.prev('.pic').attr("src", e.target.result);
+			clip.attr('src', e.target.result);
+			$this.prev('.pic').attr('src', e.target.result);
 		};
 		reader.readAsDataURL(file);
 	}
 	else
 	{
 		path = $(this).val();
-		clip.attr("src", path);
+		clip.attr('src', path);
 	}
-	$this.prev().addClass('view').end().next().text('更換圖片').next().addClass('cur').next().hide();
+	// 偵測圖檔內容格式
+	$pic.off('error');
+	$pic.addClass('view').end().next().text('更換圖片').next().addClass('cur').next().hide();
+	$pic.error(function(){
+		$pic.removeClass('view').next().next().text('插入圖片').next().removeClass('cur').next().show();
+		alert_default(alertstring);
+	});
 	btn_enable();
 }
 
 // 刪除圖片
 function remove_img()
 {
-	$(this).removeClass('cur').next().show().end().prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','').siblings('input').replaceWith($('.file--img:eq(0)').val('').clone(true));
+	$(this).removeClass('cur').next().show().end().prev().text('插入圖片').parent().find('img').removeClass('view').attr('src','')
+	.siblings('input').replaceWith($('.file--img:eq(0)').val('').clone(true));
 	btn_enable();
+	$('.pic').off('error');
 }
 
 function max_cont()
 {
-	var _qas  = $(".quiz_add_subject"),
+	var _qas  = $('.quiz_add_subject'),
 		count = _qas.find('li').size();
 
 	if(count == 6)
 	{
-		$(".add").attr("disabled", true);
+		$('.add').attr('disabled', true);
 	}
 }
 
 // 增加選項
 function additem()
 {
-	var _qas  = $(".quiz_add_subject"),
+	var _qas  = $('.quiz_add_subject'),
 		count = _qas.find('li').size();
 	
 	count++;
@@ -174,12 +217,12 @@ function additem()
 
 	if(count == 6)
 	{
-		$(".add").attr("disabled", true);
+		$('.add').attr('disabled', true);
 	}
 	renumber();
 	
 	var new_element = _qas.children('li').last();
-	$('.insert_img',new_element).on('click',insert_img);
+	$('.insert_img',new_element).click(insert_img);
 	$('.file--img',new_element).on('change',change_img);
 	$('.remove_img').on('click',remove_img);
 	$('.radioholder').on('click',radioholder);
@@ -192,8 +235,8 @@ function Remove()
 {
 	$('body').on('click','.remove',function()
 	{
-		$(".add").attr("disabled", false);
-		$(this).parents("li").remove();
+		$('.add').attr('disabled', false);
+		$(this).parents('li').remove();
 		renumber();
 		btn_enable();
 	});
@@ -202,7 +245,7 @@ function Remove()
 // 答案編號
 function renumber()
 {
-	$(".quiz_add_subject > li").each(function()
+	$('.quiz_add_subject > li').each(function()
 	{
 		var _num  = $(this).index() + 1,
 			_this = $(this).find('.radioholder > b'),
@@ -266,7 +309,7 @@ function btn_enable()
 		$success = false;
 	}
 
-	if($table__alertblock.hasClass("alert--error")) {
+	if($table__alertblock.hasClass('alert--error')) {
 		$success = false;
 	}
 
@@ -300,7 +343,7 @@ function tr_ud()
 	if($('.chk:checked').length == 1)
 	{
 		var row = $('td .chk:checked').parents('tr:first').css('color','blue'),
-			row_count = $("table > tbody > tr").length;
+			row_count = $('table > tbody > tr').length;
 		if ($(this).is('.exam-up') && row.index() >= 1)
 		{
 			row.insertBefore(row.prev());
@@ -345,18 +388,31 @@ function btn_mode()
 			$('.exam-up,.exam-down').addClass('disabled');
 			break;
 	}
+	if($('tbody tr').size() <= 0){
+		$('.exam-up,.exam-down,.exam-remove').addClass('disabled');
+	}
 }
 
 // [ exam ] tr - remove
-function tr_remove()
+function tr_remove(cont, success, error)
 {
+
 	if($('.chk:checked').length >= 1)
 	{
-		var _result = confirm('Want to delete?');
-		if(_result == true)
-		{
-			$('td .chk:checked').parents('tr').remove();
-		}
+		alert_reset();
+		alertify.confirm(cont, function (e) {
+			if (e) {
+				alertify.success(success);
+				if($('thead.tb_fixed').find('.chk').prop('checked')){
+					$('thead.tb_fixed').find('.chk').prop('checked',false);
+				}				
+				$('td .chk:checked').parents('tr').remove();
+				btn_mode();
+			} else {
+				alertify.error(error);
+			}
+		});
+		return false;
 	}
 }
 
@@ -455,24 +511,24 @@ $(function(){
 
 	// search
 	var _speed = 300;
-	$(".search").focus(function()
+	$('.search').focus(function()
 	{
-		$(this).stop().animate({width:"200px"},_speed);
+		$(this).stop().animate({width:'200px'},_speed);
 		var navwidth = 700;
-		$("#menu").animate({width:navwidth},_speed);
-		$("#searchbox").animate({width:"300px"},_speed);
+		$('#menu').animate({width:navwidth},_speed);
+		$('#searchbox').animate({width:'300px'},_speed);
 	})
 	.blur(function()
 	{
-		$(this).stop().animate({width:"100px"},_speed);
+		$(this).stop().animate({width:'100px'},_speed);
 		var navwidth = 800;
-		$("#menu").animate({width:navwidth},_speed);
-		$("#searchbox").animate({width:"200px"},_speed);
+		$('#menu').animate({width:navwidth},_speed);
+		$('#searchbox').animate({width:'200px'},_speed);
 	});
 
 	// back-top
 	$('#cont_area').append('<div class="backtop">Top</div>');
-	$(".backtop").hide();
+	$('.backtop').hide();
 	$('.backtop').click(function()
 	{
 		$('body,html').animate({scrollTop:0});return false;
@@ -505,7 +561,7 @@ $(function(){
 
 	// news_append
 	$('#news').append('<div id="newsbox"></div>');
-	$('#news').find('a').addClass('fancybox').attr({"href":"#newsbox","title":"最新消息"});
+	$('#news').find('a').addClass('fancybox').attr({'href':'#newsbox','title':'最新消息'});
 	$('#news a').each(function()
 	{ 
 		var _this = $(this).text();
@@ -517,9 +573,9 @@ $(function(){
 	});
 
 	// fancybox
-	$(".fancybox").fancybox();
-	$("input.fancybox").fancybox();
-	$(".afb").fancybox({
+	$('.fancybox').fancybox();
+	$('input.fancybox').fancybox();
+	$('.afb').fancybox({
 		wrapCSS     : '_admin_fancybox',
 		padding     : 0,
 		scrolling   : 'no',
@@ -549,7 +605,7 @@ $(function(){
 	table_autoheight();
 
 	// [ quiz ] - add subject
-	$('.insert_img').on('click',insert_img);
+	$('.insert_img').click(insert_img);
 	$('.remove_img').on('click',remove_img);
 	$('.file--img').on('change',change_img);
 	$('.radioholder,.radio-tf').on('click',radioholder);
@@ -565,7 +621,7 @@ $(function(){
 	
 	// [ exam ] table - remove & up & down
 	$('.chk').on('click',tr_reclass);
-	$('.exam-remove').on('click',tr_remove);
+	// $('.exam-remove').on('click',tr_remove);
 	$('.exam-up,.exam-down').on('click',tr_ud);
 	$('th .chk:first').on('change',chk_all);
 	$('input.chk').on('change',btn_mode);
@@ -585,10 +641,10 @@ $(function(){
 // 用 form.smart-forms 在外容器與欄位用 attr[name] 做hook
 
 $(function() {
-	$(".smart-forms").validate({
-		errorClass: "state-error",
-		validClass: "state-success",
-		errorElement: "em",
+	$('.smart-forms').validate({
+		errorClass: 'state-error',
+		validClass: 'state-success',
+		errorElement: 'em',
 		rules: {
 			// exam_paper_list_null
 			examname_001: {
@@ -598,8 +654,8 @@ $(function() {
 		},
 		messages:{
 			examname_001: {
-				required: "請填寫測驗卷名稱!",
-				maxlength: "限40個字內"
+				required: '請填寫測驗卷名稱!',
+				maxlength: '限40個字內'
 			}
 		},
 		highlight: function(element, errorClass, validClass) {
@@ -609,7 +665,7 @@ $(function() {
 			$(element).closest('.field').removeClass(errorClass).addClass(validClass);
 		},
 		errorPlacement: function(error, element) {
-			if (element.is(":radio") || element.is(":checkbox")) {
+			if (element.is(':radio') || element.is(':checkbox')) {
 				element.closest('.option-group').after(error);
 			} else {
 				//error.insertAfter(element.parent());
@@ -618,4 +674,3 @@ $(function() {
 		}
 	});
 });
-
