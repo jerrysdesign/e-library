@@ -64,13 +64,20 @@
 								span F
 /! 2014-09-23
 /! 如果內容有誤
-javascript:
-	document.getElementById('trigger-alert').click();
-a#trigger-alert.btn.btn-blue.fancybox.alert style="display:none" href="#alert" 匯入
+/ javascript:
+/ 	document.getElementById('trigger-alert').click();
+/ a#trigger-alert.btn.btn-blue.fancybox.alert style="display:none" href="#alert" 匯入
 / .fancybox
-#alert.warning style="display:none"
-	strong.strong 檔案內容有誤 (row 3)！
-	.block.center-block
-		a.btn.brn-blue onclick="javascript:parent.jQuery.fancybox.close();" href="javascript:;" OK
+/ #alert.warning style="display:none"
+/ 	strong.strong 檔案內容有誤 (row 3)！
+/ 	.block.center-block
+/ 		a.btn.brn-blue onclick="javascript:parent.jQuery.fancybox.close();" href="javascript:;" OK
+/! 如果內容有誤/
+/! 2014-09-23/
+
+
+/! 2014-12-01
+/! 如果內容有誤
+a#trigger-alert.btn.btn-blue style="display:none" onClick="alert_default('檔案內容有誤 (row 3)')"
 /! 如果內容有誤/
 /! 2014-09-23/

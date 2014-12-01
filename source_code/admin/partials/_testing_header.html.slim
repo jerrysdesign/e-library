@@ -62,4 +62,5 @@
 			.fr
 				| 測驗進行中，尚餘
 				span style="margin-right: 10px" =lorem_date("%H:%M:%S")
-				a.btn.btn-red.fancybox.alert href="#alert" 停止測驗
+				/ a.btn.btn-red.fancybox.alert href="#alert" 停止測驗
+				a.btn.btn-red.fancybox.alert href="javascript:;" onClick="alert_confirm('確定要停止測驗?', 'You`ve clicked OK', 'You`ve clicked Cancel')" 停止測驗
