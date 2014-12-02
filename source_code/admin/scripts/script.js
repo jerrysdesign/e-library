@@ -295,7 +295,6 @@ function btn_enable()
 {
 	var $textarea = $('textarea'),
 		$quiz_a_s = $('.activeradioholder,.radio-tf:checked').size(),
-		$table__alertblock = $('table').find($('.alert-block')),
 		$success  = true;
 
 	$textarea.each(function( _idx )
@@ -310,6 +309,14 @@ function btn_enable()
 	{
 		$success = false;
 	}
+
+}
+
+// 判斷儲存按鈕是否啓用
+function btn_enable2()
+{
+	var $table__alertblock = $('table').find($('.alert-block')),
+		$success  = true;
 
 	if($table__alertblock.hasClass('alert--error')) {
 		$success = false;
@@ -618,7 +625,7 @@ $(function(){
 	renumber();
 	barCharts();
 	btn_enable();
-
+	btn_enable2();
 	max_cont();
 	
 	// [ exam ] table - remove & up & down
@@ -641,8 +648,8 @@ $(function(){
 
 // 表單驗證
 // 用 form.smart-forms 在外容器與欄位用 attr[name] 做hook
-
 $(function() {
+
 	$('.smart-forms').validate({
 		errorClass: 'state-error',
 		validClass: 'state-success',
