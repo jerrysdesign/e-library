@@ -17,3 +17,51 @@
 		position: absolute
 		bottom: 0
 		left: 60%
+
+// .vender
+@import "../vendor/alertify.core"
+.alertify, .alertify-log
+	font-family: sans-serif
+
+.alertify
+	background: white
+	border-radius: 4px
+	+box-shadow(0 3px 3px rgba(0, 0, 0, 0.3))
+	+background-clip(padding-box)
+
+.alertify-text
+	border: 1px solid #CCC
+	padding: 10px
+	border-radius: 4px
+
+.alertify-button
+	@extend .btn
+	// &:hover
+	&:focus
+		box-shadow: 0 0 15px #2B72D5
+	// &:active
+
+.alertify-button-cancel
+	@extend .btn-red
+	// &:hover, &:focus
+
+.alertify-button-ok
+	@extend .btn-green
+	// &:hover, &:focus
+
+.alertify-log
+	background: #1F1F1F
+	background: rgba(0, 0, 0, 0.9)
+	padding: 15px
+	border-radius: 4px
+	color: #FFF
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5)
+
+.alertify-log-error
+	@include gradient($colorAlizarin, darken($colorAlizarin, 5))
+
+.alertify-log-success
+	@include gradient($colorEmerland, darken($colorEmerland, 5))
+
+.alertify-message
+	padding: 10px 0 20px
