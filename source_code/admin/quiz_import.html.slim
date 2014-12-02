@@ -10,8 +10,11 @@
 					.alert-block.alert--info
 						| 共選取5題
 					.fr
+						/! 2013-12-02
+						form id="fileupload-id" action="" method="POST" enctype="multipart/form-data"
+							input.upload-fiie--excel type='file' accept="application/vnd.ms-excel"
 						/! 2013-09-23
-						a.btn.btn-blue<> href="javascript:;" 匯入
+						a.btn.btn-blue.insert_excel<> href="javascript:;" 匯入
 
 						a.btn.btn-red<> href="javascript:;" onclick="history.back()" 取消
 			#quizs.quizs_ans

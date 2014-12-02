@@ -208,7 +208,7 @@ function additem()
 					"<textarea class='width-100' rows='2'></textarea>"+
 					"<div class='i-b-block'>"+
 						"<img class='pic' src=''>"+
-						"<input class='upload-fiie--img file--img' type='file'>"+
+						"<input class='upload-fiie--img file--img' type='file' accept='image/x-png, image/png, image/jpeg, image/jpe, image/jpg'>"+
 						"<a class='btn insert_img' href='javascript:;'>插入圖片</a>&nbsp;"+
 						"<a class='btn btn-red remove_img' href='javascript:;'>刪除圖片</a>"+
 						"<span class='alert-block'>插入圖片檔案最大為 2 Mb，格式限定 jpg、png。</span>"+
