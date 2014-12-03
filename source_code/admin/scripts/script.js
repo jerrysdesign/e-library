@@ -112,7 +112,6 @@ function radioholder()
 function insert_img()
 {
 	$(this).prev().click();
-	var _img = $(this).parent().find('.pic')
 }
 
 // 預覽插入圖片
@@ -290,7 +289,7 @@ function c_val_bf()
 	});
 }
 
-// 判斷儲存按鈕是否啓用
+// 判斷 quiz_mulch / tf 儲存按鈕是否啓用
 function btn_enable()
 {
 	var $textarea = $('textarea'),
@@ -310,18 +309,6 @@ function btn_enable()
 		$success = false;
 	}
 
-}
-
-// 判斷儲存按鈕是否啓用
-function btn_enable2()
-{
-	var $table__alertblock = $('table').find($('.alert-block')),
-		$success  = true;
-
-	if($table__alertblock.hasClass('alert--error')) {
-		$success = false;
-	}
-
 	if($success)
 	{
 		$('.if--validation').attr('disabled', false);
@@ -329,6 +316,27 @@ function btn_enable2()
 	else
 	{
 		$('.if--validation').attr('disabled', true);
+	}
+
+}
+
+// 判斷 exam_paper_list 儲存按鈕是否啓用
+function btn_enable2()
+{
+	var $table__alertblock = $('table').find($('.alert-block')),
+		$success2  = true;
+
+	if($table__alertblock.hasClass('alert--error')) {
+		$success2 = false;
+	}
+
+	if($success2)
+	{
+		$('.if--validation2').attr('disabled', false);
+	}
+	else
+	{
+		$('.if--validation2').attr('disabled', true);
 	}
 }
 
@@ -624,10 +632,10 @@ $(function(){
 	selectholder();
 	renumber();
 	barCharts();
-	btn_enable();
 	btn_enable2();
+	btn_enable();
+
 	max_cont();
-	
 	// [ exam ] table - remove & up & down
 	$('.chk').on('click',tr_reclass);
 	// $('.exam-remove').on('click',tr_remove);
