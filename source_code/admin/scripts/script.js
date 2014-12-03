@@ -326,7 +326,7 @@ function btn_enable2()
 	var $table__alertblock = $('table').find($('.alert-block')),
 		$success2  = true;
 
-	if($table__alertblock.hasClass('alert--error')) {
+	if($('.field').find('input').val() == '' || $('body').hasClass('alert--error')){
 		$success2 = false;
 	}
 
@@ -632,8 +632,8 @@ $(function(){
 	selectholder();
 	renumber();
 	barCharts();
-	btn_enable2();
 	btn_enable();
+	btn_enable2();
 
 	max_cont();
 	// [ exam ] table - remove & up & down
