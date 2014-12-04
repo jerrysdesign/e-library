@@ -289,14 +289,15 @@ function c_val_bf()
 	});
 }
 
-// 判斷 quiz_mulch / tf 儲存按鈕是否啓用
+// quiz_mulch / tf 儲存按鈕是否啓用判斷
 function btn_enable()
 {
 	var $textarea = $('textarea'),
 		$quiz_a_s = $('.activeradioholder,.radio-tf:checked').size(),
+		$validation = $('.if--validation2'),
 		$success  = true;
 
-	$textarea.each(function( _idx )
+	$textarea.each(function(_idx)
 	{
 		if($(this).val().trim() == '' && $('.remove_img').eq(_idx).is(':hidden'))
 		{
@@ -308,35 +309,41 @@ function btn_enable()
 	{
 		$success = false;
 	}
-
 	if($success)
 	{
-		$('.if--validation').attr('disabled', false);
+		$validation.attr('disabled', false);
 	}
 	else
 	{
-		$('.if--validation').attr('disabled', true);
+		$validation.attr('disabled', true);
 	}
 
 }
 
-// 判斷 exam_paper_list 儲存按鈕是否啓用
+// exam_paper_list 儲存按鈕是否啓用判斷
 function btn_enable2()
 {
-	var $table__alertblock = $('table').find($('.alert-block')),
-		$success2  = true;
+	var $input = $('.field').find('input:eq(0)'),
+		$table__alertblock = $('table').find($('.alert-block')),
+		$null_cont  = $('.alert--error').size(),
+		$validation = $('.if--validation2'),
+		$success2   = true;
 
-	if($('.field').find('input').val() == '' || $('body').hasClass('alert--error')){
+	if($input.val() == '')
+	{
+		$success2 = false;
+	}
+	else if($null_cont == 1){
 		$success2 = false;
 	}
 
 	if($success2)
 	{
-		$('.if--validation2').attr('disabled', false);
+		$validation.attr('disabled', false);
 	}
 	else
 	{
-		$('.if--validation2').attr('disabled', true);
+		$validation.attr('disabled', true);
 	}
 }
 
@@ -413,7 +420,6 @@ function btn_mode()
 // [ exam ] tr - remove
 function tr_remove(cont, success, error)
 {
-
 	if($('.chk:checked').length >= 1)
 	{
 		alert_reset();
@@ -425,6 +431,7 @@ function tr_remove(cont, success, error)
 				}				
 				$('td .chk:checked').parents('tr').remove();
 				btn_mode();
+				re_no();
 			} else {
 				alertify.error(error);
 			}
@@ -622,12 +629,14 @@ $(function(){
 	table_autoheight();
 
 	// [ quiz ] - add subject
-	$('.insert_img').click(insert_img);
+	$('.insert_img').on('click',insert_img);
 	$('.remove_img').on('click',remove_img);
 	$('.file--img').on('change',change_img);
 	$('.radioholder,.radio-tf').on('click',radioholder);
 	$('.add').on('click',additem);
 	$('.cont_tab4 textarea').on('focus',c_val_bf);
+	$('.field').on('keyup','input:eq(0)',btn_enable2);
+
 	Remove();
 	selectholder();
 	renumber();
@@ -638,7 +647,6 @@ $(function(){
 	max_cont();
 	// [ exam ] table - remove & up & down
 	$('.chk').on('click',tr_reclass);
-	// $('.exam-remove').on('click',tr_remove);
 	$('.exam-up,.exam-down').on('click',tr_ud);
 	$('th .chk:first').on('change',chk_all);
 	$('input.chk').on('change',btn_mode);
@@ -685,7 +693,6 @@ $(function() {
 			if (element.is(':radio') || element.is(':checkbox')) {
 				element.closest('.option-group').after(error);
 			} else {
-				//error.insertAfter(element.parent());
 				error.insertAfter(element);
 			}
 		}
