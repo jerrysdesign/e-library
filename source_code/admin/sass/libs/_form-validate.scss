@@ -17,61 +17,91 @@ $flat-colors-yellow:	#ed9c28, #d58512;
 
 /* @validaion - error state
 ------------------------------------- */
-.state-error .gui-input,
-.state-error .gui-textarea,
-.state-error.select > select,
-.state-error.select-multiple > select,
-.state-error input:hover + .checkbox, 
-.state-error input:hover + .radio,
-.state-error input:focus + .checkbox, 
-.state-error input:focus + .radio,
-.state-error .checkbox, 
-.state-error .radio{
-	background:#FEEFE9;
-	border-color:#E46B66;
+$error-background: #FEEFE9;
+$error-border-color: #E46B66;
+%error-state {
+	background: $error-background;
+  border-color: $error-border-color;
 }
 
-.state-error .gui-input ~ .field-icon i,
-.state-error .gui-textarea ~ .field-icon i{  color: nth($flat-colors-red, 1);}
-.state-error.select .arrow {color: nth($flat-colors-red, 1);}
-.state-error.select:before {border-left:1px solid #E46B66;}
-.state-error .gui-input ~ .input-hint,
-.state-error.file .gui-file:hover + .gui-input, 
-.state-error .gui-textarea ~ .input-hint {border-color:#E46B66;}
-.state-error + em{ 
-	display: block!important;
-	margin-top: 6px;
-	padding: 0 3px;
-	font-style: normal;
-	line-height: normal;
-	color:#CC0000;
-	font-size:0.85em;
+.state-error {
+  .gui-input, .gui-textarea, &.select > select, &.select-multiple > select {
+    @extend %error-state;
+  }
+  input {
+    &:hover + {
+      .checkbox, .radio {
+      	@extend %error-state;
+      }
+    }
+    &:focus + {
+      .checkbox, .radio {
+      	@extend %error-state;
+      }
+    }
+  }
+  .checkbox, .radio {
+  	@extend %error-state;
+  }
 }
 
+.state-error {
+	.gui-input ~ .field-icon i,
+	.gui-textarea ~ .field-icon i{  color: nth($flat-colors-red, 1);}
+	&.select .arrow {color: nth($flat-colors-red, 1);}
+	&.select:before {border-left:1px solid $error-border-color;}
+	.gui-input ~ .input-hint,
+	&.file .gui-file:hover + .gui-input, 
+	.gui-textarea ~ .input-hint {border-color: $error-border-color;}
+	& + em{ 
+		display: block!important;
+		margin-top: 6px;
+		padding: 0 3px;
+		font-style: normal;
+		line-height: normal;
+		color: #CC0000;
+		font-size:0.85em;
+	}
+}
 
 /* @validaion - success state 
 -------------------------------------------------- */
-.state-success .gui-input,
-.state-success .gui-textarea,
-.state-success.select > select,
-.state-success.select-multiple > select,
-.state-success input:hover + .checkbox, 
-.state-success input:hover + .radio,
-.state-success input:focus + .checkbox, 
-.state-success input:focus + .radio, 
-.state-success .checkbox, 
-.state-success .radio{
-	background:#EAFCD8;
-	border-color:nth($flat-colors-green, 1);
+$success-background: #EAFCD8;
+$success-border-color: nth($flat-colors-green, 1);
+%success-state {
+	background: $success-background;
+  border-color: $success-border-color;
+}
+.state-success {
+  .gui-input, .gui-textarea, &.select > select, &.select-multiple > select {
+    @extend %success-state;
+  }
+  input {
+    &:hover + {
+      .checkbox, .radio {
+        @extend %success-state;
+      }
+    }
+    &:focus + {
+      .checkbox, .radio {
+        @extend %success-state;
+      }
+    }
+  }
+  .checkbox, .radio {
+    @extend %success-state;
+  }
 }
 
-.state-success .gui-input ~ .field-icon i,
-.state-success .gui-textarea ~ .field-icon i{  color: nth($flat-colors-green, 1);}
-.state-success.select .arrow {color: nth($flat-colors-green, 1);}
-.state-success.select:before {border-left:1px solid nth($flat-colors-green, 1);}
-.state-success .gui-input ~ .input-hint,
-.state-success.file .gui-file:hover + .gui-input, 
-.state-success .gui-textarea ~ .input-hint {border-color:nth($flat-colors-green, 1);}
+.state-success {
+	& ~ .field-icon i,
+	.gui-textarea ~ .field-icon i{  color: nth($flat-colors-green, 1);}
+	&.select .arrow {color: nth($flat-colors-green, 1);}
+	&.select:before {border-left:1px solid nth($flat-colors-green, 1);}
+	.gui-input ~ .input-hint,
+	&.file .gui-file:hover + .gui-input, 
+	.gui-textarea ~ .input-hint {border-color:nth($flat-colors-green, 1);}
+}
 
 /* @form element :hover state 
 -------------------------------------------- */
@@ -86,8 +116,8 @@ $flat-colors-yellow:	#ed9c28, #d58512;
 }
 
 
-
-// override
+/* override
+-------------------------------------------- */
 em.state-error {
 	display: inline-block;
 	line-height: 2.1em;

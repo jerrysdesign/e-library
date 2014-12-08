@@ -7,7 +7,6 @@
 // $round-to-nearest-half-line		: false;
 
 
-
 // ------------------------------------------------------------
 // Functions for px to em conversions
 // ------------------------------------------------------------
@@ -31,32 +30,3 @@
 @function em-base($target, $context: $base-line-height) {
   @return emify($target, $context);
 }
-
-
-
-// // Setting up the Static Grid
-
-// $total-columns: 12;
-// $column-width: 65px;
-// $gutter-width: 20px;
-// $grid-padding: 0;
-
-// $container-style: static;
-// $container-width: 1000px;
-
-// %static-container { @include container; }
-
-
-// // Elastic grid as percentages
-
-// $total-columns: 12;
-// $column-width: 6%;
-// $gutter-width: 2%;
-// $grid-padding: 0;
-
-// $container-style: magic;
-// $container-width: 62.5em;
-
-// %fluid-container { @include container; }
-
-
