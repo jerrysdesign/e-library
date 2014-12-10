@@ -3,29 +3,29 @@
 // -------------------------------------------------------
 
 %static-container, .static-container {
-	width: $gridWidth*1px;
-	@include is-center-block;
+  width: $gridWidth*1px;
+  @include is-center-block;
 }
 
 .units-container,
 .units-row-end,
 .units-row {
-	@include pie-clearfix;
+  @include pie-clearfix;
 }
 .units-container { /* it's the trick to not collapse padding-top in the child element */
-	padding-top: 1px;
-	margin-top: -1px;
+  padding-top: 1px;
+  margin-top: -1px;
 }
 .units-container,
 .units-row-end,
 .units-row {
-	@include box-sizing(border-box);
+  @include box-sizing(border-box);
 }
 .units-row {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 .units-row-end {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 
@@ -93,7 +93,7 @@ select.unit-100   { width: 99.4%; }
 .units-row-end .unit-25,
 .units-row-end .unit-20,
 .units-row-end .unit-10 {
-	@include box-sizing(border-box);
+  @include box-sizing(border-box);
 }
 .units-row .unit-90,
 .units-row .unit-80,
@@ -122,8 +122,8 @@ select.unit-100   { width: 99.4%; }
 .units-row-end .unit-25,
 .units-row-end .unit-20,
 .units-row-end .unit-10 {
-	float: left;
-	margin-left: $gridGutterWidth/($gridWidth/100)*1%;
+  float: left;
+  margin-left: $gridGutterWidth/($gridWidth/100)*1%;
 }
 .units-row .unit-90:first-child,
 .units-row .unit-80:first-child,
@@ -152,7 +152,7 @@ select.unit-100   { width: 99.4%; }
 .units-row-end .unit-25:first-child,
 .units-row-end .unit-20:first-child,
 .units-row-end .unit-10:first-child {
-	margin-left: 0;
+  margin-left: 0;
 }
 .units-row .unit-90,
 .units-row-end .unit-90 { @include columns(9, 10); }
@@ -194,7 +194,7 @@ select.unit-100   { width: 99.4%; }
 .unit-push-25,
 .unit-push-20,
 .unit-push-10 {
-	position: relative;
+  position: relative;
 }
 
 .unit-push-90 { @include columns-push(9, 10); }
@@ -212,17 +212,17 @@ select.unit-100   { width: 99.4%; }
 .unit-push-10 { @include columns-push(1, 10); }
 
 .unit-push-right {
-	float: right;
+  float: right;
 }
 
 // .centered,
 // .unit-centered {
-// 	float: none !important;
-// 	margin: 0 auto !important;
+//  float: none !important;
+//  margin: 0 auto !important;
 // }
 
 // .unit-padding {
-// 	padding: $baseLine/$em;
+//  padding: $baseLine/$em;
 // }
 // .units-padding .unit-100,
 // .units-padding .unit-90,
@@ -238,7 +238,7 @@ select.unit-100   { width: 99.4%; }
 // .units-padding .unit-25,
 // .units-padding .unit-20,
 // .units-padding .unit-10 {
-// 	padding: $baseLine/$em;
+//  padding: $baseLine/$em;
 // }
 
 .units-split .unit-90,
@@ -254,7 +254,7 @@ select.unit-100   { width: 99.4%; }
 .units-split .unit-25,
 .units-split .unit-20,
 .units-split .unit-10 {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 .units-split .unit-90 { width: 90%;   }
