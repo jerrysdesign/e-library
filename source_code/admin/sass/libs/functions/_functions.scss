@@ -30,3 +30,22 @@
 @function em-base($target, $context: $base-line-height) {
   @return emify($target, $context);
 }
+
+
+// ------------------------------------------------------------
+// PX to EM 
+// ------------------------------------------------------------
+
+@function em($px, $base: $base-font-size) {
+  @return ($px / $base) * 1em;
+}
+
+
+// ------------------------------------------------------------
+// Creating PX to EM 
+// ------------------------------------------------------------
+
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}

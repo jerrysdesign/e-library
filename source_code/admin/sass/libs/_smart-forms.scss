@@ -47,7 +47,7 @@ $flat-colors-yellow:	#ed9c28, #d58512;
 
 .smart-forms {
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
-	line-height: 1.231;
+	// line-height: 1.231;
 	font-weight: 400;
 	font-size: 14px;
 	color: nth($flat-colors-black, 1);
@@ -100,7 +100,7 @@ $flat-colors-yellow:	#ed9c28, #d58512;
 	.field-label.colm{ padding-top:12px;}
 	.field-label em{ 
 		color:nth($flat-colors-red, 1);
-		font-size:14px;
+		// font-size:14px;
 		font-style:normal;
 		display:inline-block;
 		margin-left:4px;
@@ -244,7 +244,7 @@ $flat-colors-yellow:	#ed9c28, #d58512;
 .smart-forms select,  
 .smart-forms textarea {
 	margin: 0;  
-	font-size: 14px;
+	// font-size: 14px;
 	font-family:  "Roboto", Arial, Helvetica, sans-serif;
 	font-weight:400;
 	color: nth($flat-colors-black, 1);
@@ -339,7 +339,7 @@ $flat-colors-yellow:	#ed9c28, #d58512;
 	*display: inline;
 	color: nth($flat-colors-black, 1);
 	outline:none;
-	height: 42px;
+	// height: 42px;
 	// width: 100%;
 	*zoom: 1;
 }
@@ -351,7 +351,7 @@ $flat-colors-yellow:	#ed9c28, #d58512;
 .smart-forms .gui-textarea {padding:10px;}
 .smart-forms .gui-textarea {  
 	resize: none;
-	line-height: 19px;
+	// line-height: 19px;
 	overflow: auto;
 	max-width:100%;
 	height: 96px;
@@ -364,7 +364,7 @@ $flat-colors-yellow:	#ed9c28, #d58512;
 		padding: 10px;
 	display: block;
 	margin-top: -4px;
-	line-height: 16px;
+	// line-height: 16px;
 	position: relative;    
 	background: #F2F4FA;
 		border: 2px solid #bdc3c7;

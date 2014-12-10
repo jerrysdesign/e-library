@@ -8,15 +8,14 @@
 	vertical-align: top;
 	font-family: $buttonFontFamily;
 	font-size: 1em;
-	line-height: 1.6813;
+	line-height: $baseLineHeight;
 	font-weight: 500;
 	text-decoration: none;
 	color: #000;
 	@include gradient(darken(#fff, 1), darken(#fff, 12));
-	border-radius: 2px;
+	@include border-radius(2px);
 	border: 1px solid darken(#fff, 20);
-	// padding: .7em 1.1em .6em 1.1em; 
-	padding: .4em 1.1em .4em 1.1em;
+	padding: .4em 1em .4em 1em;
 	border-bottom-color: darken(#fff, 30);
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
 	box-shadow: none;
@@ -61,31 +60,20 @@
 // .btn-black {
 // 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
 // }
-.btn-red,
-// .btn-orange,
-// .btn-yellow,
-.btn-green,
-.btn-blue
-{
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.24);
-}
 .btn-black,
 .btn-red,
 // .btn-orange,
 // .btn-yellow,
 .btn-green,
-.btn-blue
-{
+.btn-blue {
 	color: #fff;
-}
-.btn-black:hover,
-.btn-red:hover,
-// .btn-orange:hover,
-// .btn-yellow:hover,
-.btn-green:hover,
-.btn-blue:hover
-{
-	color: rgba(255, 255, 255, .8);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.24);
+	&:hover {
+		color: rgba(255, 255, 255, .8);
+	}
+	&:active {
+		color: rgba(255, 255, 255, .5);
+	}
 }
 // .btn-black:hover {
 // 	background: #000;
@@ -211,4 +199,11 @@
 /* FF fix */
 @-moz-document url-prefix("http://") {
 	input[type=submit].btn::-moz-focus-inner, button.btn::-moz-focus-inner { border: 0; padding: 0; }
+}
+
+.btn {
+	+ .btn,
+	+ input {
+		margin-left: .4em;
+	}
 }

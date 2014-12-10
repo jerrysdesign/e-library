@@ -15,8 +15,8 @@ html
 	//font-size:		100%
 
 body
-	font-size:		$baseFontSize / 16 * 1em
-	line-height:	$baseLine / $em
+	font-size:		$baseFontSize / 16 + 0em
+	line-height:	$baseLineHeight + 0em
 	font-family:	$baseFontFamily
 a
 	color: $action
@@ -156,6 +156,8 @@ img
 	margin-right: 20px
 %date-time
 	font-size: 1.25em
+.date-dd
+	@extend %date-time
 .date-hh
 	@extend %date-time
 .date-mm
@@ -590,3 +592,14 @@ $radius: 0
 			border-color: #3C78CA
 	img
 		display: block
+
+
+
+
+
+// 專案客製樣式
+.clearfix , textarea, .row
+	+ .i-b-block
+		margin-top: 1em
+input + .insert_img
+	margin-left: 0

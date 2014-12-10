@@ -17,15 +17,15 @@
 // ------------------------------------------------------------
 
 // Type
-$baseFontSize	: 12;
-$baseLineHeight	: 1.618;
+$baseFontSize	  : 12;
+$baseLineHeight	: 1.5;
 
 // Util
-// outputting ems, e.g. 14/@em
-$em				: $baseFontSize;
-
-$baseLine		: $baseFontSize * $baseLineHeight;
-
+// outputting ems, e.g. 14/$em
+// $em				: $baseFontSize;
+$em						: $baseFontSize;
+$baseLine			: $baseFontSize * $baseLineHeight;//18
+$baseLineInEms: $baseLine / $baseFontSize;//1.5
 
 // ------------------------------------------------------------
 // :: Font Family
@@ -33,7 +33,7 @@ $baseLine		: $baseFontSize * $baseLineHeight;
 
 // Fonts
 $baseFontFamily			: $fontTC;
-$headingsFontFamily		: $baseFontFamily;
+$headingsFontFamily	: $baseFontFamily;
 $inputFontFamily		: $baseFontFamily;
 $buttonFontFamily		: $baseFontFamily;
 $codeFontFamily			: $monospace;
@@ -58,7 +58,7 @@ $l2	: "../images";
 
 // $show-grid-backgrounds  : true;
 // Grid
-$gridWidth			: 1000;
+$gridWidth				: 1000;
 $gridGutterWidth	: 30;
 
 
@@ -68,13 +68,13 @@ $gridGutterWidth	: 30;
 
 // Base color
 $bodyBackgroundColor	: $EAEDEF;
-$bodyColor				: $black-80;
-$headingsColor			: $black-85;
+$bodyColor						: $black-80;
+$headingsColor				: $black-85;
 
-$linkColor				: $colorLochmara;
-$linkColorHover			: $colorMandy;
-$action					: $linkColor;
-$actionRespond			: $linkColorHover;
+$linkColor						: $colorLochmara;
+$linkColorHover				: $primary;
+$action								: $linkColor;
+$actionRespond				: $linkColorHover;
 
 // BackgroundColor
 $markBackgroundColor	: #fe5;
@@ -125,9 +125,9 @@ $quote			: $beta;	// Quote size
 
 // Borders
 $default-border-width	: 1px; 
-$cellBorder				: 1px solid #eee;
-$cellBorderDark			: 1px solid #ddd;
-$fieldsetBorder			: 1px solid #e3e3e3;
+$cellBorder						: 1px solid #eee;
+$cellBorderDark				: 1px solid #ddd;
+$fieldsetBorder				: 1px solid #e3e3e3;
 
 
 // ------------------------------------------------------------
