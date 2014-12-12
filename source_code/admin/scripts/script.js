@@ -700,26 +700,6 @@ $(function() {
 });
 
 // 檢查最大字數 
-function check_Maxlen(field,Maxlen){
-	var i,f_len,strPN
-	f_len = 0;
-	for (i=0;i<field.value.length;i++)
-		{
-		strPN = escape(field.value.charAt(i)) ;
-		if ((strPN.indexOf('%u'))!= -1){
-			f_len = f_len + 2; //'若為中文,長度+2
-		}
-		else {
-			f_len = f_len + 1; //'若為英文,長度+1
-			}
-		}
-	if (f_len>Maxlen){
-		alert('xxx');
-		field.focus();
-		return true;
-	}
-}
-
 (function($) {
 	$.fn.maxlength = function(options){
 		var settings = jQuery.extend({
@@ -728,71 +708,85 @@ function check_Maxlen(field,Maxlen){
 			status:				true, // True to show status indicator bewlow the element
 			statusClass:		"status", // The class on the status div
 			statusText:			"character left", // The status text
-			notificationClass:	"notification",	// Will be added to the emement when maxlength is reached
-			showAlert:			false, // True to show a regular alert message
-			alertText:			"You have typed too many characters.", // Text in the alert message
-			slider:				false // Use counter slider
+			notificationClass:	"notification"	// Will be added to the emement when maxlength is reached
 		}, options );
 		
 		// Add the default event
 		$.merge(settings.events, ['keyup']);
 
+		String.prototype.blength = function() {
+			var arr = this.match(/[^\x00-\xff]/ig);
+			return arr == null ? this.length : this.length + arr.length;
+		}
+
 		return this.each(function() {
 			var item = $(this);
-			var charactersLength = $(this).val().length;
+			var charactersLeft;
 
-			var i,f_len,strPN
-			
-			f_len = 0;
-			for (i=0;i<field.value.length;i++){
-				strPN = escape(field.value.charAt(i)) ;
-				if ((strPN.indexOf('%u'))!= -1){
-					f_len = f_len + 2; //'若為中文,長度+2
-				}
-				else {
-					f_len = f_len + 1; //'若為英文,長度+1
-					}
-				}
-
-      // Update the status text
+			var characterslength = $(this).val().length; //輸入的字元數
+			var charactersblength = $(this).val().blength(); //輸入的byte數
+			var charactersLeft = settings.maxCharacters - charactersblength; //剩下可輸入字元數
+			//字元數就是有幾個字，byte數 = 洋文算1，中文算2 的總和
+	
+			// var cutWord = 
+			// Update the status text
 			function updateStatus(){
-				var charactersLeft = settings.maxCharacters - charactersLength;
-				
-				if(charactersLeft < 0) {
-					charactersLeft = 0;
-				}
 
-				item.next("div").html(charactersLeft + " " + settings.statusText);
+				// console.log("剩下  可輸入字元數 A"+">>"+charactersLeft);
+
+				item.next("div").html(charactersLeft + " " + settings.statusText);	
 			}
+			
 
 			function checkChars() {
+				// Too many chars?
 				var valid = true;
 				
-				// Too many chars?
-				if(charactersLength >= settings.maxCharacters) {
+				ctChqrt = (charactersblength - characterslength);
+				enChqrt = (characterslength - ctChqrt);
+				ctChqrt = Number(ctChqrt);
+				enChqrt = Number(enChqrt);
+				// console.log('輸入  的中文字'+'>>'+ ctChqrt);
+				// console.log('輸入  的英文字'+'>>'+ enChqrt);
+
+				// console.log('輸入  的字元數'+'>>'+ characterslength);
+				// console.log('輸入  的byte數'+'>>'+ charactersblength);
+
+
+				// console.log('剩下  可輸入字元數 B'+'>>'+ charactersLeft);
+
+				// console.log('最大  字元設定值 A'+'>>'+ settings.maxCharacters);
+				// console.log('最大  字元設定值 B'+'>>'+ (ctChqrt+enChqrt));
+
+				// var maxCharacter = charactersLeft - ctChqrt;//
+				//20
+				// charactersblength
+				// ctChqrt+enChqrt = settings.maxCharacters 
+
+				// console.log('最大  字元設定值 C'+'>>'+ settings.maxCharacter);
+
+				// 1234567890哈哈哈哈哈
+				// if(charactersblength >= settings.maxCharacters) { //如果輸入的BYTE數大於等於設定的最大字數
+				if(charactersLeft == 0) { //如果可輸入的BYTE數小於等於0
+					// alert('charactersLeft = 0');
 					
+					// console.log(_ccc);
 					valid = false;// Too may chars, set the valid boolean to false
 					item.addClass(settings.notificationClass);// Add the notifycation class when we have too many chars
-					item.val(item.val().substr(0,settings.maxCharacters));// Cut down the string
-					showAlert();// Show the alert dialog box, if its set to true
-				} 
+					
+					// item.val(item.val().substr(0, _ccc));
+					// item.attr('maxlength', _ccc)
+				}
+
 				else {
 					// Remove the notification class
 					if(item.hasClass(settings.notificationClass)) {
 						item.removeClass(settings.notificationClass);
 					}
 				}
-
+				
 				if(settings.status){
 					updateStatus();
-				}
-			}
-						
-			// Shows an alert msg
-			function showAlert() {
-				if(settings.showAlert)
-				{
-					alert(settings.alertText);
 				}
 			}
 
@@ -819,7 +813,19 @@ function check_Maxlen(field,Maxlen){
 			// Loop through the events and bind them to the element
 			$.each(settings.events, function (i, n) {
 				item.bind(n, function(e) {
-					charactersLength = item.val().length;
+					charactersblength = item.val().blength();//輸入的字元數
+					characterslength = item.val().length;//輸入的byte數
+					charactersLeft = settings.maxCharacters - charactersblength;
+					charactersLeft2 = settings.maxCharacters - charactersblength; //剩下可輸入字元數
+					if(charactersLeft < 0) {
+						charactersLeft = 0;
+					}
+					if(charactersLeft2 == 0){
+						var _ccc = item.val().length;
+						item.val(item.val().substr(0, _ccc));
+						console.log(_ccc);
+					}
+
 					checkChars();
 				});
 			});
@@ -831,34 +837,21 @@ function check_Maxlen(field,Maxlen){
 			}
 
 			// Remove the status div
-			if(!settings.status) {
-				var removeThisDiv = item.next("div."+settings.statusClass);
+			// if(!settings.status) {
+			// 	var removeThisDiv = item.next("div."+settings.statusClass);
 				
-				if(removeThisDiv) {
-					removeThisDiv.remove();
-				}
-			}
-
-			// Slide counter
-			if(settings.slider) {
-				item.next().hide();
-				
-				item.focus(function(){
-					item.next().slideDown('fast');
-				});
-
-				item.blur(function(){
-					item.next().slideUp('fast');
-				}); 
-			}
-
+			// 	if(removeThisDiv) {
+			// 		removeThisDiv.remove();
+			// 	}
+			// }
 		});
 	};
 })(jQuery);
 
 $(function(){
-	$(".checked_maxlen").maxlength({
-		maxCharacters: 40,
-		slider: false
+	$(".checked_maxlen_80").maxlength({
+		maxCharacters: 20
 	});
+
+	$()
 });
