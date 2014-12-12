@@ -726,6 +726,7 @@ $(function() {
 			var characterslength = $(this).val().length; //輸入的字元數
 			var charactersblength = $(this).val().blength(); //輸入的byte數
 			var charactersLeft = settings.maxCharacters - charactersblength; //剩下可輸入字元數
+			var charactersLeft2 = settings.maxCharacters - charactersblength; //剩下可輸入字元數
 			//字元數就是有幾個字，byte數 = 洋文算1，中文算2 的總和
 	
 			// var cutWord = 
@@ -746,34 +747,40 @@ $(function() {
 				enChqrt = (characterslength - ctChqrt);
 				ctChqrt = Number(ctChqrt);
 				enChqrt = Number(enChqrt);
-				// console.log('輸入  的中文字'+'>>'+ ctChqrt);
-				// console.log('輸入  的英文字'+'>>'+ enChqrt);
+				console.log('輸入  的中文字'+'>>'+ ctChqrt);
+				console.log('輸入  的英文字'+'>>'+ enChqrt);
 
-				// console.log('輸入  的字元數'+'>>'+ characterslength);
-				// console.log('輸入  的byte數'+'>>'+ charactersblength);
+				console.log('輸入  的字元數'+'>>'+ characterslength);
+				console.log('輸入  的byte數'+'>>'+ charactersblength);
 
 
-				// console.log('剩下  可輸入字元數 B'+'>>'+ charactersLeft);
+				console.log('剩下  可輸入字元數 B'+'>>'+ charactersLeft);
+				console.log('剩下  可輸入字元數 B2'+'>>'+ charactersLeft2);
 
-				// console.log('最大  字元設定值 A'+'>>'+ settings.maxCharacters);
-				// console.log('最大  字元設定值 B'+'>>'+ (ctChqrt+enChqrt));
+				console.log('最大  字元設定值 A'+'>>'+ settings.maxCharacters);
+				console.log('最大  字元設定值 B'+'>>'+ (ctChqrt+enChqrt));
 
 				// var maxCharacter = charactersLeft - ctChqrt;//
 				//20
 				// charactersblength
 				// ctChqrt+enChqrt = settings.maxCharacters 
 
-				// console.log('最大  字元設定值 C'+'>>'+ settings.maxCharacter);
+				console.log('最大  字元設定值 C'+'>>'+ settings.maxCharacters);
 
 				// 1234567890哈哈哈哈哈
 				// if(charactersblength >= settings.maxCharacters) { //如果輸入的BYTE數大於等於設定的最大字數
+				
+				if(charactersLeft2 == 0){
+					maxCharacter = item.val().length;
+				}
+				console.log('maxCharacter' + ':' + maxCharacter);
+
 				if(charactersLeft == 0) { //如果可輸入的BYTE數小於等於0
 					// alert('charactersLeft = 0');
-					
 					// console.log(_ccc);
 					valid = false;// Too may chars, set the valid boolean to false
 					item.addClass(settings.notificationClass);// Add the notifycation class when we have too many chars
-					
+					item.val(item.val().substr(0, maxCharacter));
 					// item.val(item.val().substr(0, _ccc));
 					// item.attr('maxlength', _ccc)
 				}
@@ -816,16 +823,12 @@ $(function() {
 					charactersblength = item.val().blength();//輸入的字元數
 					characterslength = item.val().length;//輸入的byte數
 					charactersLeft = settings.maxCharacters - charactersblength;
-					charactersLeft2 = settings.maxCharacters - charactersblength; //剩下可輸入字元數
 					if(charactersLeft < 0) {
 						charactersLeft = 0;
 					}
-					if(charactersLeft2 == 0){
-						var _ccc = item.val().length;
-						item.val(item.val().substr(0, _ccc));
-						console.log(_ccc);
-					}
-
+					charactersLeft2 = settings.maxCharacters - charactersblength;
+					var maxCharacter;
+					
 					checkChars();
 				});
 			});
@@ -850,8 +853,6 @@ $(function() {
 
 $(function(){
 	$(".checked_maxlen_80").maxlength({
-		maxCharacters: 20
+		maxCharacters: 80
 	});
-
-	$()
 });
